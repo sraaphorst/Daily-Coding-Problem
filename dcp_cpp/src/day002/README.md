@@ -14,7 +14,7 @@ of the new array is the product of all the numbers in the original array except 
 the expected output would be
 
 ```
-[120, 60, 40, 30, 24].
+[120, 60, 40, 30, 24]
 ```
 
 **Example 2:** If our input was:
