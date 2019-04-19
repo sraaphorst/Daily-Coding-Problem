@@ -42,9 +42,9 @@
 *.app
 
 # Directories
-/cmake-build-*/
-/debug/
-/release/
+cmake-build-*/
+debug/
+release/
 
 
 
