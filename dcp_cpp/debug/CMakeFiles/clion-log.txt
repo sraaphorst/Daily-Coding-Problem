@@ -1,0 +1,4 @@
+"/Users/sraaphorst/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/local/Cellar/llvm@5/5.0.1/bin/clang -DCMAKE_CXX_COMPILER=/usr/local/Cellar/llvm@5/5.0.1/bin/clang++ -D CMAKE_BUILD_TYPE=Debug -D CMAKE_CXX_STANDARD=17 -D CMAKE_CXX_STANDARD_REQUIRED=ON -D CMAKE_C_COMPILER=/usr/local/bin/gcc-8 -D CMAKE_CXX_COMPILER=/usr/local/bin/g++-8 -D BOOST_ROOT=/usr/local/boost-1.67.0 -G "CodeBlocks - Unix Makefiles" /Users/sraaphorst/Development/daily_coding_problem/dcp_cpp
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/sraaphorst/Development/daily_coding_problem/dcp_cpp/debug

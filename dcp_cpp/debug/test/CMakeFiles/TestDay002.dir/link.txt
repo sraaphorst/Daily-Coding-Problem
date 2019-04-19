@@ -1,0 +1,1 @@
+/usr/local/bin/g++-8  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/readline/lib -L/Applications/Qt-5.9.4/5.9.4/clang_64/lib CMakeFiles/TestDay002.dir/TestDay002.cpp.o CMakeFiles/TestDay002.dir/main.cpp.o  -o TestDay002 

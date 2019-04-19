@@ -1,0 +1,39 @@
+# Daily Coding Problem
+
+These are some practice problems solved in a variety of different languages (depending on the question specification and on my whims) from the Daily Coding Problem challenge:
+
+https://www.dailycodingproblem.com
+
+Here is a brief description of each problem solved so far and a link to the problem in the repo.
+
+The following problems are implemented in C++:
+
+## Day 1 \[Easy\]
+
+Given a list and a goal sum, find if two elements in the list sum up to the goal.
+
+Implemented in C++: [Day 1](dcp_cpp/src/day001)
+
+## Day 2 \[Hard\]
+
+Given a list `L`, create a new list `L'` where `L'[i]` is the product of all elements of `L` except `L[i]`.
+
+Implemented in C++: [Day 2](dcp_cpp/src/day002)
+
+## Day 5 \[Medium\]
+
+Working with `cons`, `car`, and `cdr`.
+
+Implemented in Python: [Day 5](dcp_py/day005)
+
+## Day 8 \[Easy\]
+
+Counting unival subtrees.
+
+Implemented in Scala: [Day 8](dcp_jvm/src/main/scala/dcp/day008)
+
+## Day 12 \[Hard\]
+
+Given a staircase of `N` steps and a list `L` of possible step jumps, find the number of ways to ascend the steps.
+
+Implemented in C++: [Day 12](dcp_cpp/src/day012)
