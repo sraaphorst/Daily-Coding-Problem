@@ -20,6 +20,12 @@ Given a list `L`, create a new list `L'` where `L'[i]` is the product of all ele
 
 Implemented in C++: [Day 2](dcp_cpp/src/day002)
 
+## Day 3 \[Medium\]
+
+Create a binary tree `Node` in Python that is serializable and deserializable.
+
+Implemented in Python: [Day 3](dcp_py/day003)
+
 ## Day 5 \[Medium\]
 
 Working with `cons`, `car`, and `cdr`.
