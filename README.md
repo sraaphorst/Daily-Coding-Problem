@@ -43,3 +43,18 @@ Implemented in Scala: [Day 8](dcp_jvm/src/main/scala/dcp/day008)
 Given a staircase of `N` steps and a list `L` of possible step jumps, find the number of ways to ascend the steps.
 
 Implemented in C++: [Day 12](dcp_cpp/src/day012)
+
+## Day 27 \[Easy\]
+
+Given a string made of parentheses `{`, `}`, `[`, `]`, `(`, and `)`,
+determine if it is balanced.
+
+Implemented in C++: [Day 27](dcp_cpp/src/day027)
+
+## Day 28 \[Medium\]
+
+Given a list of words `L` and a line length `k` (with each word at
+most length `k`), break the words into full-padded lines of length `k`
+with excess padding given to left words.
+
+Implemented in Python: [Day 28](dcp_py/day028)

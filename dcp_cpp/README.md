@@ -7,3 +7,5 @@ The following problems are implemented in C++:
 * [Day 2](src/day002)
 
 * [Day 12](src/day012)
+
+* [Day 27](src/day027)

@@ -20,7 +20,9 @@ target_link_libraries(tests Catch)
 set(TEST_LIST
         TestDay001
         TestDay002
+        TestDay004
         TestDay012
+        TestDay027
         )
 
 foreach(testname ${TEST_LIST})
