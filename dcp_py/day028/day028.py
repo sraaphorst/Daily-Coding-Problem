@@ -31,7 +31,7 @@ def partition_words(words, k):
         else:
             lines.append(line)
             line = [word]
-            currlength = len(word)
+            currlength = len(word) + 1
 
     if line:
         lines.append(line)
