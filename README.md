@@ -58,3 +58,10 @@ most length `k`), break the words into full-padded lines of length `k`
 with excess padding given to left words.
 
 Implemented in Python: [Day 28](dcp_py/day028)
+
+## Day 29 \[Easy\]
+
+Run-length encoding and decoding of strings.
+
+Implemented in Scala: [Day 29](dcp_jvm/src/main/scala/dcp/day029)
+
