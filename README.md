@@ -71,6 +71,12 @@ Elevation water pooling.
 
 Implemented in C++: [Day 30](dcp_cpp/day30)
 
+## Day 31 \[Easy\]
+
+Computing word edit distance
+
+Implemented in Python: [Day 31](dcp_py/day031)
+
 ## Day 35 \[Hard\]
 
 Sort a string of `R`s, `G`s, and `B`s  so that all `R`s are on the
