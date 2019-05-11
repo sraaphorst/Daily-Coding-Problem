@@ -9,3 +9,5 @@ The following problems are implemented in C++:
 * [Day 12](src/day012)
 
 * [Day 27](src/day027)
+
+* [Day 30](src/day030)

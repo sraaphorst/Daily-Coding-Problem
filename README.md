@@ -65,3 +65,11 @@ Run-length encoding and decoding of strings.
 
 Implemented in Scala: [Day 29](dcp_jvm/src/main/scala/dcp/day029)
 
+## Day 30 \[Medium\]
+
+Elevation water pooling.
+
+Implemented in C++: [Day 30](dcp_cpp/day30)
+
+
+
