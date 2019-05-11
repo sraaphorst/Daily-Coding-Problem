@@ -10,6 +10,9 @@
 #include <iostream>
 
 namespace dcp::day030 {
+    /**
+     * Given an elevation chart, determine how many units of rain can be retained.
+     */
     template<size_t N>
     constexpr size_t captured_water(const std::array<size_t, N> &elevation) {
         /**
