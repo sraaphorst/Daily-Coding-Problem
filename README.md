@@ -44,6 +44,13 @@ Given a staircase of `N` steps and a list `L` of possible step jumps, find the n
 
 Implemented in C++: [Day 12](dcp_cpp/src/day012)
 
+## Day 20 \[Easy\]
+
+Detect the intersection point in two singly linked lists, if one
+exists.
+
+Implemented in Java: [Day 20](dcp_jvm/src/main/java/dcp/day020)
+
 ## Day 27 \[Easy\]
 
 Given a string made of parentheses `{`, `}`, `[`, `]`, `(`, and `)`,

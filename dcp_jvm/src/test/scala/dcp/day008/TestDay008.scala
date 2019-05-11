@@ -3,7 +3,7 @@ package dcp.day008
 import org.scalatest.FunSuite
 
 class TestDay008 extends FunSuite {
-  test("BinaryTree.univalCount") {
+  test("Day008: BinaryTree univalCount") {
     val t =
       BinaryTree(0,
         Some(BinaryTree(1, None, None)),

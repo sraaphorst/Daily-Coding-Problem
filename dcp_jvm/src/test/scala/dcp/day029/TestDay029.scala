@@ -9,28 +9,28 @@ class TestDay029 extends FunSuite {
   private val LongStringEncoding = "1001A3B23C99A"
 
   test("Encoder: empty string") {
-    Encoder.encode("").equals("")
+    assert(Encoder.encode("").equals(""))
   }
   test("Encoder: one character") {
-    Encoder.encode("A").equals("1A")
+    assert(Encoder.encode("A").equals("1A"))
   }
   test("Encoder: example") {
-    Encoder.encode(ExampleString).equals(ExampleStringEncoding)
+    assert(Encoder.encode(ExampleString).equals(ExampleStringEncoding))
   }
   test("Encoder: long string") {
-    Encoder.encode(LongString).equals(LongStringEncoding)
+    assert(Encoder.encode(LongString).equals(LongStringEncoding))
   }
 
   test("Decoder: empty string") {
-    Decoder.decode("").equals("")
+    assert(Decoder.decode("").equals(""))
   }
   test("Decoder: one character") {
-    Decoder.decode("1A").equals("A")
+    assert(Decoder.decode("1A").equals("A"))
   }
   test("Decoder: example") {
-    Decoder.decode(ExampleStringEncoding).equals(ExampleString)
+    assert(Decoder.decode(ExampleStringEncoding).equals(ExampleString))
   }
   test("Decoder: long string") {
-    Decoder.decode(LongStringEncoding).equals(LongString)
+    assert(Decoder.decode(LongStringEncoding).equals(LongString))
   }
 }
