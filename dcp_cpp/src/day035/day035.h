@@ -4,6 +4,9 @@
  * By Sebastian Raaphorst, 2019.
  */
 
+#include <algorithm>
+#include <string>
+
 namespace dcp::day035 {
     /**
      * Given a string comprised of Rs, Gs, and Bs, sort it so that all the Rs come first, then Gs, then Bs.
