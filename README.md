@@ -89,6 +89,6 @@ Implemented in Python: [Day 31](dcp_py/day031)
 Sort a string of `R`s, `G`s, and `B`s  so that all `R`s are on the
 left, followed by all `G`s, and then by all `B`s.
 
-Implemented in C++: [Day 35](dcp_cpp/src/day035
+Implemented in C++: [Day 35](dcp_cpp/src/day035)
 
 
