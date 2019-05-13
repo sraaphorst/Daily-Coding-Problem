@@ -17,6 +17,7 @@ class Node:
 serialize = repr
 deserialize = eval
 
-
-node = Node('root', Node('left', Node('left.left')), Node('right'))
-assert deserialize(serialize(node)).left.left.val == 'left.left'
+# Put testing here instead since serialize and deserialize are just aliases.
+if __name__ == '__main__':
+    node = Node('root', Node('left', Node('left.left')), Node('right'))
+    assert deserialize(serialize(node)).left.left.val == 'left.left'

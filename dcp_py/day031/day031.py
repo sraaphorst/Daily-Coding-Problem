@@ -41,3 +41,13 @@ def compute_edit_distance(w1: str, w2: str) -> int:
             compute_edit_distance_aux(w1, p1 - 1, w2, p2 - 1)
         )
     return compute_edit_distance_aux(w1, len(w1), w2, len(w2))
+
+
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) < 3:
+        sys.stderr.write(f'Usage: {sys.argv[0]} word1 word2')
+        sys.exit(0)
+
+    w1, w2 = sys.argv[1], sys.argv[2]
+    print(f'Editing distance: {compute_edit_distance(w1, w2)}')
