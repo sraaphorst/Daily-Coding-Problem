@@ -44,6 +44,12 @@ Counting unival subtrees.
 
 Implemented in Scala: [Day 8](dcp_jvm/src/main/scala/dcp/day008)
 
+## Day 10 \[Medium\]
+
+Delay a function call by a specified number of ms.
+
+Implemented in Java: [Day 10](dcp_jvm/src/main/java/dcp/day010)
+
 ## Day 12 \[Hard\]
 
 Given a staircase of `N` steps and a list `L` of possible step jumps, find the number of ways to ascend the steps.

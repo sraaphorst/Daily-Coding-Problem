@@ -4,6 +4,8 @@
 
 The following problems are implemented in Java:
 
+* [Day 10](src/main/java/dcp/day010)
+
 * [Day 20](src/main/java/dcp/day020)
 
 ## Scala implementations
