@@ -54,3 +54,5 @@ Then to our new list `L'`, assign:
 ```
 L'[i] = left[i] * right[i]
 ```
+
+Link: [Testing code](../../test/TestDay002.cpp)

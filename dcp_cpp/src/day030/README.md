@@ -15,3 +15,5 @@ Given the input `[3, 0, 1, 3, 0, 5]`, we can hold:
  * `3` in the fourth index.
   
 (We cannot hold `5` since it would run off to the left), so we can trap `8` units of water.
+
+Link: [Testing code](../../test/TestDay030.cpp)

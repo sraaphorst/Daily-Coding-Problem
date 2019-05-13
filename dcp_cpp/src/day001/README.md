@@ -21,3 +21,5 @@ twice unless they actually appear twice, e.g.:
 
 Then, we iterate over the elements `x` and determine if `k - x` is in the `unordered_map`,
 which takes average constant time: thus, the whole algorithm takes average constant time.
+
+Link: [Testing code](../../test/TestDay001.cpp)

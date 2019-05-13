@@ -16,4 +16,7 @@ For example, given the array:
  ['R', 'R', 'R', 'G', 'G', 'B', 'B'].
  ```
  
- Note: we work with `std::string` but this could trivially be changded to another collection.
+ Note: we work with `std::string` but this could trivially be changed to another collection type that allows
+ bidirectional iterators.
+ 
+ Link: [Testing code](../../test/TestDay035.cpp)

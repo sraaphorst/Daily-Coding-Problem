@@ -34,3 +34,5 @@ The `X = {1, 3, 5}` variation is `A060961` in the Online Encyclopedia of Integer
 https://oeis.org/A060961
 
 We could possibly find closed forms for certain values of `X` using recurrence relations; we do not do so here.
+
+Link: [Testing code](../../test/TestDay012.cpp)
