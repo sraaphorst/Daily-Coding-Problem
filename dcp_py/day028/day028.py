@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# day028.py
+# By Sebastian Raaphorst, 2019.
 
 
 def partition_words(words, k):

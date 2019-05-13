@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-# By Sebastian Raaphorst, 2019
+# day031.py
+# By Sebastian Raaphorst, 2019.
 
 
 def compute_edit_distance(w1: str, w2: str) -> int:
