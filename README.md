@@ -32,6 +32,12 @@ Working with `cons`, `car`, and `cdr`.
 
 Implemented in Python: [Day 5](dcp_py/day005)
 
+## Day  7 \[Medium\]
+
+Determining the number of ways to decode numeric strings.
+
+Implemented in Python: [Day 7](dcp_py/day007)
+
 ## Day 8 \[Easy\]
 
 Counting unival subtrees.
