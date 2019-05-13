@@ -17,3 +17,5 @@ return the node with value `8`.
 In this example, assume nodes with the same value are the exact same node objects.
 
 Do this in `O(M + N)` time (where `M` and `N` are the lengths of the lists) and constant space.
+
+Link: [Testing code](../../../../test/scala/dcp/day020)

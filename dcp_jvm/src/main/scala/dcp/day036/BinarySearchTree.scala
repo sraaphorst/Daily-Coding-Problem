@@ -87,10 +87,6 @@ object BinarySearchTreeUtils {
         */
       var (n, p) = largestWithParent(t, None)
       n.left.map(_.largestNode).orElse(p)
-//      largestWithParent(t, None) match {
-//        case (_, None) => None
-//        case (n, p) => n.left.map(_.largestNode).orElse(p)
-//      }
     }
 
     def toSeq: Seq[T] = {
@@ -107,17 +103,4 @@ object BinarySearchTreeUtils {
     def toList: List[T] =
       toSeq.toList
   }
-}
-
-object Test extends App {
-  import BinarySearchTreeUtils._
-
-//  val bst = BinarySearchTree[Int](4).insert(1).insert(3)
-//  println(s"$bst\n\n")
-//  val node = bst.secondLargestNode
-//  println(node)
-val bst = BinarySearchTree[Int](5).insert(3).insert(4).insert(2).insert(0).insert(1)
-  println(s"$bst\n\n")
-  val node = bst.secondLargestNode
-  println(node.map(_.value))
 }
