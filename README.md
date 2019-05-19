@@ -111,5 +111,10 @@ Find the second largest element in a binary search tree.
 Implemented in Scala (and property tested with ScalaCheck):
 [Day 36](dcp_jvm/src/main/scala/dcp/day036)
 
+## Day 43 \[Easy\]
 
+Implement a mutable stack that keeps track of its largest element in
+constant time.
 
+Implemented in Scala (and property tested with ScalaCheck):
+[Day 43](dcp_jvm/src/main/scala/dcp/day043)
