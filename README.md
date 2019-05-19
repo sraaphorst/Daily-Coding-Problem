@@ -4,8 +4,6 @@ These are some practice problems solved in a variety of different languages (dep
 
 https://www.dailycodingproblem.com
 
-I will work in filling in the gaps over time.
-
 Here is a brief description of each problem solved so far and a link to the problem in the repo.
 
 The following problems are implemented in C++:
