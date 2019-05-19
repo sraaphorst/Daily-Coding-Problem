@@ -744,13 +744,13 @@ namespace Catch {
 #endif
 
 void arcSafeRelease( NSObject* obj );
-id performOptionalSelector( id obj, SEL sel );
+symm_id performOptionalSelector( symm_id obj, SEL sel );
 
 #if !CATCH_ARC_ENABLED
 inline void arcSafeRelease( NSObject* obj ) {
     [obj release];
 }
-inline id performOptionalSelector( id obj, SEL sel ) {
+inline symm_id performOptionalSelector( symm_id obj, SEL sel ) {
     if( [obj respondsToSelector: sel] )
         return [obj performSelector: sel];
     return nil;
@@ -759,7 +759,7 @@ inline id performOptionalSelector( id obj, SEL sel ) {
 #define CATCH_ARC_STRONG
 #else
 inline void arcSafeRelease( NSObject* ){}
-inline id performOptionalSelector( id obj, SEL sel ) {
+inline symm_id performOptionalSelector( symm_id obj, SEL sel ) {
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
@@ -2956,7 +2956,7 @@ namespace Catch {
         OcMethod( Class cls, SEL sel ) : m_cls( cls ), m_sel( sel ) {}
 
         virtual void invoke() const {
-            id obj = [[m_cls alloc] init];
+            symm_id obj = [[m_cls alloc] init];
 
             performOptionalSelector( obj, @selector(setUp)  );
             performOptionalSelector( obj, m_sel );
@@ -2979,7 +2979,7 @@ namespace Catch {
             NSString* selStr = [[NSString alloc] initWithFormat:@"Catch_%s_%s", annotationName.c_str(), testCaseName.c_str()];
             SEL sel = NSSelectorFromString( selStr );
             arcSafeRelease( selStr );
-            id value = performOptionalSelector( cls, sel );
+            symm_id value = performOptionalSelector( cls, sel );
             if( value )
                 return [(NSString*)value UTF8String];
             return "";
@@ -7417,7 +7417,7 @@ namespace {
 #if defined( CATCH_CONFIG_WINDOWS_SEH )
 
 namespace Catch {
-    struct SignalDefs { DWORD id; const char* name; };
+    struct SignalDefs { DWORD symm_id; const char* name; };
 
     // There is no 1-1 mapping between signals and windows exceptions.
     // Windows can easily distinguish between SO and SigSegV,
@@ -7431,7 +7431,7 @@ namespace Catch {
 
     LONG CALLBACK FatalConditionHandler::handleVectoredException(PEXCEPTION_POINTERS ExceptionInfo) {
         for (auto const& def : signalDefs) {
-            if (ExceptionInfo->ExceptionRecord->ExceptionCode == def.id) {
+            if (ExceptionInfo->ExceptionRecord->ExceptionCode == def.symm_id) {
                 reportFatal(def.name);
             }
         }
