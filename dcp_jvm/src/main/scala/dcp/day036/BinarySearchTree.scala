@@ -1,3 +1,6 @@
+// Stack.scala
+//
+// By Sebastian Raaphorst, 2019.
 package dcp.day036
 
 import Ordering.Implicits._

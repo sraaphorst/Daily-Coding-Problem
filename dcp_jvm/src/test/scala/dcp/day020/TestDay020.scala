@@ -15,6 +15,7 @@ class TestDay020 extends FunSuite {
         n99.setNext(n1).setNext(n8)
 
         assert(ListIntersection.findIntersectionPoint(n3, n99).filter(n => n == n8).isPresent)
+        val a = ListIntersection.findIntersectionPoint(n3, n99)
         assert(!ListIntersection.findIntersectionPoint(n3, n99).isEmpty)
     }
 
