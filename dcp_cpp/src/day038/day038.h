@@ -76,7 +76,7 @@ namespace dcp::day038 {
         constexpr bool queens_complete(const queens<N> &q) {
             std::array<bool, N> pos{};
             for (size_t i = 0; i < N; ++i)
-                pos[i] = true;
+                pos[i] = q[i];
             for (size_t i = 0; i < N; ++i)
                 if (!pos[i])
                     return false;

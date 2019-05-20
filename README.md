@@ -56,6 +56,12 @@ Given a staircase of `N` steps and a list `L` of possible step jumps, find the n
 
 Implemented in C++: [Day 12](dcp_cpp/src/day012)
 
+## Day 14 \[Medium\]
+
+Use a Monte-Carlo method to estimate pi to three decimal places.
+
+Implemented in C++: [Day 14](dcp_cpp/src/day014)
+
 ## Day 20 \[Easy\]
 
 Detect the intersection point in two singly linked lists, if one
