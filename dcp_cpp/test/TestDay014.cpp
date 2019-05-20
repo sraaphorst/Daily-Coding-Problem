@@ -12,6 +12,6 @@
 using namespace dcp::day014;
 
 TEST_CASE("Day014: Monte Carlo pi estimation") {
-    const auto pi = estimate_pi();
+    const double pi = estimate_pi();
     REQUIRE(std::abs(pi - M_PI) < 1e-3);
 }
