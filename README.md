@@ -111,6 +111,12 @@ Find the second largest element in a binary search tree.
 Implemented in Scala (and property tested with ScalaCheck):
 [Day 36](dcp_jvm/src/main/scala/dcp/day036)
 
+## Day 38 \[Hard\]
+
+Count the number of solutions to the n-queen problem.
+
+Implemented in an isomorph-free algorithm in C++: [Day 38](dcp_cpp/src/day08)
+
 ## Day 43 \[Easy\]
 
 Implement a mutable stack that keeps track of its largest element in

@@ -1,12 +1,12 @@
 /**
- * day027.h
+ * day038.h
  *
  * By Sebastian Raaphorst, 2019.
  */
 
 #pragma once
 
-namespace dcp::day028 {
+namespace dcp::day038 {
     /**
      * The simple approach would be to do a backtracking approach, but we can do better than this.
      * Number the rows and columns beginning with (0, 0) in the upper-left corner.
@@ -75,12 +75,12 @@ namespace dcp::day028 {
         template<size_t N>
         constexpr bool queens_complete(const queens<N> &q) {
             std::array<bool, N> pos{};
-            for (size_t i = 0; i < N; ++i) {
-                if (pos[i])
+            for (size_t i = 0; i < N; ++i)
+                pos[i] = true;
+            for (size_t i = 0; i < N; ++i)
+                if (!pos[i])
                     return false;
-                pos[i] = false;
-            }
-            return false;
+            return true;
         }
 
         // Convert between a fixed position and (row, col) coordinates.

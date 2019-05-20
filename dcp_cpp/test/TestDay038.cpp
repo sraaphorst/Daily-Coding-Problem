@@ -1,5 +1,5 @@
 /**
- * TestDay028.cpp
+ * TestDay038.cpp
  *
  * By Sebastian Raaphorst, 2019.
  */
@@ -9,10 +9,10 @@
 #include <iostream>
 #include <tuple>
 
-#include "day028/day028.h"
+#include "day038/day038.h"
 
-using namespace dcp::day028;
-using namespace dcp::day028::impl;
+using namespace dcp::day038;
+using namespace dcp::day038::impl;
 
 constexpr int side = 5;
 
@@ -54,7 +54,7 @@ bool has_order(const M &m) {
 /**
  * Check the values of the symmetries and their orders.
  */
-TEST_CASE("Day028: Verify symm_id symmetry") {
+TEST_CASE("Day038: Verify symm_id symmetry") {
     REQUIRE(has_order<2,1>(symm_id<side>));
     REQUIRE(has_order<3,1>(symm_id<side>));
     REQUIRE(has_order<4,1>(symm_id<side>));
@@ -65,7 +65,7 @@ TEST_CASE("Day028: Verify symm_id symmetry") {
     REQUIRE(has_order<5,1>(symm_id<side+1>));
 }
 
-TEST_CASE("Day028: Verify horizontal reflection symmetry") {
+TEST_CASE("Day038: Verify horizontal reflection symmetry") {
     REQUIRE(has_order<2,2>(symm_rh<side>));
     REQUIRE(has_order<3,2>(symm_rh<side>));
     REQUIRE(has_order<4,2>(symm_rh<side>));
@@ -76,7 +76,7 @@ TEST_CASE("Day028: Verify horizontal reflection symmetry") {
     REQUIRE(has_order<5,2>(symm_rh<side+1>));
 }
 
-TEST_CASE("Day028: Verify vertical reflection symmetry") {
+TEST_CASE("Day038: Verify vertical reflection symmetry") {
     REQUIRE(has_order<2,2>(symm_rv<side>));
     REQUIRE(has_order<3,2>(symm_rv<side>));
     REQUIRE(has_order<4,2>(symm_rv<side>));
@@ -87,7 +87,7 @@ TEST_CASE("Day028: Verify vertical reflection symmetry") {
     REQUIRE(has_order<5,2>(symm_rv<side+1>));
 }
 
-TEST_CASE("Day028: Verify slash reflection symmetry") {
+TEST_CASE("Day038: Verify slash reflection symmetry") {
     REQUIRE(has_order<2,2>(symm_sl<side>));
     REQUIRE(has_order<3,2>(symm_sl<side>));
     REQUIRE(has_order<4,2>(symm_sl<side>));
@@ -98,7 +98,7 @@ TEST_CASE("Day028: Verify slash reflection symmetry") {
     REQUIRE(has_order<5,2>(symm_sl<side+1>));
 }
 
-TEST_CASE("Day028: Verify backslash reflection symmetry") {
+TEST_CASE("Day038: Verify backslash reflection symmetry") {
     REQUIRE(has_order<2,2>(symm_bs<side>));
     REQUIRE(has_order<3,2>(symm_bs<side>));
     REQUIRE(has_order<4,2>(symm_bs<side>));
@@ -109,7 +109,7 @@ TEST_CASE("Day028: Verify backslash reflection symmetry") {
     REQUIRE(has_order<5,2>(symm_bs<side+1>));
 }
 
-TEST_CASE("Day028: Verify rotation by 90 symmetry") {
+TEST_CASE("Day038: Verify rotation by 90 symmetry") {
     REQUIRE(has_order<2,4>(rot_90<side>));
     REQUIRE(has_order<3,4>(rot_90<side>));
     REQUIRE(has_order<4,4>(rot_90<side>));
@@ -120,7 +120,7 @@ TEST_CASE("Day028: Verify rotation by 90 symmetry") {
     REQUIRE(has_order<5,4>(rot_90<side+1>));
 }
 
-TEST_CASE("Day028: Verify rotation by 180 symmetry") {
+TEST_CASE("Day038: Verify rotation by 180 symmetry") {
     REQUIRE(has_order<2,2>(rot_180<side>));
     REQUIRE(has_order<3,2>(rot_180<side>));
     REQUIRE(has_order<4,2>(rot_180<side>));
@@ -131,7 +131,7 @@ TEST_CASE("Day028: Verify rotation by 180 symmetry") {
     REQUIRE(has_order<5,2>(rot_180<side+1>));
 }
 
-TEST_CASE("Day028: Verify rotation by 270 symmetry") {
+TEST_CASE("Day038: Verify rotation by 270 symmetry") {
     REQUIRE(has_order<2,4>(rot_270<side>));
     REQUIRE(has_order<3,4>(rot_270<side>));
     REQUIRE(has_order<4,4>(rot_270<side>));
