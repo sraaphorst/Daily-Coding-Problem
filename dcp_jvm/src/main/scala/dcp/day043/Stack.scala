@@ -4,8 +4,6 @@
 package dcp.day043
 
 import Ordering.Implicits._
-import scala.util.Random
-
 
 // Unfortunately, the problem demands mutability by using pop instead of top / pop.
 
