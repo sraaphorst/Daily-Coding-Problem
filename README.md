@@ -123,6 +123,12 @@ Count the number of solutions to the n-queen problem.
 
 Implemented in an isomorph-free algorithm in C++: [Day 38](dcp_cpp/src/day08)
 
+## Day 39 \[Medium\]
+
+Visual implementation of Conway's Game of Life.
+
+Implemented in Java: [Day 39](dcp_jvm/src/main/scala/dcp/day039)
+
 ## Day 43 \[Easy\]
 
 Implement a mutable stack that keeps track of its largest element in
