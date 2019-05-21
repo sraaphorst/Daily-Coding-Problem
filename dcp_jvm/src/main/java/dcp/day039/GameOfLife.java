@@ -174,7 +174,7 @@ public final class GameOfLife extends JFrame {
         return next_board;
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
         // Determine the range of the visible points.
         final var screenSize = Toolkit.getDefaultToolkit().getScreenSize();
