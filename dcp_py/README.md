@@ -3,11 +3,7 @@
 The following problems are implemented in Python:
 
 * [Day 3](day003)
-
 * [Day 5](day005)
-
 * [Day 7](day007)
-
 * [Day 28](day028)
-
 * [Day 31](day031)
