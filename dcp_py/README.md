@@ -7,3 +7,4 @@ The following problems are implemented in Python:
 * [Day 7](day007)
 * [Day 28](day028)
 * [Day 31](day031)
+* [Day 45](day045)

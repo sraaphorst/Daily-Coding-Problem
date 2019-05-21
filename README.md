@@ -136,3 +136,20 @@ constant time.
 
 Implemented in Scala (and property tested with ScalaCheck):
 [Day 43](dcp_jvm/src/main/scala/dcp/day043)
+
+## Day 44 \[Medium\]
+
+Count the number of inversions in an array. Both brute force and
+mergesort are implemented.
+
+mplemented in Scala (and property tested with ScalaCheck):
+[Day 44](dcp_jvm/src/main/scala/dcp/day044)
+
+
+## Day 45 \[Easy\]
+
+Given `rand5` that generates `[1,5]` uniformly, derive `rand7`that
+generates `[1,7]` uniformly.
+
+Implemented in Python: [Day 45](dcp_py/day045)
+
