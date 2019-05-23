@@ -145,7 +145,6 @@ mergesort are implemented.
 mplemented in Scala (and property tested with ScalaCheck):
 [Day 44](dcp_jvm/src/main/scala/dcp/day044)
 
-
 ## Day 45 \[Easy\]
 
 Given `rand5` that generates `[1,5]` uniformly, derive `rand7`that
@@ -153,3 +152,17 @@ generates `[1,7]` uniformly.
 
 Implemented in Python: [Day 45](dcp_py/day045)
 
+## Day 46 \[Hard\]
+
+Given a string, find the longest palindrome that it contains.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 46](dcp_py/day046)
+
+## Day 47 \[Easy\]
+
+Given a list of stock price over time, determine the highest profit
+per stock you can make.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 45](dcp_py/day045)

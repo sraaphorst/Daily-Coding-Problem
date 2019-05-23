@@ -8,3 +8,5 @@ The following problems are implemented in Python:
 * [Day 28](day028)
 * [Day 31](day031)
 * [Day 45](day045)
+* [Day 46](day046)
+* [DAy 47](day047)

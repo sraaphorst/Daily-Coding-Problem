@@ -91,7 +91,7 @@ def dynamic_palindrome(s: str) -> str:
     return s[start:start + max_length]
 
 
-# To configure this, add a configuration for pytest.d
+# To configure this, add a configuration for pytest.
 # We can Limit the characters so that the likelihood of palindromes is higher, and they will be longer:
 # @given(st.text('abcdefg'))
 @given(st.text())
