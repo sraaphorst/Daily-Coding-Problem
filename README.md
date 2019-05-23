@@ -165,4 +165,4 @@ Given a list of stock price over time, determine the highest profit
 per stock you can make.
 
 Implemented in Python (and property tested with hypothesis):
-[Day 45](dcp_py/day045)
+[Day 47](dcp_py/day047)
