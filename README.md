@@ -166,3 +166,12 @@ per stock you can make.
 
 Implemented in Python (and property tested with hypothesis):
 [Day 47](dcp_py/day047)
+
+## Day 48 \[Medium\]
+
+Given the prefix and infix reading of a binary tree, recreate the
+tree.
+
+Implemented in Scala (and property tested with Scalacheck):
+[Day 48](dcp_jvm/src/main/scala/dcp/day048)
+

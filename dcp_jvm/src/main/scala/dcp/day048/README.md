@@ -24,3 +24,5 @@ You should return the following tree:
  / \ / \
 d  e f  g
 ```
+
+Link: [Testing code](../../../../test/scala/dcp/day048)
