@@ -19,7 +19,7 @@ case class BinaryTree[T](value: T, left: Option[BinaryTree[T]], right: Option[Bi
 object BinaryTree {
   def apply[T](preorder: List[T], inorder: List[T]): Option[BinaryTree[T]] = {
     preorder.headOption.map { value =>
-      // Divide into left preOrder, right preOrder, left inOrdder, right inOrder.
+      // Divide into left preOrder, right preOrder, left inOrder, right inOrder.
       // In example, a gives 3, splitAt gives bde, cfg which is what we want.
       // Now we need the inorder. We want dbe and fcg.
       val inOrderIdx = inorder.indexOf(value)
