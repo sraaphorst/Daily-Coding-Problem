@@ -175,3 +175,12 @@ tree.
 Implemented in Scala (and property tested with Scalacheck):
 [Day 48](dcp_jvm/src/main/scala/dcp/day048)
 
+## Day 49 \[Medium\]
+
+Given an array, find the maximum sum amongst its consecutive
+subarrays.
+
+Implemented in Python (and property tested with hyptothesis):
+[Day 49](dcp_py/day049)
+
+

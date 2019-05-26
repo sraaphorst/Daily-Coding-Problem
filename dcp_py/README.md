@@ -9,4 +9,5 @@ The following problems are implemented in Python:
 * [Day 31](day031)
 * [Day 45](day045)
 * [Day 46](day046)
-* [DAy 47](day047)
+* [Day 47](day047)
+* [Day 49](day049)

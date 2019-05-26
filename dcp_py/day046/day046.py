@@ -7,6 +7,7 @@
 import hypothesis.strategies as st
 from hypothesis import given
 
+
 def is_palindrome(p: str) -> bool:
     """
     Determine if a string is a palindrome.
