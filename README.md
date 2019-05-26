@@ -183,4 +183,10 @@ subarrays.
 Implemented in Python (and property tested with hyptothesis):
 [Day 49](dcp_py/day049)
 
+## Day 50 \[Easy\]
+
+Create and evaluate an expression tree.
+
+Implemented in Scala (and property tested with Scalacheck):
+[Day 50](dcp_jvm/src/main/scala/dcp/day050)
 
