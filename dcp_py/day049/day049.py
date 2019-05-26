@@ -34,9 +34,6 @@ def kadane_algorithm(array: List[int]) -> int:
     >>> kadane_algorithm([-5, -1, -8, -9])
     0
     """
-    if not array:
-        return 0
-
     current_max_ending = 0
     max_ending = 0
     for v in array:
