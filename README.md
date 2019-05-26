@@ -62,6 +62,13 @@ Use a Monte-Carlo method to estimate pi to three decimal places.
 
 Implemented in C++: [Day 14](dcp_cpp/src/day014)
 
+## Day 19 \[Medium\]
+
+Colour houses according to cost using dynamic programming.
+
+Implemented in Python (and property tested with hyptothesis):
+[Day 19](dcp_py/day019)
+
 ## Day 20 \[Easy\]
 
 Detect the intersection point in two singly linked lists, if one
