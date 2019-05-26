@@ -6,8 +6,6 @@ https://www.dailycodingproblem.com
 
 Here is a brief description of each problem solved so far and a link to the problem in the repo.
 
-The following problems are implemented in C++:
-
 ## Day 1 \[Easy\]
 
 Given a list and a goal sum, find if two elements in the list sum up to the goal.
