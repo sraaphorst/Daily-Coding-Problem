@@ -195,3 +195,11 @@ Create and evaluate an expression tree.
 Implemented in Scala (and property tested with Scalacheck):
 [Day 50](dcp_jvm/src/main/scala/dcp/day050)
 
+## Day 51 \[Medium\]
+
+Shuffle a deck of cards uniformly given a uniform random number
+generator.
+
+Implemented in Python:
+[Day 51](dcp_py/day051)
+
