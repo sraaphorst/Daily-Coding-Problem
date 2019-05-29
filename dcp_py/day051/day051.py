@@ -46,8 +46,8 @@ class Card:
         """
         return Card.ranks.index(self.rank) + Card.suits.index(self.suit) * len(Card.ranks)
 
-    @staticmethod
-    def from_int(rank: int):
+    @classmethod
+    def from_int(cls, rank: int):
         """
         Given the rank of a card as a number in [0,52), with suits being arranged as per the Card.suits list
         and ranks being arranged as per the Cards.ranks list, unrank the card.
@@ -60,7 +60,7 @@ class Card:
         """
         r = Card.ranks[rank % len(Card.ranks)]
         s = Card.suits[rank // len(Card.ranks)]
-        return Card(r, s)
+        return cls(r, s)
 
     def __lt__(self, other):
         return self.__int__() < other.__int__()
@@ -79,21 +79,21 @@ class Deck:
     def __init__(self):
         self.cards = [Card(rank, suit) for suit in Card.suits for rank in Card.ranks]
 
-    @staticmethod
-    def ordered_deck(s: str):
+    @classmethod
+    def ordered_deck(cls, s: str):
         """
         This method takes a deck in string form and deserializes it to a real deck.
         :param s: the serialization string of the deck
         :return: the deck
         """
-        deck = Deck()
+        deck = cls()
         deck.cards = eval(s)
         return deck
 
-    @staticmethod
-    def subdeck(suit: str):
+    @classmethod
+    def subdeck(cls, suit: str):
         assert(suit in Card.suits)
-        deck = Deck()
+        deck = cls()
         deck.cards = [Card(rank, suit) for rank in Card.ranks]
         return deck
 
@@ -118,6 +118,11 @@ class Deck:
         Rank:
         Given an ordering of the cards, determine the rank of the permutation of said ordering.
         :return: an integer in [0,52!) indicating the rank of the permutation.
+
+        >>> for i in range(25000):
+        ...     d = Deck()
+        ...     d.shuffle()
+        ...     assert(Deck.from_int(int(d)) == d)
         """
         n = len(self.cards)
         p = [int(c) for c in self.cards]
@@ -135,13 +140,19 @@ class Deck:
             fact //= (n - 1 - i)
         return r
 
-    @staticmethod
-    def from_int(rank: int):
+    @classmethod
+    def from_int(cls, rank: int):
         """
         Unrank:
         Given the rank of a deck of cards (in the range [0,52!)), determine the permutation that the rank refers to.
         :param rank: the rank of the permutation of the cards in the deck
         :return: the deck with cards sorted as per the rank
+
+        # Do a number of trials to make sure that the ranking / unranking works.
+        >>> total = factorial(52)
+        >>> for i in range(25000):
+        ...     rr = randrange(total)
+        ...     assert(int(Deck.from_int(i)) == i)
         """
         n = 52
         fact = factorial(n-1)
@@ -154,7 +165,7 @@ class Deck:
             del digits[q]
             if i != n - 1:
                 fact //= (n - 1 - i)
-        return Deck.ordered_deck(f'{[Card.from_int(i) for i in p]}')
+        return cls.ordered_deck(f'{[Card.from_int(i) for i in p]}')
 
     def __lt__(self, other):
         return self.__int__() < other.__int__()
@@ -180,14 +191,33 @@ class Deck:
 
         The time complexity is O(n) and as the shuffle is done by swapping, the space complexity is down in O(1).
         """
-        n = len(self.cards)
-        for i in range(n-1, 0, -1):
-            # Pick a card from range(0, i) using our perfect random number generator.
-
-            card_idx = randrange(i)
-            self.cards[card_idx], self.cards[i] = self.cards[i], self.cards[card_idx]
+        self.shuffle_range(len(self.cards))
 
     def shuffle_range(self, r):
+        """
+        Shuffle only the first r cards of the deck.
+        This is primarily for testing purposes: it is impossible to test a full deck shuffle for uniformity due
+        to the huge number of permutations.
+        :param r: the number of cards to shuffle
+
+        Get an initial deck and perform a shuffle on it. Then shuffle the first num_cards num_trials times
+        and record the number of each of the possible hands that comes up. Make sure that this is uniform by
+        checking that these are within the range of normal.
+
+        NOTE: we are getting an error here of odd! giving us only odd!/2 occurrences. Why?
+        >>> num_trials = 250000
+        >>> num_cards = 4
+        >>> d = Deck()
+        >>> d.shuffle()
+        >>> occurrences = {}
+        >>> for _ in range(num_trials):
+        ...     d.shuffle_range(num_cards)
+        ...     rk = int(d)
+        ...     occurrences[rk] = occurrences.get(rk, 0) + 1
+        >>> expected_value = num_trials / factorial(num_cards)
+        >>> False not in [abs(o - expected_value)/expected_value < 1e-1 for o in occurrences.values()]
+        True
+        """
         for i in range(r-1, 0, -1):
             # Pick a card from range(0, i) using our perfect random number generator.
 
