@@ -7,32 +7,31 @@ package dcp.day053;
 import java.util.Stack;
 
 public final class StackQueue<T> {
-    private Stack<T> contents;
+    private Stack<T> lifo;
+    private Stack<T> fifo;
 
     public StackQueue() {
-        contents = new Stack<T>();
+        lifo = new Stack<>();
+        fifo = new Stack<>();
     }
 
     public synchronized void enqueue(final T item) {
-        contents.push(item);
+        lifo.push(item);
     }
 
     public synchronized T dequeue() {
-        final Stack<T> tmp = new Stack<>();
-        while (!contents.empty())
-            tmp.push(contents.pop());
-        final T item = tmp.pop();
-        while (!tmp.empty())
-            contents.push(tmp.pop());
+        if (fifo.empty())
+            while (!lifo.empty())
+                fifo.push(lifo.pop());
 
-        return item;
+        return fifo.pop();
     }
 
     public int size() {
-        return contents.size();
+        return lifo.size() + fifo.size();
     }
 
     public boolean empty() {
-        return contents.empty();
+        return lifo.empty() && fifo.empty();
     }
 }
