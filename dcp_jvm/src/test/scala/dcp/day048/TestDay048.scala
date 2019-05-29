@@ -12,7 +12,7 @@ import org.scalacheck.Prop.BooleanOperators
 import org.scalacheck._
 import org.scalacheck.Arbitrary._
 
-class TestDay48 extends FlatSpec with Matchers with GeneratorDrivenPropertyChecks {
+class TestDay048 extends FlatSpec with Matchers with GeneratorDrivenPropertyChecks {
   /**
     * Generator to produce arbitrary BinaryTrees.
     * This is an embarrassingly hot mess of code because:

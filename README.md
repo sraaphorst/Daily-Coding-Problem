@@ -203,3 +203,11 @@ generator.
 Implemented in Python:
 [Day 51](dcp_py/day051)
 
+## Day 53 \[Medium\]
+
+Implement a queue with two stacks.
+
+Implemented in Java:
+[Day 53](dcp_jvm/src/main/java/dcp/day053)
+
+

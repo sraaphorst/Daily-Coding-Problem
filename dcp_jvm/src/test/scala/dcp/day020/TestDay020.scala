@@ -1,6 +1,6 @@
-package dcp.day020;
+package dcp.day020
 
-import org.scalatest.FunSuite;
+import org.scalatest.FunSuite
 
 class TestDay020 extends FunSuite {
     test("Day020: ListIntersection example 1") {
