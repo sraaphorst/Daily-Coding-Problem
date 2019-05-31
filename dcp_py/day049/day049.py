@@ -48,7 +48,7 @@ def kadane_algorithm(array: List[int]) -> int:
 
 
 @given(st.lists(st.integers()))
-def test_algs(arr):
+def test_algs(arr: List[int]):
     """
     Test the subarray maximization algorithms.
     """

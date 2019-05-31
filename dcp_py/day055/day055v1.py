@@ -2,9 +2,31 @@
 # day055v1.py
 # By Sebastian Raaphorst, 2019.
 
+# My initial thought was to:
+# 1. Take the URL, which would be in simple ASCII (i.e. base 7)
+# 2. Encode it into base 10.
+# 3. Encode that into base 62 and output the result.
+#
+# Then, to undo:
+# 1. Take the base 62 string.
+# 2. Decode it into base 10.
+# 3. Decode that into base 7 ASCII and output the result.
+#
+# The problem with this approach is that the encodings needed for even short URLs and much longer than 6 digits,
+# so this is not a feasible way to do this.
+
+from hypothesis import strategies as st
+from hypothesis import given
+from typing import List
+
 
 # First we need to take a base-7 (non-extended ASCII) string and convert it to a number.
 def base7_to_10(s: str) -> int:
+    """
+    Take an ASCII string and convert it to its compact representation in base-10.
+    :param s: the ASCII string
+    :return: the number representing the ASCII string
+    """
     num = 0
     for c in s:
         num = (num << 7) | ord(c)
@@ -13,6 +35,11 @@ def base7_to_10(s: str) -> int:
 
 # Next take a base-7 string and reverse it to non-extended ASCII
 def base10_to_7(num: int) -> str:
+    """
+    Take a base 10 number and convert it to an ASCII string.
+    :param num: the base 10 number
+    :return: the ASCII string
+    """
     s = ""
     while num:
         s += chr(num & 0x7F)
@@ -23,8 +50,13 @@ def base10_to_7(num: int) -> str:
 BASE_62 = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 
-# Convert from base 10 to base arb.
 def base_10_to_arb(n: int, alphabet: str = BASE_62) -> str:
+    """
+    Given a number in base 10, convert it to an arbitrary base as specified by an alphabet.
+    :param n: the base 10 number
+    :param alphabet: the alphabet
+    :return: the representation of the base 10 string in the alphabet
+    """
     if not n:
         return alphabet[0]
 
@@ -38,8 +70,13 @@ def base_10_to_arb(n: int, alphabet: str = BASE_62) -> str:
     return ''.join(rep)
 
 
-# Convert from base arb to base 10.
 def base_arb_to_10(n: str, alphabet: str = BASE_62) -> int:
+    """
+    Given a string representing a number in an arbitrary base as specified by an alphabet, convert it to base 10.
+    :param n: the number in the alphabet
+    :param alphabet: the alphabet
+    :return: the representation of the string as base 10
+    """
     if not n:
         return 0
 
@@ -53,27 +90,36 @@ def base_arb_to_10(n: str, alphabet: str = BASE_62) -> int:
 
 
 def encode(url: str) -> str:
-    v1 = base7_to_10(url)
-    print(f"v1 = {v1}")
-    v2 = base_10_to_arb(v1)
-    print(f"v2 = {v2}")
-    return v2
+    """
+    Given a URL, encode it by converting it from ASCII to base 62.
+    We should, by the requirements, cut it at 6 places, but it turns out this strategy is not sufficient.
+    :param url: the URL to encode
+    :return: the encoded URL
+
+    >>> a1 = "the_goose_flies_at_night"
+    >>> a2 = decode(encode(a1))
+    >>> a1 == a2
+    True
+    """
+    return base_10_to_arb(base7_to_10(url))
 
 
 def decode(n: str) -> str:
-    u1 = base_arb_to_10(n)
-    print(f'u1 = {u1}')
-    u2 = base10_to_7(u1)
-    print(f'u2 = {u2}')
-    return u2
+    """
+    Given an encoded URL, decode it by converting it from base 62 into ASCII.
+    We should, by the requirements, cut it at 6 places, but it turns out this strategy is not sufficient.
+    :param n: the encoded URL
+    :return: the original URL
+    """
+    return base10_to_7(base_arb_to_10(n))
 
 
-# Base 7 to base 10 conversion correct.
-bin = 0b1101100110111111101101100101110110011110011101100110000111001001110011011000101100100110011
-print(f"in base 10: {int(bin)}")
-a = "lovelylads123"
-b = encode(a)
-print(b)
-c = decode(b)
-print(c)
-
+@given(st.lists(st.integers(min_value=0, max_value=127)))
+def test_conversions(arr: List[int]):
+    """
+    Test the conversion from an ASCII string to a base-62 encoding and back.
+    """
+    original = ''.join(chr(i) for i in arr)
+    enc = encode(original)
+    dec = decode(enc)
+    assert(dec == original)
