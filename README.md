@@ -215,7 +215,7 @@ Implemented in Java:
 Implement an efficient sudoku solver.
 I have already done this many times:
 
-* [Brute force backtracking in C++ with `constexpr`](https://github.com/sraaphorst/sudoku_constexpr_
+* [Brute force backtracking in C++ with `constexpr`](https://github.com/sraaphorst/sudoku_constexpr)
 * [Using constraint programming](https://github.com/sraaphorst/sudoku_cp)
 * [Using Knuth's DLX algorithm in C++ with `constexpr`](https://github.com/sraaphorst/dlx_constexpr)
 * [Using Knuth's DLX algorithm in Python](https://github.com/sraaphorst/dlxpy)
