@@ -3,12 +3,7 @@
 # By Sebastian Raaphorst, 2019.
 
 # We'll pick IDs iteratively by converting from int to base-62 strings using what we implemented in V1 code of today.
-import day055.day055v1 as d55
-
-from hypothesis import strategies as st
-from hypothesis import given
-from more_strategies import url
-from typing import List
+import day055.day055_v1 as d55
 
 
 class URLStore:
@@ -16,22 +11,18 @@ class URLStore:
     A storage for shortened URLs six digits in length.
     """
     def __init__(self):
-        self.id = 0
         self.url_to_id = {}
         self.id_to_url = {}
+        self.ids = self.__generate_ids()
 
-    def __generate_id(self) -> int:
+    def __generate_ids(self) -> int:
         """
         Yield the next empty ID slot for a short URL.
         :return: the next empty ID, or raise an exception if all 62 ** 6 = 56800235584 shortened URLs are in use.
         """
-        url = d55.base_10_to_arb(self.id)
-        if len(url) > 6:
-            raise OverflowError("no more IDs left")
-        self.id += 1
-
-        # Tack on any necessary 0s to get to six digits.
-        yield (6 - len(url)) * '0' + url
+        for i in range(62 ** 6):
+            id = d55.base_10_to_arb(i)
+            yield (6  - len(id)) * '0' + id
 
     def encode(self, url: str) -> str:
         """
@@ -42,11 +33,13 @@ class URLStore:
         if url is None or not url:
             return None
 
-        if url in self.url_to_id:
+        if url in self.url_to_id.keys():
             return self.url_to_id[url]
-        id = self.__generate_id()
-        self.url_to_id[id] = url
-        return id
+
+        next_id = next(self.ids)
+        self.url_to_id[url] = next_id
+        self.id_to_url[next_id] = url
+        return next_id
 
     def decode(self, id) -> str:
         """
@@ -54,19 +47,18 @@ class URLStore:
         return the original URL.
         :param id: the shortened ID associated with the URL
         :return: the original URL
+
+        >>> url_store = URLStore()
+        >>> urls = ["www.hotmail.com", "www.gmail.com", "http://slashdot.org", "reddit.com", "https://www.youtube.com/watch?v=SNcNfB7ctHw&t=1419s"]
+        >>> set([url_store.decode(url) for url in urls]) == {None}
+        True
+        >>> ids = [url_store.encode(url) for url in urls]
+        >>> False in [url_store.decode(url_store.encode(url)) == url for url in urls]
+        False
+        >>> False in [url_store.encode(url_store.decode(id)) == id for id in ids]
+        False
         """
         if id is None or not id:
             return None
 
         return self.id_to_url.get(id, None)
-
-
-@given(st.lists(url, min_size=0, max_size=5000))
-def test_store(urls: List[str]):
-    store = URLStore()
-    for url in urls:
-        assert(store.decode(url) is None)
-    for url in urls:
-        assert(store.encode(url) is not None)
-    for url in urls:
-        assert(store.decode(store.encode(url)) == url)

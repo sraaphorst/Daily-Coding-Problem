@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# day055v1.py
+# day055_v1.py
 # By Sebastian Raaphorst, 2019.
 
 # My initial thought was to:
@@ -114,7 +114,8 @@ def decode(n: str) -> str:
     return base10_to_7(base_arb_to_10(n))
 
 
-@given(st.lists(st.integers(min_value=0, max_value=127)))
+# Anything before 32 or after 126 is encoded as \0x... and thus not
+@given(st.lists(st.integers(min_value=32, max_value=126)))
 def test_conversions(arr: List[int]):
     """
     Test the conversion from an ASCII string to a base-62 encoding and back.
