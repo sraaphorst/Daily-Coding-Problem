@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# day055.py
+# day055v1.py
 # By Sebastian Raaphorst, 2019.
 
 
@@ -66,14 +66,6 @@ def decode(n: str) -> str:
     u2 = base10_to_7(u1)
     print(f'u2 = {u2}')
     return u2
-
-#
-# a = 1234567890
-# print(a)
-# b = base_10_to_arb(a)
-# print(b)
-# c = base_arb_to_10(b)
-# print(c)
 
 
 # Base 7 to base 10 conversion correct.
