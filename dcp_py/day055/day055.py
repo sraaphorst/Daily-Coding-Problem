@@ -20,7 +20,6 @@ def base10_to_7(num: int) -> str:
     return s[::-1]
 
 
-
 BASE_62 = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 
@@ -76,6 +75,10 @@ def decode(n: str) -> str:
 # c = base_arb_to_10(b)
 # print(c)
 
+
+# Base 7 to base 10 conversion correct.
+bin = 0b1101100110111111101101100101110110011110011101100110000111001001110011011000101100100110011
+print(f"in base 10: {int(bin)}")
 a = "lovelylads123"
 b = encode(a)
 print(b)
