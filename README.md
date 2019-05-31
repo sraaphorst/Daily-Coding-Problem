@@ -210,4 +210,14 @@ Implement a queue with two stacks.
 Implemented in Java:
 [Day 53](dcp_jvm/src/main/java/dcp/day053)
 
+## Day 54 \[Hard\]
+
+Implement an efficient sudoku solver.
+I have already done this many times:
+
+* [Brute force backtracking in C++ with `constexpr`](https://github.com/sraaphorst/sudoku_constexpr)
+* [Using constraint programming](https://github.com/sraaphorst/sudoku_cp)
+* [Using Knuth's DLX algorithm in C++ with `constexpr`](https://github.com/sraaphorst/dlx_constexpr)
+* [Using Knuth's DLX algorithm in Python](https://github.com/sraaphorst/dlxpy)
+* [Using stochastic methods](https://github.com/sraaphorst/sudoku_stochastic)
 
