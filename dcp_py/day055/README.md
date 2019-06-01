@@ -8,3 +8,5 @@ Implement a URL shortener with the following methods:
 * `restore(short)`, which expands the shortened string into the original url. If no such shortened string exists, return null.
 
 Hint: What if we enter the same URL twice?
+
+Note: I used `encode` and `decode` instead of `shorten` and `restore`.
