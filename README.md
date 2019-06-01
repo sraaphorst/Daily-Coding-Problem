@@ -228,7 +228,7 @@ I have already done this many times:
 Impleent a base-62 URL shortening algorithm.
 
 Implemented in Python:
-[Day 55](dcp_py/day056)
+[Day 55](dcp_py/day055)
 
 ## Day 56 \[Medium\]
 
