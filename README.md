@@ -126,7 +126,9 @@ Implemented in Scala (and property tested with ScalaCheck):
 
 Count the number of solutions to the n-queen problem.
 
-Implemented in an isomorph-free algorithm in C++: [Day 38](dcp_cpp/src/day08)
+INCOMPLETE. Needs testing.
+
+Implemented in a brute-force backtracking isomorph-free `constexpr` algorithm in C++: [Day 38](dcp_cpp/src/day038)
 
 ## Day 39 \[Medium\]
 
@@ -221,3 +223,16 @@ I have already done this many times:
 * [Using Knuth's DLX algorithm in Python](https://github.com/sraaphorst/dlxpy)
 * [Using stochastic methods](https://github.com/sraaphorst/sudoku_stochastic)
 
+## Day 55 \[Easy\]
+
+Impleent a base-62 URL shortening algorithm.
+
+Implemented in Python:
+[Day 55](dcp_py/day056)
+
+## Day 56 \[Medium\]
+
+Write a graph colouring algorithm.
+
+Implemented as brute force backtracking (with basic isomorphic
+pruning) in `constexpr` C++: [Day 56](dcp_cpp/src/day056)

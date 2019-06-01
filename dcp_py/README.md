@@ -13,3 +13,4 @@ The following problems are implemented in Python:
 * [Day 47](day047)
 * [Day 49](day049)
 * [Day 51](day051)
+* [Day 55](day055)
