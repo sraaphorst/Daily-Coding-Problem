@@ -7,7 +7,7 @@ https://www.dailycodingproblem.com
 The languages I used to solve the problem depend on what seems to be the best tool for the job, coupled with my whims
 for the day. So far, the programming languages I use are:
 * C++17
-* Java 10 (with unit and specification testing done primarily with [ScalaCheck](https://github.com/rickynils/scalacheck) and [ScalaTest](https://github.com/scalatest/scalatest))
+* Java 10
 * Python 3.6
 * Scala 2.11
 
