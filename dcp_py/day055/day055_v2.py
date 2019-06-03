@@ -5,9 +5,9 @@
 # We'll pick IDs iteratively by converting from int to base-62 strings using what we implemented in V1 code of today.
 import day055.day055_v1 as d55
 
-from typing import List
 from hypothesis import strategies as st
 from hypothesis import given
+from typing import List
 
 
 class URLStore:

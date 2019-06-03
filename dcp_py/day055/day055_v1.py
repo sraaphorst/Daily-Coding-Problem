@@ -17,7 +17,6 @@
 
 from hypothesis import strategies as st
 from hypothesis import given
-from typing import List
 
 
 # First we need to take a base-7 (non-extended ASCII) string and convert it to a number.
