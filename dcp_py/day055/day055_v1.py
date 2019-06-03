@@ -114,13 +114,11 @@ def decode(n: str) -> str:
     return base10_to_7(base_arb_to_10(n))
 
 
-# Anything before 32 or after 126 is encoded as \0x... and thus not included.
-@given(st.lists(st.integers(min_value=32, max_value=126)))
-def test_conversions(arr: List[int]):
+@given(st.lists(st.integers(min_value=32, max_value=126).map(chr)).map(' '.join))
+def test_conversions(original: str):
     """
     Test the conversion from an ASCII string to a base-62 encoding and back.
     """
-    original = ''.join(chr(i) for i in arr)
     enc = encode(original)
     dec = decode(enc)
     assert(dec == original)
