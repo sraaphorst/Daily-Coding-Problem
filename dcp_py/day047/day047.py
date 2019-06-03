@@ -63,9 +63,6 @@ def efficient_profit(arr: List[int]) -> int:
     return biggest_diff
 
 
-# To configure this, add a configuration for pytest.
-# We can Limit the characters so that the likelihood of palindromes is higher, and they will be longer:
-# @given(st.text('abcdefg'))
 @given(st.lists(st.integers()))
 def test_stocks(arr):
     """
