@@ -193,7 +193,7 @@ class Deck:
         """
         self.shuffle_range(len(self.cards))
 
-    def shuffle_range(self, r):
+    def shuffle_range(self, r: int):
         """
         Shuffle only the first r cards of the deck.
         This is primarily for testing purposes: it is impossible to test a full deck shuffle for uniformity due
