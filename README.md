@@ -227,8 +227,8 @@ I have already done this many times:
 
 Impleent a base-62 URL shortening algorithm.
 
-Implemented in Python:
-[Day 55](dcp_py/day056)
+Implemented in Python (and property tested with hypothesis)
+[Day 55](dcp_py/day055)
 
 ## Day 56 \[Medium\]
 
@@ -236,3 +236,10 @@ Write a graph colouring algorithm.
 
 Implemented as brute force backtracking (with basic isomorphic
 pruning) in `constexpr` C++: [Day 56](dcp_cpp/src/day056)
+
+## Day 57 \[Medium\]
+
+Split text into lines of maximum length.
+
+Implemented in Python (and property tested with hyptothesis):
+[Day 57](dcp_py/day057)
