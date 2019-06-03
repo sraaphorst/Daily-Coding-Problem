@@ -9,7 +9,7 @@ for the day. So far, the programming languages I use are:
 * C++17
 * Java 10
 * Python 3.6
-* Scala 2.11
+* Scala 2.12
 
 The C++ testing is done using:
 * Unit testing with [Catch2](https://github.com/catchorg/Catch2).
