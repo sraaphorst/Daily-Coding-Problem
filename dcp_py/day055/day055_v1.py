@@ -114,7 +114,7 @@ def decode(n: str) -> str:
     return base10_to_7(base_arb_to_10(n))
 
 
-# Anything before 32 or after 126 is encoded as \0x... and thus not
+# Anything before 32 or after 126 is encoded as \0x... and thus not included.
 @given(st.lists(st.integers(min_value=32, max_value=126)))
 def test_conversions(arr: List[int]):
     """
