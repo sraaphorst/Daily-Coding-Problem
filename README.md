@@ -4,6 +4,25 @@ These are some practice problems solved in a variety of different languages (dep
 
 https://www.dailycodingproblem.com
 
+The languages I used to solve the problem depend on what seems to be the best tool for the job, coupled with my whims
+for the day. So far, the programming languages I use are:
+* C++17
+* Java 10 (with unit and specification testing done primarily with [ScalaCheck](https://github.com/rickynils/scalacheck) and [ScalaTest](https://github.com/scalatest/scalatest))
+* Python 3.6
+* Scala 2.11
+
+The C++ testing is done using:
+* Unit testing with [Catch2](https://github.com/catchorg/Catch2).
+
+The Java and Scala testing is done using:
+* Unit testing with [ScalaTest](https://github.com/scalatest/scalatest).
+* Specification testing with ScalaTest and [ScalaCheck](https://github.com/rickynils/scalacheck).
+
+The Python testing is done using:
+* Unit testing with [doctests](https://docs.python.org/2/library/doctest.html)
+* Specification testing with [Hypothesis](https://github.com/HypothesisWorks/hypothesis).
+
+
 Here is a brief description of each problem solved so far and a link to the problem in the repo.
 
 ## Day 1 \[Easy\]
@@ -241,5 +260,5 @@ pruning) in `constexpr` C++: [Day 56](dcp_cpp/src/day056)
 
 Split text into lines of maximum length.
 
-Implemented in Python (and property tested with hyptothesis):
+Implemented in Python (and property tested with hypothesis):
 [Day 57](dcp_py/day057)
