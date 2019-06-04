@@ -4,6 +4,25 @@ These are some practice problems solved in a variety of different languages (dep
 
 https://www.dailycodingproblem.com
 
+The languages I used to solve the problem depend on what seems to be the best tool for the job, coupled with my whims
+for the day. So far, the programming languages I use are:
+* C++17
+* Java 10
+* Python 3.6
+* Scala 2.12
+
+The C++ testing is done using:
+* Unit testing with [Catch2](https://github.com/catchorg/Catch2).
+
+The Java and Scala testing is done using:
+* Unit testing with [ScalaTest](https://github.com/scalatest/scalatest).
+* Specification testing with ScalaTest and [ScalaCheck](https://github.com/rickynils/scalacheck).
+
+The Python testing is done using:
+* Unit testing with [doctests](https://docs.python.org/2/library/doctest.html)
+* Specification testing with [Hypothesis](https://github.com/HypothesisWorks/hypothesis).
+
+
 Here is a brief description of each problem solved so far and a link to the problem in the repo.
 
 ## Day 1 \[Easy\]
@@ -126,7 +145,9 @@ Implemented in Scala (and property tested with ScalaCheck):
 
 Count the number of solutions to the n-queen problem.
 
-Implemented in an isomorph-free algorithm in C++: [Day 38](dcp_cpp/src/day08)
+INCOMPLETE. Needs testing.
+
+Implemented in a brute-force backtracking isomorph-free `constexpr` algorithm in C++: [Day 38](dcp_cpp/src/day038)
 
 ## Day 39 \[Medium\]
 
@@ -220,4 +241,33 @@ I have already done this many times:
 * [Using Knuth's DLX algorithm in C++ with `constexpr`](https://github.com/sraaphorst/dlx_constexpr)
 * [Using Knuth's DLX algorithm in Python](https://github.com/sraaphorst/dlxpy)
 * [Using stochastic methods](https://github.com/sraaphorst/sudoku_stochastic)
+
+## Day 55 \[Easy\]
+
+Impleent a base-62 URL shortening algorithm.
+
+Implemented in Python (and property tested with hypothesis)
+[Day 55](dcp_py/day055)
+
+## Day 56 \[Medium\]
+
+Write a graph colouring algorithm.
+
+Implemented as brute force backtracking (with basic isomorphic
+pruning) in `constexpr` C++: [Day 56](dcp_cpp/src/day056)
+
+## Day 57 \[Medium\]
+
+Split text into lines of maximum length.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 57](dcp_py/day057)
+
+## Day 58 \[Medium\]
+
+Given a sorted array that has been rotated and an element, determine
+if and where the element is in the array in time less than `O(n)`.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 58](dcp_py/day058)
 

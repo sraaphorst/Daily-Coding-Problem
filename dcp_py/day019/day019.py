@@ -3,8 +3,7 @@
 # By Sebastian Raaphorst, 2019.
 
 import hypothesis.strategies as st
-from hypothesis import assume, given
-from hypothesis.strategies import integers as ints
+from hypothesis import given
 from typing import List
 
 
@@ -65,7 +64,9 @@ def dynamic_approach(costs: List[List[int]]) -> int:
 # Generate a table of 3 to 7 rows of 3 to 6 columns.
 # Represents cost of 3 to 7 houses using 3 to 6 colours.
 # Deeper than this cannot be handled efficiently by the brute force approach.
-same_len_lists = ints(min_value=3, max_value=6).flatmap(lambda n: st.lists(st.lists(ints(), min_size=n, max_size=n), min_size=3, max_size=7))
+same_len_lists = st.integers(min_value=3, max_value=6).flatmap(
+    lambda n: st.lists(st.lists(st.integers(), min_size=n, max_size=n), min_size=3, max_size=7)
+)
 
 
 @given(same_len_lists)

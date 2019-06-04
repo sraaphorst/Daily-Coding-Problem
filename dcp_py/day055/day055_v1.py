@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# day055v1.py
+# day055_v1.py
 # By Sebastian Raaphorst, 2019.
 
 # My initial thought was to:
@@ -17,7 +17,6 @@
 
 from hypothesis import strategies as st
 from hypothesis import given
-from typing import List
 
 
 # First we need to take a base-7 (non-extended ASCII) string and convert it to a number.
@@ -114,12 +113,11 @@ def decode(n: str) -> str:
     return base10_to_7(base_arb_to_10(n))
 
 
-@given(st.lists(st.integers(min_value=0, max_value=127)))
-def test_conversions(arr: List[int]):
+@given(st.lists(st.integers(min_value=32, max_value=126).map(chr)).map(' '.join))
+def test_conversions(original: str):
     """
     Test the conversion from an ASCII string to a base-62 encoding and back.
     """
-    original = ''.join(chr(i) for i in arr)
     enc = encode(original)
     dec = decode(enc)
     assert(dec == original)
