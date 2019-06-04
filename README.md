@@ -262,3 +262,12 @@ Split text into lines of maximum length.
 
 Implemented in Python (and property tested with hypothesis):
 [Day 57](dcp_py/day057)
+
+## Day 58 \[Medium\]
+
+Given a sorted array that has been rotated and an element, determine
+if and where the element is in the array in time less than `O(n)`.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 58](dcp_py/day058)
+
