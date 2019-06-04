@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# day055v2.py
+# day057.py
 # By Sebastian Raaphorst, 2019.
 
 from hypothesis import strategies as st
