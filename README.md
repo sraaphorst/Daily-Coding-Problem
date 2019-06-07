@@ -271,6 +271,14 @@ if and where the element is in the array in time less than `O(n)`.
 Implemented in Python (and property tested with hypothesis):
 [Day 58](dcp_py/day058)
 
+## Day 59 \[Hard\]
+
+Use a Merkle tree to determine the differences between two file
+systems.
+
+Implemented in Java, and currently untested:
+[Day59](dcp_jvm/src/main/java/dcp/day059)
+
 ## Day 62 \[Medium\]
 
 Given an n x m matrix, determine the number of paths from the top left
