@@ -271,3 +271,10 @@ if and where the element is in the array in time less than `O(n)`.
 Implemented in Python (and property tested with hypothesis):
 [Day 58](dcp_py/day058)
 
+## Day 62 \[Medium\]
+
+Given an n x m matrix, determine the number of paths from the top left
+to the bottom right.
+
+Implemented in Python:
+[Day 62](dcp_day062)
