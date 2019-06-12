@@ -287,6 +287,14 @@ to the bottom right.
 Implemented in Python:
 [Day 62](dcp_day062)
 
+## Day 63 \[Easy\]
+
+Given a square matrix of letters, determine if a word appears amongst
+the rows or columns.
+
+Implemented in Python:
+[Day 63](dcp_day063)
+
 ## Day 66 \[Medium\]
 
 Given a biased coin, find a way to use it to produce an unbiased coin.
