@@ -286,3 +286,10 @@ to the bottom right.
 
 Implemented in Python:
 [Day 62](dcp_day062)
+
+## Day 66 \[Medium\]
+
+Given a biased coin, find a way to use it to produce an unbiased coin.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 66](dcp_py/day066)

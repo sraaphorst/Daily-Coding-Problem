@@ -4,10 +4,10 @@
 
 from hypothesis import strategies as st
 from hypothesis import given
-from typing import List
+from typing import List, Optional
 
 
-def brute_force(arr: List[int], value: int) -> int:
+def brute_force(arr: List[int], value: int) -> Optional[int]:
     """
     A brute force method that runs in O(n) and thus does not satisfy the question's requirements.
     We use it for comparison.
@@ -27,14 +27,14 @@ def brute_force(arr: List[int], value: int) -> int:
     True
     """
     if arr is None or not arr or value is None:
-        None
+        return None
     try:
         return arr.index(value)
     except ValueError:
         return None
 
 
-def quicksort_technique(arr: List[int], value: int) -> int:
+def quicksort_technique(arr: List[int], value: int) -> Optional[int]:
     """
     Solves the problem by assuming that this is a step in a quicksort with max on left, min on right.
     The rotation of the sorted array generates a pivot, which is an element such that the next element
@@ -62,10 +62,10 @@ def quicksort_technique(arr: List[int], value: int) -> int:
     """
 
     if arr is None or not arr or value is None:
-        None
+        return None
 
     # Finding the pivot point.
-    def find_pivot(low: int = 0, high: int = len(arr)-1) -> int:
+    def find_pivot(low: int = 0, high: int = len(arr)-1) -> Optional[int]:
         """
         Finds the pivot (if any) in the rotated sequence for indices low through high inclusive.
 
@@ -89,7 +89,7 @@ def quicksort_technique(arr: List[int], value: int) -> int:
             return find_pivot(low, mid - 1)
         return find_pivot(mid + 1, high)
 
-    def binary_search(low: int, high: int) -> int:
+    def binary_search(low: int, high: int) -> Optional[int]:
         """
         Perform a standard binary search on a sorted portion of array from indices low to high inclusive.
         :param low: the starting point
@@ -121,7 +121,7 @@ def quicksort_technique(arr: List[int], value: int) -> int:
     elif arr[0] <= value:
         return binary_search(0, pivot-1)
     else:
-        return binary_search(pivot+1, len(arr)-1);
+        return binary_search(pivot+1, len(arr)-1)
 
 
 @st.composite
