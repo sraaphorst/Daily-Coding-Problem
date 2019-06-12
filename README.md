@@ -295,6 +295,14 @@ the rows or columns.
 Implemented in Python:
 [Day 63](dcp_day063)
 
+## Day 65 \[Easy\]
+
+Given an `n` by `m` matrix, unwind it as a spiral clockwise from the
+top left corner.
+
+Implemented in Python:
+[Day 65](dcp_day065)
+
 ## Day 66 \[Medium\]
 
 Given a biased coin, find a way to use it to produce an unbiased coin.
