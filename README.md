@@ -322,8 +322,10 @@ Implemented in Python:
 4, 6, 9, 11, 13, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 32, 33, 34,
 37, 40, 41, 42, 52, 60, 61, 64, 67
 
+A table of summary information:
+
 | Status    | Fraction |
-------------------------
+|-----------|----------|
 | Competed  | 41 / 68  |
 | Remaining | 27 / 68  |
 
