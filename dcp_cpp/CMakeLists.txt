@@ -14,4 +14,3 @@ endif()
 include_directories("${PROJECT_SOURCE_DIR}/src")
 add_subdirectory(test)
 
-add_executable(day38 src/day038/day038.cpp)

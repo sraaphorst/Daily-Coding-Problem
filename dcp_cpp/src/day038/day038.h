@@ -150,9 +150,7 @@ namespace dcp::day038 {
                 cover(row, next_position, valid_positions);
                 ++row;
             }
-
             return num_boards;
         }
     };
-
 }
