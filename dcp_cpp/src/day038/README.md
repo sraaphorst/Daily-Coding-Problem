@@ -16,7 +16,7 @@ symmetry group has size eight. Here is a table that shows the difference between
 and an isomorph-free generation:
 
 | `n`    | 0 | 1 | 2 | 3 | 4 |  5 | 6 |  7 |
-|--------|---|---|---|---|---|----|---|----|
+|--------|--:|--:|--:|--:|--:|---:|--:|---:|
 | unique | 0 | 1 | 0 | 0 | 1 |  2 | 1 |  6 |
 | all    | 0 | 1 | 0 | 0 | 2 | 10 | 4 | 40 |
 
