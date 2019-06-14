@@ -15,10 +15,10 @@ symmetry group divided by the size of the automorphism ground. In this case, I b
 symmetry group has size eight. Here is a table that shows the difference between a full generation
 and an isomorph-free generation:
 
-| `n`    | `0` | `1` | `2` | `3` | `4` |  `5` | `6` |  `7` |
-|--------|-----|-----|-----|-----|-----|------|-----|------|
-| unique | `0` | `1` | `0` | `0` | `1` |  `2` | `1` |  `6` |
-| all    | `0` | `1` | `0` | `0` | `2` | `10` | `4` | `40` |
+| `n`    | 0 | 1 | 2 | 3 | 4 |  5 | 6 |  7 |
+|--------|---|---|---|---|---|----|---|----|
+| unique | 0 | 1 | 0 | 0 | 1 |  2 | 1 |  6 |
+| all    | 0 | 1 | 0 | 0 | 2 | 10 | 4 | 40 |
 
 2. Early isomorphism pruning if possible. This will require more thought.
 
