@@ -98,23 +98,6 @@ namespace dcp::day038 {
             const auto [r, c] = toRC(queen_pos);
             pos[r][c] = true;
             for (size_t delta = 0; delta < N; ++delta) {
-                if (r - delta >= 0) pos[r - delta][c] = true;
-                if (r + delta <  N) pos[r + delta][c] = true;
-                if (c - delta >= 0) pos[r][c - delta] = true;
-                if (c + delta <  N) pos[r][c + delta] = true;
-
-                if ((r - delta >= 0) && (c - delta >= 0)) pos[r - delta][c - delta] = true;
-                if ((r - delta >= 0) && (c + delta <  N)) pos[r - delta][c + delta] = true;
-                if ((r + delta <  N) && (c - delta >= 0)) pos[r + delta][c - delta] = true;
-                if ((r + delta <  N) && (c + delta >= 0)) pos[r + delta][c + delta] = true;
-            }
-        }
-
-        // Given a queen and a board, uncover the spots occluded by the queen, marking them as false.
-        static constexpr void uncover(const int queen_pos, valid_positions &pos) {
-            const auto [r, c] = toRC(queen_pos);
-            pos[r][c] = false;
-            for (size_t delta = 1; delta < N; ++delta) {
                 if (r - delta >= 0) pos[r - delta][c] = false;
                 if (r + delta <  N) pos[r + delta][c] = false;
                 if (c - delta >= 0) pos[r][c - delta] = false;
@@ -124,6 +107,23 @@ namespace dcp::day038 {
                 if ((r - delta >= 0) && (c + delta <  N)) pos[r - delta][c + delta] = false;
                 if ((r + delta <  N) && (c - delta >= 0)) pos[r + delta][c - delta] = false;
                 if ((r + delta <  N) && (c + delta >= 0)) pos[r + delta][c + delta] = false;
+            }
+        }
+
+        // Given a queen and a board, uncover the spots occluded by the queen, marking them as false.
+        static constexpr void uncover(const int queen_pos, valid_positions &pos) {
+            const auto [r, c] = toRC(queen_pos);
+            pos[r][c] = false;
+            for (size_t delta = 1; delta < N; ++delta) {
+                if (r - delta >= 0) pos[r - delta][c] = true;
+                if (r + delta <  N) pos[r + delta][c] = true;
+                if (c - delta >= 0) pos[r][c - delta] = true;
+                if (c + delta <  N) pos[r][c + delta] = true;
+
+                if ((r - delta >= 0) && (c - delta >= 0)) pos[r - delta][c - delta] = true;
+                if ((r - delta >= 0) && (c + delta <  N)) pos[r - delta][c + delta] = true;
+                if ((r + delta <  N) && (c - delta >= 0)) pos[r + delta][c - delta] = true;
+                if ((r + delta <  N) && (c + delta >= 0)) pos[r + delta][c + delta] = true;
             }
         }
 
@@ -185,14 +185,21 @@ namespace dcp::day038 {
             for (size_t i = 0; i < N; ++i)
                 pos[i] = -1;
 
+            // All valid positions should initially be true.
             valid_positions validPositions{};
+            for (size_t i = 0; i < N; ++i)
+                for (size_t j = 0; j < N; ++j)
+                    validPositions[i][j] = true;
 
             // We will only generate lexicographically smallest boards, row-by-row.
             int row = 0;
-            while (row > 0) {
+            int n = N;
+            while (row >= 0) {
                 // Do we have a valid position?
-                if (row == N)
+                if (row == N) {
                     boards += num_boards(pos);
+                    --row;
+                }
 
                 const int prev_pos = pos[row];
 

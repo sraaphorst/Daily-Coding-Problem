@@ -143,6 +143,6 @@ TEST_CASE("Day038: Verify rotation by 270 symmetry") {
 }
 
 TEST_CASE("Day039: One queen") {
-    constexpr auto n = NQueens<1>::n_queens();
+    auto n = NQueens<1>::n_queens();
     REQUIRE(n == 1);
 }
