@@ -142,7 +142,12 @@ TEST_CASE("Day038: Verify rotation by 270 symmetry") {
     REQUIRE(has_order<5,4>(rot_270<side+1>));
 }
 
-TEST_CASE("Day039: One queen") {
+TEST_CASE("Day039: One configuration of one queen") {
     auto n = NQueens<1>::n_queens();
     REQUIRE(n == 1);
+}
+
+TEST_CASE("Day039: Zero configurations of two queens") {
+    auto n = NQueens<2>::n_queens();
+    REQUIRE(n == 0);
 }
