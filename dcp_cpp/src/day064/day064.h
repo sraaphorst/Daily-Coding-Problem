@@ -10,61 +10,13 @@
 #include <utility>
 #include <unordered_map>
 
+#include "day064_kd.h"
+
 namespace dcp::day064 {
     template<size_t N>
     class KnightsTour {
-        // The directions a knight can take.
-        enum class KnightDirections {
-            NONE,
-
-            NNE,
-            NEE,
-
-            SEE,
-            SSE,
-
-            SSW,
-            SWW,
-
-            NWW,
-            NNW,
-        };
-
-        // An array of all moving directions so that we can iterate over them at each square and make sure each
-        // was executed.
-        const std::array<8, KnightDirections> directions{
-            KingsDirections::NNE,
-            KingsDirections::NEE,
-            KingsDirections::SEE,
-            KingsDirections::SSE,
-            KingsDirections::SSW,
-            KingsDirections::SWW,
-            KingsDirections::NWW,
-            KingsDirections::NNW
-        };
-
-        // A single movemment.
-        using Offset = std::pair<int, int>;
-
-        // The movements by direction.
-        using KnightMovement = std::unordered_map<KnightDirections, Offset>;
-
-        // The deltas
-        const KnightMovement knight_movement = {
-                {KnightDirections::NONE, Offset{ 0,  0}},
-
-                {KnightDirections::NNE,  Offset{-2,  1}},
-                {KnightDirections::SSW,  Offset{ 2, -1}},
-
-                {KnightDirections::NEE,  Offset{-1,  2}},
-                {KnightDirections::SWW,  Offset{ 1, -2}},
-
-                {KnightDirections::SEE,  Offset{ 1,  2}}
-                {KnightDirections::NWW,  Offset{-1, -2}},
-
-                {KnightDirections::SSE,  Offsets{ 2, 1}},
-                {KnightDirections::NNW,  Offsets{-2, 1}}
-        };
+        // We need to visit every square once; however, we start in a square.
+        static constexpr auto REQUIRED_MOVES = N * N - 1;
 
         // An N x N board.
         // The board. Entry (i,j) indictes the last known step to get there. So:
@@ -73,18 +25,26 @@ namespace dcp::day064 {
         // board[i]j] = -1 is a free position.
         using game_board = std::array<std::array<int, N>, N>;
 
-        // A complete board has N * N - 1 moves to unique squares:
-        // 0. The original origin.
-        // N * N - 1. Moves to the remaining squares.
-        constexpr auto required_moves = N * N - 1;
+
+        // A struct of information stored during a knight move.
+        // This is the information that records us moving INTO this position.
+        struct KnightInfo {
+            // The row and the column of
+            const int row = -1;
+            const int col = -1;
+
+            // The move that was last made here. This is an index into all_knights_directions.
+            int move_out_idx = 0;
+        };
 
         // A list of the movements made by the knight.
-        using knight_moves = std::array<KnightDirections, N * N - 1>;
+        using knight_moves = std::array<KnightInfo, N * N>;
 
         // We need the following information:
         // 1. The board and its coverage
         // 2. The list of movements of the knight
         // 3. The total number of boards found so far.
+
 
 
         /**
@@ -96,12 +56,16 @@ namespace dcp::day064 {
          * @return number of completed boards that can be reached starting from that position
          */
         static constexpr size_t calculate_aux(const int r0, const int c0) noexcept {
+            // The number of knight boards we have found.
             size_t num_boards = 0;
 
-            // Initialize the movement of the night.
+
+            // *** Create the array representing the movement of the knight.
+            // *** The top most entry represents the current position and thus, we start with one, i.e. entrance.
             knight_moves moves{};
             for (size_t i = 0; i < N * N; ++i)
                 moves[i] = KnightDirections::NONE;
+            moves[0] = KnightInfo{r0, c0, KnightDirections::NONE};
 
             // Mark the board as being empty.
             game_board board{};
@@ -113,13 +77,25 @@ namespace dcp::day064 {
             board[r0][c0] = 0;
 
             // Continue until we must backtrack off the board.
+            // We start in position 0 and continue until
             for (int current_move_num = 0; current_move_num >= 0; ) {
 
+                // ***** 1 *****
                 // Do we have a complete board?
-                // We consider a complete board to be one less
-                if (current_move_num == N * N - 1) {
+                // If we do, record and then backtrack to the next possible move.
+                if (current_move_num == REQUIRED_MOVES) {
                     ++num_boards;
-                    --c
+                    --current_move_num;
+                    continue;
+                }
+
+
+                // ***** 2 *****
+                // Did we backtrack to this position?
+                // Check to see if the row is already covered.
+                if (moves[current_move_num].move_out != KnightDirections::NONE) {
+                    // Continuously try the next position until we run out of positions.
+
                 }
             }
 
