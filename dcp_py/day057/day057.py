@@ -4,10 +4,10 @@
 
 from hypothesis import strategies as st
 from hypothesis import given
-from typing import List
+from typing import List, Optional
 
 
-def to_lines(text: str, k: int) -> List[str]:
+def to_lines(text: str, k: int) -> Optional[List[str]]:
     """
     Given a block of text and a maximum line length k, split the text into lines of length at most k.
     If this cannot be done, i.e. a word is longer than k, return None.

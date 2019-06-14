@@ -7,8 +7,7 @@ import day055.day055_v1 as d55
 
 from hypothesis import strategies as st
 from hypothesis import given
-from typing import List
-
+from typing import List, Optional
 
 class URLStore:
     """
@@ -28,7 +27,7 @@ class URLStore:
             id = d55.base_10_to_arb(i)
             yield (6  - len(id)) * '0' + id
 
-    def encode(self, url: str) -> str:
+    def encode(self, url: str) -> Optional[str]:
         """
         Given a URL, encode it and return its ID encoding.
         :param url: the URL to encode
@@ -45,7 +44,7 @@ class URLStore:
         self.id_to_url[next_id] = url
         return next_id
 
-    def decode(self, id: str) -> str:
+    def decode(self, id: str) -> Optional[str]:
         """
         Given an ID (which must be six alphanumeric digits long) that was previously associated with an encoded URL,
         return the original URL.

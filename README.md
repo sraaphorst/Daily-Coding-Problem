@@ -310,10 +310,16 @@ Given a biased coin, find a way to use it to produce an unbiased coin.
 Implemented in Python (and property tested with hypothesis):
 [Day 66](dcp_py/day066)
 
+## Day 68 \[Medium\]
+
+Given a board of bishops, determine the number of attacking pairs.
+
+Implemented in Python:
+[Day 68](dcp_py/day068)
 
 ## Outstanding problems
 
 4, 6, 9, 11, 13, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 32, 33, 34,
-37, 40, 41, 42, 52, 60, 61, 64
+37, 40, 41, 42, 52, 60, 61, 64, 67
 
-Completion: 39 / 66
+Completion: 40 / 68

@@ -1,4 +1,4 @@
-# Medium \[Day 52\]
+d# Medium \[Day 52\]
 
 This problem was asked by Facebook.
 
