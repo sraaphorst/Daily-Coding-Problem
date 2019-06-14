@@ -145,9 +145,9 @@ Implemented in Scala (and property tested with ScalaCheck):
 
 Count the number of solutions to the n-queen problem.
 
-INCOMPLETE. Needs testing.
+Implemented in C++: [Day 38](dcp_cpp/src/day038)
 
-Implemented in a brute-force backtracking isomorph-free `constexpr` algorithm in C++: [Day 38](dcp_cpp/src/day038)
+Future enhancements planned.
 
 ## Day 39 \[Medium\]
 
@@ -322,4 +322,4 @@ Implemented in Python:
 4, 6, 9, 11, 13, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 32, 33, 34,
 37, 40, 41, 42, 52, 60, 61, 64, 67
 
-Completion: 40 / 68
+Completion: 27 / 68.

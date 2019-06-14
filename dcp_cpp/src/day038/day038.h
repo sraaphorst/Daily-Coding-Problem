@@ -97,6 +97,9 @@ namespace dcp::day038 {
          * @return the unique number of configurations of n queens
          */
         static constexpr size_t calculate() {
+            if (N == 0)
+                return 0;
+
             // The number of boards.
             size_t num_boards = 0;
 
