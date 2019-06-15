@@ -10,7 +10,7 @@ Link: [Testing code](../../test/TestDay038.cpp)
 
 ### Possible future enhancements:
 
-1. Isomorphism chechking. We are generating each arrangement multiple times, namely the size of the
+1. Isomorphism checking. We are generating each arrangement multiple times, namely the size of the
 symmetry group divided by the size of the automorphism ground. In this case, I believe that the
 symmetry group has size eight. Here is a table that shows the difference between a full generation
 and an isomorph-free generation:
