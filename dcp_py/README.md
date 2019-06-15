@@ -22,3 +22,4 @@ The following problems are implemented in Python:
 * [Day 66](day066)
 * [Day 68](day068)
 * [Day 69](day069)
+* [Day 70](day070)

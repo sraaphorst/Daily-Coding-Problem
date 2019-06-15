@@ -324,6 +324,13 @@ Given a list of integers, return the largest product that can be made by multipl
 Implemented in Python (and property tested with hypothesis):
 [Day 69](dcp_py/day069)
 
+## Day 70 \[Easy\]
+
+Generate "perfect" numbers. Very unclear.
+
+Implemented in Python.
+[Day 70](dcp_py/day070)
+
 ## Outstanding problems
 
 4, 6, 9, 11, 13, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 32, 33, 34,
@@ -333,5 +340,5 @@ A table of summary information:
 
 | Status    | Fraction |
 |-----------|----------|
-| Competed  | 42 / 69  |
-| Remaining | 26 / 69  |
+| Competed  | 43 / 70  |
+| Remaining | 27 / 70  |
