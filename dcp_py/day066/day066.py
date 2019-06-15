@@ -61,3 +61,4 @@ def test_coin(probability1: float):
 
     # Generous wiggle room.
     assert(abs(probability1 - 0.5) < 1e-2)
+
