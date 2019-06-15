@@ -321,7 +321,7 @@ Implemented in Python:
 
 Given a list of integers, return the largest product that can be made by multiplying any three integers.
 
-Implemented in Python:
+Implemented in Python (and property tested with hypothesis):
 [Day 69](dcp_py/day069)
 
 ## Outstanding problems
@@ -329,14 +329,9 @@ Implemented in Python:
 4, 6, 9, 11, 13, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 32, 33, 34,
 37, 40, 41, 42, 52, 60, 61, 64, 67
 
-<<<<<<< HEAD
-Completion: 28 / 69.
-=======
 A table of summary information:
 
 | Status    | Fraction |
 |-----------|----------|
-| Competed  | 41 / 68  |
-| Remaining | 27 / 68  |
-
->>>>>>> 9d5fddc562ca151ebc0f9467508ab897cfcea4dd
+| Competed  | 42 / 69  |
+| Remaining | 26 / 69  |
