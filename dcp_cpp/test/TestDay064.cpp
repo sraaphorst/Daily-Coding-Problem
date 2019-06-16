@@ -8,5 +8,5 @@
 #include <array>
 #include <iostream>
 
-#include <day064/day064.h>
+#include <day064/day064.cpp>
 using namespace dcp::day064;
