@@ -1,5 +1,5 @@
 /**
- * new.h
+ * knights tour.h
  *
  * By Sebastian Raaphorst, 2019.
  */
@@ -66,20 +66,6 @@ namespace dcp::day064 {
         // 1. -1 if not visited.
         // 2. the move number if visited.
         using ChessBoard = std::array<std::array<int, N>, N>;
-
-//        static void print_board(const ChessBoard &board) {
-//            static std::string_view view{"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
-//            std::cout << "--- BOARD ---\n";
-//            for (int i=0; i < N; ++i) {
-//                for (int j = 0; j < N; ++j)
-//                    if (board[i][j] == -1)
-//                        std::cout << "*";
-//                    else
-//                        std::cout << view[board[i][j]];
-//
-//                std::cout << '\n';
-//            }
-//        }
 
     public:
         /**
@@ -175,6 +161,6 @@ namespace dcp::day064 {
 }
 
 int main() {
-    constexpr auto boards = dcp::day064::KnightsTour<5>::computeFrom(0, 0);
+    auto boards = dcp::day064::KnightsTour<5>::computeFrom(0, 0);
     std::cout << boards;
 }
