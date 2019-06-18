@@ -9,6 +9,7 @@ The following problems are implemented in Java:
 * [Day 39](src/main/java/dcp/day039)
 * [Day 53](src/main/java/dcp/day053)
 * [Day 59](src/main/java/dcp/day059)
+* [Day 73](src/main/java/dcp/day073)
 
 ## Scala implementations
 

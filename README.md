@@ -331,14 +331,14 @@ Generate "perfect" numbers. Very unclear.
 Implemented in Python.
 [Day 70](dcp_py/day070)
 
+## Day 73 \[Easy\]
+
+Reverse a singly linked list in place.
+
+Implemented in Java (and property tested with ScalaCheck):
+[Day 73](dcp_jvm/src/main/scala/dcp/day073)
+
 ## Outstanding problems
 
-4, 6, 9, 11, 13, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 32, 33, 34,
-37, 40, 41, 42, 52, 60, 61, 64, 67
-
-A table of summary information:
-
-| Status    | Fraction |
-|-----------|----------|
-| Competed  | 43 / 70  |
-| Remaining | 27 / 70  |
+Some problems are outstanding, and others have been repeated, so they
+were not attempted again.

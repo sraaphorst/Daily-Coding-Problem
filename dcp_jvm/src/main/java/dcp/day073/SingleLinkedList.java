@@ -40,20 +40,31 @@ final public class SingleLinkedList<T> implements Iterable<T> {
         }
     }
 
+    /**
+     * Convenience method to create a populated Optional of a node.
+     * @param data the data in the node
+     * @param tail the tail to append to the node
+     * @param <T> the type of the data held in the node
+     * @return a populated Optional holding a node with this data
+     */
     private static <T> Optional<Node<T>> create(T data, Optional<Node<T>> tail) {
         return Optional.of(new Node<>(data, tail));
     }
 
     /**
-     * Convenience method to create a populated Option of a node.
+     * Convenience method to create a populated Optional of a node.
      * @param data the data in the node
      * @param <T> the type of the data held in the node
-     * @return a poulated Option holding a node with data
+     * @return a poulated Optional holding a node with data
      */
     private static <T> Optional<Node<T>> create(T data) {
         return Optional.of(new Node<>(data));
     }
 
+    /**
+     * Allow iteration over the list.
+     * @param <T> the type of the data held in the list
+     */
     private static class NodeIterator<T> implements Iterator<T> {
         Optional<Node<T>> node;
 
@@ -74,40 +85,45 @@ final public class SingleLinkedList<T> implements Iterable<T> {
         }
     }
 
-    private int size;
     private Optional<Node<T>> head;
 
     public SingleLinkedList() {
-        size = 0;
         head = Optional.empty();
     }
 
+    /**
+     * Append an element to the singly-linked list.
+     * Note this is a slow, O(n) operation as we must traverse the whole list.
+     * @param data the element to append
+     * @return the list, to allow chaining operations
+     */
     public SingleLinkedList<T> append(T data) {
-        if (head.isEmpty()) {
+        if (head.isEmpty())
             head = create(data);
-            size = 1;
-        }
         else {
+            // Go to the last element
             var ptr = head;
             while (ptr.isPresent() && ptr.get().tail.isPresent())
                 ptr = ptr.flatMap(p -> p.tail);
             ptr.ifPresent(p -> p.tail = create(data));
-            ++size;
         }
         return this;
     }
 
+    /**
+     * Prepend an element to the singly-linked list in O(1).
+     * @param data the element to prepend
+     * @return the list, to allow chaining operations
+     */
     public SingleLinkedList<T> prepend(T data) {
         head = create(data, head);
-        ++size;
         return this;
     }
 
     private void reverse_aux(Optional<Node<T>> prev, Optional<Node<T>> current) {
         // If we have reached the end, make the head the last element.
-        if (current.isEmpty()) {
+        if (current.isEmpty())
             head = prev;
-        }
 
         // Otherwise, continue and then reverse.
         else {
@@ -116,6 +132,9 @@ final public class SingleLinkedList<T> implements Iterable<T> {
         }
     }
 
+    /**
+     * Reverse the contents of the list by traversing the list and then backtracking, flipping the pointers.
+     */
     public void reverse() {
         reverse_aux(Optional.empty(), head);
     }
@@ -123,19 +142,5 @@ final public class SingleLinkedList<T> implements Iterable<T> {
     @Override
     public Iterator<T> iterator() {
         return new NodeIterator<>(head);
-    }
-
-    public static void main(String[] args) {
-        SingleLinkedList<Integer> sll1 = new SingleLinkedList<>();
-        sll1.prepend(1).prepend(2).prepend(3).prepend(4).prepend(5);
-        for (final var i: sll1) {
-            System.out.println(i);
-        }
-
-        sll1.reverse();
-        for (final var i: sll1) {
-            System.out.println(i);
-        }
-
     }
 }
