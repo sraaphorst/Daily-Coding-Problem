@@ -152,7 +152,7 @@ Future enhancements planned.
 
 Visual implementation of Conway's Game of Life.
 
-Implemented in Java: [Day 39](dcp_jvm/src/main/scala/dcp/day039)
+Implemented in Java: [Day 39](dcp_jvm/src/main/java/dcp/day039)
 
 ## Day 43 \[Easy\]
 
