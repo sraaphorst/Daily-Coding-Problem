@@ -125,7 +125,6 @@ public final class GameOfLife extends JFrame {
         board = calculateNextBoard();
         getContentPane().repaint();
         repaint();
-
     }
 
     /**
