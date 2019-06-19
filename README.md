@@ -338,6 +338,13 @@ Reverse a singly linked list in place.
 Implemented in Java (and property tested with ScalaCheck):
 [Day 73](dcp_jvm/src/main/scala/dcp/day073)
 
+## Day 74 \[Medium\]
+
+Find the number of occurrences of a product in a muliplication table.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 74](dcp_py/day074)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
