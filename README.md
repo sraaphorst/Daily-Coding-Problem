@@ -136,7 +136,6 @@ Implemented in C++: [Day 35](dcp_cpp/src/day035)
 ## Day 36 \[Medium\]
 
 Find the second largest element in a binary search tree.
-(Property tested with ScalaCheck.)
 
 Implemented in Scala (and property tested with ScalaCheck):
 [Day 36](dcp_jvm/src/main/scala/dcp/day036)
