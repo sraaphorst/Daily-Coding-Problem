@@ -21,3 +21,5 @@ The following problems are implemented in Scala:
 * [Day 44](src/main/scala/dcp/day044)
 * [Day 48](src/main/scala/dcp/day048)
 * [Day 50](src/main/scala/dcp/day050)
+* [Day 75](src/main/scala/dcp/day075)
+* [Day 76](src/main/scala/dcp/day076)

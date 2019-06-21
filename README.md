@@ -351,6 +351,14 @@ Find the length of the largest increasing subarray within an array.
 Implemented in Scala (and property tested with ScalaCheck):
 [Day 75](dcp_jvm/src/main/scala/dcp/day075)
 
+## Day 76 \[Medium\]
+
+Given a grid, find the mnimum number of columns that can be removed to
+ensure each row is ordered from top to borrom lexicographically.
+
+Implemented in Scala (and property checked with ScalaCheck):
+[Day 76](dcp_jvm/src/main/scala/dcp/day076)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
