@@ -1,15 +1,13 @@
 package dcp.day075
 
 import math.max
+import scala.collection.mutable
 import scala.math.Ordering.Implicits._
 
 object LongestIncreasingSubsequence extends App {
   /**
     * Brute force method of finding the longest subsequence. We try all possibilities, so if there are n elements
     * in the list, the algorithm takes O(n**2).
-    * @param lst
-    * @tparam T
-    * @return
     */
   def longestSubsequenceBF[T : Ordering](lst: List[T]): Int = {
 
@@ -33,7 +31,11 @@ object LongestIncreasingSubsequence extends App {
   }
 
 
-  def longestSubsequenceDP[T : Ordering](lst: List[T]): Int = {
+  /**
+    * My initial idea was to do a refinement across the list.
+    * This works in most cases, but there are a small number of exceptions.
+    */
+  def longestSubsequenceDP_NotWorking[T : Ordering](lst: List[T]): Int = {
     /**
       * Find the maximum crossover list between a and b
       * @param a list where a(0) < ... < a(n-1)
@@ -45,22 +47,23 @@ object LongestIncreasingSubsequence extends App {
       val m = b.size
 
       // For each possible ai, find where we can switch over to b.
-      // We also want a and b
-      val candidates = for (i <- Range(0, n)) yield {
-        val bs = b.dropWhile(_ < a(i))
-        a.take(i) ++ bs
-      }
+      val candidates = b :: (for (i <- Range(0, n)) yield {
+        val bs = b.dropWhile(_ <= a(i))
+        a.take(i+1) ++ bs
+      }).toList
 
-      println(s"a=$a, b=$b, candidates=$candidates")
-
-      // Return the longest of said lists.
-      candidates.maxBy(_.size)
+      // We want the lexicographically smallest candidate of the candidates amongst the largest size.
+      val max_size = candidates.map(_.size).max
+      val winner = candidates.filter(_.size == max_size).min
+      //println(s"a=$a, b=$b, candidates=$candidates, winner=$winner")
+      winner
     }
 
     /**
       * A collection of adjacent sublists. Find the maximum crossover between each adjacent pair.
       * @param lst the collection of lists
       * @return a collection of maximum crossovers between adjacent pairs, resulting in a list of one shorter
+      *         (or more due to the call to distinct)
       */
     def aux(lsts: List[List[T]]): List[T] = lsts match {
       case Nil      => Nil
@@ -77,9 +80,40 @@ object LongestIncreasingSubsequence extends App {
     longest_increasing_subsequence.size
   }
 
+  /**
+    * We memoize the function since it has repeated calls.
+    */
+  //def Memoize[I, O](f: I => O): I => O = new mutable.HashMap[I, O]() { key: I => getOrElseUpdate(key, f(key)) }
+  def Memoize[I, O](f: I => O): I => O = new mutable.HashMap[I, O]() {
+    override def apply(key: I) = getOrElseUpdate(key, f(key))
+  }
+
+  /**
+    * Another dynamic programming approach, but this one works in all cases.
+    * length(i) is the length of the longest increasing subarray ending at i and containing lst(i).
+    *
+    * Thus, we have the recursion:
+    * 1. length(0) = 1
+    * 2. length(i) = 1 + max({length(j) | j < i and lst(j) < lst(i)}), or 1 if no such j exists.
+    */
+  def longestSubsequenceDP[T : Ordering](lst: List[T]): Int = {
+    if (lst.isEmpty) 0
+    else {
+      lazy val aux: Int => Int = Memoize {
+        case 0 => 1
+        case i =>
+          // Include 0 here to account for the case where no such j exists; thus, max never is called on an empty list.
+          1 + (0 :: Range(0, i).filter(lst(_) < lst(i)).map(aux).toList).max
+      }
+      lst.indices.map(aux).max
+    }
+  }
+
   val testarray: List[Int] = List(0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15)
-  val xyz = longestSubsequenceBF(testarray)
-  assert(xyz == 6)
-  val xyzs = longestSubsequenceDP(testarray)
-  assert(xyzs == 6)
+  assert(longestSubsequenceBF(testarray) == 6)
+  assert(longestSubsequenceDP(testarray) == 6)
+
+  // Counterexample: generates 3 (-1, 1, 3) when should generate four (-1, 0, 1, 3).
+//  val a = List(-1, 1, 3, 0, -1, 1, 3)
+//  println(s"${longestSubsequenceDP_NotWorking(a)}")
 }

@@ -344,6 +344,13 @@ Find the number of occurrences of a product in a muliplication table.
 Implemented in Python (and property tested with hypothesis):
 [Day 74](dcp_py/day074)
 
+## Day 75 \[Hard\]
+
+Find the length of the largest increasing subarray within an array.
+
+Implemented in Scala (and property tested with ScalaCheck):
+[Day 75](dcp_jvm/src/main/scala/dcp/day075)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
