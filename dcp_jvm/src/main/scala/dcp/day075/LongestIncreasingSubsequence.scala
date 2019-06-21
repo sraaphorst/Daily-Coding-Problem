@@ -30,7 +30,6 @@ object LongestIncreasingSubsequence extends App {
     aux(None, lst)
   }
 
-
   /**
     * My initial idea was to do a refinement across the list.
     * This works in most cases, but there are a small number of exceptions.
@@ -81,9 +80,8 @@ object LongestIncreasingSubsequence extends App {
   }
 
   /**
-    * We memoize the function since it has repeated calls.
+    * We memoize the auxiliary function since it has repeated calls.
     */
-  //def Memoize[I, O](f: I => O): I => O = new mutable.HashMap[I, O]() { key: I => getOrElseUpdate(key, f(key)) }
   def Memoize[I, O](f: I => O): I => O = new mutable.HashMap[I, O]() {
     override def apply(key: I) = getOrElseUpdate(key, f(key))
   }
@@ -114,6 +112,6 @@ object LongestIncreasingSubsequence extends App {
   assert(longestSubsequenceDP(testarray) == 6)
 
   // Counterexample: generates 3 (-1, 1, 3) when should generate four (-1, 0, 1, 3).
-//  val a = List(-1, 1, 3, 0, -1, 1, 3)
-//  println(s"${longestSubsequenceDP_NotWorking(a)}")
+  // val a = List(-1, 1, 3, 0, -1, 1, 3)
+  // assert(longestSubsequenceDP_NotWorking(a)} == 4)
 }
