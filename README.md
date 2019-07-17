@@ -359,6 +359,13 @@ ensure each row is ordered from top to borrom lexicographically.
 Implemented in Scala (and property checked with ScalaCheck):
 [Day 76](dcp_jvm/src/main/scala/dcp/day076)
 
+## Day 77 \[Easy\]
+
+Given a list of possibly overlapping intervals, return a new list of intervals where all overlapping intervals have been merged.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 77](dcp_py/day077)
+
 ## Day 91 \[Easy\]
 
 What does the below code snippet print out? How can we fix the anonymous functions to behave as we'd expect?
