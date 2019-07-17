@@ -359,6 +359,22 @@ ensure each row is ordered from top to borrom lexicographically.
 Implemented in Scala (and property checked with ScalaCheck):
 [Day 76](dcp_jvm/src/main/scala/dcp/day076)
 
+## Day 91 \[Easy\]
+
+What does the below code snippet print out? How can we fix the anonymous functions to behave as we'd expect?
+
+```
+functions = []
+for i in range(10):
+    functions.append(lambda : i)
+
+for f in functions:
+    print(f())
+```
+
+Implemented in Python:
+[Day 91](dcp_py/day091)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
