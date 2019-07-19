@@ -6,7 +6,6 @@
 
 #include <catch.hpp>
 #include <array>
-#include <iostream>
 
 #include <day056/day056.h>
 using namespace dcp::day056;
