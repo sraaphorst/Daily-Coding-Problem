@@ -382,6 +382,15 @@ for f in functions:
 Implemented in Python:
 [Day 91](dcp_py/day091)
 
+
+## Day 104 \[Easy\]
+
+Check if the contents of a doubly linked list are palindromic.
+
+How about a singly linked list?
+
+Implemented in C++: [Day 104](dcp_cpp/src/day104)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
