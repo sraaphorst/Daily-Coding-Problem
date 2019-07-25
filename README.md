@@ -391,6 +391,12 @@ How about a singly linked list?
 
 Implemented in C++: [Day 104](dcp_cpp/src/day104)
 
+## Day 107 \[Easy\]
+
+Given a binary tree, print it row-by-row.
+
+Implemented in Scala: [Day 107](dcp_jvm/src/main/scala/dcp/day107)
+
 ## Day 108 \[Easy\]
 
 Determine if one string can be rotated to match antoher.
@@ -412,6 +418,12 @@ a6 a7 a4 a5 a2 a3 a0 a1.
 ```
 
 Implemented in C++: [Day109](dcp_cpp/src/day109)
+
+## Day 110 \Medium\]
+
+Given a binary tree, return all paths from the roots to the leaves.
+
+Implemented in Scala: [Day 110](dcp_jvm/src/main/scala/dcp/day110)
 
 ## Outstanding problems
 
