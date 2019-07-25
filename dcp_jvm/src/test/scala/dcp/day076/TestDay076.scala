@@ -1,3 +1,7 @@
+// TestDay076.scala
+//
+// By Sebastian Raaphorst, 2019.
+
 package dcp.day076
 
 import org.scalatest.prop.GeneratorDrivenPropertyChecks
