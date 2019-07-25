@@ -423,7 +423,8 @@ Implemented in C++: [Day109](dcp_cpp/src/day109)
 
 Given a binary tree, return all paths from the roots to the leaves.
 
-Implemented in Scala: [Day 110](dcp_jvm/src/main/scala/dcp/day110)
+Implemented in Scala (and property checked with ScalaCheck):
+[Day 110](dcp_jvm/src/main/scala/dcp/day110)
 
 ## Outstanding problems
 
