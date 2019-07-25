@@ -391,6 +391,12 @@ How about a singly linked list?
 
 Implemented in C++: [Day 104](dcp_cpp/src/day104)
 
+## Day 108 \[Easy\]
+
+Determine if one string can be rotated to match antoher.
+
+Implemented in Python: [Day 108](dcp_py/day108)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
