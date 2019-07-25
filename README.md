@@ -397,6 +397,22 @@ Determine if one string can be rotated to match antoher.
 
 Implemented in Python: [Day 108](dcp_py/day108)
 
+## Day 109 \[Medium\]
+
+Given a binary string of length 8, interleave the bits, i.e.:
+
+```
+a7 a6 a5 a4 a3 a2 a1 a0
+```
+
+becomes:
+
+```
+a6 a7 a4 a5 a2 a3 a0 a1.
+```
+
+Implemented in C++: [Day109](dcp_cpp/src/day109)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
