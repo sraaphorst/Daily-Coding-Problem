@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from hypothesis import strategies as st
-from hypothesis import given, settings
+from hypothesis import given
 from typing import List
 from typing import Tuple
 

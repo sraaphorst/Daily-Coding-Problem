@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from hypothesis import strategies as st
+from hypothesis import given
 from typing import List
 
 
@@ -10,11 +12,21 @@ def brute_force_run(steps: List[int]) -> bool:
     :param steps: the list of hops we can make from each position
     :return: True if we can reach the end, and False otherwise.
 
+    >>> brute_force_run([])
+    False
+    >>> brute_force_run([1])
+    True
+    >>> brute_force_run([0])
+    True
     >>> brute_force_run([2, 0, 1, 0])
     True
     >>> brute_force_run([1, 1, 0, 1])
     False
     """
+    # No steps means no movement: fail.
+    if not steps:
+        return False
+
     end_pos = len(steps) - 1
 
     def from_position(pos: int) -> bool:
@@ -43,11 +55,20 @@ def dynamic_programming_run(steps: List[int]) -> bool:
     :param steps: the list of hops we can make from each position
     :return: True if we can reach the end, and False otherwise.
 
+    >>> dynamic_programming_run([])
+    False
+    >>> dynamic_programming_run([1])
+    True
+    >>> dynamic_programming_run([0])
+    True
     >>> dynamic_programming_run([2, 0, 1, 0])
     True
     >>> dynamic_programming_run([1, 1, 0, 1])
     False
     """
+    # No steps means no movement: fail.
+    if not steps:
+        return False
 
     def accessible(n):
         """
@@ -55,11 +76,13 @@ def dynamic_programming_run(steps: List[int]) -> bool:
         :param n: the position
         :return: True if accessible, and false otherwise.
         """
-        # If we have nowhere to go or can go nowhere, then fail.
-        if n == 0 or steps[0] == 0:
+
+        if n == 0:
+            return True
+        if steps[0] == 0:
             return False
 
-        hops = [False] * len(steps)
+        hops = [False] * (len(steps) + 1)
         hops[0] = True
 
         # Find for all positions [1,n] if they can be accessed.
@@ -72,3 +95,8 @@ def dynamic_programming_run(steps: List[int]) -> bool:
         return hops[n]
 
     return accessible(len(steps)-1)
+
+
+@given(st.lists(st.integers(min_value=0, max_value=5), max_size=100))
+def test_it(steps: List[int]):
+    assert brute_force_run(steps) == dynamic_programming_run(steps)

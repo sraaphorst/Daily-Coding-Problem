@@ -391,6 +391,13 @@ How about a singly linked list?
 
 Implemented in C++: [Day 104](dcp_cpp/src/day104)
 
+## Day 106 \[Medium\]
+
+Given an array of hops, see if you can make it to the end.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 106](dcp_py/day106)
+
 ## Day 107 \[Easy\]
 
 Given a binary tree, print it row-by-row.
