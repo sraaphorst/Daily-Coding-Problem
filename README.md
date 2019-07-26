@@ -383,6 +383,14 @@ Implemented in Python:
 [Day 91](dcp_py/day091)
 
 
+## Day 102 \[Medium\]
+
+Given a sum `k` and a list of elements `L`, find a contiguous sublist
+of `L` that sums to `k`.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 102](dcp_py/day102)
+
 ## Day 104 \[Easy\]
 
 Check if the contents of a doubly linked list are palindromic.

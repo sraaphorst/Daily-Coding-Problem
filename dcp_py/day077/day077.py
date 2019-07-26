@@ -44,7 +44,6 @@ def check_intervals(intervals: List[Tuple[int, int]]) -> bool:
             return False
     return True
 
-
 @given(st.lists(st.tuples(st.integers(min_value=-100, max_value=100), st.integers(min_value=-100, max_value=100)),
                 min_size=1, max_size=100))
 def test_it(intervals: List[Tuple[int, int]]):
