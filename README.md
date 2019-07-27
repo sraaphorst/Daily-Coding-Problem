@@ -441,6 +441,13 @@ Given a binary tree, return all paths from the roots to the leaves.
 Implemented in Scala (and property checked with ScalaCheck):
 [Day 110](dcp_jvm/src/main/scala/dcp/day110)
 
+## Day 112 \[Hard\]
+
+Given two nodes in a binary tree, find their least common ancestor.
+
+Implemented in Java:
+[Day 112](dcp_jvm/src/main/java/dcp/day112)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they

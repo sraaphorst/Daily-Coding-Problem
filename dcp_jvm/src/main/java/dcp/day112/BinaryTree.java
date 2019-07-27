@@ -7,7 +7,7 @@ package dcp.day112;
 import java.util.*;
 
 // A binary tree with a parent reference.
-public class BinaryTree<T> {
+public final class BinaryTree<T> {
     // For the root, this is None.
     private Optional<BinaryTree<T>> parent;
     private Optional<BinaryTree<T>> left;
@@ -69,6 +69,7 @@ public class BinaryTree<T> {
         var p = this;
         for (; !p.isRoot(); p = p.parent.get()) {
             map.put(depth, p);
+            --depth;
         }
         map.put(0, p);
 
@@ -102,26 +103,17 @@ public class BinaryTree<T> {
         if (this == o) return true;
         if (!(o instanceof BinaryTree)) return false;
         final var that = (BinaryTree<?>) o;
-        return parent.equals(that.parent) &&
-                left.equals(that.left) &&
-                right.equals(that.right) &&
-                value.equals(that.value);
+        return value.equals(that.value);
+    }
+
+    @Override
+    public String toString() {
+        return "n(" + value + ")";
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(parent, left, right, value);
-    }
-
-    public static void main(String[] args) {
-        final var root = new BinaryTree<>(0);
-        final var left = new BinaryTree<>(1);
-        final var right = new BinaryTree<>(2);
-        root.setLeft(left);
-        root.setRight(right);
-        assert(leastCommonAncestor(left, right) == root);
-        assert(leastCommonAncestor(left, left) == left);
-        assert(leastCommonAncestor(root, root) == root);
-        root.destroy();
+        return Objects.hash(left, right, value);
     }
 }
+
