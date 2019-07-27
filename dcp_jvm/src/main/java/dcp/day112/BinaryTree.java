@@ -81,7 +81,7 @@ public final class BinaryTree<T> {
      * Could optimize memory here by not making the path maps and just traversing backwards through the tree
      * starting from minmax depth above each node, but this is easier.
      */
-    public static <T> BinaryTree<T> leastCommonAncestor(final BinaryTree<T> t1, final BinaryTree<T> t2) {
+    public static BinaryTree<?> leastCommonAncestor(final BinaryTree<?> t1, final BinaryTree<?> t2) {
         final var m1 = t1.pathMap();
         final var m2 = t2.pathMap();
 
