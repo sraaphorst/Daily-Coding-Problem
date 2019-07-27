@@ -1,3 +1,7 @@
+// TestDay008.scala
+//
+// By Sebastian Raaphorst, 2019.
+
 package dcp.day008
 
 import org.scalatest.FunSuite

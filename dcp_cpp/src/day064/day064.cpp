@@ -160,7 +160,7 @@ namespace dcp::day064 {
     };
 }
 
-int main() {
-    auto boards = dcp::day064::KnightsTour<5>::computeFrom(0, 0);
-    std::cout << boards;
-}
+//int main() {
+//    auto boards = dcp::day064::KnightsTour<5>::computeFrom(0, 0);
+//    std::cout << boards;
+//}

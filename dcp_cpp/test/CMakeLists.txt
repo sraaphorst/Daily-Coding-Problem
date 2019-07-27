@@ -29,6 +29,8 @@ set(TEST_LIST
         TestDay038
         TestDay056
         TestDay064
+        TestDay104
+        TestDay109
         )
 
 foreach(testname ${TEST_LIST})

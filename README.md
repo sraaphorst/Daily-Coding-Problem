@@ -359,6 +359,88 @@ ensure each row is ordered from top to borrom lexicographically.
 Implemented in Scala (and property checked with ScalaCheck):
 [Day 76](dcp_jvm/src/main/scala/dcp/day076)
 
+## Day 77 \[Easy\]
+
+Given a list of possibly overlapping intervals, return a new list of intervals where all overlapping intervals have been merged.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 77](dcp_py/day077)
+
+## Day 91 \[Easy\]
+
+What does the below code snippet print out? How can we fix the anonymous functions to behave as we'd expect?
+
+```
+functions = []
+for i in range(10):
+    functions.append(lambda : i)
+
+for f in functions:
+    print(f())
+```
+
+Implemented in Python:
+[Day 91](dcp_py/day091)
+
+
+## Day 102 \[Medium\]
+
+Given a sum `k` and a list of elements `L`, find a contiguous sublist
+of `L` that sums to `k`.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 102](dcp_py/day102)
+
+## Day 104 \[Easy\]
+
+Check if the contents of a doubly linked list are palindromic.
+
+How about a singly linked list?
+
+Implemented in C++: [Day 104](dcp_cpp/src/day104)
+
+## Day 106 \[Medium\]
+
+Given an array of hops, see if you can make it to the end.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 106](dcp_py/day106)
+
+## Day 107 \[Easy\]
+
+Given a binary tree, print it row-by-row.
+
+Implemented in Scala: [Day 107](dcp_jvm/src/main/scala/dcp/day107)
+
+## Day 108 \[Easy\]
+
+Determine if one string can be rotated to match antoher.
+
+Implemented in Python: [Day 108](dcp_py/day108)
+
+## Day 109 \[Medium\]
+
+Given a binary string of length 8, interleave the bits, i.e.:
+
+```
+a7 a6 a5 a4 a3 a2 a1 a0
+```
+
+becomes:
+
+```
+a6 a7 a4 a5 a2 a3 a0 a1.
+```
+
+Implemented in C++: [Day109](dcp_cpp/src/day109)
+
+## Day 110 \Medium\]
+
+Given a binary tree, return all paths from the roots to the leaves.
+
+Implemented in Scala (and property checked with ScalaCheck):
+[Day 110](dcp_jvm/src/main/scala/dcp/day110)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they

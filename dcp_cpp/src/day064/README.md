@@ -1,4 +1,4 @@
-# Day 64 \[Hard\
+# Day 64 \[Hard\]
 
 This problem was asked by Google.
 

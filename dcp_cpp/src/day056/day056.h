@@ -1,4 +1,4 @@
-d/**
+/**
  * day056.h
  *
  * By Sebastian Raaphorst, 2019.
