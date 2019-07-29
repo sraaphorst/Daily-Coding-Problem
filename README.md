@@ -448,6 +448,12 @@ Given two nodes in a binary tree, find their least common ancestor.
 Implemented in Java:
 [Day 112](dcp_jvm/src/main/java/dcp/day112)
 
+## Day 113 \[Medium\]
+
+For a mutable string, reverse the order of its words.
+
+Implemented in C++: [Day 113](dcp_cpp/src/day113)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
