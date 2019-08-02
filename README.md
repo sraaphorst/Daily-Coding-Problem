@@ -454,6 +454,21 @@ For a mutable string, reverse the order of its words.
 
 Implemented in C++: [Day 113](dcp_cpp/src/day113)
 
+## Day 114 \[Hard\]
+
+For a mutable string, reverse the order of its words while maintaining
+the order of its delimiters. WIP.
+
+Implemented in C++: [Day 114](dcp_cpp/src/day114)
+
+## Day 118 \[Easy\]
+
+Given a sorted array, square the contents of the array and provide the
+output in sorted order.
+
+Implemented in `constexpr` C++: [Day 118](dcp_cpp/src/day118)
+
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
