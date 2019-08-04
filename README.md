@@ -468,6 +468,12 @@ output in sorted order.
 
 Implemented in `constexpr` C++: [Day 118](dcp_cpp/src/day118)
 
+## Day 120 \[Medium\]
+
+Instead of a singleton, implement an alternating pair of singletons.
+
+Implemented in Java: 
+[Day 120](dcp_jvm/src/main/java/dcp/day120)
 
 ## Outstanding problems
 
