@@ -206,6 +206,17 @@ project/plugins/project/
 .idea
 
 
+# ******************
+# ***** Kotlin *****
+# ******************
+
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
 
 
 
