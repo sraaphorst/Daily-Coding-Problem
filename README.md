@@ -483,6 +483,13 @@ Instead of a singleton, implement an alternating pair of singletons.
 Implemented in Java: 
 [Day 120](dcp_jvm/src/main/java/dcp/day120)
 
+## Day 121 \[Hard\]
+
+Write a means of identifying k-palindromes.
+
+Implemented in Python.
+[Day 121](dcp_py/day121)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
