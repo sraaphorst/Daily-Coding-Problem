@@ -469,6 +469,13 @@ output in sorted order.
 Implemented in `constexpr` C++: [Day 118](dcp_cpp/src/day118)
 
 
+## Day 122 \[Medium\]
+
+Given an `n` by `m` matrix, starting at the top left and moving only
+right and down, find the largest sum.
+
+Implemeneted in Python: [Day 122](dcp_py/src/day122)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
