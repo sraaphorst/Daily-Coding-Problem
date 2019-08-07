@@ -78,7 +78,7 @@ namespace dcp::day118 {
         size_t i2 = 0;
         while (i1 + i2 < N1 + N2) {
             // Note that we have to be REALLY careful here to convince the compiler that we are not reading past the end
-            // of the arrays for this to compile as constexpr, hence the extraneous checks if the if statements.
+            // of the arrays for this to compile as constexpr, hence the extraneous checks in the if statements.
             const auto idx = i1 + i2;
             if (i2 == N2 || (i1 < N1 && arr1[i1] <= arr2[i2])) {
                 arr_merge[idx] = arr1[i1++];
