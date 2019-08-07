@@ -10,6 +10,7 @@ for the day. So far, the programming languages I use are:
 * Java 10
 * Python 3.6
 * Scala 2.12
+* Kotlin 1.3.40 (in the process of learning)
 
 The C++ testing is done using:
 * Unit testing with [Catch2](https://github.com/catchorg/Catch2).
@@ -468,6 +469,26 @@ output in sorted order.
 
 Implemented in `constexpr` C++: [Day 118](dcp_cpp/src/day118)
 
+## Day 119 \[Medium\]
+
+Given a set of intervals, determine a smallest collection of intervals
+that cover the intervals.
+
+Implemented in Kotlin: [Day 119](dcp_jvm/src/main/kotlin/dcp/day119)
+
+## Day 120 \[Medium\]
+
+Instead of a singleton, implement an alternating pair of singletons.
+
+Implemented in Java: 
+[Day 120](dcp_jvm/src/main/java/dcp/day120)
+
+## Day 121 \[Hard\]
+
+Write a means of identifying k-palindromes.
+
+Implemented in Python.
+[Day 121](dcp_py/day121)
 
 ## Day 122 \[Medium\]
 
