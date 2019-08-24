@@ -487,8 +487,14 @@ Implemented in Java:
 
 Write a means of identifying k-palindromes.
 
-Implemented in Python.
+Implemented in Python:
 [Day 121](dcp_py/day121)
+
+## Day 140 \[Medium\]
+
+Find the two non-repeated elements in a list of integral elements.
+
+Implemented in `constexpr` C++: [Day 140](dcp_cpp/src/day140)
 
 ## Outstanding problems
 

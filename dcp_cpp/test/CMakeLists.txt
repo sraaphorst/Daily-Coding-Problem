@@ -34,6 +34,7 @@ set(TEST_LIST
         TestDay113
         TestDay114
         TestDay118
+        TestDay140
         )
 
 foreach(testname ${TEST_LIST})
