@@ -18,3 +18,5 @@ return:
 Follow-up: Does your solution work for the following cases:
 * `"hello/world:here/"`
 * `"hello//world:here"`
+
+Link: [Testing code](../../test/TestDay114.cpp)
