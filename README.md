@@ -503,6 +503,14 @@ Find the two non-repeated elements in a list of integral elements.
 
 Implemented in `constexpr` C++: [Day 140](dcp_cpp/src/day140)
 
+## Day 142 \[Hard\]
+
+Given a string made out of `(`, `)`, and `*`, where `*` can be a
+parenthesis or an empty string, determine if it is balanced.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 142](dcp_py/day142)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they

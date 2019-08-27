@@ -2,6 +2,7 @@
 
 from typing import List
 
+
 def max_coins(coins: List[List[int]]) -> int:
     """
     Given an n by m board, with each label (i,j) labeled with the number of coins that that square contains,
