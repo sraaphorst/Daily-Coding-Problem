@@ -511,6 +511,13 @@ parenthesis or an empty string, determine if it is balanced.
 Implemented in Python (and property tested with hypothesis):
 [Day 142](dcp_py/day142)
 
+## Day 143 \[Medium\]
+
+Partition a list around a pivot element.
+
+Implemented in Python (and property tested with hypothesis):
+[Day 143](dcp_py/day143)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they

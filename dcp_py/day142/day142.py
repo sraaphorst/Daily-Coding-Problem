@@ -2,9 +2,8 @@
 # day142.py
 # By Sebastian Raaphorst, 2019.
 
-from hypothesis import given, event
+from hypothesis import given
 from hypothesis import strategies as st
-from typing import List
 
 
 def evaluate_parens(paren_string: str) -> bool:

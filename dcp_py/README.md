@@ -32,3 +32,4 @@ The following problems are implemented in Python:
 * [Day 121](day121)
 * [Day 122](day122)
 * [Day 142](day142)
+* [Day 143](day143)
