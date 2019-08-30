@@ -518,6 +518,20 @@ Partition a list around a pivot element.
 Implemented in Python (and property tested with hypothesis):
 [Day 143](dcp_py/day143)
 
+## Day 144 \[Medium\]
+
+Given an array and an index to an element in an array, find the
+nearest larger number. (Interpreted incorrectly.)
+
+Implemented in Kotlin: [Day 144](dcp_jvm/src/main/kotlin/dcp/day144)
+
+## Day 145 \[Easy\]
+
+Given a singly linked list, reverse the first and second nodes, the
+third and fourth nodes, etc.
+
+Implemented in C++: [Day145](dcp_cpp/src/day145)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
