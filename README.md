@@ -532,6 +532,12 @@ third and fourth nodes, etc.
 
 Implemented in C++: [Day145](dcp_cpp/src/day145)
 
+## Day 151 \[Medium\]
+
+Perform flood-fill on an image.
+
+Implemened in Python: [Day151](dcp_py/day151)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
