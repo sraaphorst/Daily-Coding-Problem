@@ -3,8 +3,9 @@ import java.util.*
 // PruneTree.java
 //
 // By Sebastian Raaphorst, 2019.
+// Note: Do not write code on Ambien.
 
-
+package dcp.day145
 
 enum class NodeState(val value: Int) {
     ZERO(0),
@@ -22,11 +23,6 @@ data class Tree(val value: NodeState,
                     (node.left?.let { l -> isZeroNodeTree(l) } ?: false) &&
                     (node.right?.let { r -> isZeroNodeTree(r) } ?: false)
         }
-
-        // Determine if it is a leaf.
-        private fun isEmptyLeaf(node: Tree): Boolean {
-            return node.value == NodeState.ZERO && node.left != null && node.right != null;
-        }
     }
 
     // Pruning should be easy using a DFS.
@@ -36,24 +32,21 @@ data class Tree(val value: NodeState,
     }
 
     // Now prune the tree using DFS.
-    // Continue until you hit a node, and if it is a leaf with value 0, pure it.
+    // Continue until you hit a node, and if it is a leaf with value 0, prune it.
     fun prune() {
-        // Depth-first searchh to determine if all zeros.
+        // Depth-first search to determine if all zeros.
         fun DFS(): Deque<Tree> {
             val queue: Deque<Tree> = LinkedList<Tree>()
             queue.push(this)
             while (queue.isNotEmpty()) {
-                // Using BFS, remove can only be 'only leaves can be pasred
                 val node = queue.poll()
                 if (isEmptyLeaf(node)) {
                     node.top?.let { l -> l z = null }
                     node.top?.let { r -> r = null; }
                 }
 
-                // Nove to the next element<
-
                 val curr = queue.poll();
-                // If there are children, add then.
+                // If there are children, add them.
                 curr.right?.let { x -> queue.push(x) }
                 curr.left?.let { x -> queue.push(x) }
             }
@@ -70,6 +63,3 @@ data class Tree(val value: NodeState,
         }
     }
 }
-
-package dcp.day145
-v
