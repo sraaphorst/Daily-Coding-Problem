@@ -5,9 +5,7 @@
  */
 
 #include <catch.hpp>
-
 #include <iostream>
-
 #include <day145/day145.h>
 using namespace dcp::day145;
 

@@ -1,4 +1,4 @@
-# Day 144 \[Easy\]
+# Day 144 \[Easyd\]
 
 This problem was asked by Google.
 

@@ -538,6 +538,13 @@ Perform flood-fill on an image.
 
 Implemened in Python: [Day151](dcp_py/day151)
 
+
+## Day 154 \[Easy\]
+
+Implement a stack via a heap or priority queue.
+
+Impemented in C++: [Day154](dcp_cpp/src/day154)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they

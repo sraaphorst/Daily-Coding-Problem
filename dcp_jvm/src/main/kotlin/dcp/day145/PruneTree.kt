@@ -23,6 +23,11 @@ data class Tree(val value: NodeState,
                     (node.left?.let { l -> isZeroNodeTree(l) } ?: false) &&
                     (node.right?.let { r -> isZeroNodeTree(r) } ?: false)
         }
+
+        private fun isEmptyLeafNode(node: Tree): Boolean {
+            return node.value == NodeState.ZERO &&
+                    node.left == null && node.right == null;
+        }
     }
 
     // Pruning should be easy using a DFS.
@@ -52,8 +57,8 @@ data class Tree(val value: NodeState,
             }
         }
 
-        // Start at the bottom and w                                                                                                                                                                                                                                                                                  ork progressively up, i.e. in the reverse order to which we added them.
-        // This will allow us to remove all the leaves, and then making new leaves.
+        // Start at the bottom and walk back up.                                                                                                                                                                                                                                                                                ork progressively up, i.e. in the reverse order to which we added them.
+        // This will allow us to remove all the leaves, leaving only the non-empty leaves.
         val dfs = DFS()
 
         // Keep popping empty elements until we can no longer do so.
