@@ -532,6 +532,12 @@ third and fourth nodes, etc.
 
 Implemented in C++: [Day145](dcp_cpp/src/day145)
 
+## Day 146 \[Easy\]
+
+Given a zero-one tree, process the tree.
+
+Implemented in Scala: [Day 146](dcp_jvm/src/main/scala/dcp/day146)
+
 ## Day 151 \[Medium\]
 
 Perform flood-fill on an image.
