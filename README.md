@@ -544,12 +544,18 @@ Perform flood-fill on an image.
 
 Implemened in Python: [Day151](dcp_py/day151)
 
-
 ## Day 154 \[Easy\]
 
 Implement a stack via a heap or priority queue.
 
 Impemented in C++: [Day154](dcp_cpp/src/day154)
+
+## Day 155 \[Medium\]
+
+Given a list of elements, find the majority element, which appears
+more than half the time.
+
+Implemented in C++: [Day155](dcp_cpp/src/day155)
 
 ## Outstanding problems
 
