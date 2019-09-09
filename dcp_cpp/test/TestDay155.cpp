@@ -22,3 +22,9 @@ TEST_CASE("No majority") {
     auto answer = find_majority_element(std::cbegin(arr), std::cend(arr));
     REQUIRE(!answer.has_value());
 }
+
+TEST_CASE("Single element list") {
+    constexpr std::array<int, 1> arr{{0}};
+    auto answer = find_majority_element(std::cbegin(arr), std::cend(arr));
+    REQUIRE((answer.has_value() and answer.value() == 0));
+}
