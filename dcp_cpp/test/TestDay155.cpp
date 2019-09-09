@@ -16,3 +16,9 @@ TEST_CASE("Provided test case") {
     auto answer = find_majority_element(std::cbegin(arr), std::cend(arr));
     REQUIRE((answer.has_value() and answer.value() == 1));
 }
+
+TEST_CASE("No majority") {
+    constexpr std::array<int, 5> arr{{1, 2, 3, 3, 4}};
+    auto answer = find_majority_element(std::cbegin(arr), std::cend(arr));
+    REQUIRE(!answer.has_value());
+}
