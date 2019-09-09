@@ -29,7 +29,7 @@ namespace dcp::day155 {
            return iter.second >= goal;
         });
 
-        // Determine if value exists and convert to optional..
+        // Determine if value exists and convert to optional.
         if (iter == std::cend(counts))
             return {};
         return {iter->first};
