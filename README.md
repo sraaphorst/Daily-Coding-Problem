@@ -557,6 +557,13 @@ more than half the time.
 
 Implemented in C++: [Day155](dcp_cpp/src/day155)
 
+## Day 156 \[Medium\]
+
+For a given positive integer `n`, determine the smallest numnber of
+squared integers which sums up to `n`.
+
+Implemented in C++: [Day 156](dcp_cpp/src/day156)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
