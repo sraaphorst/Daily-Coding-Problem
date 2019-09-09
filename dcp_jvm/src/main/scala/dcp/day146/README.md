@@ -1,4 +1,4 @@
-# Day 146 \[Easy\]
+# Day 146 \[Medium\]
 
 This question was asked by BufferBox.
 

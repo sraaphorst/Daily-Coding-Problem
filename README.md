@@ -532,7 +532,7 @@ third and fourth nodes, etc.
 
 Implemented in C++: [Day145](dcp_cpp/src/day145)
 
-## Day 146 \[Easy\]
+## Day 146 \[Medium\]
 
 Given a zero-one tree, process the tree.
 
