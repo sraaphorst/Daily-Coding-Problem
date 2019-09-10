@@ -20,3 +20,4 @@ The following problems are implemented in C++:
 * [Day 145](src/day145)
 * [Day 155](src/day155)
 * [Day 156](src/day156)
+* [Day 157](src/day157)

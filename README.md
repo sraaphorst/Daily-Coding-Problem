@@ -564,6 +564,12 @@ squared integers which sums up to `n`.
 
 Implemented in C++: [Day 156](dcp_cpp/src/day156)
 
+## Day 157 \[Easy\]
+
+Determine if a string is a permutation of a palindrome.
+
+Implemented in C++: [Day 157](dcp_cpp/src/day157)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
