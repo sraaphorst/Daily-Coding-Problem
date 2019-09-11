@@ -20,7 +20,7 @@ W = State.Wall
 def memoized_path(matrix: Matrix) -> int:
     """
     Instead of using a brute-force approach, which might require processing the same submatrix many times,
-    use a memoized approach on position using an LRU cache in order to avoid repeated work.
+    use a dynamic programming memoized approach on position using an LRU cache in order to avoid repeated work.
 
     :param matrix: the matrix indicating the layout of the space
     :return: the number of paths
