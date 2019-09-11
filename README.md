@@ -495,7 +495,7 @@ Implemented in Python:
 Given an `n` by `m` matrix, starting at the top left and moving only
 right and down, find the largest sum.
 
-Implemeneted in Python: [Day 122](dcp_py/src/day122)
+Implemeneted in Python: [Day 122](dcp_py/day122)
 
 ## Day 140 \[Medium\]
 
@@ -569,6 +569,13 @@ Implemented in C++: [Day 156](dcp_cpp/src/day156)
 Determine if a string is a permutation of a palindrome.
 
 Implemented in C++: [Day 157](dcp_cpp/src/day157)
+
+## Day 158 \[Medium\]
+
+Given a matrix indicating a floor plan, determine the number of paths
+through a matrix.
+
+Implemented in Python: [Day 158](dcp_py/day158)
 
 ## Outstanding problems
 
