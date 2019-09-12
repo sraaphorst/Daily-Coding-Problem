@@ -577,6 +577,13 @@ through a matrix.
 
 Implemented in Python: [Day 158](dcp_py/day158)
 
+## Day 159 \[Medium\]
+
+For a given string, return the first duplicated character in it if one
+exists.
+
+Implemented in Python: [Day 159](dcp_py/day159)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
