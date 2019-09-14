@@ -40,6 +40,7 @@ set(TEST_LIST
         TestDay155
         TestDay156
         TestDay157
+        TestDay161
         )
 
 foreach(testname ${TEST_LIST})

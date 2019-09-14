@@ -584,6 +584,12 @@ exists.
 
 Implemented in Python: [Day 159](dcp_py/day159)
 
+## Day 161 \[Easy\]
+
+Flip a 32 bit integer.
+
+Implemented in C++: [Day 161](dcp_cpp/src/day161)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
