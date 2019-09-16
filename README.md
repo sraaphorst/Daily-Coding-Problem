@@ -590,6 +590,12 @@ Flip a 32 bit integer.
 
 Implemented in C++: [Day 161](dcp_cpp/src/day161)
 
+## Day 162 \[Medium\]
+
+Given a set of words, determine its unique set of minimal prefixes.
+
+Implemented in C++: [Day162](dcp_cpp/src/day162)
+
 ## Day 163 \[Hard\]
 
 Implement a Reverse Polish Notation calculator evaluator.
