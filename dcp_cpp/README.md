@@ -22,3 +22,5 @@ The following problems are implemented in C++:
 * [Day 156](src/day156)
 * [Day 157](src/day157)
 * [Day 161](src/day161)
+* [Day 162](src/day162)
+
