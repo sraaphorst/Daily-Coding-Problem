@@ -602,6 +602,12 @@ Implement a Reverse Polish Notation calculator evaluator.
 
 Implemented in Scala: [Day 163](dcp_jvm/src/main/scala/dcp/day163)
 
+## Day 164 \[Medium\]
+
+Implement a pigeon hole detector in `O(n)` time and `O(n)` space.
+
+Implemented in C++: [Day164](dcp_cpp/src/day164)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they

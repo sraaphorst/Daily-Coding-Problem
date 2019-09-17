@@ -36,11 +36,12 @@ TEST_CASE("Collect unique prefixes for dog, cat, apple, apricot, and fish") {
 }
 
 TEST_CASE("Maintain prefixes for overlapping words") {
-    const std::array<std::string, 3> strs{{"cat", "catheter", "cathinone"}};
+    const std::array<std::string, 4> strs{{"cat", "catheter", "cats", "cathinone"}};
     std::set<std::string> prefixes;
     create_minimal_representation(std::cbegin(strs), std::cend(strs), std::inserter(prefixes, prefixes.end()));
-    REQUIRE(prefixes.size() == 3);
+    REQUIRE(prefixes.size() == 4);
     REQUIRE(prefixes.find("cat") != std::cend(prefixes));
     REQUIRE(prefixes.find("cathe") != std::cend(prefixes));
+    REQUIRE(prefixes.find("cats") != std::cend(prefixes));
     REQUIRE(prefixes.find("cathi") != std::cend(prefixes));
 }

@@ -62,7 +62,7 @@ namespace dcp::day162 {
     }
 
     template<typename InputIter, typename OutputIter>
-    std::set<std::string> create_minimal_representation(InputIter inputBegin, InputIter inputEnd, OutputIter outBegin) {
+    void create_minimal_representation(InputIter inputBegin, InputIter inputEnd, OutputIter outBegin) {
         auto root = std::make_shared<MinimalPrefixNode>();
 
         // Process each word.
