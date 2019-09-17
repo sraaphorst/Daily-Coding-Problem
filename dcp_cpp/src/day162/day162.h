@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <unordered_map>
 #include <memory>
+#include <string>
 #include <tuple>
 
 #pragma once
@@ -28,13 +29,15 @@ namespace dcp::day162 {
     namespace details {
         // Auxiliary method to iterate over the trie and collect the unique prefixes into the output iterator.
         // This collects the string as it progresses through the trie.
+        template<typename OutIter>
         void output_minimal_prefixes_iterator_aux(const std::string &str,
                                                   const std::shared_ptr<MinimalPrefixNode> &node,
-                                                  std::set<std::string> &prefixes) {
+                                                  OutIter outBegin) {
             // If we have reached a node with only one visit, it is a unique prefix for the word its extension
             // represents in the trie.
             if (node->visits == 1 || (node->visits > 1 && node->is_word)) {
-                prefixes.insert(str);
+                *outBegin = str;
+                ++outBegin;
 
                 // If we are not a word, then we can terminate: otherwise, we might be a subword of another word
                 // and need to continue.
@@ -45,22 +48,21 @@ namespace dcp::day162 {
             // Iterate over the trie nodes.
             for (const auto &iter: node->subnodes) {
                 const char ch = iter.first;
-                output_minimal_prefixes_iterator_aux(str + ch, iter.second, prefixes);
+                output_minimal_prefixes_iterator_aux(str + ch, iter.second, outBegin);
             }
         }
 
 
         // Iterate over the trie and collect the unique prefixes into the output iterator.
-        std::set<std::string> output_minimal_prefixes_iterator(const std::shared_ptr<MinimalPrefixNode> &node) {
+        template<typename OutIter>
+        void output_minimal_prefixes_iterator(const std::shared_ptr<MinimalPrefixNode> &node, OutIter outBegin) {
             // Begin with the empty string and continue to collect the characters as we traverse the trie.
-            std::set<std::string> prefixes;
-            details::output_minimal_prefixes_iterator_aux("", node, prefixes);
-            return prefixes;
+            details::output_minimal_prefixes_iterator_aux("", node, outBegin);
         }
     }
 
-    template<typename InputIter>
-    std::set<std::string> create_minimal_representation(InputIter inputBegin, InputIter inputEnd) {
+    template<typename InputIter, typename OutputIter>
+    std::set<std::string> create_minimal_representation(InputIter inputBegin, InputIter inputEnd, OutputIter outBegin) {
         auto root = std::make_shared<MinimalPrefixNode>();
 
         // Process each word.
@@ -94,6 +96,6 @@ namespace dcp::day162 {
         }
 
         // Return the complete trie with the number of words passing through each mode.
-        return details::output_minimal_prefixes_iterator(root);
+        details::output_minimal_prefixes_iterator(root, outBegin);
     }
 }
