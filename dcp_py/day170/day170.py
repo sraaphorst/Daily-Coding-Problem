@@ -11,7 +11,7 @@ Transformation = List[Word]
 
 def find_shortest_transformation(start: Word, end: Word, dictionary: Dictionary) -> Transformation:
     """
-    Use a DFS to find the shortest transformation - if one exists - from start to end.
+    Use a BFS to find the shortest transformation - if one exists - from start to end.
     :param start: the start word
     :param end: the end word
     :param dictionary: the dictionary
