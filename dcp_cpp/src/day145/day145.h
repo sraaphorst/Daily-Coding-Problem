@@ -74,7 +74,7 @@ namespace dcp::day145 {
             n2->next = n1;
             n1->next = n3;
 
-            // Iterate to make the new head the tail of this bit.
+            // Iterate to make the new root the tail of this bit.
             auto nextHead = swapConsecutiveAux(n3);
             n1->next = nextHead;
 

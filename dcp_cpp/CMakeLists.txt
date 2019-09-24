@@ -15,3 +15,4 @@ include_directories("${PROJECT_SOURCE_DIR}/src")
 add_subdirectory(test)
 
 add_executable(day064 src/day064/day064.cpp)
+add_executable(wtf wtf.cpp)
