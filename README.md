@@ -754,6 +754,83 @@ will occur.
 
 Implemented in Python: [Day173](dcp_py/day173)
 
+
+## Day 174 \[Medium\]
+
+This problem was asked by Microsoft.
+
+Describe and give an example of each of the following types of polymorphism:
+
+* Ad-hoc polymorphism
+* Parametric polymorphism
+* Subtype polymorphism
+
+### Ad-hoc polymorphism:
+
+Ad-hoc polymorphism is specifically bound to a type, and thus requires
+different implementations depending on type in order to invoke. This
+is essentially method or function overloading. An example includes
+addition: lists would be concatenated, whereas integers would be
+added.
+
+```C++
+int add1(int a1) {
+    return a1 + 1;
+}
+double add(double d) {
+    return d + 1'
+}
+```
+
+### Parametric polymorphism
+
+Parametric polymorphism imposes a type parameter on a
+structure. Examples include lists (e.g. `List[Int]`,
+`List[Double]`). A method, say, `head`, is parameterized in the sense
+that it doesn't care about the type of the list: it simply returns the
+first item in the list and its implementation is the same for all types.
+
+```scala
+import scala.math.sqrt
+
+case class Tree[+T](value: T, left: Option[Tree[T]], right: Option[Tree[T]]) {
+  def tree_map[S](f: T => S): Tree[S] =
+    Tree(f(value), left.map(_.tree_map(f)), right.map(_.tree_map(f)))
+}
+
+object Tree extends App {
+  val leaf1 = Tree(5, None, None)
+  val leaf2 = Tree(3, None, None)
+  val root = Tree(4, Some(leaf2), Some(leaf1))
+  println(root.tree_map(x => sqrt(x.toDouble)))
+}
+```
+
+### Subtype polymorphism
+
+Subclasses provide different implementations of a superclass method:
+these are like virtual functions in C++. A simple example would be:
+
+```C++
+using sound = std::optional<std::string>;
+
+struct Animal {
+  virtual sound noise() const noexcept = 0;
+};
+
+struct Cat {
+  virtual sound noise() const noexcept {
+    return "meow";
+  }
+};
+
+struct Earthworm {
+  sound noise() const noexcept {
+    return {};
+  }
+};
+```
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
