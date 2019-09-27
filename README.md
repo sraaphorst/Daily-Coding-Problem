@@ -42,7 +42,6 @@ Implemented in C++: [Day 1](dcp_cpp/src/day001)
 
 Link: [Testing code](../../test/TestDay001.cpp)
 
-
 ## Daily Coding Problem: Problem #2 \[Hard\]
 
 This problem was asked by Uber.
