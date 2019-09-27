@@ -6,7 +6,6 @@
 
 #include <catch.hpp>
 #include <array>
-#include <iterator>
 
 #include "day001/day001.h"
 

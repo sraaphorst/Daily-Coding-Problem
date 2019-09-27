@@ -40,6 +40,7 @@ Bonus: Can you do this in one pass?
 
 Implemented in C++: [Day 1](dcp_cpp/src/day001)
 
+Link: [Testing code](../../test/TestDay001.cpp)
 
 ## Daily Coding Problem: Problem #2 \[Hard\]
 
@@ -125,15 +126,47 @@ If using a language that has no pointers (such as Python), you can assume you ha
 NOT YET IMPLEMENTED
 
 
-## Day  7 \[Medium\]
+## Daily Coding Problem: Problem 7 \[Medium\]
 
-Determining the number of ways to decode numeric strings.
+This problem was asked by Facebook.
+
+Given the mapping:
+```
+a = 1, b = 2, ... z = 26
+```
+and an encoded message, count the number of ways it can be decoded.
+
+For example, the message `111` would give `3`, since it could be decoded as:
+* `aaa`,
+* `a`, and
+* `ak`.
+
+You can assume that the messages are decodable.
+For example, `001` is not allowed.
 
 Implemented in Python: [Day 7](dcp_py/day007)
 
-## Day 8 \[Easy\]
+#Daily Coding Problem: Problem 8 \[Easy\]
 
-Counting unival subtrees.
+This problem was asked by Google.
+
+A *unival tree* (which stands for "universal value") is a tree where all nodes under it have the same value.
+
+Given the root to a binary tree, count the number of unival subtrees.
+
+For example, the following tree has 5 unival subtrees:
+
+```
+   0
+  / \
+ 1   0
+    / \
+   1   0
+  / \
+ 1   1
+ ```
+ 
+ Link: [Testing code](../../../../test/scala/dcp/day008)
 
 Implemented in Scala: [Day 8](dcp_jvm/src/main/scala/dcp/day008)
 
@@ -778,7 +811,7 @@ int add1(int a1) {
     return a1 + 1;
 }
 double add(double d) {
-    return d + 1'
+    return d + 1;
 }
 ```
 
