@@ -729,7 +729,7 @@ Given `start = "dog"`, `end = "cat"`, and `dictionary = {"dot", "tod", "dat", "d
 
 Implemented in Python: [Day170](dcp_py/day170)
 
-# Day 171 \[Medium\]
+## Day 171 \[Medium\]
 
 This problem was asked by Dropbox.
 
@@ -752,7 +752,7 @@ The order of the indices does not matter.
 Implemented in Python: [Day171](dcp_py/day171)
 
 
-# Day 173 \[Easy\]
+## Day 173 \[Easy\]
 
 This problem was asked by Stripe.
 
@@ -863,6 +863,34 @@ struct Earthworm {
   }
 };
 ```
+
+
+## Day 175: \[Easy\]
+
+This problem was asked by Google.
+
+You are given a starting state start, a list of transition probabilities for a Markov chain, and a number of steps num_steps. Run the Markov chain starting from start for num_steps and compute the number of times we visited each state.
+
+For example, given the starting state `a`, number of steps `5000`, and the following transition probabilities:
+```
+[
+  ('a', 'a', 0.9),
+  ('a', 'b', 0.075),
+  ('a', 'c', 0.025),
+  ('b', 'a', 0.15),
+  ('b', 'b', 0.8),
+  ('b', 'c', 0.05),
+  ('c', 'a', 0.25),
+  ('c', 'b', 0.25),
+  ('c', 'c', 0.5)
+]
+```
+One instance of running this Markov chain might produce:
+```
+{ 'a': 3012, 'b': 1656, 'c': 332 }
+```
+
+Implemented in Python: [Day175](dcp_py/day175)
 
 ## Outstanding problems
 

@@ -33,7 +33,7 @@ def biased_toss(probability1: float) -> Iterator[int]:
     :param probability1: the probability of 1 being flipped; the probability of 0 is 1 - probability1
     :return: the iterator that produces the biased coin
     """
-    assert(0 < probability1 < 1, "Probability of 1 must be in (0,1).")
+    assert 0 < probability1 < 1, "Probability of 1 must be in (0,1)."
     while True:
         yield 1 if random() < probability1 else 0
 
