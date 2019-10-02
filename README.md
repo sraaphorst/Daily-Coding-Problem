@@ -907,6 +907,19 @@ map to two characters.
 Implemented in Python: [Day176](dcp_py/day176)
 
 
+## Day 177 \[Easy\]
+
+This problem was asked by Airbnb.
+
+Given a linked list and a positive integer `k`, rotate the list to the right by `k` places.
+
+For example, given the linked list `7 -> 7 -> 3 -> 5` and `k = 2`, it should become `3 -> 5 -> 7 -> 7`.
+
+Given the linked list `1 -> 2 -> 3 -> 4 -> 5` and `k = 3`, it should
+become `3 -> 4 -> 5 -> 1 -> 2`.
+
+Implemented in C++: [Day177](dcp_cpp/src/day177)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
