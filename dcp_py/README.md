@@ -36,4 +36,5 @@ The following problems are implemented in Python:
 * [Day 148](day148)
 * [Day 151](day151)
 * [Day 158](day158)
-# [Day 159](day159)
+* [Day 159](day159)
+* [Day 178](day178)
