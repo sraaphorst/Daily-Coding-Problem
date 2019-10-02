@@ -13,16 +13,17 @@ Which of the two games should Alice elect to play? Does it even matter? Write a 
 
 # Explanation:
 
-Regardless of which game Alice is playing, in order to put herself in a state
-where she is capable of winning, she must roll a 5. After this, the choice
-of game becomes important:
+To see which game is better, consider the possibilities that Alice faces.
 
-1. Regardless of game, if Alice rolls 0-4, she is back in the state where she
-is not capable of winning in one roll.
-2. If Alice rolls a 5, then regardless of which game Alice is playing, she either wins
-or remains in the state where she is capable of winning in one roll.
-3. If Alice rolls a 6 in the 5 followed by 6 game, then Alice wins.
+There are three possible states:
+1. Initial state. (A first five must be rolled.)
+2. Potential victory state. (The previous roll was a five.)
+3. Winning state. (A five followed by the required number was rolled.)
 
-Playing either game, Alice needs to roll a 5 to put her in the potential of winning.
-1. In the 5-5 game, if Alice rolls anything other than a 6, Alice drops to the losing state where she must first roll a 5.
-2. In the 5-6 game, if Alice rolls a 5, she remains in the potential winning state. 
+Regardless of choice of game, Alice must first enter into the potential victory state by rolling a 5.
+
+In the 5-5 game, once Alice has entered the potential victory state, she wins if she rolls a 5. She returns to the initial state if she rolls a 1, 2, 3, 4, or 6.
+
+In the 5-6 game, once Alice has entered the potential victory state, she wins if she rolls a 6. She remains in the potential victory state if she rolls a 5. She returns to the initial state if she rolls a 1, 2, 3, or 4.
+
+Thus, the 5-6 game is the better choice of game.
