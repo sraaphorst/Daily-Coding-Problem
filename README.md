@@ -953,8 +953,6 @@ For example, given the sequence `2, 4, 3, 8, 7, 5`, you should construct the fol
 2   4   8
 ```
 
-Link: [Testing code](../../../../test/scala/dcp/day179)
-
 Implemented in Scala: [Day 179](dcp_jvm/src/main/scala/dcp/day179)
 
 
