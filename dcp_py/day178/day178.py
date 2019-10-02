@@ -47,6 +47,6 @@ def expected_rolls(simulations: int = 100000) -> Tuple[float, float]:
     return exp56 / simulations, exp55 / simulations
 
 
-five_five, five_six = expected_rolls()
-print(f"5-5 expected cost: {five_five}")
+five_six, five_five = expected_rolls()
 print(f"5-6 expected cost: {five_six}")
+print(f"5-5 expected cost: {five_five}")
