@@ -541,7 +541,7 @@ becomes:
 a6 a7 a4 a5 a2 a3 a0 a1.
 ```
 
-Implemented in C++: [Day109](dcp_cpp/src/day109)
+Implemented in C++: [Day 109](dcp_cpp/src/day109)
 
 ## Day 110 \Medium\]
 
@@ -638,7 +638,7 @@ Implemented in Kotlin: [Day 144](dcp_jvm/src/main/kotlin/dcp/day144)
 Given a singly linked list, reverse the first and second nodes, the
 third and fourth nodes, etc.
 
-Implemented in C++: [Day145](dcp_cpp/src/day145)
+Implemented in C++: [Day 145](dcp_cpp/src/day145)
 
 ## Day 146 \[Medium\]
 
@@ -650,20 +650,20 @@ Implemented in Scala: [Day 146](dcp_jvm/src/main/scala/dcp/day146)
 
 Perform flood-fill on an image.
 
-Implemened in Python: [Day151](dcp_py/day151)
+Implemened in Python: [Day 151](dcp_py/day151)
 
 ## Day 154 \[Easy\]
 
 Implement a stack via a heap or priority queue.
 
-Impemented in C++: [Day154](dcp_cpp/src/day154)
+Impemented in C++: [Day 154](dcp_cpp/src/day154)
 
 ## Day 155 \[Medium\]
 
 Given a list of elements, find the majority element, which appears
 more than half the time.
 
-Implemented in C++: [Day155](dcp_cpp/src/day155)
+Implemented in C++: [Day 155](dcp_cpp/src/day155)
 
 ## Day 156 \[Medium\]
 
@@ -702,7 +702,7 @@ Implemented in C++: [Day 161](dcp_cpp/src/day161)
 
 Given a set of words, determine its unique set of minimal prefixes.
 
-Implemented in C++: [Day162](dcp_cpp/src/day162)
+Implemented in C++: [Day 162](dcp_cpp/src/day162)
 
 ## Day 163 \[Hard\]
 
@@ -714,7 +714,7 @@ Implemented in Scala: [Day 163](dcp_jvm/src/main/scala/dcp/day163)
 
 Implement a pigeon hole detector in `O(n)` time and `O(n)` space.
 
-Implemented in C++: [Day164](dcp_cpp/src/day164)
+Implemented in C++: [Day 164](dcp_cpp/src/day164)
 
 
 ## Day 170 \[Medium\]
@@ -727,7 +727,7 @@ For example, given `start = "dog"`, `end = "cat"`, and `dictionary = {"dot", "do
 
 Given `start = "dog"`, `end = "cat"`, and `dictionary = {"dot", "tod", "dat", "dar"}`, return `null` as there is no possible transformation from `dog` to `cat`.
 
-Implemented in Python: [Day170](dcp_py/day170)
+Implemented in Python: [Day 170](dcp_py/day170)
 
 ## Day 171 \[Medium\]
 
@@ -749,7 +749,7 @@ For example:
 
 The order of the indices does not matter.
 
-Implemented in Python: [Day171](dcp_py/day171)
+Implemented in Python: [Day 171](dcp_py/day171)
 
 
 ## Day 173 \[Easy\]
@@ -785,7 +785,7 @@ it should become:
 You can assume keys do not contain dots in them, i.e. no clobbering
 will occur.
 
-Implemented in Python: [Day173](dcp_py/day173)
+Implemented in Python: [Day 173](dcp_py/day173)
 
 
 ## Day 174 \[Medium\]
@@ -890,7 +890,7 @@ One instance of running this Markov chain might produce:
 { 'a': 3012, 'b': 1656, 'c': 332 }
 ```
 
-Implemented in Python: [Day175](dcp_py/day175)
+Implemented in Python: [Day 175](dcp_py/day175)
 
 
 ## Day 176 \[Easy\]
@@ -904,7 +904,7 @@ For example, given `s1 = abc` and `s2 = bcd`, return true since we can map `a` t
 Given `s1 = foo` and `s2 = bar`, return `false` since the `o` cannot
 map to two characters.
 
-Implemented in Python: [Day176](dcp_py/day176)
+Implemented in Python: [Day 176](dcp_py/day176)
 
 
 ## Day 177 \[Easy\]
@@ -918,7 +918,7 @@ For example, given the linked list `7 -> 7 -> 3 -> 5` and `k = 2`, it should bec
 Given the linked list `1 -> 2 -> 3 -> 4 -> 5` and `k = 3`, it should
 become `3 -> 4 -> 5 -> 1 -> 2`.
 
-Implemented in C++: [Day177](dcp_cpp/src/day177)
+Implemented in C++: [Day 177](dcp_cpp/src/day177)
 
 
 ## Day 178 \[Hard\]
@@ -934,7 +934,7 @@ The second game: same, except that the stopping condition is a five followed by 
 Which of the two games should Alice elect to play? Does it even matter? Write a program to simulate the two games and calculate their expected value.
 
 Simultation implemented in Python, and explanation given here:
-[Day178](dcp_py/day178)
+[Day 178](dcp_py/day178)
 
 
 ## Day 179 \[Medium\]
@@ -955,7 +955,7 @@ For example, given the sequence `2, 4, 3, 8, 7, 5`, you should construct the fol
 
 Link: [Testing code](../../../../test/scala/dcp/day179)
 
-Implemented in Scala: [Day 8](dcp_jvm/src/main/scala/dcp/day179)
+Implemented in Scala: [Day 179](dcp_jvm/src/main/scala/dcp/day179)
 
 
 ## Outstanding problems
