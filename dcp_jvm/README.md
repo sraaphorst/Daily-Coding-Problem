@@ -27,7 +27,8 @@ The following problems are implemented in Scala:
 * [Day 107](src/main/scala/dcp/day107)
 * [Day 110](src/main/scala/dcp/day110)
 * [Day 146](src/main/scala/dcp/day146)
-* [Day 163](src/main/scala/scp/day163)d
+* [Day 163](src/main/scala/dcp/day163)
+* [Day 179](src/main/scala/dcp/day179)
 
 ## Kotlin implementations
 
