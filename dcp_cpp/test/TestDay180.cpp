@@ -12,6 +12,8 @@
 #include <day180/day180.h>
 using namespace dcp::day180;
 
+// NOTE: If we use push instead of initializer_list with stack, we don't invoke a constructor copy call and can get away
+// with all move operations.
 TEST_CASE("Day180: Example test case 1") {
     std::stack<int> stack{{1, 2, 3, 4, 5}};
     const std::stack<int> result{{1, 5, 2, 4, 3}};
