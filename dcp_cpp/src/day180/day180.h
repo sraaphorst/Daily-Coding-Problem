@@ -23,20 +23,14 @@ namespace dcp::day180 {
     void interleave(std::stack<T> &stack) {
         if (stack.empty())
             return;
-
-        // The idea is as follows:
-        // Enqueue all elements but the first.
-        // Push all the elements back on the stack (they will be reversed).
-        // Enqueue all the elements but the first two.
-        // Push all the elements back on the stack (they will be in original order).
-        // Continue this pattern until there is only one element left.
-        std::queue<T*> queue;
+        
+        std::queue<T> queue;
 
         for (size_t elements_to_enqueue = stack.size() - 1; elements_to_enqueue > 1; --elements_to_enqueue) {
             for (size_t i = 0; i < elements_to_enqueue; ++i) {
                 T &elem = stack.top();
                 stack.pop();
-                queue.push(&elem);
+                queue.push(std::move(elem));
             }
             while (!queue.empty()) {
                 T &elem = queue.front();
