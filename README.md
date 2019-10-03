@@ -956,6 +956,20 @@ For example, given the sequence `2, 4, 3, 8, 7, 5`, you should construct the fol
 Implemented in Scala: [Day 179](dcp_jvm/src/main/scala/dcp/day179)
 
 
+# Day 180 \[Medium\]
+
+This problem was asked by Google.
+
+Given a stack of N elements, interleave the first half of the stack with the second half reversed using only one other queue. This should be done in-place.
+
+Recall that you can only push or pop from a stack, and enqueue or dequeue from a queue.
+
+For example, if the stack is `[1, 2, 3, 4, 5]`, it should become `[1, 5, 2, 4, 3]`. If the stack is `[1, 2, 3, 4]`, it should become `[1, 4, 2, 3]`.
+
+Hint: Try working backwards from the end state.
+
+Implemented in C++: [Day 180](dcp_cpp/src/day180)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
