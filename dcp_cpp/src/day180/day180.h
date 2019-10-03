@@ -24,6 +24,12 @@ namespace dcp::day180 {
         if (stack.empty())
             return;
 
+        // The idea is as follows:
+        // Enqueue all elements but the first.
+        // Push all the elements back on the stack (they will be reversed).
+        // Enqueue all the elements but the first two.
+        // Push all the elements back on the stack (they will be in original order).
+        // Continue this pattern until there is only one element left.
         std::queue<T> queue;
 
         for (size_t elements_to_enqueue = stack.size() - 1; elements_to_enqueue > 1; --elements_to_enqueue) {
