@@ -34,12 +34,12 @@ namespace dcp::day180 {
 
         for (size_t elements_to_enqueue = stack.size() - 1; elements_to_enqueue > 1; --elements_to_enqueue) {
             for (size_t i = 0; i < elements_to_enqueue; ++i) {
-                T elem = std::move(stack.top());
+                T &elem = stack.top();
                 stack.pop();
                 queue.push(std::move(elem));
             }
             while (!queue.empty()) {
-                T elem = std::move(queue.front());
+                T &elem = queue.front();
                 queue.pop();
                 stack.push(std::move(elem));
             }
