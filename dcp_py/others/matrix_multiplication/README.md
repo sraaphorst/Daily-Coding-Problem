@@ -1,4 +1,4 @@
-## Matrix multiplication
+# Matrix multiplication
 
 Given a list of matrix dimensions of the form `M_i = dims[i-1] x dims[i]`, determine the fewest / most operations
 needed to multiply matrices of those dimensions together.

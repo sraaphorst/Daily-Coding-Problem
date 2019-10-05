@@ -1,4 +1,4 @@
-## Chapter 13-2: Number of ways to decode a string
+# Chapter 13-2: Number of ways to decode a string
 
 Given a mapping `a = 1`, `b = 2`, ..., `z = 26`, and an encoded string, count the
 number of ways that it can be decoded.

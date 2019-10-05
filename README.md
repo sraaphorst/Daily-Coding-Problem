@@ -970,6 +970,20 @@ Hint: Try working backwards from the end state.
 
 Implemented in C++: [Day 180](dcp_cpp/src/day180)
 
+
+# Day 182 \[Medium\]
+
+This problem was asked by Facebook.
+
+A graph is minimally-connected if it is connected and there is no edge that can be removed while still leaving the graph connected. For example, any binary tree is minimally-connected.
+
+Given an undirected graph, check if the graph is
+minimally-connected. You can choose to represent the graph as either
+an adjacency matrix or adjacency list.
+
+Implemented in Python: [Day 182](dcp_py/day182)
+
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
