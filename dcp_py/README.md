@@ -38,3 +38,7 @@ The following problems are implemented in Python:
 * [Day 158](day158)
 * [Day 159](day159)
 * [Day 178](day178)
+
+Other assorted puzzles and chapters from the book:
+* [Ch13-2](others/ch13_2.py)
+* [Matrix multiplication](others/matrix_multiplication)

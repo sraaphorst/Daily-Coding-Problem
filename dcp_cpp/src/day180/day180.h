@@ -23,7 +23,7 @@ namespace dcp::day180 {
     void interleave(std::stack<T> &stack) {
         if (stack.empty())
             return;
-        
+
         std::queue<T> queue;
 
         for (size_t elements_to_enqueue = stack.size() - 1; elements_to_enqueue > 1; --elements_to_enqueue) {
