@@ -21,7 +21,7 @@ TEST_CASE("Day 184: Specific constexpr case") {
 TEST_CASE("Day 184: Random four number GCD") {
     std::random_device rd;
     std::mt19937 gen{rd()};
-    std::uniform_int_distribution<> dis(0, 1'000'000);
+    std::uniform_int_distribution<> dis(-1'000'000, 1'000'000);
 
     for (size_t i = 0; i < 1'000'000; ++i) {
         const auto a = dis(gen);
