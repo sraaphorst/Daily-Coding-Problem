@@ -984,6 +984,17 @@ an adjacency matrix or adjacency list.
 Implemented in Python: [Day 182](dcp_py/day182)
 
 
+# Day 184 \[Easy\]
+
+This problem was asked by Amazon.
+
+Given n numbers, find the greatest common denominator between them.
+
+For example, given the numbers `[42, 56, 14]`, return `14`.
+
+Implemented in C++ using variadic templates: [Day 184](dcp_cpp/src/day184)
+
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
