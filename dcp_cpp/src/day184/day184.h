@@ -9,7 +9,7 @@
 #include <type_traits>
 
 namespace dcp::day184 {
-    // Variadic programmic to extend gcd to any number of parameters.
+    // Variadic programmatic technique to extend gcd to any number of parameters >= 2.
     template<typename T, typename S>
     constexpr auto gcd(T t, S s) {
         static_assert(std::is_integral_v<T>);
