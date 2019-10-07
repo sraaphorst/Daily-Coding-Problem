@@ -20,9 +20,9 @@ namespace dcp::day184 {
     }
 
     template<typename T, typename S, typename... Types>
-    constexpr auto gcd(T a, S b, Types... args) {
+    constexpr auto gcd(T t, S s, Types... args) {
         static_assert(std::is_integral_v<T>);
         static_assert(std::is_integral_v<S>);
-        return gcd(a, gcd(b, args...));
+        return gcd(t, gcd(s, args...));
     }
 }
