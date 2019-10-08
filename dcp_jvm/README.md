@@ -36,3 +36,4 @@ The following problems are implemented in Kotlin:
 
 * [Day 119](src/main/kotlin/dcp/day119)
 * [Day 144](src/main/kotlin/dcp/day144) - Incorrectly interpreted.
+* [Day 185](src/main/kotlin/dcp/day185)
