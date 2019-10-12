@@ -1051,7 +1051,7 @@ return `6`.
 Implemented in Kotlin: [Day 185](dcp_jvm/src/main/kotlin/dcp/day185)
 
 
-# Day 186 \[Hard\]
+## Day 186 \[Hard\]
 
 This problem was asked by Microsoft.
 
@@ -1063,6 +1063,31 @@ possible difference.
 
 Implemented in Python: [Day 186](dcp_py/day186)
 
+## Day 188 \[Medium\]
+
+This problem was asked by Google.
+
+What will this code print out?
+
+```
+def make_functions():
+    flist = []
+
+    for i in [1, 2, 3]:
+        def print_i():
+            print(i)
+        flist.append(print_i)
+
+    return flist
+
+functions = make_functions()
+for f in functions:
+    f()
+```
+
+How can we make it print out what we apparently want?
+
+Implemented in Python: [Day 188](dcp_py/day188)
 
 ## Outstanding problems
 

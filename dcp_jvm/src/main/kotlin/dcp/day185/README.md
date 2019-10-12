@@ -23,3 +23,5 @@ and
 ```
 
 return `6`.
+
+Assistance: https://www.khanacademy.org/computer-programming/rectx-y-width-height-radius/839496660
