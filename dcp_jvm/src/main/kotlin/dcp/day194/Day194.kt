@@ -20,7 +20,7 @@ fun countIntersections(ps: Points, qs: Points): Int {
     val n = ps.size
     assert(ps.size == qs.size) {"ps and qs must have same size (ps.size =${ps.size}, qs.size=${qs.size}"}
 
-    infix fun Segment.intersect(other: Segment): Boolean {
+    infix fun Segment.`∩`(other: Segment): Boolean {
         val (p1, q1) = this
         val (p2, q2) = other
         return if (p1 <= p2 && q1 >= q2) true
@@ -38,7 +38,7 @@ fun countIntersections(ps: Points, qs: Points): Int {
                 yield(points[i1] to points[i2])
     }
 
-    return intervals.count{ (i1, i2) -> i1 intersect i2}
+    return intervals.count{ (i1, i2) -> i1 `∩` i2}
 }
 
 fun main() {
