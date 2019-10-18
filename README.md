@@ -1089,6 +1089,22 @@ How can we make it print out what we apparently want?
 
 Implemented in Python: [Day 188](dcp_py/day188)
 
+## Day 194 \[Easy\]
+
+This problem was asked by Facebook.
+
+Suppose you are given two lists of `n` points, one list:
+
+* `p1, p2, ..., pn` on the line `y = 0`; and
+* the other list `q1, q2, ..., qn` on the line `y = 1`.
+
+Imagine a set of `n` line segments connecting each point `pi` to
+`qi`. Write an algorithm to determine how many pairs of the line
+segments intersect.
+
+Implemented in Kotlin: [Day 194](dcp_jvm/src/main/kotlin/dcp/day194)
+
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
