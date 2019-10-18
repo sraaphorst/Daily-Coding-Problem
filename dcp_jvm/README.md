@@ -26,9 +26,14 @@ The following problems are implemented in Scala:
 * [Day 76](src/main/scala/dcp/day076)
 * [Day 107](src/main/scala/dcp/day107)
 * [Day 110](src/main/scala/dcp/day110)
+* [Day 146](src/main/scala/dcp/day146)
+* [Day 163](src/main/scala/dcp/day163)
+* [Day 179](src/main/scala/dcp/day179)
 
 ## Kotlin implementations
 
 The following problems are implemented in Kotlin:
 
 * [Day 119](src/main/kotlin/dcp/day119)
+* [Day 144](src/main/kotlin/dcp/day144) - Incorrectly interpreted.
+* [Day 185](src/main/kotlin/dcp/day185)

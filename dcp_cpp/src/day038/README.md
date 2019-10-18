@@ -26,3 +26,5 @@ The earlier version of [`day038.h`](day038.h) had mechanisms for trying to captu
 and to assign a lexicographical order to boards in an isomorphism class so that we can limit to the
 canonical representative and just generate the "unique" boards instead of the "all" boards. This will
 enable us to generate more efficiently, and for higher values of `n`.
+
+Link: [Testing code](../../test/TestDay038.cpp)

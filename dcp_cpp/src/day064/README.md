@@ -14,3 +14,5 @@ Link: [Testing code](../../test/TestDay064.cpp)
 group of the board to determine the current number of equivalent boards across the starting positions of the rest
 of the board. This could also be used to reduce the number of starting positions in the upper-left board: for
 example, starting at `(0,1)` should be the same as starting at `(1,0)` for any `N > 1`.
+
+Link: [Testing code](../../test/TestDay064.cpp)

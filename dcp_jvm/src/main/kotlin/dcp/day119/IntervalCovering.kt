@@ -1,4 +1,4 @@
-// dcp.day119.java
+// IntervalCovering.kt
 //
 // By Sebastian Raaphorst, 2019.
 

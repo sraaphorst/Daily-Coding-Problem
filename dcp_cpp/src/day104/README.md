@@ -17,3 +17,5 @@ returns `True` while
 ```
 
 returns `False`.
+
+Link: [Testing code](../../test/TestDay104.cpp)

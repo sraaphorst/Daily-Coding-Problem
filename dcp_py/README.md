@@ -31,4 +31,17 @@ The following problems are implemented in Python:
 * [Day 108](day108)
 * [Day 121](day121)
 * [Day 122](day122)
+* [Day 142](day142)
+* [Day 143](day143)
+* [Day 148](day148)
+* [Day 151](day151)
+* [Day 158](day158)
+* [Day 159](day159)
+* [Day 178](day178)
+* [Day 182](day182)
+* [Day 186](day186)
+* [Day 188](day188)
 
+Other assorted puzzles and chapters from the book:
+* [Ch13-2](others/ch13_2.py)
+* [Matrix multiplication](others/matrix_multiplication)

@@ -13,3 +13,5 @@ Given three 32-bit integers `x`, `y`, and `b`, return:
  using only mathematical or bit operations.
 
  You can assume `b` can only be `1` or `0`.
+ 
+ Link: [Testing code](../../test/TestDay085.cpp)
