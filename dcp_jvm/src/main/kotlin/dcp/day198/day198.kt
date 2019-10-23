@@ -1,8 +1,10 @@
 package dcp.day198
+// day198.kt
+// By Sebastian Raaphorst, 2019.
 
 import kotlin.test.assertEquals
 
-fun find_longest_divisors(elems: Collection<Int>): Set<Int> {
+fun findLongestDivisors(elems: Collection<Int>): Set<Int> {
     // If there are no elems or 0 or 1 are in elems, then just return the whole sequence.
     // If 0 is in: 0 % m == 0 for all m.
     // If 1 is in: m % 1 == 0 for all n.
@@ -15,8 +17,10 @@ fun find_longest_divisors(elems: Collection<Int>): Set<Int> {
     // We calculate divs and keep track of the indices.
     val numElems = elems.size
     val sortedElems = elems.sorted()
-    var divs = Array(numElems){1}
-    var idxs = Array(numElems){-1}
+
+    // We use arrays due to fixed size, which are inherently mutable.
+    val divs = Array(numElems){1}
+    val idxs = Array(numElems){-1}
 
     var maxVal = 0
     var maxIdx = numElems - 1
@@ -45,10 +49,10 @@ fun find_longest_divisors(elems: Collection<Int>): Set<Int> {
 }
 
 fun main() {
-    assertEquals(find_longest_divisors(listOf(3, 5, 10, 20, 21)), setOf(5, 10, 20))
-    assertEquals(find_longest_divisors(listOf(1, 3, 6, 24)), setOf(1, 3, 6, 24))
-    assertEquals(find_longest_divisors(listOf(5, 10, 20, 15, 35, 40, 50, 3, 9)), setOf(5, 10, 20, 40))
-    assertEquals(find_longest_divisors(listOf()), setOf())
-    assertEquals(find_longest_divisors(listOf(0, 2, 4)), setOf(0, 2, 4))
-    assertEquals(find_longest_divisors(listOf(1, 3, 5)), setOf(1, 3, 5))
+    assertEquals(findLongestDivisors(listOf(3, 5, 10, 20, 21)),                setOf(5, 10, 20))
+    assertEquals(findLongestDivisors(listOf(1, 3, 6, 24)),                     setOf(1, 3, 6, 24))
+    assertEquals(findLongestDivisors(listOf(5, 10, 20, 15, 35, 40, 50, 3, 9)), setOf(5, 10, 20, 40))
+    assertEquals(findLongestDivisors(listOf()),                                setOf())
+    assertEquals(findLongestDivisors(listOf(0, 2, 4)),                         setOf(0, 2, 4))
+    assertEquals(findLongestDivisors(listOf(1, 3, 5)),                         setOf(1, 3, 5))
 }

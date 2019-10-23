@@ -1,12 +1,11 @@
-// NextHighest.kt
-//
+package dcp.day144
+// day144.kt
 // By Sebastian Raaphorst, 2019.
 
-package dcp.day144
 
 import kotlin.random.Random.Default
 
-fun find_next_highest_brute_force(elems: List<Int>, elemIdx: Int): Int? {
+fun findNextHighestBruteForce(elems: List<Int>, elemIdx: Int): Int? {
     val elem = elems[elemIdx]
     var idx: Int? = null
     for (i in elems.indices) {
@@ -43,7 +42,7 @@ fun preprocess(elems: List<Int>): Pair<List<Int>, List<Int>> {
     return Pair(index, unindex)
 }
 
-fun find_next_highest_constant(data: Pair<List<Int>, List<Int>>, elemIdx: Int): Int? {
+fun findNextHighestConstant(data: Pair<List<Int>, List<Int>>, elemIdx: Int): Int? {
     val index   = data.first
     val unindex = data.second
 
@@ -58,7 +57,7 @@ fun main() {
     val lst = listOf(4, 1, 3, 5, 6)
     val processedLst = preprocess(lst)
     for (i in lst.indices)
-        assert(find_next_highest_brute_force(lst, i) == find_next_highest_constant(processedLst, i))
+        assert(findNextHighestBruteForce(lst, i) == findNextHighestConstant(processedLst, i))
 
     // Do a random one as well.
     val length = Default.nextInt(0, 100)
@@ -67,5 +66,5 @@ fun main() {
     }
     val processedRandomLst = preprocess(randomLst)
     for (i in randomLst.indices)
-        assert(find_next_highest_brute_force(randomLst, i) == find_next_highest_constant(processedRandomLst, i))
+        assert(findNextHighestBruteForce(randomLst, i) == findNextHighestConstant(processedRandomLst, i))
 }

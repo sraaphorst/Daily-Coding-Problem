@@ -1105,7 +1105,7 @@ segments intersect.
 Implemented in Kotlin: [Day 194](dcp_jvm/src/main/kotlin/dcp/day194)
 
 
-# Day 198 \[Medium\]
+## Day 198 \[Medium\]
 
 This problem was asked by Google.
 
@@ -1114,6 +1114,19 @@ Given a set of distinct positive integers, find the largest subset such that eve
 For example, given the set `[3, 5, 10, 20, 21]`, you should return `[5, 10, 20]`. Given `[1, 3, 6, 24]`, return `[1, 3, 6, 24]`.
 
 Implemented in Kotlin: [Day 198](dcp_jvm/src/main/kotlin/dcp/day198)
+
+
+## Day 199 - \[Hard\]
+
+This problem was asked by Facebook.
+
+Given a string of parentheses, find the balanced string that can be produced from it using the minimum number of insertions and deletions. If there are multiple solutions, return any of them.
+
+For example, given `"(()"`, you could return `"(())"`. Given
+`"))()("`, you could return `"()()()()"`.
+
+Implemented in Kotlin: [Day 199](dcp_jvm/src/main/kotlin/dcp/day199)
+
 
 ## Outstanding problems
 

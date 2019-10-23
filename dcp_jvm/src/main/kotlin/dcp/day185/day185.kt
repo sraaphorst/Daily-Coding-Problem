@@ -1,4 +1,6 @@
 package dcp.day185
+// day185.kt
+// By Sebastian Raaphorst, 2019.
 
 import kotlin.math.max
 import kotlin.math.min
@@ -21,7 +23,7 @@ infix fun Rectangle.intersection(other: Rectangle): Int {
 }
 
 fun main() {
-    val rect1: Rectangle = Rectangle(Point(4, 1), Dimension(3, 3))
-    val rect2: Rectangle = Rectangle(Point(5, 0), Dimension(4, 3))
+    val rect1 = Rectangle(Point(4, 1), Dimension(3, 3))
+    val rect2 = Rectangle(Point(5, 0), Dimension(4, 3))
     println("The intersection of $rect1 and $rect2 is ${rect1 intersection rect2}.")
 }
