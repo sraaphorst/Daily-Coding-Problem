@@ -1,4 +1,6 @@
 package dcp.day199
+// day199.kt
+// By Sebastian Raaphorst.
 
 fun closestString(elems: List<Char>): String {
     /**
