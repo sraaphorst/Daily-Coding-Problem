@@ -13,7 +13,7 @@
 #include <day164/day164.h>
 using namespace dcp::day164;
 
-TEST_CASE("First 10 intengers") {
+TEST_CASE("First 10 integers") {
     std::array<int, 10> arr{{0, 1, 2, 3, 4, 5, 6, 7, 8, 8}};
     const auto result = apply_pidgeonhole<int>(std::cbegin(arr), std::cend(arr));
     REQUIRE(result.has_value());

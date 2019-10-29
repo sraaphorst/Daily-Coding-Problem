@@ -4,11 +4,10 @@
  * By Sebastian Raaphorst, 2019.
  */
 
-#pragma once
-
 #include <iostream>
 #include <array>
 #include <utility>
+#include <cassert>
 
 namespace dcp::day064 {
     template<int N>
@@ -160,7 +159,18 @@ namespace dcp::day064 {
     };
 }
 
-//int main() {
-//    auto boards = dcp::day064::KnightsTour<5>::computeFrom(0, 0);
-//    std::cout << boards;
-//}
+int main() {
+    auto boards00 = dcp::day064::KnightsTour<5>::computeFrom(0, 0);
+    assert(boards00 == 304);
+    auto boards01 = dcp::day064::KnightsTour<5>::computeFrom(0, 1);
+    assert(boards01 == 0);
+    auto boards02 = dcp::day064::KnightsTour<5>::computeFrom(0, 2);
+    assert(boards02 == 56);
+    auto boards11 = dcp::day064::KnightsTour<5>::computeFrom(1, 1);
+    assert(boards11 == 56);
+    auto boards21 = dcp::day064::KnightsTour<5>::computeFrom(2, 1);
+    assert(boards21 == 0);
+    auto boards22 = dcp::day064::KnightsTour<5>::computeFrom(2, 2);
+    assert(boards22 == 64);
+    std::cout << "All tests passed.\n";
+}
