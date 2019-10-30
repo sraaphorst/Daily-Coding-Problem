@@ -5,7 +5,7 @@ package dcp.day200
 import kotlin.math.max
 import kotlin.math.min
 
-data class Interval private constructor(val start: Double, val end: Double): Comparable<Interval> {
+data class Interval(val start: Double, val end: Double): Comparable<Interval> {
     operator fun contains(that: Interval): Boolean = start <= that.start && end >= that.end
 
     operator fun contains(value: Double): Boolean = value in start..end
@@ -30,14 +30,13 @@ data class Interval private constructor(val start: Double, val end: Double): Com
     }
 }
 
-//operator Double.contains(interval: Interval): Boolean {  in interval.start..interval.end }
-
-fun findStabbingSet(intervals: List<Interval?>): Set<Double> {
+// This is the non-functional, efficient implementation of findStabbingSet.
+// We sort the intervals and then only have to traverse them. Since we allow for nullability, this takes
+// O(n log n) complexity and O(n) space: if we eliminate nullibility, we could do it in constant space.
+fun smallestStabbingSet(intervals: List<Interval?>): Set<Double> {
     // Filter out the nulls, sort by increasing order on the last element, and then take
     // the largest number in the current interval.
     // Consume intervals until we reach an interval that requires a new stabbing number.
-    // This runs in O(n log n) and O(n) space.
-    // If we disallow null intervals, we could reduce this to constant space.
     val sortedIntervals = intervals.filterNotNull().sorted()
     val stabbingSet = mutableListOf<Double>()
 
@@ -52,7 +51,24 @@ fun findStabbingSet(intervals: List<Interval?>): Set<Double> {
     return stabbingSet.toSet()
 }
 
+// A functional programming approach: higher complexity and space required, i.e. O(n^2) in each case.
+// This will not return the same stabbing set, but the sizes should be the same and they should both be solutions.
+fun smallestStabSetFP(intervals: List<Interval?>): Set<Double> {
+    // We want a set of all intersections of the intervals, and then filter to the minimal intervals, i.e.
+    // we want the intersection for every pair of intervals (including every interval with itself so that the set
+    // contains the original intervals) and then we filter out intervals that contain other intervals.
+    // What is left behind is a set of intervals that is disjoint but has points that cover all the initial
+    // intervals, so we can just pick one point from each one to get the stab set.
+    val definedIntervals = intervals.filterNotNull()
+    val allIntersections = definedIntervals.flatMap { i1 ->definedIntervals.map { i2 -> i1.intersection(i2) }  }.filterNotNull().distinct()
+    val maximalIntervals = allIntersections.filter { i1-> allIntersections.none { i2 -> i1 != i2 && i2 in i1 } }
+
+    // Any point from each of the maximalIntervals would do.
+    return maximalIntervals.map { it.start }.toSet()
+}
+
 fun main() {
+    println("*** Intervals 1: ***")
     val list1 = listOf(
             Interval.makeInterval(0.0, 3.0),
             Interval.makeInterval(2.0, 3.0),
@@ -61,5 +77,9 @@ fun main() {
             Interval.makeInterval(7.0, 10.0),
             Interval.makeInterval(4.0, 6.0)
     )
-    println(findStabbingSet(list1))
+    println("${list1}")
+    val ss1List1 = smallestStabbingSet(list1)
+    val ss2List1 = smallestStabSetFP(list1)
+    println("Stabbing set (linear), size=${ss1List1.size}: $ss1List1")
+    println("Stabbing set (FP),     size=${ss2List1.size}: $ss2List1")
 }
