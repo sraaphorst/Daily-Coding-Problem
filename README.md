@@ -403,6 +403,17 @@ the rows or columns.
 Implemented in Python:
 [Day 63](dcp_day063)
 
+
+## Day 64 \[Hard\
+
+This problem was asked by Google.
+
+A knight's tour is a sequence of moves by a knight on a chessboard such that all squares are visited once.
+
+Given `N`, write a function to return the number of knight's tours on an `N` by `N` chessboard.
+
+Implemented as brute force backtracking in `constexpr` C++: [Day 64](dcp_cpp/src/day064). The implementation takes `N` and a a starting position and calculates the number of paths. Isomorphism is ignored.
+
 ## Day 65 \[Easy\]
 
 Given an `n` by `m` matrix, unwind it as a spiral clockwise from the
