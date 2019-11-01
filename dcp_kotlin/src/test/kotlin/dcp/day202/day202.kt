@@ -1,4 +1,6 @@
 package dcp.day202
+// day202.kt
+// By Sebastian Raaphorst, 2019.
 
 import io.kotlintest.properties.forAll
 import io.kotlintest.specs.StringSpec

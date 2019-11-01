@@ -2,9 +2,6 @@ package dcp.day144
 // day144.kt
 // By Sebastian Raaphorst, 2019.
 
-
-import kotlin.random.Random.Default
-
 fun findNextHighestBruteForce(elems: List<Int>, elemIdx: Int): Int? {
     val elem = elems[elemIdx]
     var idx: Int? = null
@@ -51,20 +48,4 @@ fun findNextHighestConstant(data: Pair<List<Int>, List<Int>>, elemIdx: Int): Int
     val position = index[elemIdx]
 
     return if (position < unindex.size - 1) unindex[position + 1] else null
-}
-
-fun main() {
-    val lst = listOf(4, 1, 3, 5, 6)
-    val processedLst = preprocess(lst)
-    for (i in lst.indices)
-        assert(findNextHighestBruteForce(lst, i) == findNextHighestConstant(processedLst, i))
-
-    // Do a random one as well.
-    val length = Default.nextInt(0, 100)
-    val randomLst = List(length) {
-        Default.nextInt(0, 100)
-    }
-    val processedRandomLst = preprocess(randomLst)
-    for (i in randomLst.indices)
-        assert(findNextHighestBruteForce(randomLst, i) == findNextHighestConstant(processedRandomLst, i))
 }

@@ -1,4 +1,6 @@
 package dcp.day119
+// day119.kt
+// By Sebastian Raaphorst, 2019.
 
 import io.kotlintest.properties.Gen
 import io.kotlintest.properties.forAll

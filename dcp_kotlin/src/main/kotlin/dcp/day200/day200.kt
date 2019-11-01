@@ -66,20 +66,3 @@ fun smallestStabSetFP(intervals: List<Interval?>): Set<Double> {
     // Any point from each of the maximalIntervals would do.
     return maximalIntervals.map { it.start }.toSet()
 }
-
-fun main() {
-    println("*** Intervals 1: ***")
-    val list1 = listOf(
-            Interval.makeInterval(0.0, 3.0),
-            Interval.makeInterval(2.0, 3.0),
-            Interval.makeInterval(15.0, 3.0),
-            Interval.makeInterval(8.0, 11.0),
-            Interval.makeInterval(7.0, 10.0),
-            Interval.makeInterval(4.0, 6.0)
-    )
-    println("${list1}")
-    val ss1List1 = smallestStabbingSet(list1)
-    val ss2List1 = smallestStabSetFP(list1)
-    println("Stabbing set (linear), size=${ss1List1.size}: $ss1List1")
-    println("Stabbing set (FP),     size=${ss2List1.size}: $ss2List1")
-}
