@@ -10,7 +10,7 @@ for the day. So far, the programming languages I use are:
 * Java 10
 * Python 3.6
 * Scala 2.12
-* Kotlin 1.3.40 (in the process of learning)
+* Kotlin 1.3.50 (in the process of learning)
 
 The C++ testing is done using:
 * Unit testing with [Catch2](https://github.com/catchorg/Catch2).
@@ -593,7 +593,7 @@ Implemented in `constexpr` C++: [Day 118](dcp_cpp/src/day118)
 Given a set of intervals, determine a smallest collection of intervals
 that cover the intervals.
 
-Implemented in Kotlin: [Day 119](dcp_jvm/src/main/kotlin/dcp/day119)
+Implemented in Kotlin: [Day 119](dcp_kotlin/src/main/kotlin/dcp/day119)
 
 ## Day 120 \[Medium\]
 
@@ -642,7 +642,7 @@ Implemented in Python (and property tested with hypothesis):
 Given an array and an index to an element in an array, find the
 nearest larger number. (Interpreted incorrectly.)
 
-Implemented in Kotlin: [Day 144](dcp_jvm/src/main/kotlin/dcp/day144)
+Implemented in Kotlin: [Day 144](dcp_kotlin/src/main/kotlin/dcp/day144)
 
 ## Day 145 \[Easy\]
 
@@ -1059,7 +1059,7 @@ and
 
 return `6`.
 
-Implemented in Kotlin: [Day 185](dcp_jvm/src/main/kotlin/dcp/day185)
+Implemented in Kotlin: [Day 185](dcp_kotlin/src/main/kotlin/dcp/day185)
 
 
 ## Day 186 \[Hard\]
@@ -1113,7 +1113,7 @@ Imagine a set of `n` line segments connecting each point `pi` to
 `qi`. Write an algorithm to determine how many pairs of the line
 segments intersect.
 
-Implemented in Kotlin: [Day 194](dcp_jvm/src/main/kotlin/dcp/day194)
+Implemented in Kotlin: [Day 194](dcp_kotlin/src/main/kotlin/dcp/day194)
 
 
 ## Day 198 \[Medium\]
@@ -1124,7 +1124,7 @@ Given a set of distinct positive integers, find the largest subset such that eve
 
 For example, given the set `[3, 5, 10, 20, 21]`, you should return `[5, 10, 20]`. Given `[1, 3, 6, 24]`, return `[1, 3, 6, 24]`.
 
-Implemented in Kotlin: [Day 198](dcp_jvm/src/main/kotlin/dcp/day198)
+Implemented in Kotlin: [Day 198](dcp_kotlin/src/main/kotlin/dcp/day198)
 
 
 ## Day 199 - \[Hard\]
@@ -1136,7 +1136,7 @@ Given a string of parentheses, find the balanced string that can be produced fro
 For example, given `"(()"`, you could return `"(())"`. Given
 `"))()("`, you could return `"()()()()"`.
 
-Implemented in Kotlin: [Day 199](dcp_jvm/src/main/kotlin/dcp/day199)
+Implemented in Kotlin: [Day 199](dcp_kotlin/src/main/kotlin/dcp/day199)
 
 ## Day 200 \[Hard\]
 
@@ -1147,7 +1147,7 @@ Let `X` be a set of `n` intervals on the real line. We say that a set of points 
 For example, given the intervals `[(1, 4), (4, 5), (7, 9), (9, 12)]`,
 you should return `[4, 9]`.
 
-Implemented in Kotlin: [Day 200](dcp_jvm/src/main/kotlin/dcp/day200)
+Implemented in Kotlin: [Day 200](dcp_kotlin/src/main/kotlin/dcp/day200)
 
 ## Day 201 \[Easy\]
 
@@ -1164,7 +1164,7 @@ We define a path in the triangle to start at the top and go down one row at a ti
 
 Write a program that returns the weight of the maximum weight path.
 
-Implemented in Kotlin: [Day 201](dcp_jvm/src/main/kotlin/dcp/day201)
+Implemented in Kotlin: [Day 201](dcp_kotlin/src/main/kotlin/dcp/day201)
 
 ## Outstanding problems
 
