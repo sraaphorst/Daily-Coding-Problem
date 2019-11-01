@@ -1,5 +1,5 @@
-package day202
-// day202.kt
+package dcp.day202
+// dcp.day202.kt
 // By Sebastian Raaphorst, 2019
 
 // Reverse the number and compare.

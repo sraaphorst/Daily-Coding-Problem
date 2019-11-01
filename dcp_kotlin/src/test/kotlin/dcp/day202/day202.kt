@@ -1,4 +1,4 @@
-package day202
+package dcp.day202
 
 import io.kotlintest.properties.forAll
 import io.kotlintest.specs.StringSpec
