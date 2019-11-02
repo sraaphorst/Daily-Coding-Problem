@@ -1,4 +1,6 @@
 package dcp.day202
+// PalindromeTester.kt
+// By Sebastian Raaphorst, 2019.
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals

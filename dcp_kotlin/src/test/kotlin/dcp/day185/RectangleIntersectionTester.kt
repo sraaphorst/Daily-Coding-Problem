@@ -1,5 +1,5 @@
 package dcp.day185
-// day185.kt
+// RectangleIntersectionTester.kt
 // By Sebastian Raaphorst, 2019.
 
 import org.junit.jupiter.api.Test
