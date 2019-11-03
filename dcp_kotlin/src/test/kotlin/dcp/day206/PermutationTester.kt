@@ -9,11 +9,13 @@ class PermutationTester {
     @Test
     fun permTest1() {
         assertEquals(permute(listOf("a", "b", "c"), listOf(2, 1, 0)), listOf("c", "b", "a"))
+        assertEquals(permute(mutableListOf("a", "b", "c"), mutableListOf(2, 1, 0)), mutableListOf("c", "b", "a"))
     }
 
     @Test
     fun permTestID() {
         assertEquals(permute(listOf("a", "b", "c", "d", "e"), listOf(0, 1, 2, 3, 4)), listOf("a", "b", "c", "d", "e"))
+        assertEquals(permute(mutableListOf("a", "b", "c", "d", "e"), mutableListOf(0, 1, 2, 3, 4)), mutableListOf("a", "b", "c", "d", "e"))
     }
 
     @Test
