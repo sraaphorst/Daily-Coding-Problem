@@ -1166,6 +1166,27 @@ Write a program that returns the weight of the maximum weight path.
 
 Implemented in Kotlin: [Day 201](dcp_kotlin/src/main/kotlin/dcp/day201)
 
+## Day 206 \[Easy\]
+
+This problem was asked by Twitter.
+
+A permutation can be specified by an array `P`, where `P[i]` represents the location of the element at `i` in the permutation. For example, `[2, 1, 0]` represents the permutation where elements at the index 0 and 2 are swapped.
+
+Given an array and a permutation, apply the permutation to the array. For example, given the array `["a", "b", "c"]` and the permutation `[2, 1, 0]`, return `["c", "b", "a"]`.
+
+Implemented in Kotlin: [Day 206](dcp_kotlin/src/main/kotlin/dcp/day206)
+
+## Day 207 \[Medium\]
+
+This problem was asked by Dropbox.
+
+Given an undirected graph `G`, check whether it is bipartite. Recall
+that a graph is bipartite if its vertices can be divided into two
+independent sets, `U` and `V`, such that no edge connects vertices of
+the same set.
+
+Implemented in Kotlin: [Day 207](dcp_kotlin/src/main/kotlin/dcp/day207)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they

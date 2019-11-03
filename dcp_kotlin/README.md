@@ -8,3 +8,5 @@
 * [Day 199](src/main/kotlin/dcp/day199)
 * [Day 200](src/main/kotlin/dcp/day200)
 * [Day 201](src/main/kotlin/dcp/day201)
+* [Day 206](src/main/kotlin/dcp/day206)
+* [Day 207](src/main/kotlin/dcp/day207)
