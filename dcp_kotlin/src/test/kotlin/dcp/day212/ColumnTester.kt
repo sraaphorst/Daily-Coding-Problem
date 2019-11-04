@@ -8,10 +8,11 @@ import kotlin.test.assertEquals
 class ColumnTester {
     @Test
     // We just make sure that we have a bijection.
-    fun columnTest() {
-        val upper = 26 * 26 * 26 + 1
+    fun columnTest1() {
+        // This goes from AAAA to ZZZZ
+        val upper = 26 * (1 + 26 * (1 + 26 * (1 + 26)))
          for (colId in 1..upper) {
-             println("$colId -> ${columnNumberToId(colId)}, ${columnIdToNum(columnNumberToId(colId))}")
+             //println("$colId -> ${columnNumberToId(colId)}, ${columnIdToNum(columnNumberToId(colId))}")
              assertEquals(columnIdToNum(columnNumberToId(colId)), colId)
          }
     }

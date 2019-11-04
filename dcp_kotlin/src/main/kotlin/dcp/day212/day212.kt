@@ -13,14 +13,14 @@ fun columnNumberToId(colNum: Int): String {
 }
 
 fun columnIdToNum(colId: String): Int {
-    require(colId.isNotEmpty() && colId.all { it.isLetter() }) { "Illegal column identifier: \"$colId\""}
-
+    require(colId.isNotEmpty() && colId.all { it.isLetter() }) { "Illegal column identifier: \"$colId\"" }
     fun aux(colId: String): Int {
-        return if (colId.isEmpty())
-            0
+        // If we are empty, done.
+        return if (colId.isEmpty()) 0
         else {
-            val curr = (colId.first().toInt() - 'A'.toInt() + 1)
-            val rem = colId.drop(1)
+            // Process right to left.
+            val curr = (colId.last().toInt() - 'A'.toInt() + 1)
+            var rem = colId.dropLast(1)
             if (rem.isEmpty()) curr else curr + 26 * aux(rem)
         }
     }
