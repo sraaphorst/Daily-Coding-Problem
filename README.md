@@ -1203,6 +1203,20 @@ Bonus: What input `n <= 1000000` gives the longest sequence?
 
 Implemented in C++: [Day 208](dcp_cpp/src/day208)
 
+
+## Day 212 \[Easy\]
+
+This problem was asked by Dropbox.
+
+Spreadsheets often use this alphabetical encoding for its columns: `"A"`, `"B"`, `"C"`, ..., `"AA"`, `"AB"`, ..., `"ZZ"`, `"AAA"`, `"AAB"`, ....
+
+Given a column number, return its alphabetical column id. For example,
+given `1`, return `"A"`. Given `27`, return `"AA"`.
+
+Implemented in Kotlin:
+[Day 212](dcp_kotlin/src/main/kotlin/dcp/day212)
+
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
