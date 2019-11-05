@@ -1204,6 +1204,15 @@ Bonus: What input `n <= 1000000` gives the longest sequence?
 Implemented in C++: [Day 208](dcp_cpp/src/day208)
 
 
+## Day 211 \[Medium\]
+
+This problem was asked by Microsoft.
+
+Given a string and a pattern, find the starting indices of all occurrences of the pattern in the string. For example, given the string `"abracadabra"` and the pattern `"abr"`, you should return `[0, 7]`.
+
+Implemented in Kotlin:
+[Day 211](dcp_kotlin/src/main/kotlin/dcp/day211)
+
 ## Day 212 \[Easy\]
 
 This problem was asked by Dropbox.
