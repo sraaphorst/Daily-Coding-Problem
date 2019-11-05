@@ -20,7 +20,7 @@ fun columnIdToNum(colId: String): Int {
         else {
             // Process right to left.
             val curr = (colId.last().toInt() - 'A'.toInt() + 1)
-            var rem = colId.dropLast(1)
+            val rem = colId.dropLast(1)
             if (rem.isEmpty()) curr else curr + 26 * aux(rem)
         }
     }
