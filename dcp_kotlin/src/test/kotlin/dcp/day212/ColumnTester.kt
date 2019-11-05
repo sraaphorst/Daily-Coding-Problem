@@ -12,8 +12,8 @@ class ColumnTester {
         // This goes from AAAA to ZZZZ
         val upper = 26 * (1 + 26 * (1 + 26 * (1 + 26)))
          for (colNum in 1..upper) {
-             //println("$colId -> ${columnNumberToId(colId)}, ${columnIdToNum(columnNumberToId(colId))}")
-             assertEquals(columnIdToNum(columnNumberToId(colNum)), colNum)
+             //println("$colId -> ${columnNumToId(colId)}, ${columnIdToNum(columnNumToId(colId))}")
+             assertEquals(columnIdToNum(columnNumToId(colNum)), colNum)
          }
     }
 }

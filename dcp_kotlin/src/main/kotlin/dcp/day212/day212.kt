@@ -1,6 +1,6 @@
 package dcp.day212
 
-fun columnNumberToId(colNum: Int): String {
+fun columnNumToId(colNum: Int): String {
     require(colNum >= 1) { "Illegal column number: \"$colNum\"" }
 
     // Work with mod 26 to simplify.
