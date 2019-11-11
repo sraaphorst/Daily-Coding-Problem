@@ -1,4 +1,6 @@
 package dcp.day212
+// day212.kt
+// By Sebastian Raaphorst, 2019.
 
 fun columnNumToId(colNum: Int): String {
     require(colNum >= 1) { "Illegal column number: \"$colNum\"" }

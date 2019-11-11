@@ -1,11 +1,11 @@
 package dcp.day211
-// abracadabratest.kt
+// AbracadabraTester.kt
 // By Sebastian Raaphorst, 2019.
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class AbracadabraTest {
+class AbracadabraTester {
     @Test
     fun abracadabraTest() {
         assertEquals(findStartPoints("abracadabra", "abr"), setOf(0, 7))

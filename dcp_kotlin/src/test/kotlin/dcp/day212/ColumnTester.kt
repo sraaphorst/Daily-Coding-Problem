@@ -1,5 +1,5 @@
 package dcp.day212
-// day212.kt
+// ColumnTester.kt
 // By Sebastian Raaphorst, 2019.
 
 import org.junit.jupiter.api.Test
