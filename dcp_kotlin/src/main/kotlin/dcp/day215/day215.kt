@@ -34,7 +34,3 @@ class HDNode<T>(
         return listOf()
     }
 }
-//
-//private operator fun <A, B> Pair<A, B>?.get(depth: A) {
-//
-//}

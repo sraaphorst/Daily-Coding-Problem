@@ -14,7 +14,8 @@ class RomanNumeral {
     }
 
     companion object {
-        val orderedList = mapOf(
+        // These are the important combinations, in order, to generate a Roman numeral from a natural number.
+        private val orderedList = mapOf(
             "M"  to 1000,
             "D"  to 500,
             "C"  to 100,
@@ -28,16 +29,17 @@ class RomanNumeral {
             "I"  to 1
             )
 
-        val reverseList = orderedList.toList().map { it.second to it.first }.toMap()
-
+        // We reverse the important combinations, which allow us to reverse the process to get a natural number
+        // from a Roman numeral. We need them to be ordered: hence a list and not a map.
+        //private val reverseList = orderedList.toList().map { it.second to it.first }.toMap()
+        private val reverseList = orderedList.map { it.value to it.key }
+ }
         private fun convStr(rest: Int): String {
             if (rest == 0)
                 return ""
-            val entry = reverseList.filterKeys { rest >= it }.maxBy { it.key }
-            if (entry == null)
-                throw IllegalArgumentException("Cannot represent as a Roman numeral: $rest")
-            return entry.value + convStr(rest - entry.key)
-
+            val entry = reverseList.filter { it.first <= rest }.maxBy { it.first }
+                ?: throw IllegalArgumentException("Cannot represent as a Roman numeral: $rest")
+            return entry.second + convStr(rest - entry.first)
         }
 
         private fun convInt(rest: String): Int {
@@ -52,6 +54,7 @@ class RomanNumeral {
                     return num + convInt(rest.drop(2))
             }
 
+            // Fallback to extracting one character from the string.
             val oneChar = rest.take(1)
 
             val num: Int? = orderedList[oneChar]
@@ -61,13 +64,3 @@ class RomanNumeral {
             throw IllegalArgumentException("Illegal sequence: $rest")
         }
     }
-}
-
-fun main() {
-    for (i in 0..2000) {
-        val rm = RomanNumeral(i)
-        val rm2 = RomanNumeral(rm.toString)
-        val rm3 = RomanNumeral(rm.toInt)
-        println("${rm.toString} -> ${rm2.toInt} -> ${rm3.toString}")
-    }
-}

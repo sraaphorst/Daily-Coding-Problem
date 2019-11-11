@@ -11,3 +11,6 @@
 * [Day 206](src/main/kotlin/dcp/day206)
 * [Day 207](src/main/kotlin/dcp/day207)
 * [Day 212](src/main/kotlin/dcp/day212)
+* [Day 215](src/main/kotlin/dcp/day215) - Incomplete
+* [Day 216](src/main/kotlin/dcp/day216) - Needs cleanup
+* [Day 218](src/main/kotlin/dcp/day218)

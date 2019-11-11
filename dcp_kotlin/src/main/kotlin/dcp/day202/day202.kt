@@ -20,10 +20,3 @@ fun Int.isPalindrome(): Boolean {
 
     return this == reversedNumber
 }
-
-//fun main() {
-//    println(1011.isPalindrome())
-//    println(111.isPalindrome())
-//    println(0.isPalindrome())
-//    println(10.isPalindrome())
-//}
