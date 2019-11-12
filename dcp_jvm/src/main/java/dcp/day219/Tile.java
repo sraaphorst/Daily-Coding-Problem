@@ -5,7 +5,7 @@ import java.awt.*;
 // These are the possible tiles.
 enum Tile {
     YELLOW(Color.YELLOW),
-    BLUE(Color.BLUE),
+    BLUE(Color.CYAN),
     GREEN(Color.GREEN);
 
     final Color color;

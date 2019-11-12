@@ -2,20 +2,52 @@ package dcp.day219;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.OptionalInt;
 
 final public class Connect4 {
 
     static final int ROWS = 6;
     static final int COLS = 7;
 
-    final Connect4Model model;
-    final Connect4View view;
-    final Connect4Controller controller;
+    private final Connect4Model model;
+    private final Connect4View view;
+    private final Connect4Controller controller;
+    private Tile player;
 
-    Connect4() {
-        model = new Connect4Model(this);
-        view = new Connect4View(this);
-        controller = new Connect4Controller(this);
+    public Connect4() {
+        model = new Connect4Model();
+        view = new Connect4View();
+        controller = new Connect4Controller();
+        player = Tile.BLUE;
+
+        // Hook up the headers to the controllers.
+        view.header.forEach(comp -> {
+            // Convert the header to a column position.
+            final OptionalInt colIdx = view.headerToColumn(comp);
+            if (colIdx.isPresent()) System.out.println("PRESENT");
+            else System.out.println("NOT PRESENT");
+
+            // Hook up the button to invoke the controls for the column.
+            colIdx.ifPresent(col -> ((JButton) comp).addActionListener(evt -> {
+                        System.out.println("Clicked " + col);
+
+                        // Set the model.
+                        OptionalInt rowIdx = model.addToColumn(player, col);
+                        rowIdx.ifPresent(row -> {
+                            System.out.println("Setting colour of (" + row + "," + col + ") to " + player);
+                            view.setToTile(player, row, col);
+
+                            // Repaint and swap players.
+                            view.repaint();
+                            swapPlayer();
+                        });
+                    }
+            ));
+        });
+    }
+
+    void swapPlayer() {
+        player = player == Tile.BLUE ? Tile.YELLOW : Tile.BLUE;
     }
 
     public static void main(String[] args) {
