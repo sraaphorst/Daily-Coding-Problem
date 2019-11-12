@@ -15,20 +15,20 @@ class Connect4View extends JPanel {
     final List<List<JComponent>> components;
 
     Connect4View() {
-        setLayout(new GridLayout(0, Connect4.COLS, PAD, PAD));
+        setLayout(new GridLayout(0,Connect4.COLS, PAD, PAD));
 
         // Create the components.
         components = new ArrayList<>(Connect4.ROWS);
 
         // Create the headers.
         header = new ArrayList<>(Connect4.COLS);
-        for (int i = 0; i < Connect4.COLS; ++i) {
-            final JButton button = new JButton(String.valueOf(i+1));
+        for (int c = 0; c < Connect4.COLS; ++c) {
+            final JButton button = new JButton(String.valueOf(c + 1));
             button.setBorder(BorderFactory.createLoweredSoftBevelBorder());
             add(button);
             header.add(button);
         }
-        components.add(header);
+        //components.add(header);
 
         // Create the JLabel rows.
         for (int r = 0; r < Connect4.ROWS; ++r) {
@@ -37,7 +37,7 @@ class Connect4View extends JPanel {
                 final JLabel label = new JLabel("LABEL (" + r + "," + c + ")");
                 label.setOpaque(true);
                 label.setForeground(Color.BLACK);
-                label.setBackground(Tile.GREEN.getColor());
+                label.setBackground(Player.UNVISISTED.color);
 
 //                if (c == 0) label.setBackground(Color.RED);
 //                if (c == 1) label.setBackground(Color.MAGENTA);
@@ -48,18 +48,17 @@ class Connect4View extends JPanel {
                 label.setBorder(BorderFactory.createRaisedSoftBevelBorder());
                 add(label);
                 row.add(label);
-                components.add(row);
             }
+            components.add(row);
         }
     }
 
-    void setToTile(final Tile tile, int row, int col) {
-        System.out.println("\n*** SET TO TILE: " + tile + " r=" + row + " c=" + col + " ***");
-        final JLabel label = ((JLabel)components.get(col).get(row));
-        System.out.println("view " + label.getText() + ", setToTile: (" + row + "," + col + ") -> " + tile.getColor());
-        System.out.println("\twas: " + label.getBackground());
-        label.setBackground(tile.getColor());
-        System.out.println("\tnow: " + label.getBackground());
+    void setToTile(final Player player, int row, int col) {
+        System.out.println("\n*** SET TO PLAYER: " + player + " r=" + row + " c=" + col + " ***");
+        final JLabel label = ((JLabel)components.get(row).get(col));
+        System.out.println("view " + label.getText() + ", setToTile: (" + row + "," + col + ") -> " + player.color);
+        label.setBackground(player.color);
+        repaint();
     }
 
     // Convert a header to a column.

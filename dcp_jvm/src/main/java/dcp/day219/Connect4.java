@@ -12,13 +12,13 @@ final public class Connect4 {
     private final Connect4Model model;
     private final Connect4View view;
     private final Connect4Controller controller;
-    private Tile player;
+    private Player player;
 
     public Connect4() {
         model = new Connect4Model();
         view = new Connect4View();
         controller = new Connect4Controller();
-        player = Tile.BLUE;
+        player = Player.BLUE;
 
         // Hook up the headers to the controllers.
         view.header.forEach(comp -> {
@@ -37,8 +37,7 @@ final public class Connect4 {
                             System.out.println("Setting colour of (" + row + "," + col + ") to " + player);
                             view.setToTile(player, row, col);
 
-                            // Repaint and swap players.
-                            view.repaint();
+                            // Swap players.
                             swapPlayer();
                         });
                     }
@@ -47,7 +46,7 @@ final public class Connect4 {
     }
 
     void swapPlayer() {
-        player = player == Tile.BLUE ? Tile.YELLOW : Tile.BLUE;
+        player = player == Player.BLUE ? Player.YELLOW : Player.BLUE;
     }
 
     public static void main(String[] args) {
