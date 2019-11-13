@@ -34,18 +34,12 @@ class Connect4View extends JPanel {
         for (int r = 0; r < Connect4.ROWS; ++r) {
             final List<JComponent> row = new ArrayList<>(Connect4.COLS);
             for (int c = 0; c < Connect4.COLS; ++c) {
-                final JLabel label = new JLabel("LABEL (" + r + "," + c + ")");
+                final JLabel label = new JLabel("(" + (r + 1) + "," + (c + 1) + ")");
                 label.setOpaque(true);
                 label.setForeground(Color.BLACK);
                 label.setBackground(Player.UNVISISTED.color);
-
-//                if (c == 0) label.setBackground(Color.RED);
-//                if (c == 1) label.setBackground(Color.MAGENTA);
-//                if (c == 2) label.setBackground(Color.ORANGE);
-//                if (c == 3) label.setBackground(Color.GREEN);
-//                if (c == 4) label.setBackground(Color.LIGHT_GRAY);
-
                 label.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+                label.setHorizontalAlignment(SwingConstants.CENTER);
                 add(label);
                 row.add(label);
             }
@@ -54,9 +48,7 @@ class Connect4View extends JPanel {
     }
 
     void setToTile(final Player player, int row, int col) {
-        System.out.println("\n*** SET TO PLAYER: " + player + " r=" + row + " c=" + col + " ***");
         final JLabel label = ((JLabel)components.get(row).get(col));
-        System.out.println("view " + label.getText() + ", setToTile: (" + row + "," + col + ") -> " + player.color);
         label.setBackground(player.color);
         repaint();
     }

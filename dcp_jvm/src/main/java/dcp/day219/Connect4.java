@@ -24,18 +24,12 @@ final public class Connect4 {
         // Hook up the headers to the controllers.
         view.header.forEach(comp -> {
             // Convert the header to a column position.
-            final OptionalInt colIdx = view.headerToColumn(comp);
-            if (colIdx.isPresent()) System.out.println("PRESENT");
-            else System.out.println("NOT PRESENT");
-
             // Hook up the button to invoke the controls for the column.
-            colIdx.ifPresent(col -> ((JButton) comp).addActionListener(evt -> {
-                        System.out.println("Clicked " + col);
-
+            view.headerToColumn(comp).
+                    ifPresent(col -> ((JButton) comp).addActionListener(evt -> {
                         // Set the model.
                         OptionalInt rowIdx = model.addToColumn(player, col);
                         rowIdx.ifPresent(row -> {
-                            System.out.println("Setting colour of (" + row + "," + col + ") to " + player);
                             view.setToTile(player, row, col);
 
                             // Check if there is a win.
@@ -117,7 +111,6 @@ final public class Connect4 {
         }
         positions.clear();
         for (int d = 0; (dr + d) < ROWS && (dc - d) >= 0; ++d) {
-            System.out.println("d=" + d + " dr = " + dr + " dc = " + dc);
             if (p(dr + d, dc - d) != winner)
                 positions.clear();
             else if (p(dr + d, dc - d) == winner)
@@ -130,16 +123,11 @@ final public class Connect4 {
 
     public static void main(String[] args) {
         final JFrame frame = new JFrame("Connect 4");
-        //frame.setSize(300, 300);
-        //final JLabel label = new JLabel("Label");
-        //frame.add(label);
-        //label.setBorder(BorderFactory.createLoweredBevelBorder());
-        //label.setSize(200, 200);
-        //final Connect4View view = new Connect4View();
-        final Connect4 connect4 = new Connect4();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
+        final Connect4 connect4 = new Connect4();
         frame.add(connect4.view, BorderLayout.CENTER);
-        frame.setSize(600, 600);
+        frame.setSize(700, 600);
         frame.setVisible(true);
     }
 }

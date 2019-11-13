@@ -26,19 +26,10 @@ class Connect4Model {
      * Given a column, try to add a tile to it by sliding it down.
      */
     OptionalInt addToColumn(Player player, int column) {
-        System.out.println("\n*** MODEL: addToColumn + " + player + " column=" + column + " ***");
         // Start at bottom, work to top.
-        System.out.println("Empty: entries in column: ");
-        for (int row = ROWS-1; row >= 0; --row)
-            if (board.get(row).get(column) == Player.UNVISISTED) System.out.print(row + " ");
-        System.out.println();
-
         for (int row = ROWS-1; row >= 0; --row) {
-            System.out.println("Checking if row " + row + " is empty: " + (board.get(row).get(column) == Player.UNVISISTED));
             if (board.get(row).get(column) == Player.UNVISISTED) {
-                System.out.println("addToColumn: Setting tile (" + row + "," + column + ") to " + player);
                 board.get(row).set(column, player);
-                System.out.println("Returning " + row);
                 return OptionalInt.of(row);
             }
         }
