@@ -1321,6 +1321,16 @@ Design and implement Connect 4.
 Implemented in Java:
 * [Day 219](src/main/java/dcp/day219)
 
+
+## Day 221 \[Easy\]
+
+This problem was asked by Zillow.
+
+Let's define a "sevenish" number to be one which is either a power of 7, or the sum of unique powers of 7. The first few sevenish numbers are 1, 7, 8, 49, and so on. Create an algorithm to find the nth sevenish number.
+
+mplemented in Kotlin:
+[Day 221](dcp_kotlin/src/main/kotlin/dcp/day221)
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
