@@ -28,7 +28,6 @@ class Connect4View extends JPanel implements Connect4Constants {
             add(button);
             header.add(button);
         }
-        //components.add(header);
 
         // Create the JLabel rows.
         for (int r = 0; r < ROWS; ++r) {

@@ -64,8 +64,9 @@ final public class Connect4 implements Connect4Constants{
 
     /**
      * Determine if a player has won, and if so, return the Winner information.
+     * We check every time a tile is placed, so the winner must contain the newly placed tile (row, column),
+     * which reduces how much of the board we have to scan on each turn.
      */
-    // Check for a winner that passes through position (row, column).
     private Optional<Winner> checkWinner(int row, int column) {
         // The potential winner.
         final Player winner = p(row, column);
