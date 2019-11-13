@@ -7,22 +7,22 @@ import java.util.List;
 import java.util.OptionalInt;
 import java.util.stream.IntStream;
 
-class Connect4View extends JPanel {
+class Connect4View extends JPanel implements Connect4Constants {
 
-    private static final int PAD  = 5;
+    private static final int PAD = 5;
 
     final List<JComponent> header;
-    final List<List<JComponent>> components;
+    private final List<List<JComponent>> components;
 
     Connect4View() {
         setLayout(new GridLayout(0,Connect4.COLS, PAD, PAD));
 
         // Create the components.
-        components = new ArrayList<>(Connect4.ROWS);
+        components = new ArrayList<>(ROWS);
 
         // Create the headers.
-        header = new ArrayList<>(Connect4.COLS);
-        for (int c = 0; c < Connect4.COLS; ++c) {
+        header = new ArrayList<>(COLS);
+        for (int c = 0; c < COLS; ++c) {
             final JButton button = new JButton(String.valueOf(c + 1));
             button.setBorder(BorderFactory.createLoweredSoftBevelBorder());
             add(button);
@@ -31,9 +31,9 @@ class Connect4View extends JPanel {
         //components.add(header);
 
         // Create the JLabel rows.
-        for (int r = 0; r < Connect4.ROWS; ++r) {
-            final List<JComponent> row = new ArrayList<>(Connect4.COLS);
-            for (int c = 0; c < Connect4.COLS; ++c) {
+        for (int r = 0; r < ROWS; ++r) {
+            final List<JComponent> row = new ArrayList<>(COLS);
+            for (int c = 0; c < COLS; ++c) {
                 final JLabel label = new JLabel("(" + (r + 1) + "," + (c + 1) + ")");
                 label.setOpaque(true);
                 label.setForeground(Color.BLACK);
@@ -47,13 +47,18 @@ class Connect4View extends JPanel {
         }
     }
 
-    void setToTile(final Player player, int row, int col) {
+    /**
+     * Set a tile to a player.
+     */
+    void setTileToPlayer(final Player player, int row, int col) {
         final JLabel label = ((JLabel)components.get(row).get(col));
         label.setBackground(player.color);
         repaint();
     }
 
-    // Convert a header to a column.
+    /**
+     * Given a header, convert it to a column index 0 <= colIdx < COL.
+     */
     OptionalInt headerToColumn(final JComponent c) {
         return IntStream.range(0, header.size()).filter(i -> header.get(i).equals(c)).findFirst();
     }

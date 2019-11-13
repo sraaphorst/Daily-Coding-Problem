@@ -7,16 +7,16 @@ import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.List;
 
-final public class Connect4 {
-
-    static final int ROWS = 6;
-    static final int COLS = 7;
+/**
+ * The controller and main app for Connect4.
+ */
+final public class Connect4 implements Connect4Constants{
 
     private final Connect4Model model;
     private final Connect4View view;
     private Player player;
 
-    public Connect4() {
+    private Connect4() {
         model = new Connect4Model();
         view = new Connect4View();
         player = Player.BLUE;
@@ -30,12 +30,12 @@ final public class Connect4 {
                         // Set the model.
                         OptionalInt rowIdx = model.addToColumn(player, col);
                         rowIdx.ifPresent(row -> {
-                            view.setToTile(player, row, col);
+                            view.setTileToPlayer(player, row, col);
 
                             // Check if there is a win.
                             checkWinner(row, col).ifPresent(w -> {
                                 for (Position p: w.positions)
-                                    view.setToTile(Player.WINNER, p.row, p.column);
+                                    view.setTileToPlayer(Player.WINNER, p.row, p.column);
                                 JOptionPane.showMessageDialog(null, "Winner!");
                                 System.exit(0);
                             });
@@ -48,21 +48,30 @@ final public class Connect4 {
         });
     }
 
-    void swapPlayer() {
+    /**
+     * Swap the players.
+     */
+    private void swapPlayer() {
         player = player == Player.BLUE ? Player.YELLOW : Player.BLUE;
     }
 
-    Player p(int r, int c) {
+    /**
+     * Shorthand to get the player at position (r, c).
+     */
+    private Player p(int r, int c) {
         return model.board.get(r).get(c);
     }
 
+    /**
+     * Determine if a player has won, and if so, return the Winner information.
+     */
     // Check for a winner that passes through position (row, column).
-    Optional<Winner> checkWinner(int row, int column) {
+    private Optional<Winner> checkWinner(int row, int column) {
         // The potential winner.
         final Player winner = p(row, column);
 
         // Check horizonal line.
-        List<Position> positions = new ArrayList<>(4);
+        final List<Position> positions = new ArrayList<>(4);
         for (int c = 0; c < COLS; ++c) {
             if (p(row, c) != winner)
                 positions.clear();
@@ -121,13 +130,14 @@ final public class Connect4 {
         return Optional.empty();
     }
 
+
     public static void main(String[] args) {
         final JFrame frame = new JFrame("Connect 4");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         final Connect4 connect4 = new Connect4();
         frame.add(connect4.view, BorderLayout.CENTER);
-        frame.setSize(700, 600);
+        frame.setSize(500, 600);
         frame.setVisible(true);
     }
 }
