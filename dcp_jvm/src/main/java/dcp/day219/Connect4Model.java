@@ -9,7 +9,7 @@ class Connect4Model {
     static int ROWS = 6;
     static int COLS = 7;
 
-    private List<List<Player>> board;
+    List<List<Player>> board;
 
     Connect4Model() {
         // Initialize all to unvisited.

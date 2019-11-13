@@ -6,7 +6,8 @@ import java.awt.*;
 enum Player {
     YELLOW(Color.YELLOW),
     BLUE(Color.CYAN),
-    UNVISISTED(Color.GREEN);
+    UNVISISTED(Color.GREEN),
+    WINNER(Color.RED);
 
     final Color color;
 

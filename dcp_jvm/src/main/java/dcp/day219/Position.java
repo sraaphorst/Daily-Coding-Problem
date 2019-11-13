@@ -1,10 +1,10 @@
 package dcp.day219;
 
-public class Pair {
+public class Position {
     final int row;
     final int column;
 
-    public Pair(int row, int column) {
+    public Position(int row, int column) {
         this.row = row;
         this.column = column;
     }
