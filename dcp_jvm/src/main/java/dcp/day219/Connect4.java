@@ -70,7 +70,7 @@ final public class Connect4 implements Connect4Constants{
         // The potential winner.
         final Player winner = p(row, column);
 
-        // Check horizonal line.
+        // Check horizontal line.
         final List<Position> positions = new ArrayList<>(4);
         for (int c = 0; c < COLS; ++c) {
             if (p(row, c) != winner)
