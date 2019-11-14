@@ -16,19 +16,26 @@ The C++ testing is done using:
 * Unit testing with [Catch2](https://github.com/catchorg/Catch2).
 
 The Java and Scala testing are done using:
-* Unit testing with [ScalaTest](https://github.com/scalatest/scalatest).
+* Unit testing with [JUnit](https://junit.org/junit5/docs/current/user-guide).
 * Specification testing with ScalaTest and [ScalaCheck](https://github.com/rickynils/scalacheck).
 
 The Python testing are done using:
 * Unit testing with [doctests](https://docs.python.org/2/library/doctest.html).
 * Specification testing with [Hypothesis](https://github.com/HypothesisWorks/hypothesis).
+Note that Python testing is included in the source files.
+
+The Kotlin testing is done using:
+* Unit testing with [JUnit](https://junit.org/junit5/docs/current/user-guide).
+* Specification testing with [KotlinTest](https://github.com/kotlintest/kotlintest).
 
 
 Here are the descriptions of the problems solved (not all of them have
 been attempted but will progress as time goes on.)
 
 
-## Daily Coding Problem: Problem #1 \[Easy\]
+---
+
+### Problem #1 \[Easy\]
 
 This problem was recently asked by Google.
 
@@ -42,7 +49,9 @@ Bonus: Can you do this in one pass?
 * [Unit testing](dcp_cpp/test/TestDay001.cpp)
 
 
-## Daily Coding Problem: Problem #2 \[Hard\]
+---
+
+### Problem #2 \[Hard\]
 
 This problem was asked by Uber.
 
@@ -52,10 +61,13 @@ For example, if our input was `[1, 2, 3, 4, 5]`, the expected output would be `[
 
 Follow-up: what if you can't use division?
 
-Implemented in C++: [Day 2](dcp_cpp/src/day002)
+* [C++ implementation](dcp_cpp/src/day002)
+* [Unit testing](dcp_cpp/test/TestDay002.cpp)
 
 
-## Daily Coding Problem: Problem #3 \[Medium\]
+---
+
+### Problem #3 \[Medium\]
 
 This problem was asked by Google.
 
@@ -78,10 +90,12 @@ node = Node('root', Node('left', Node('left.left')), Node('right'))
 assert deserialize(serialize(node)).left.left.val == 'left.left'
 ```
 
-Implemented in Python: [Day 3](dcp_py/day003)
+* [Python implementation](dcp_py/day003)
 
 
-## Daily Coding Problem: Problem 4 \[Hard\]
+---
+
+### Problem 4 \[Hard\]
 
 This problem was asked by Stripe.
 
@@ -91,10 +105,12 @@ For example, the input `[3, 4, -1, 1]` should give `2`. The input `[1, 2, 0]` sh
 
 You can modify the input array in-place.
 
-NOT YET IMPLEMENTED.
+* NOT YET IMPLEMENTED.
 
 
-## Daily Coding Problem: Problem 5 \[Medium\]
+---
+
+### Problem 5 \[Medium\]
 
 This problem was asked by Jane Street.
 
@@ -111,22 +127,25 @@ def cons(a, b):
 		
 Implement car and cdr.
 
-Implemented in Python: [Day 5](dcp_py/day005)
+* [Python implementation](dcp_py/day005)
 
 
+---
 
-## Daily Coding Problem: Problem 6 \[Hard\]
+### Problem 6 \[Hard\]
 
 This problem was asked by Google.
 
 An XOR linked list is a more memory efficient doubly linked list. Instead of each node holding next and prev fields, it holds a field named both, which is an XOR of the next node and the previous node. Implement an XOR linked list; it has an add(element) which adds the element to the end, and a get(index) which returns the node at index.
 
-If using a language that has no pointers (such as Python), you can assume you have access to get_pointer and dereference_pointer functions that converts between nodes and memory addresses.
+If using a language that has no pointers (such as Python), you can assume you have access to `get_pointer` and dereference_pointer functions that converts between nodes and memory addresses.
 
-NOT YET IMPLEMENTED
+* NOT YET IMPLEMENTED
 
 
-## Daily Coding Problem: Problem 7 \[Medium\]
+---
+
+### Problem 7 \[Medium\]
 
 This problem was asked by Facebook.
 
@@ -144,9 +163,12 @@ For example, the message `111` would give `3`, since it could be decoded as:
 You can assume that the messages are decodable.
 For example, `001` is not allowed.
 
-Implemented in Python: [Day 7](dcp_py/day007)
+* [Python implementation][Day 7](dcp_py/day007)
 
-#Daily Coding Problem: Problem 8 \[Easy\]
+
+---
+
+### Problem 8 \[Easy\]
 
 This problem was asked by Google.
 
@@ -165,42 +187,232 @@ For example, the following tree has 5 unival subtrees:
   / \
  1   1
  ```
- 
- Link: [Testing code](../../../../test/scala/dcp/day008)
 
-Implemented in Scala: [Day 8](dcp_jvm/src/main/scala/dcp/day008)
+* [Scala implementation](dcp_jvm/src/main/scala/dcp/day008)
+* [Unit testing](dcp_jvm/src/test/scala/dcp/TestDay008.scala)
 
-## Day 10 \[Medium\]
 
-Delay a function call by a specified number of ms.
+---
 
-Implemented in Java: [Day 10](dcp_jvm/src/main/java/dcp/day010)
+### Problem 9 \[Hard\]
 
-## Day 12 \[Hard\]
+This problem was asked by Airbnb.
 
-Given a staircase of `N` steps and a list `L` of possible step jumps, find the number of ways to ascend the steps.
+Given a list of integers, write a function that returns the largest sum of non-adjacent numbers. Numbers can be 0 or negative.
 
-Implemented in C++: [Day 12](dcp_cpp/src/day012)
+For example, `[2, 4, 6, 2, 5]` should return `13`, since we pick `2`, `6`, and `5`. `[5, 1, 1, 5]` should return `10`, since we pick `5` and `5`.
 
-## Day 14 \[Medium\]
+Follow-up: Can you do this in `O(N)` time and constant space?
 
-Use a Monte-Carlo method to estimate pi to three decimal places.
+* NOT YET IMPLEMENTED
 
-Implemented in C++: [Day 14](dcp_cpp/src/day014)
 
-## Day 19 \[Medium\]
+---
 
-Colour houses according to cost using dynamic programming.
+### Problem 10 \[Medium\]
 
-Implemented in Python (and property tested with hyptothesis):
-[Day 19](dcp_py/day019)
+This problem was asked by Apple.
 
-## Day 20 \[Easy\]
+Implement a job scheduler which takes in a function `f` and an integer `n`, and calls `f` after `n` milliseconds.
 
-Detect the intersection point in two singly linked lists, if one
-exists.
+* [Java implementation](dcp_jvm/src/main/java/dcp/day010)
+* [Unit testing](dcp_jvm/src/test/scala/dcp/TestDay010.scala)
 
-Implemented in Java: [Day 20](dcp_jvm/src/main/java/dcp/day020)
+
+---
+
+### Problem 11 \[Medium\]
+
+This problem was asked by Twitter.
+
+Implement an autocomplete system. That is, given a query string `s` and a set of all possible query strings, return all strings in the set that have `s` as a prefix.
+
+For example, given the query string `de` and the set of strings `[dog, deer, deal]`, return `[deer, deal]`.
+
+Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
+
+* NOT YET IMPLEMENTED
+
+
+---
+
+### Problem 12 \[Hard\]
+
+This problem was asked by Amazon.
+
+There exists a staircase with `N` steps, and you can climb up either 1 or 2 steps at a time. Given `N`, write a function
+that returns the number of unique ways you can climb the staircase. The order of the steps matters.
+
+What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive
+integers `X`? For example, if `X = {1, 3, 5}`, you could climb 1, 3, or 5 steps at a time.
+
+* [C++ implementation](dcp_cpp/src/day012)
+* [Unit testing](dcp_cpp/test/TestDay012.cpp)
+
+
+---
+
+### Problem 13 \[Hard\]
+
+This problem was asked by Amazon.
+
+Given an integer `k` and a string `s`, find the length of the longest substring that contains at most `k` distinct characters.
+
+For example, given `s = "abcba"` and `k = 2`, the longest substring with `k` distinct characters is `"bcb"`.
+
+* NOT YET IMPLEMENTED
+
+
+---
+
+### Problem 14 \[Medium\]
+
+This problem was asked by Google.
+
+The area of a circle is defined as `πr^2`.
+
+Estimate `π` to 3 decimal places using a Monte Carlo method.
+
+Hint: The basic equation of a circle is `x^2 + y^2 = r^2`.
+
+* [C++ implementation](dcp_cpp/src/day014)
+* [Unit testing](dcp_cpp/test/TestDay014.cpp)
+
+
+---
+
+### Problem 15 \[Medium\]
+
+This problem was asked by Facebook.
+
+Given a stream of elements too large to store in memory, pick a random element from the stream with uniform probability.
+
+* NOT YET IMPLEMENTED
+
+
+---
+
+### Problem 16 \[Easy\]
+
+This problem was asked by Twitter.
+
+You run an e-commerce website and want to record the last `N` order ids in a log. Implement a data structure to accomplish this, with the following API:
+
+`record(order_id)`: adds the `order_id` to the log
+`get_last(i)`: gets the `i`th last element from the log. `i` is guaranteed to be smaller than or equal to `N`.
+You should be as efficient with time and space as possible.
+
+* NOT YET IMPLEMENTED
+
+
+---
+
+### Problem 17 
+
+This problem was asked by Google.
+
+Suppose we represent our file system by a string in the following manner:
+
+The string `"dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"` represents:
+
+```
+dir
+    subdir1
+    subdir2
+        file.ext
+```
+The directory dir contains an empty sub-directory `subdir1` and a sub-directory `subdir2` containing a file `file.ext`.
+
+The string `"dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"` represents:
+
+```
+dir
+    subdir1
+        file1.ext
+        subsubdir1
+    subdir2
+        subsubdir2
+            file2.ext
+```
+The directory `dir` contains two sub-directories `subdir1` and `subdir2`. `subdir1` contains a file `file1.ext` and an empty second-level sub-directory `subsubdir1`. `subdir2` contains a second-level sub-directory `subsubdir2` containing a file `file2.ext`.
+
+We are interested in finding the longest (number of characters) absolute path to a file within our file system. For example, in the second example above, the longest absolute path is `"dir/subdir2/subsubdir2/file2.ext"`, and its length is `32` (not including the double quotes).
+
+Given a string representing the file system in the above format, return the length of the longest absolute path to a file in the abstracted file system. If there is no file in the system, return `0`.
+
+Note:
+
+The name of a file contains at least a period and an extension.
+
+The name of a directory or sub-directory will not contain a period.
+
+* NOT YET IMPLEMENTED
+
+
+---
+
+### Problem 18 \[Hard\]
+
+This problem was asked by Google.
+
+Given an array of integers and a number `k`, where `1 <= k <= length` of the array, compute the maximum values of each subarray of length `k`.
+
+For example, given `array = [10, 5, 2, 7, 8, 7]` and `k = 3`, we should get: `[10, 7, 8, 8]`, since:
+```
+10 = max(10, 5, 2)
+7 = max(5, 2, 7)
+8 = max(2, 7, 8)
+8 = max(7, 8, 7)
+```
+Do this in `O(n)` time and `O(k)` space. You can modify the input array in-place and you do not need to store the results. You can simply print them out as you compute them.
+
+* NOT YET IMPLEMENTED
+
+
+
+---
+
+### Day 19 \[Medium\]
+
+This problem was asked by Facebook.
+
+A builder is looking to build a row of `N` houses that can be of `K` different colors.
+
+He has a goal of minimizing cost while ensuring that no two neighboring houses are of the same color.
+
+
+Given an `N x K` matrix where the `n`th row and `k`th column represents the cost to build the nth house with kth color, return the minimum cost which achieves this goal.
+
+[Implemented in Python](dcp_py/day019)
+
+
+---
+
+### Problem 20 \[Easy\]
+
+This problem was asked by Google.
+
+Given two singly linked lists that intersect at some point, find the intersecting node. The lists are non-cyclical.
+
+For example, given:
+```
+A = 3 -> 7 -> 8 -> 10
+```
+and
+```
+B = 99 -> 1 -> 8 -> 10
+```
+return the node with value `8`.
+
+In this example, assume nodes with the same value are the exact same node objects.
+
+Do this in `O(M + N)` time (where `M` and `N` are the lengths of the lists) and constant space.
+
+* [Java implementation](dcp_jvm/src/main/java/dcp/day020)
+* [Unit testing](dcp_jvm/src/test/scala/dcp/TestDay020.scala)
+
+
+
 
 ## Day 27 \[Easy\]
 
