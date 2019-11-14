@@ -216,7 +216,7 @@ This problem was asked by Apple.
 Implement a job scheduler which takes in a function `f` and an integer `n`, and calls `f` after `n` milliseconds.
 
 * [Java implementation](dcp_jvm/src/main/java/dcp/day010)
-* [Unit testing](dcp_jvm/src/test/scala/dcp/TestDay010.scala)
+* [Unit testing](dcp_jvm/src/test/scala/dcp/day010/TestDay010.scala)
 
 
 ---
