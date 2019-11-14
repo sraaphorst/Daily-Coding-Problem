@@ -409,10 +409,10 @@ In this example, assume nodes with the same value are the exact same node object
 Do this in `O(M + N)` time (where `M` and `N` are the lengths of the lists) and constant space.
 
 * [Java implementation](dcp_jvm/src/main/java/dcp/day020)
-* [Unit testing](dcp_jvm/src/test/scala/dcp/TestDay020.scala)
+* [Unit testing](dcp_jvm/src/test/scala/dcp/day020/TestDay020.scala)
 
 
-
+---
 
 ## Day 27 \[Easy\]
 
