@@ -189,7 +189,7 @@ For example, the following tree has 5 unival subtrees:
  ```
 
 * [Scala implementation](dcp_jvm/src/main/scala/dcp/day008)
-* [Unit testing](dcp_jvm/src/test/scala/dcp/TestDay008.scala)
+* [Unit testing](dcp_jvm/src/test/scala/dcp/day008/TestDay008.scala)
 
 
 ---
