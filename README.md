@@ -1,5 +1,8 @@
 # Daily Coding Problem
 
+***NOTE***
+This is in the process of being reorganized and cleaned up.
+
 These are some practice problems solved in a variety of different languages (depending on the question specification and on my whims) from the Daily Coding Problem challenge:
 
 https://www.dailycodingproblem.com
