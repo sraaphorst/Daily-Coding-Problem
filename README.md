@@ -1331,6 +1331,19 @@ Let's define a "sevenish" number to be one which is either a power of 7, or the 
 mplemented in Kotlin:
 [Day 221](dcp_kotlin/src/main/kotlin/dcp/day221)
 
+
+## Day 222 \[Medium\]
+
+This problem was asked by Quora.
+
+Given an absolute pathname that may have `.` or `..` as part of it, return the shortest standardized path.
+
+For example, given `"/usr/bin/../bin/./scripts/../"`, return
+`"/usr/bin/"`.
+
+Implemented in Python: [Day 222](dcp_py/day222)
+
+
 ## Outstanding problems
 
 Some problems are outstanding, and others have been repeated, so they
