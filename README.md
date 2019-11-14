@@ -38,9 +38,9 @@ For example, given `[10, 15, 3, 7]` and `k` of `17`, return true since `10 + 7` 
 
 Bonus: Can you do this in one pass?
 
-Implemented in C++: [Day 1](dcp_cpp/src/day001)
+* [C++ implementation](dcp_cpp/src/day001)
+* [Unit testing](dcp_cpp/test/TestDay001.cpp)
 
-Link: [Testing code](../../test/TestDay001.cpp)
 
 ## Daily Coding Problem: Problem #2 \[Hard\]
 
