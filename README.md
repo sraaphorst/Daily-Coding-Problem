@@ -163,7 +163,7 @@ For example, the message `111` would give `3`, since it could be decoded as:
 You can assume that the messages are decodable.
 For example, `001` is not allowed.
 
-* [Python implementation][Day 7](dcp_py/day007)
+* [Python implementation](dcp_py/day007)
 
 
 ---
