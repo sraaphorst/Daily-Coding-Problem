@@ -1511,8 +1511,8 @@ In addition, note that the Roman numeral system uses subtractive notation for nu
 
 For the input `XIV`, for instance, you should return `14`.
 
-Implemented in Kotlin:
-[Day 216](dcp_kotlin/src/main/kotlin/dcp/day216)
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day216)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day216/RomanNumeralTester.kt)
 
 
 ---
@@ -1536,7 +1536,7 @@ This problem was asked by Yahoo.
 Write an algorithm that computes the reversal of a directed graph. For example, if a graph consists of `A -> B -> C`, it should become `A <- B <- C`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day218)
-* [Specification testing](dcp_kotlin/src/main/kotlin/dcp/day218/day218.kt)
+* [Specification testing](dcp_kotlin/src/test/kotlin/dcp/day218/day218.kt)
 
 
 ---
@@ -1565,7 +1565,7 @@ You are asked to play the following game. You and an opponent take turns choosin
 Write a program that returns the maximum amount of money you can win with certainty, if you move first, assuming your opponent plays optimally.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day220)
-* [Specification testing](dcp_kotlin/src/main/kotlin/dcp/day220/day220.kt)
+* [Specification testing](dcp_kotlin/src/test/kotlin/dcp/day220/day220.kt)
 
 
 ---
@@ -1577,7 +1577,7 @@ This problem was asked by Zillow.
 Let's define a "sevenish" number to be one which is either a power of 7, or the sum of unique powers of 7. The first few sevenish numbers are 1, 7, 8, 49, and so on. Create an algorithm to find the `n`th sevenish number.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day221)
-* [Unit testing](dcp_kotlin/src/main/kotlin/dcp/day221/SevenishTester.kt)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day221/SevenishTester.kt)
 
 
 ---
