@@ -10,11 +10,9 @@ import kotlin.math.min
 class CoinGameTester : StringSpec() {
     init {
         "Coin game tester" {
-            forAll(100, Gen.list(Gen.choose(1, 100))) { coins: List<Int> ->
-                // Limit to 25 coins because of exponential growth.
-                val coinLimit = coins.take(min(coins.size, 25))
+            forAll(50, Gen.list(Gen.choose(1, 100))) { coins: List<Int> ->
+                val coinLimit = coins.take(min(coins.size, 20))
                 coin_backtrack(coinLimit) == coin_dynamic(coinLimit)
-                true
             }
         }
     }
