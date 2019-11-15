@@ -310,7 +310,7 @@ You should be as efficient with time and space as possible.
 
 ---
 
-### Problem 17 
+### Problem 17 \[Hard\]
 
 This problem was asked by Google.
 
