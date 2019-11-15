@@ -38,7 +38,7 @@ been attempted but will progress as time goes on.)
 
 ---
 
-### Problem #1 \[Easy\]
+### Day #1 \[Easy\]
 
 This problem was recently asked by Google.
 
@@ -54,7 +54,7 @@ Bonus: Can you do this in one pass?
 
 ---
 
-### Problem #2 \[Hard\]
+### Day #2 \[Hard\]
 
 This problem was asked by Uber.
 
@@ -70,7 +70,7 @@ Follow-up: what if you can't use division?
 
 ---
 
-### Problem #3 \[Medium\]
+### Day #3 \[Medium\]
 
 This problem was asked by Google.
 
@@ -98,7 +98,7 @@ assert deserialize(serialize(node)).left.left.val == 'left.left'
 
 ---
 
-### Problem 4 \[Hard\]
+### Day 4 \[Hard\]
 
 This problem was asked by Stripe.
 
@@ -113,7 +113,7 @@ You can modify the input array in-place.
 
 ---
 
-### Problem 5 \[Medium\]
+### Day 5 \[Medium\]
 
 This problem was asked by Jane Street.
 
@@ -135,7 +135,7 @@ Implement car and cdr.
 
 ---
 
-### Problem 6 \[Hard\]
+### Day 6 \[Hard\]
 
 This problem was asked by Google.
 
@@ -148,7 +148,7 @@ If using a language that has no pointers (such as Python), you can assume you ha
 
 ---
 
-### Problem 7 \[Medium\]
+### Day 7 \[Medium\]
 
 This problem was asked by Facebook.
 
@@ -171,7 +171,7 @@ For example, `001` is not allowed.
 
 ---
 
-### Problem 8 \[Easy\]
+### Day 8 \[Easy\]
 
 This problem was asked by Google.
 
@@ -197,7 +197,7 @@ For example, the following tree has 5 unival subtrees:
 
 ---
 
-### Problem 9 \[Hard\]
+### Day 9 \[Hard\]
 
 This problem was asked by Airbnb.
 
@@ -212,7 +212,7 @@ Follow-up: Can you do this in `O(N)` time and constant space?
 
 ---
 
-### Problem 10 \[Medium\]
+### Day 10 \[Medium\]
 
 This problem was asked by Apple.
 
@@ -224,7 +224,7 @@ Implement a job scheduler which takes in a function `f` and an integer `n`, and 
 
 ---
 
-### Problem 11 \[Medium\]
+### Day 11 \[Medium\]
 
 This problem was asked by Twitter.
 
@@ -239,7 +239,7 @@ Hint: Try preprocessing the dictionary into a more efficient data structure to s
 
 ---
 
-### Problem 12 \[Hard\]
+### Day 12 \[Hard\]
 
 This problem was asked by Amazon.
 
@@ -255,7 +255,7 @@ integers `X`? For example, if `X = {1, 3, 5}`, you could climb 1, 3, or 5 steps 
 
 ---
 
-### Problem 13 \[Hard\]
+### Day 13 \[Hard\]
 
 This problem was asked by Amazon.
 
@@ -268,7 +268,7 @@ For example, given `s = "abcba"` and `k = 2`, the longest substring with `k` dis
 
 ---
 
-### Problem 14 \[Medium\]
+### Day 14 \[Medium\]
 
 This problem was asked by Google.
 
@@ -284,7 +284,7 @@ Hint: The basic equation of a circle is `x^2 + y^2 = r^2`.
 
 ---
 
-### Problem 15 \[Medium\]
+### Day 15 \[Medium\]
 
 This problem was asked by Facebook.
 
@@ -295,7 +295,7 @@ Given a stream of elements too large to store in memory, pick a random element f
 
 ---
 
-### Problem 16 \[Easy\]
+### Day 16 \[Easy\]
 
 This problem was asked by Twitter.
 
@@ -310,7 +310,7 @@ You should be as efficient with time and space as possible.
 
 ---
 
-### Problem 17 \[Hard\]
+### Day 17 \[Hard\]
 
 This problem was asked by Google.
 
@@ -354,7 +354,7 @@ The name of a directory or sub-directory will not contain a period.
 
 ---
 
-### Problem 18 \[Hard\]
+### Day 18 \[Hard\]
 
 This problem was asked by Google.
 
@@ -391,7 +391,7 @@ Given an `N x K` matrix where the `n`th row and `k`th column represents the cost
 
 ---
 
-### Problem 20 \[Easy\]
+### Day 20 \[Easy\]
 
 This problem was asked by Google.
 
@@ -1515,17 +1515,33 @@ Implemented in Kotlin:
 [Day 216](dcp_kotlin/src/main/kotlin/dcp/day216)
 
 
-## Day 218 \[Medium\]
+---
+
+### Day 217 \[Hard\]
+
+This problem was asked by Oracle.
+
+We say a number is sparse if there are no adjacent ones in its binary representation. For example, 21 (10101) is sparse, but 22 (10110) is not. For a given input N, find the smallest sparse number greater than or equal to N.
+
+Do this in faster than O(N log N) time.
+
+* NOT YET IMPLEMENTED
+
+---
+
+### Day 218 \[Medium\]
 
 This problem was asked by Yahoo.
 
 Write an algorithm that computes the reversal of a directed graph. For example, if a graph consists of `A -> B -> C`, it should become `A <- B <- C`.
 
-Implemented in Kotlin:
-[Day 218](dcp_kotlin/src/main/kotlin/dcp/day218)
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day218)
+* [Specification testing](dcp_kotlin/src/main/kotlin/dcp/day218/day218.kt)
 
 
-## Day 219 \[Hard\]
+---
+
+### Day 219 \[Hard\]
 
 This problem was asked by Salesforce.
 
@@ -1533,21 +1549,40 @@ Connect 4 is a game where opponents take turns dropping red or black discs into 
 
 Design and implement Connect 4.
 
-Implemented in Java:
-* [Day 219](src/main/java/dcp/day219)
+* [Java implementation](dcp_kotlin/src/main/kotlin/dcp/day219)
 
 
-## Day 221 \[Easy\]
+---
+
+### Day 220 \[Medium\]
+
+This problem was asked by Square.
+
+In front of you is a row of `N` coins, with values `v1`, `v2`, ..., `vn`.
+
+You are asked to play the following game. You and an opponent take turns choosing either the first or last coin from the row, removing it from the row, and receiving the value of the coin.
+
+Write a program that returns the maximum amount of money you can win with certainty, if you move first, assuming your opponent plays optimally.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day220)
+* [Specification testing](dcp_kotlin/src/main/kotlin/dcp/day220/day220.kt)
+
+
+---
+
+### Day 221 \[Easy\]
 
 This problem was asked by Zillow.
 
 Let's define a "sevenish" number to be one which is either a power of 7, or the sum of unique powers of 7. The first few sevenish numbers are 1, 7, 8, 49, and so on. Create an algorithm to find the `n`th sevenish number.
 
-mplemented in Kotlin:
-[Day 221](dcp_kotlin/src/main/kotlin/dcp/day221)
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day221)
+* [Unit testing](dcp_kotlin/src/main/kotlin/dcp/day221/SevenishTester.kt)
 
 
-## Day 222 \[Medium\]
+---
+
+### Day 222 \[Medium\]
 
 This problem was asked by Quora.
 
@@ -1556,10 +1591,4 @@ Given an absolute pathname that may have `.` or `..` as part of it, return the s
 For example, given `"/usr/bin/../bin/./scripts/../"`, return
 `"/usr/bin/"`.
 
-Implemented in Python: [Day 222](dcp_py/day222)
-
-
-## Outstanding problems
-
-Some problems are outstanding, and others have been repeated, so they
-were not attempted again.
+* [Python implementation](dcp_py/day222)
