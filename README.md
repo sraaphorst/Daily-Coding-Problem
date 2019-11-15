@@ -1487,7 +1487,9 @@ For this tree, for example, the bottom view could be `[0, 1, 3, 6, 8, 9]`.
 Given the root to a binary tree, return its bottom view.
 
 
-## Day 216 \[Medium\]
+---
+
+### Day 216 \[Medium\]
 
 TODO: NEEDS KOTLIN CLEANUP.
 
@@ -1549,7 +1551,7 @@ Connect 4 is a game where opponents take turns dropping red or black discs into 
 
 Design and implement Connect 4.
 
-* [Java implementation](dcp_kotlin/src/main/kotlin/dcp/day219)
+* [Java implementation](dcp_jvm/src/main/java/dcp/day219)
 
 
 ---
