@@ -14,4 +14,5 @@
 * [Day 215](src/main/kotlin/dcp/day215) - Incomplete
 * [Day 216](src/main/kotlin/dcp/day216) - Needs cleanup
 * [Day 218](src/main/kotlin/dcp/day218)
+* [Day 220](src/main/kotlin/dcp/day220)
 * [Day 221](src/main/kotlin/dcp/day221)
