@@ -16,10 +16,9 @@ fun coin_backtrack(coins: List<Int>): Int {
         else if (curr_coins.size == 2)
             return max(curr_coins[0], curr_coins[1]) + value
         else {
-            val minCandidate = aux(curr_coins.drop(2), value)
-            val midCandidate = aux(curr_coins.drop(1).dropLast(1), value)
-            val maxCandidate = aux(curr_coins.dropLast(2), value)
-            return max(maxCandidate, midCandidate) + min(minCandidate, midCandidate) + value
+            val m1 = curr_coins[0] + min(aux(curr_coins.drop(2), value), aux(curr_coins.drop(1).dropLast(1), value))
+            val m2 = curr_coins.last() + min(aux(curr_coins.dropLast(2), value), aux(curr_coins.drop(1).dropLast(1), value))
+            return value + max(m1, m2)
 
         }
     }
@@ -56,4 +55,10 @@ fun coin_dynamic(coins: List<Int>): Int {
                 )}
     }
     return value[0][n-1]
+}
+
+fun main() {
+    val coins = listOf(30, 45, 10, 53)
+    println(coin_backtrack(coins))
+    println(coin_dynamic(coins))
 }
