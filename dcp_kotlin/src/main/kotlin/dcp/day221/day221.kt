@@ -31,8 +31,3 @@ fun sevenish_loop(n: Int): Int {
     }
     return sum
 }
-
-fun main() {
-    for (i in 1..10)
-        println("sevenish($i) = ${sevenish(i)} = ${sevenish_loop(i)}")
-}

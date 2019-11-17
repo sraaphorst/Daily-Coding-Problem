@@ -1594,3 +1594,36 @@ For example, given `"/usr/bin/../bin/./scripts/../"`, return
 `"/usr/bin/"`.
 
 * [Python implementation](dcp_py/day222)
+
+
+---
+
+### Day 223 \[Hard\]
+
+This problem was asked by Palantir.
+
+Typically, an implementation of in-order traversal of a binary tree
+has `O(h)` space complexity, where `h` is the height of the tree. Write a
+program to compute the in-order traversal of a binary tree using `O(1)`
+space.
+
+* Work in progress using threaded binary tree. Completed in C++:
+  rewriting in Kotlin.
+
+
+---
+
+### Day 224 \[Easy\]
+
+This problem was asked by Amazon.
+
+Given a sorted array, find the smallest positive integer that is not the sum of a subset of the array.
+
+For example, for the input `[1, 2, 3, 10]`, you should return 7.
+
+Do this in `O(N)` time.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day224)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day224/SumNotInSetTester.kt)
+
+
