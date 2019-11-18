@@ -8,7 +8,7 @@
 
 #include <day208/day208.h>
 using namespace dcp::day208;
-//
+
 constexpr auto N = 100000;
 
 // There really is no way to test the conjecture that the Collatz sequence ends for any value: if may not, and

@@ -1602,14 +1602,11 @@ For example, given `"/usr/bin/../bin/./scripts/../"`, return
 
 This problem was asked by Palantir.
 
-Typically, an implementation of in-order traversal of a binary tree
-has `O(h)` space complexity, where `h` is the height of the tree. Write a
-program to compute the in-order traversal of a binary tree using `O(1)`
-space.
+Typically, an implementation of in-order traversal of a binary tree has `O(h)` space complexity, where `h` is the height of the tree. Write a program to compute the in-order traversal of a binary tree using `O(1)` space.
 
-* Work in progress using threaded binary tree. Completed in C++:
-  rewriting in Kotlin.
 
+* [C++ implementation](dcp_cpp/src/day223)
+* [Unit testing](dcp_cpp/test/TestDay223.cpp)
 
 ---
 
@@ -1627,3 +1624,18 @@ Do this in `O(N)` time.
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day224/SumNotInSetTester.kt)
 
 
+---
+
+### Day 225
+
+This problem was asked by Bloomberg.
+
+There are `N` prisoners standing in a circle, waiting to be executed. The executions are carried out starting with the `k`th person, and removing every successive `k`th person going clockwise until there is no one left.
+
+Given `N` and `k`, write an algorithm to determine where a prisoner should stand in order to be the last survivor.
+
+For example, if `N = 5` and `k = 2`, the order of executions would be `[2, 4, 1, 5, 3`], so you should return `3`.
+
+Bonus: Find an `O(log N)` solution if `k = 2`.
+
+* [Python implementation](dcp_py/day225)
