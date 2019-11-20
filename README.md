@@ -1626,7 +1626,7 @@ Do this in `O(N)` time.
 
 ---
 
-### Day 225
+### Day 225 \[Easy\]
 
 This problem was asked by Bloomberg.
 
@@ -1639,3 +1639,17 @@ For example, if `N = 5` and `k = 2`, the order of executions would be `[2, 4, 1,
 Bonus: Find an `O(log N)` solution if `k = 2`.
 
 * [Python implementation](dcp_py/day225)
+
+
+---
+
+### Day 226 \[Hard\]
+
+This problem was asked by Airbnb.
+
+You come across a dictionary of sorted words in a language you've never seen before. Write a program that returns the correct order of letters in this language.
+
+For example, given `['xww', 'wxyz', 'wxyw', 'ywx', 'ywz']`, you should return `['x', 'z', 'w', 'y']`.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day226)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day226/AlphabetSorter.kt)

@@ -7,3 +7,5 @@ Given a sorted array, find the smallest positive integer that is not the sum of 
 For example, for the input `[1, 2, 3, 10]`, you should return 7.
 
 Do this in `O(N)` time.
+
+Link: [Testing code](../../../../test/kotlin/dcp/day224)
