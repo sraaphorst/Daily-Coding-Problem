@@ -1653,3 +1653,11 @@ For example, given `['xww', 'wxyz', 'wxyw', 'ywx', 'ywz']`, you should return `[
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day226)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day226/AlphabetSorter.kt)
+
+---
+
+### Day 228 \[Medium\]
+
+This problem was asked by Twitter.
+
+Given a list of numbers, create an algorithm that arranges them in order to form the largest possible integer. For example, given `[10, 7, 76, 415]`, you should return `77641510`.
