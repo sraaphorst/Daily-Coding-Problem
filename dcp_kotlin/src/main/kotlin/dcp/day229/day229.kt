@@ -60,7 +60,7 @@ fun main() {
     val snakes = mapOf(16 to 6, 48 to 26, 49 to 11, 56 to 53, 62 to 19, 64 to 60, 87 to 24, 93 to 73, 95 to 75, 98 to 78)
     val ladders = mapOf(1 to 38, 4 to 14, 9 to 31, 21 to 42, 28 to 84, 36 to 44, 51 to 67, 71 to 91, 80 to 100)
 
-    // We play from 0 to 99 instead of 1 to 100, so drop all the teleporters by 1.
-    val teleporters = (snakes + ladders).map { it.key - 1 to it.value - 1}.toMap()
-    println(snakesAndLadders(10, teleporters))
+    // We play from 0 to 99 instead of 1 to 100, so drop all the transporters by 1.
+    val transporters = (snakes + ladders).map { it.key - 1 to it.value - 1}.toMap()
+    println("Number of moves required: ${snakesAndLadders(10, transporters)}.")
 }
