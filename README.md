@@ -1686,7 +1686,7 @@ For convenience, here are the squares representing snakes and ladders, and their
 
 ---
 
-# Day 230 \[Medium\]
+### Day 230 \[Medium\]
 
 This problem was asked by Goldman Sachs.
 
