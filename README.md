@@ -1669,7 +1669,7 @@ order to form the largest possible integer. For example, given
 
 ---
 
-# Day 229 \[Medium\]
+### Day 229 \[Medium\]
 
 This problem was asked by Flipkart.
 
@@ -1683,3 +1683,16 @@ For convenience, here are the squares representing snakes and ladders, and their
 * `ladders = {1: 38, 4: 14, 9: 31, 21: 42, 28: 84, 36: 44, 51: 67, 71: 91, 80: 100}`
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day229)
+
+---
+
+### Day 231 \[Easy\]
+
+This problem was asked by IBM.
+
+Given a string with repeated characters, rearrange the string so that no two adjacent characters are the same. If this is not possible, return `None`.
+
+For example, given `"aaabbc"`, you could return `"ababac"`. Given `"aaab"`, return `None`.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day231)
+* [Unit and property testing](dcp_kotlin/src/test/kotlin/dcp/day231)

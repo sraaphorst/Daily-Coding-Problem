@@ -1,5 +1,5 @@
 package dcp.day224
-// SumNotInSetTester.kt
+// day224.kt
 // By Sebastian Raaphorst, 2019.
 
 import org.junit.jupiter.api.Test
