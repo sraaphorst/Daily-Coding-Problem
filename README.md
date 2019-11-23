@@ -1652,7 +1652,7 @@ You come across a dictionary of sorted words in a language you've never seen bef
 For example, given `['xww', 'wxyz', 'wxyw', 'ywx', 'ywz']`, you should return `['x', 'z', 'w', 'y']`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day226)
-* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day226.kt)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day226/day226.kt)
 
 ---
 
@@ -1665,7 +1665,7 @@ order to form the largest possible integer. For example, given
 `[10, 7, 76, 415]`, you should return `77641510`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day228)
-* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day228.kt)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day228/day228.kt)
 
 ---
 
@@ -1711,4 +1711,4 @@ Given a string with repeated characters, rearrange the string so that no two adj
 For example, given `"aaabbc"`, you could return `"ababac"`. Given `"aaab"`, return `None`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day231)
-* [Unit and property testing](dcp_kotlin/src/test/kotlin/dcp/day231.kt)
+* [Unit and property testing](dcp_kotlin/src/test/kotlin/dcp/day231/day231.kt)
