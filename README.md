@@ -1579,7 +1579,7 @@ This problem was asked by Zillow.
 Let's define a "sevenish" number to be one which is either a power of 7, or the sum of unique powers of 7. The first few sevenish numbers are 1, 7, 8, 49, and so on. Create an algorithm to find the `n`th sevenish number.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day221)
-* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day221/SevenishTester.kt)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day221/day221.kt)
 
 
 ---
@@ -1621,7 +1621,7 @@ For example, for the input `[1, 2, 3, 10]`, you should return 7.
 Do this in `O(N)` time.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day224)
-* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day224/SumNotInSetTester.kt)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day224/day224.kt)
 
 
 ---
@@ -1652,7 +1652,7 @@ You come across a dictionary of sorted words in a language you've never seen bef
 For example, given `['xww', 'wxyz', 'wxyw', 'ywx', 'ywz']`, you should return `['x', 'z', 'w', 'y']`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day226)
-* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day226/AlphabetSorter.kt)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day226.kt)
 
 ---
 
@@ -1665,7 +1665,7 @@ order to form the largest possible integer. For example, given
 `[10, 7, 76, 415]`, you should return `77641510`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day228)
-* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day228/MaxNumTester.kt)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day228.kt)
 
 ---
 
@@ -1695,4 +1695,4 @@ Given a string with repeated characters, rearrange the string so that no two adj
 For example, given `"aaabbc"`, you could return `"ababac"`. Given `"aaab"`, return `None`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day231)
-* [Unit and property testing](dcp_kotlin/src/test/kotlin/dcp/day231)
+* [Unit and property testing](dcp_kotlin/src/test/kotlin/dcp/day231.kt)
