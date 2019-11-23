@@ -38,7 +38,7 @@ been attempted but will progress as time goes on.)
 
 ---
 
-### Day #1 \[Easy\]
+### Day 1 \[Easy\]
 
 This problem was recently asked by Google.
 
@@ -54,7 +54,7 @@ Bonus: Can you do this in one pass?
 
 ---
 
-### Day #2 \[Hard\]
+### Day 2 \[Hard\]
 
 This problem was asked by Uber.
 
@@ -70,7 +70,7 @@ Follow-up: what if you can't use division?
 
 ---
 
-### Day #3 \[Medium\]
+### Day 3 \[Medium\]
 
 This problem was asked by Google.
 
