@@ -6,4 +6,4 @@ Given a string with repeated characters, rearrange the string so that no two adj
 
 For example, given `"aaabbc"`, you could return `"ababac"`. Given `"aaab"`, return `None`.
 
-Link: [Testing code](../../../../test/kotlin/dcp/day231)
+Link: [Testing code](../../../../test/kotlin/dcp/day231/day231.kt)
