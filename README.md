@@ -1715,7 +1715,7 @@ For example, given `"aaabbc"`, you could return `"ababac"`. Given `"aaab"`, retu
 
 ---
 
-# Day \[232\]
+# Day 232 \[Easy\]
 
 This problem was asked by Google.
 
