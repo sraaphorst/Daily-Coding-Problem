@@ -1715,7 +1715,7 @@ For example, given `"aaabbc"`, you could return `"ababac"`. Given `"aaab"`, retu
 
 ---
 
-# Day 232 \[Easy\]
+### Day 232 \[Easy\]
 
 This problem was asked by Google.
 
@@ -1739,10 +1739,19 @@ assert mapsum.sum("col") == 5
 
 ---
 
-## Day 233 \[Easy\]
+### Day 233 \[Easy\]
 
 This problem was asked by Apple.
 
 Implement the function `fib(n)`, which returns the nth number in the Fibonacci sequence, using only `O(1)` space.
 
 * [Python implementation](dcp_py/day233)
+
+---
+
+### Day 234 \[Hard\]
+
+Recall that the minimum spanning tree is the subset of edges of a tree that connect all its vertices with the smallest possible total edge weight. Given an undirected graph with weighted edges, compute the maximum weight spanning tree.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day234)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day234/day234.kt)

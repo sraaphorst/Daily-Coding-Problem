@@ -1,5 +1,6 @@
 package dcp.day232
-// da===day3jdsczZ
+// day232.kt
+// By Sebastian Raaphorst, 2019.
 
 class PrefixMapSum(val prefixesMap: MutableMap<String, Int> = mutableMapOf()) {
     fun insert(key: String, value: Int) {
