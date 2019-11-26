@@ -1736,3 +1736,13 @@ assert mapsum.sum("col") == 5
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day232)
 * [Unit and property testing](dcp_kotlin/src/test/kotlin/dcp/day232/day232.kt)
+
+---
+
+## Day 233 \[Easy\]
+
+This problem was asked by Apple.
+
+Implement the function `fib(n)`, which returns the nth number in the Fibonacci sequence, using only `O(1)` space.
+
+* [Python implementation](dcp_py/day233)

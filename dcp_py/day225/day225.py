@@ -53,6 +53,6 @@ def josephus(n: int, k: int) -> int:
         return (josephus(n - 1, k) + k - 1) % n + 1
 
 
-@given(st.integers(min_value=1))
+@given(st.integers(min_value=1, max_value=100))
 def test_j2(n: int):
     assert josephus2(n) == josephus(n, 2)
