@@ -1755,3 +1755,14 @@ Recall that the minimum spanning tree is the subset of edges of a tree that conn
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day234)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day234/day234.kt)
+
+---
+
+### Day 235 \[Hard\]
+
+This problem was asked by Facebook.
+
+Given an array of numbers of length `N`, find both the minimum and
+maximum using less than `2 * (N - 2)` comparisons.
+
+* [Python implementation](dcp_py/day235)
