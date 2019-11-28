@@ -19,7 +19,10 @@ def find_max_min(list: List[int]) -> Tuple[int, int, int]:
     If the list was odd, append the odd element to each of these partitions.
 
     Then iterate over the lists in the traditional way to find the maximum / minimum, which requires (n/2) - 1
-    comparisons for each list.
+    comparisons for each list. There is no advantage to performing more tournaments, even for powers of 2.
+    Example: 16 elements
+    1. One tournament (8 comparisons) and two runs through the resultant sublists (7 comparisons each) = 22 comparisons.
+    2. Tournaments: 8, two of 4, two of 2, two of 1 = 22 comparisons.
 
     This strategy results in less than 2(n-2) comparisons for any list of length >= 4.
 
