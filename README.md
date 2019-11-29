@@ -1766,3 +1766,22 @@ Given an array of numbers of length `N`, find both the minimum and
 maximum using less than `2 * (N - 2)` comparisons.
 
 * [Python implementation](dcp_py/day235)
+
+---
+
+### Day 237 \[Easy\]
+
+This problem was asked by Amazon.
+
+A tree is symmetric if its data and shape remain unchanged when it is reflected about the root node. The following tree is an example:
+```
+        4
+      / | \
+    3   5   3
+  /           \
+9              9
+```
+Given a `k`-ary tree, determine whether it is symmetric.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day237)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day237/day237.kt)
