@@ -11,3 +11,5 @@ A tree is symmetric if its data and shape remain unchanged when it is reflected 
 9              9
 ```
 Given a `k`-ary tree, determine whether it is symmetric.
+
+Link: [Testing code](../../../../test/kotlin/dcp/day237/day237.kt)
