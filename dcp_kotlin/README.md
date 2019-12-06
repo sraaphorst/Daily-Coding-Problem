@@ -24,3 +24,4 @@
 * [Day 234](src/main/kotlin/dcp/day234)
 * [Day 237](src/main/kotlin/dcp/day237)
 * [Day 241](src/main/kotlin/dcp/day241)
+* [Day 244](src/main/kotlin/dcp/day244)
