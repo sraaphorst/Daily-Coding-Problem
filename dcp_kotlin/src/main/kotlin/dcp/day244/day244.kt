@@ -1,4 +1,6 @@
 package dcp.day244
+// day244.kt
+// By Sebastian Raaphorst, 2019.
 
 val sieve = sequence {
     val primes = mutableListOf<Int>()
