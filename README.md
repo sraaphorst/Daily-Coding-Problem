@@ -1820,3 +1820,28 @@ Bonus: Create a generator that produces primes indefinitely (that is, without ta
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day244)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day244/day244.kt)
+
+---
+
+### Day 245 \[Medium\]
+
+This problem was asked by Yelp.
+
+You are given an array of integers, where each element represents the maximum number of steps that can be jumped going forward from that element. Write a function to return the minimum number of jumps you must take in order to get from the start to the end of the array.
+
+For example, given `[6, 2, 4, 0, 5, 1, 1, 4, 2, 9]`, you should return `2`, as the optimal solution involves jumping from `6` to `5`, and then from `5` to `9`.
+
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day245)
+* [Unit and property testing](dcp_kotlin/src/test/kotlin/dcp/day245/day245.kt)
+
+---
+
+### Day 247 \[Easy\]
+
+This problem was asked by PayPal.
+
+Given a binary tree, determine whether or not it is height-balanced. A height-balanced binary tree can be defined as one in which the heights of the two subtrees of any node never differ by more than one.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day247)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day247/day247.kt)
