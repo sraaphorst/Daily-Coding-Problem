@@ -1845,3 +1845,14 @@ Given a binary tree, determine whether or not it is height-balanced. A height-ba
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day247)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day247/day247.kt)
+
+---
+
+### Day 248 \[Hard\]
+
+This problem was asked by Nvidia.
+
+Find the maximum of two numbers without using any if-else statements, branching, or direct comparisons.
+
+* [C++ implementation](dcp_cpp/src/day248)
+* [Unit testing](dcp_cpp/test/TestDay248.cpp)
