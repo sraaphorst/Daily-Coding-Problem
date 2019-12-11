@@ -21,6 +21,7 @@ set(TEST_LIST
         TestDay001
         TestDay002
         TestDay004
+        TestDay006
         TestDay012
         TestDay014
         TestDay027
