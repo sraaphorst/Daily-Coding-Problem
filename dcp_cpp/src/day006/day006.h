@@ -25,12 +25,9 @@ namespace dcp::day006 {
     class node final {
         T data;
         node *both;
-        node *prev;
-        node *next;
-        node *comb;
 
         template<typename U>
-        node(U &&t, node<T> *prev, node<T> *next) noexcept: data{t}, both{prev}, prev{prev}, next{next}, comb{combine(prev, next)} {}
+        node(U &&t, node<T> *prev) noexcept: data{t}, both{prev} {}
 
         friend class xor_list<T>;
     };
@@ -81,16 +78,11 @@ namespace dcp::day006 {
 
         template<typename U>
         void add(U&& u) {
-            auto n = new node<T>{u, back, nullptr};
-            if (siz == 0) {
+            auto n = new node<T>{u, back};
+            if (siz == 0)
                 front = n;
-            }
-            else {
+            else
                 back->both = combine(back->both, n);
-                n->prev = back;
-                n->prev->next = n;
-                n->prev->comb = combine(n->prev->prev, n->prev->next);
-            }
             back = n;
             ++siz;
         }
