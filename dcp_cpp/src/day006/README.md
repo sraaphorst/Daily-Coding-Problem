@@ -1,4 +1,4 @@
-# Day 006 \[Hard\]
+# Day 6 \[Hard\]
 
 This problem was asked by Google.
 
