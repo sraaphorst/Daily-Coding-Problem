@@ -11,14 +11,6 @@
 
 namespace dcp::day006 {
     template<typename T>
-    class node;
-
-    template<typename T>
-    node<T> *combine(node<T> *n1, node<T> *n2) {
-        return reinterpret_cast<node<T>*>(reinterpret_cast<uint64_t>(n1) ^ reinterpret_cast<uint64_t>(n2));
-    }
-
-    template<typename T>
     class xor_list;
 
     template<typename T>
@@ -37,6 +29,11 @@ namespace dcp::day006 {
         node<T> *front;
         node<T> *back;
         size_t siz;
+
+        // Used to combine pointers to create both.
+        static node<T> *combine(node<T> *n1, node<T> *n2) {
+            return reinterpret_cast<node<T>*>(reinterpret_cast<uint64_t>(n1) ^ reinterpret_cast<uint64_t>(n2));
+        }
 
     public:
         xor_list() noexcept: front{nullptr}, back{nullptr}, siz{0} {}
@@ -77,7 +74,7 @@ namespace dcp::day006 {
         }
 
         template<typename U>
-        void add(U&& u) {
+        void add(U&& u) noexcept {
             auto n = new node<T>{u, back};
             if (siz == 0)
                 front = n;
@@ -87,7 +84,7 @@ namespace dcp::day006 {
             ++siz;
         }
 
-        [[nodiscard]] size_t size() const {
+        [[nodiscard]] size_t size() const noexcept {
             return siz;
         }
     };
