@@ -1,4 +1,4 @@
-# Day 1 Problem \[Easy\]
+# Day 1 \[Easy\]
 
 This problem was recently asked by Google.
 
