@@ -32,7 +32,7 @@ fun closestString(elems: List<Char>): String {
                 else ->
                     when (openParens) {
                         0 -> (openParens to "$closestString()")
-                        else -> (openParens -1 to "$closestString)")
+                        else -> (openParens - 1 to "$closestString)")
                     }
             }
         }
