@@ -31,7 +31,7 @@ namespace dcp::day006 {
         size_t siz;
 
         // Used to combine pointers to create both.
-        static node<T> *combine(node<T> *n1, node<T> *n2) {
+        static auto combine(node<T> *n1, node<T> *n2) {
             return reinterpret_cast<node<T>*>(reinterpret_cast<uint64_t>(n1) ^ reinterpret_cast<uint64_t>(n2));
         }
 
@@ -43,7 +43,7 @@ namespace dcp::day006 {
             back = nullptr;
             node<T> *prev = nullptr;
             node<T> *next = nullptr;
-            node<T> *curr = front;
+            auto curr = front;
             for (size_t i = 0; i < siz; ++i ){
                 next = combine(prev, curr->both);
                 curr->both = nullptr;
@@ -54,13 +54,13 @@ namespace dcp::day006 {
             front = nullptr;
         }
 
-        T &get(size_t index) {
+        auto &get(size_t index) {
             if (index > siz) {
                 std::ostringstream str;
                 str << "out of bounds: tried to access " << index << " in list of size " << siz;
                 throw std::invalid_argument{str.str()};
             }
-            node<T> *curr = front;
+            auto *curr = front;
             node<T> *prev = nullptr;
             node<T> *prevtmp = nullptr;
 
@@ -84,7 +84,7 @@ namespace dcp::day006 {
             ++siz;
         }
 
-        [[nodiscard]] size_t size() const noexcept {
+        [[nodiscard]] auto size() const noexcept {
             return siz;
         }
     };
