@@ -22,7 +22,7 @@ def find_all_perms_brute_force(s: str) -> List[str]:
     """
     A brute-force technique to generate all IPs from a list of characters represented as a string.
     We simply pick three places to insert the periods and then check for validity.
-    This prouces many invalid IPs, but given the small number of IPs (11C3 = 165), time is not really a concern
+    This produces many invalid IPs, but given the small number of IPs (11C3 = 165), time is not really a concern
     and there is no reason to engage in a technique like backtracking.
     :param s: the string of digits to analyze for IPs
     :return: the list of valid IPs
