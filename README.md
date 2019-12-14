@@ -1858,3 +1858,14 @@ Find the maximum of two numbers without using any if-else statements, branching,
 
 * [C++ implementation](dcp_cpp/src/day248)
 * [Unit testing](dcp_cpp/test/TestDay248.cpp)
+
+---
+
+### Day 251 \[Medium\}
+
+This problem was asked by Amazon.
+
+Given an array of a million integers between zero and a billion, out of order, how can you efficiently sort it? Assume that you cannot store an array of a billion elements in memory.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day251)
+* [Property testing](dcp_kotlin/src/test/kotlin/dcp/day251/day251.kt)

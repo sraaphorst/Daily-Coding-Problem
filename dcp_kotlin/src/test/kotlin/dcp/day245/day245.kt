@@ -2,7 +2,6 @@ package dcp.day245
 // day245.kt
 // By Sebastian Raaphorst, 2019.
 
-import dcp.day247.BinaryTree
 import io.kotlintest.properties.Gen
 import io.kotlintest.properties.forAll
 import io.kotlintest.specs.StringSpec
