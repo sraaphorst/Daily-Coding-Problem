@@ -11,8 +11,8 @@ class RationalGen: Gen<Rational> {
     }
 
     override fun random(): Sequence<Rational> = generateSequence {
-        val n = Gen.choose(0, 1_000_000).random().first()
-        val d = Gen.choose(n+1, 1_000_000).random().first()
+        val n = Gen.choose(0, 1_000).random().first()
+        val d = Gen.choose(n+1, 1_000).random().first()
         n divBy d
     }
 }

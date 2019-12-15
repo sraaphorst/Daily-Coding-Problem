@@ -1869,3 +1869,22 @@ Given an array of a million integers between zero and a billion, out of order, h
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day251)
 * [Property testing](dcp_kotlin/src/test/kotlin/dcp/day251/day251.kt)
+
+---
+
+### Day 253 \[Easy\]
+
+This problem was asked by PayPal.
+
+Given a string and a number of lines `k`, print the string in zigzag form. In zigzag, characters are printed out diagonally from top left to bottom right until reaching the kth line, then back up to top right, and so on.
+
+For example, given the sentence `"thisisazigzag"` and `k = 4`, you should print:
+
+```
+t     a     g
+ h   s z   a
+  i i   i z
+   s     g
+   ```
+
+* [Python implementation](dcp_py/day253)

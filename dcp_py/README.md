@@ -47,6 +47,7 @@ The following problems are implemented in Python:
 * [Day 230](day230)
 * [Day 233](day233)
 * [Day 235](day235)
+* [Day 253](day253)
 
 Other assorted puzzles and chapters from the book:
 * [Ch13-2](others/ch13_2.py)
