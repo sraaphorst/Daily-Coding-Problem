@@ -59,7 +59,6 @@ fun Rational.toEgyptianRationalImp(): List<Rational> {
     return list
 }
 
-
 fun main() {
     val e1 = 815 divBy 934
     //val e2 = e1.toEgyptianRational()

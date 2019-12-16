@@ -1872,6 +1872,19 @@ Given an array of a million integers between zero and a billion, out of order, h
 
 ---
 
+### Day 252 [Easy\]
+
+This problem was asked by Palantir.
+
+The ancient Egyptians used to express fractions as a sum of several terms where each numerator is one. For example, `4 / 13` can be represented as `1 / 4 + 1 / 18 + 1 / 468`.
+
+Create an algorithm to turn an ordinary fraction `a / b`, where `a < b`, into an Egyptian fraction.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day252)
+* [Property testing and unit](dcp_kotlin/src/test/kotlin/dcp/day252/day252.kt)
+
+---
+
 ### Day 253 \[Easy\]
 
 This problem was asked by PayPal.

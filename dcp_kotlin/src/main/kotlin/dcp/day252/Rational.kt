@@ -84,3 +84,11 @@ fun String.toRational(): Rational {
     val denom = denomText.toBigIntegerOrNull() ?: fail()
     return Rational(numer, denom)
 }
+
+@kotlin.jvm.JvmName("sumOfBigInteger")
+fun Iterable<BigInteger>.sum(): BigInteger =
+    this.fold(BigInteger.ZERO){acc, curr -> acc + curr}
+
+@kotlin.jvm.JvmName("sumOfRational")
+fun Iterable<Rational>.sum(): Rational =
+    this.fold(Rational.ZERO){acc, curr -> acc + curr}
