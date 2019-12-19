@@ -22,3 +22,5 @@ You should convert it to:
         /   \
        6     7
 ```
+
+Link: [Testing code](../../../../test/kotlin/dcp/day254/day254.kt)

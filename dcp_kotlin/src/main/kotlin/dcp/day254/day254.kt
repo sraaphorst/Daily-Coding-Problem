@@ -1,4 +1,6 @@
 package dcp.day254
+// day254.kt
+// By Sebastian Raaphorst, 2019.
 
 data class BinaryTree<out T>(val value: T, val left: BinaryTree<T>?, val right: BinaryTree<T>?) {
     fun toFullTree(): BinaryTree<T>? {
@@ -12,4 +14,3 @@ data class BinaryTree<out T>(val value: T, val left: BinaryTree<T>?, val right: 
         else (left?.toFullTree()) ?: (right?.toFullTree())
     }
 }
-

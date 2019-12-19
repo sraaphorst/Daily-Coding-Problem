@@ -6,4 +6,4 @@ The ancient Egyptians used to express fractions as a sum of several terms where 
 
 Create an algorithm to turn an ordinary fraction `a / b`, where `a < b`, into an Egyptian fraction.
 
-Link: [Testing code](../../../../test/kotlin/dcp/day251/day253.kt)
+Link: [Testing code](../../../../test/kotlin/dcp/day252/day252.kt)
