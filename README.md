@@ -1960,6 +1960,19 @@ Given a graph, find its transitive closure.
 
 WORK IN PROGRESS
 
+---
+
+### Day 256 \[Medium\]
+
+This problem was asked by Fitbit.
+
+Given a linked list, rearrange the node values such that they appear in alternating `low -> high -> low -> high` ... form. For example, given `1 -> 2 -> 3 -> 4 -> 5`, you should return `1 -> 3 -> 2 -> 5 -> 4`.
+
+* [C++ implementation](dcp_cpp/src/day256)
+* [Unit testing](dcp_cpp/test/TestDay256.cpp)
+
+---
+
 ### Day 258 \[Easy\]
 
 This problem was asked by Morgan Stanley.

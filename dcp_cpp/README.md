@@ -31,3 +31,4 @@ The following problems are implemented in C++:
 * [Day 208](src/day208)
 * [Day 223](src/day223)
 * [Day 248](src/day248)
+* [Day 256](src/day256)
