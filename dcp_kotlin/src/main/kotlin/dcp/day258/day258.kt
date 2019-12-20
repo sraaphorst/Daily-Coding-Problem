@@ -16,10 +16,3 @@ data class Node<T>(val value: T, val left: Node<T>?, val right: Node<T>?) {
         return aux(listOf(this), Direction.RIGHT)
     }
 }
-
-fun main() {
-    val t = Node(1,
-        Node(2, Node(4, null, null), Node(5, null, null)),
-        Node(3, Node(6, null, null), Node(7, null, null)))
-    println(t.toBoustrophedonOrder())
-}
