@@ -1932,3 +1932,51 @@ You should convert it to:
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day254)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day254/day254.kt)
 
+---
+
+### Day 255 \[Easy\]
+
+This problem was asked by Microsoft.
+
+The transitive closure of a graph is a measure of which vertices are reachable from other vertices. It can be represented as a matrix `M`, where `M[i][j] == 1` if there is a path between vertices `i` and `j`, and otherwise `0`.
+
+For example, suppose we are given the following graph in adjacency list form:
+```
+graph = [
+    [0, 1, 3],
+    [1, 2],
+    [2],
+    [3]
+]
+```
+The transitive closure of this graph would be:
+```
+[1, 1, 1, 1]
+[0, 1, 1, 0]
+[0, 0, 1, 0]
+[0, 0, 0, 1]
+```
+Given a graph, find its transitive closure.
+
+WORK IN PROGRESS
+
+### Day 258 \[Easy\]
+
+This problem was asked by Morgan Stanley.
+
+In Ancient Greece, it was common to write text with the first line going left to right, the second line going right to left, and continuing to go back and forth. This style was called "boustrophedon".
+
+Given a binary tree, write an algorithm to print the nodes in boustrophedon order.
+
+For example, given the following tree:
+```
+       1
+    /     \
+  2         3
+ / \       / \
+4   5     6   7
+```
+You should return `[1, 3, 2, 4, 5, 6, 7]`.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day258)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day258/day258.kt)
