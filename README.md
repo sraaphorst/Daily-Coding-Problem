@@ -1881,7 +1881,7 @@ The ancient Egyptians used to express fractions as a sum of several terms where 
 Create an algorithm to turn an ordinary fraction `a / b`, where `a < b`, into an Egyptian fraction.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day252)
-* [Property testing and unit](dcp_kotlin/src/test/kotlin/dcp/day252/day252.kt)
+* [Property and unit testing](dcp_kotlin/src/test/kotlin/dcp/day252/day252.kt)
 
 ---
 
@@ -1983,7 +1983,7 @@ be sorted. For example, given `[3, 7, 5, 6, 9]`, you should return
 `(1, 3)`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day257)
-* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day257/day257.kt)
+* [Property and unit testing](dcp_kotlin/src/test/kotlin/dcp/day257/day257.kt)
 
 ---
 
