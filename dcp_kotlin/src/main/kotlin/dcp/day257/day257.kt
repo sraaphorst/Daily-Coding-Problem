@@ -7,6 +7,7 @@ fun <T: Comparable<T>> smallest_window(list: List<T>): Pair<Int, Int> {
 
     // Traverse from left to right, finding the element less than the max seen so far.
     // This has to be part of the sorting window.
+    // The pair holds the max so far and the index of the element mentioned above.
     val right = list.foldIndexed(Pair(list.min(), 0)) { idx, acc, value ->
         val (maxSeen, right) = acc
         val newMaxSeen = maxOf(maxSeen!!, value)
@@ -15,6 +16,7 @@ fun <T: Comparable<T>> smallest_window(list: List<T>): Pair<Int, Int> {
 
     // Traverse from right to left, finding the element greater than the min seen so far.
     // This has to be part of the sorting window.
+    // The pair holds the min so far and the index of the element mentioned above.
     val left = list.foldRightIndexed(Pair(list.max(), 0)) { idx, value, acc ->
         val (minSeen, leftN) = acc
         val newMinSeen = minOf(minSeen!!, value)
