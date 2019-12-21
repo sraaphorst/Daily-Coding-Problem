@@ -2,13 +2,6 @@ package dcp.day257
 // day257.kt
 // By Sebastian Raaphorst, 2019.
 
-typealias Advancer = (Int) -> Int
-typealias MinMax<T> = (T, T) -> T
-
-// Say I want to find the smallest item in a generic list.
-fun <T: Comparable<T>> smallest(list: List<T>): Boolean =
-    list[0] > list[1]
-
 fun <T: Comparable<T>> smallest_window(list: List<T>): Pair<Int, Int> {
     if (list.isEmpty()) return Pair(0, 0)
 
