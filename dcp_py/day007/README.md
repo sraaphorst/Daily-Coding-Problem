@@ -10,7 +10,7 @@ and an encoded message, count the number of ways it can be decoded.
 
 For example, the message `111` would give `3`, since it could be decoded as:
 * `aaa`,
-* `a`, and
+* `ka`, and
 * `ak`.
 
 You can assume that the messages are decodable.
