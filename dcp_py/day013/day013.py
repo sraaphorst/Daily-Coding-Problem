@@ -1,7 +1,6 @@
 #!bin/env python3
 # By Sebastian Raaphorst, 2019.
 
-from typing import List, Mapping, Tuple
 from hypothesis import given, strategies as st
 
 
@@ -37,61 +36,94 @@ def bruteForceLongestSubstring(s: str, k: int) -> str:
     candidates = [s[i:j+1] for i in range(n) for j in range(i, n) if checkCharacters(s[i:j+1]) <= k]
     return max(candidates, key=len)
 
-
 def longestSubstring(s: str, k: int) -> str:
     """
     We maintain a shifting window that moves from the left to the right, trying to hold
     the maximum number of characters that need to be sorted.
 
-    When we reach the limit k, we move the left forward to make room for more expansion
-    to the right.
     @param s: the string to check
     @param k: the number of distinct allowable colours in the string.
     @return: the first lexical maximum substring of s containing at most k distinct colours
 
-    >>> bruteForceLongestSubstring('abcba', 2)
+    >>> longestSubstring('abcba', 2)
     'bcb'
-    >>> bruteForceLongestSubstring('abcabcdzabcdeabcdefyabcdefgab', 5)
+    >>> longestSubstring('abcabcdzabcdeabcdefyabcdefgab', 5)
     'abcabcdzabcd'
     """
-    # Weed out some obnoxious or corner cases.
-    if s is None or len(s) < 2 or k < 1:
-        return None
 
     n = len(s)
-    left, right = 0, 0
-    characters = set()
-    bestLeft, bestRight = 0, -1
 
-    for curr in range(n):
-        charToAdd = s[curr]
-        right = curr
-        characters.add(charToAdd)
+    # Nothing to sort.
+    if not s:
+        return ""
 
-        # Otherwise, we have reached or are approaching a new maximal.
-        # We check if it is the best height so far.
-        if len(characters) <= k and right - left > bestRight - bestLeft:
-            bestLeft, bestRight = left, right
+    # We can sort it all.
+    elif len(s) <= k:
+        return s
 
-        # If we have too many elements, shrink the window from the left.
-        if len(characters) > k:
-            # Drop the left-most character.
-            # We must drop ALL of them, so start at right and then move left until we
-            # reach the first one, which there is guaranteed to be there.
-            charToDrop = s[left]
-            left = right
-            while s[left] != charToDrop:
-                left -= 1
-            left += 1
-            characters.remove(charToDrop)
+    # First thiing out of place.
+    elif k <= 1:
+        candidates = [i for i in range(n) for j in range(i, n) if s[j] > s[i]]
 
-        # We may have moved out of bounds if right was at the end. If so, break.
-        # Otherwise, continue to expand.
-        if left >= n:
-            break
+        # All sorted.
+        if len(candidates) == 0:
+            return None
+        else:
+            return s[candidates[0]]
 
-    # This is inclusive on the right-most character.
-    return s[bestLeft:bestRight+1]
+    # Now that the sanity checks are done, proceed with the algorithm.
+    def aux(left: int = 0, best_left: int = None, best_right: int = None) -> str:
+        """
+        We start at position left and try to build a sorting frame as far right as possible until we reach the point
+        where we cannot continue due to k.
+
+        During the process, we determine the next starting position, if there is one, and keep track of the max / min.
+
+        @param left: the starting position for this iteration.
+        @param best_left: the best left position seen so far.
+        @param best_right: the best right position so far.
+        @return: the longest sorting window.
+        """
+        if left is None:
+            return s[best_left:best_right]
+
+        first = s[left]
+        chars_seen = set()
+        chars_seen.add(first)
+        next_try = None
+
+        # Advance past all s[0] to get to the next position to try.
+        right = left
+        while right < n and s[right] == first:
+            right += 1
+        next_try = right
+
+        # We are at the end, so proceed.
+        if right == n:
+            if best_right is None or best_left is None or right - left > best_right - best_left:
+                best_left, best_right = left, right
+            return s[best_left:best_right]
+
+        # Continue to add elements until:
+        # 1. We reach the k restriction
+        # 2. We reach the n boundary
+        # at this point, we take the max with the value calculated from the next starting position and return.
+        while right < n and (len(chars_seen) < k or (len(chars_seen) == k and s[right] in chars_seen)):
+            chars_seen.add(s[right])
+            right += 1
+
+        if best_right is None or best_left is None or right - left > best_right - best_left:
+            best_left, best_right = left, right
+
+        # Calculate the candidate for next (which causes a recursion of cascading computations, of which the best is
+        # kept), and compare to our current best and return the best.
+        candidate = aux(next_try, best_left, best_right)
+        if len(candidate) > best_right - best_left:
+            return candidate
+        else:
+            return s[best_left:best_right]
+
+    return aux()
 
 
 if __name__ == '__main__':
@@ -105,8 +137,5 @@ if __name__ == '__main__':
 @given(st.tuples(st.from_regex("[a-eA-E0-9]{5,}", fullmatch=True), st.integers(min_value=2, max_value=10)))
 def testwindow(inp):
     s, k = inp
-    print("***********")
-    print(s)
-    print(k)
     assert bruteForceLongestSubstring(s, k) == longestSubstring(s, k)
 
