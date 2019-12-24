@@ -5,8 +5,8 @@ import java.util.PriorityQueue
 import java.util.ArrayDeque
 import java.util.Stack
 
-class HuffmanCode(frequencies: Map<Char, Int>): AutoCloseable {
-    private sealed class Node(val probability: Double, var parent: Node?): Comparator<Node>, Comparable<Node> {
+class HuffmanCode(frequencies: Map<Char, Int>) {
+    private sealed class Node(val probability: Double): Comparator<Node>, Comparable<Node> {
         override fun compare(o1: Node?, o2: Node?): Int {
             require(o1 != null && o2 != null)
             return when  {
@@ -19,8 +19,8 @@ class HuffmanCode(frequencies: Map<Char, Int>): AutoCloseable {
         override fun compareTo(other: Node): Int =
             this.compare(this, other)
 
-        class InternalNode(probability: Double, parent: Node?, val left: Node, val right: Node) : Node(probability, parent)
-        class Leaf(val char: Char, probability: Double, parent: InternalNode?) : Node(probability, parent)
+        class InternalNode(probability: Double, val left: Node, val right: Node) : Node(probability)
+        class Leaf(val char: Char, probability: Double) : Node(probability)
     }
 
     // The root of the Huffman tree.
@@ -33,15 +33,13 @@ class HuffmanCode(frequencies: Map<Char, Int>): AutoCloseable {
 
         // Create a priority queue and insert a node for each character.
         val pq = PriorityQueue<Node>()
-        frequencies.forEach{ (char, frequency) -> pq.add(Node.Leaf(char, frequency.toDouble() / samples, null))}
+        frequencies.forEach{ (char, frequency) -> pq.add(Node.Leaf(char, frequency.toDouble() / samples))}
 
         // While there is more than one element left in the priority queue, pull the top two, combine with a parent, and reinsert.
         while (pq.size > 1) {
             val n1 = pq.poll()
             val n2 = pq.poll()
-            val n  = Node.InternalNode(n1.probability + n2.probability, null, n1, n2)
-            n1.parent = n
-            n2.parent = n
+            val n  = Node.InternalNode(n1.probability + n2.probability, n1, n2)
             pq.add(n)
         }
 
@@ -65,19 +63,6 @@ class HuffmanCode(frequencies: Map<Char, Int>): AutoCloseable {
             }
         }
         encoding = map
-    }
-
-    override fun close() {
-        // Traverse the tree and set the parent pointers to null to avoid circular links.
-        val stack = Stack<Node>()
-        while (stack.isNotEmpty()) {
-            val top = stack.pop()
-            top.parent = null
-            if (top is Node.InternalNode) {
-                stack.add(top.left)
-                stack.add(top.right)
-            }
-        }
     }
 
     fun encode(txt: String): List<Int> =

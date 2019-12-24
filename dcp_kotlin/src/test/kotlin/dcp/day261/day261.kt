@@ -11,19 +11,15 @@ class UnitTests {
     @Test
     fun test1() {
         val hc = HuffmanCode(HuffmanCode.frequencyMap("aaaaabbbcd"))
-        hc.use {
-            val e = hc.decode(hc.encode("a"))
-            assertEquals(e, "a")
-        }
+        val e = hc.decode(hc.encode("a"))
+        assertEquals(e, "a")
     }
 
     @Test
     fun test2() {
         val hc = HuffmanCode(HuffmanCode.frequencyMap("aaaaabbbcd"))
-        hc.use {
-            val e = hc.decode(hc.encode("abcd"))
-            assertEquals(e, "abcd")
-        }
+        val e = hc.decode(hc.encode("abcd"))
+        assertEquals(e, "abcd")
     }
 }
 
@@ -34,15 +30,13 @@ class PropertyTests: StringSpec() {
         val sb = StringBuilder()
         pap.readLines().forEach { sb.append(it).append("\n") }
         val hc = HuffmanCode(HuffmanCode.frequencyMap(sb.toString()))
-        //hc.use {
-            val text = ('a'..'z').toList() + ('A'..'Z').toList() + listOf(" ", ".", ",", "?", "!")
-            "Encoding / decoding" {
-                forAll(Gen.list(Gen.from(text))) { txt ->
-                    val s1 = txt.joinToString()
-                    val s2 = hc.decode(hc.encode(s1))
-                    s1 == s2
-                }
+        val text = ('a'..'z').toList() + ('A'..'Z').toList() + listOf(" ", ".", ",", "?", "!")
+        "Encoding / decoding" {
+            forAll(Gen.list(Gen.from(text))) { txt ->
+                val s1 = txt.joinToString()
+                val s2 = hc.decode(hc.encode(s1))
+                s1 == s2
             }
-        //}
+        }
     }
 }
