@@ -126,14 +126,6 @@ def longestSubstring(s: str, k: int) -> str:
     return aux()
 
 
-if __name__ == '__main__':
-    # My idea fails for this solution.
-    ls = longestSubstring('0102300', 3)
-    print(f"LS: {len(ls)}: **{ls}**")
-    bf = bruteForceLongestSubstring('0102300', 3)
-    print(f"BF: {len(bf)}: **{bf}**")
-
-
 @given(st.tuples(st.from_regex("[a-eA-E0-9]{5,}", fullmatch=True), st.integers(min_value=2, max_value=10)))
 def testwindow(inp):
     s, k = inp

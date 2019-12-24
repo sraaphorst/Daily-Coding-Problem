@@ -1,11 +1,12 @@
 package dcp.day261
 
+import java.io.Closeable
 import java.util.Comparator
 import java.util.PriorityQueue
 import java.util.ArrayDeque
 import java.util.Stack
 
-class Huffman(frequencies: Map<Char, Int>) {
+class Huffman(frequencies: Map<Char, Int>): Closeable {
     private sealed class Node(val probability: Double, var parent: Node?): Comparator<Node> {
         override fun compare(o1: Node?, o2: Node?): Int {
             require(o1 != null && o2 != null)
@@ -62,6 +63,19 @@ class Huffman(frequencies: Map<Char, Int>) {
             }
         }
         encoding = map
+    }
+
+    override fun close() {
+        // Traverse the tree and set the parent pointers to null to avoid circular links.
+        val stack = Stack<Node>()
+        while (stack.isNotEmpty()) {
+            val top = stack.pop()
+            top.parent = null
+            if (top is Node.InternalNode) {
+                stack.add(top.left)
+                stack.add(top.right)
+            }
+        }
     }
 
     fun encode(txt: String): List<Int> =
