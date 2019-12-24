@@ -17,8 +17,6 @@ class StabIntervalTester {
             Interval.makeInterval(7.0, 10.0),
             Interval.makeInterval(4.0, 6.0)
         )
-        val ss1List1 = smallestStabbingSet(list1)
-        val ss2List1 = smallestStabSetFP(list1)
         assertEquals(smallestStabbingSet(list1).size, smallestStabSetFP(list1).size)
     }
 }

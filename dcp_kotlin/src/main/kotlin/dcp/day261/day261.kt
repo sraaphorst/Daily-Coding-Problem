@@ -6,8 +6,8 @@ import java.util.PriorityQueue
 import java.util.ArrayDeque
 import java.util.Stack
 
-class Huffman(frequencies: Map<Char, Int>): Closeable {
-    private sealed class Node(val probability: Double, var parent: Node?): Comparator<Node> {
+class HuffmanCode(frequencies: Map<Char, Int>): Closeable {
+    private sealed class Node(val probability: Double, var parent: Node?): Comparator<Node>, Comparable<Node> {
         override fun compare(o1: Node?, o2: Node?): Int {
             require(o1 != null && o2 != null)
             return when  {
@@ -16,6 +16,9 @@ class Huffman(frequencies: Map<Char, Int>): Closeable {
                 else                                ->  0
             }
         }
+
+        override fun compareTo(other: Node): Int =
+            this.compare(this, other)
 
         class InternalNode(probability: Double, parent: Node?, val left: Node, val right: Node) : Node(probability, parent)
         class Leaf(val char: Char, probability: Double, parent: InternalNode?) : Node(probability, parent)
@@ -63,6 +66,7 @@ class Huffman(frequencies: Map<Char, Int>): Closeable {
             }
         }
         encoding = map
+        encoding.forEach{(k,v) -> println("$k:   $v")}
     }
 
     override fun close() {
@@ -111,14 +115,19 @@ class Huffman(frequencies: Map<Char, Int>): Closeable {
 
         return txt
     }
-}
 
-/**
- * Make a map from text for Huffman encoding.
- */
-fun frequencyMap(txt: String): Map<Char, Int> =
-    txt.toCharArray().distinct().map{ char -> Pair(char, txt.count { char == it })}.toMap()
+    companion object HuffmanCode {
+        /**
+         * Make a map from text for Huffman encoding.
+         */
+        fun frequencyMap(txt: String): Map<Char, Int> =
+            txt.toCharArray().distinct().map{ char -> Pair(char, txt.count { char == it })}.toMap()
 
-fun main() {
-
+        /**
+         * Java access.
+         */
+        @JvmStatic
+        fun createCode(txt: String) =
+            HuffmanCode(frequencyMap(txt))
+    }
 }
