@@ -1,12 +1,11 @@
 package dcp.day261
 
-import java.io.Closeable
 import java.util.Comparator
 import java.util.PriorityQueue
 import java.util.ArrayDeque
 import java.util.Stack
 
-class HuffmanCode(frequencies: Map<Char, Int>): Closeable {
+class HuffmanCode(frequencies: Map<Char, Int>): AutoCloseable {
     private sealed class Node(val probability: Double, var parent: Node?): Comparator<Node>, Comparable<Node> {
         override fun compare(o1: Node?, o2: Node?): Int {
             require(o1 != null && o2 != null)
@@ -66,7 +65,6 @@ class HuffmanCode(frequencies: Map<Char, Int>): Closeable {
             }
         }
         encoding = map
-        encoding.forEach{(k,v) -> println("$k:   $v")}
     }
 
     override fun close() {
@@ -86,6 +84,9 @@ class HuffmanCode(frequencies: Map<Char, Int>): Closeable {
         txt.mapNotNull { encoding[it] }.flatten()
 
     fun decode(code: List<Int>): String {
+        if (code.isEmpty())
+            return ""
+
         // Traverse the tree.
         val queue = ArrayDeque<Int>(code.size)
         code.forEach { queue.add(it) }
@@ -93,15 +94,20 @@ class HuffmanCode(frequencies: Map<Char, Int>): Closeable {
         var txt = ""
 
         var nodeptr: Node = root
-        while (queue.isNotEmpty()) {
+
+        // Careful here: we have to make sue the last character is processed, which is why we have the while
+        // structure here.
+        breakable@while (true) {
             if (nodeptr is Node.Leaf) {
                 txt += nodeptr.char
                 nodeptr = root
+                if (queue.isEmpty())
+                    break@breakable
             } else if (nodeptr is Node.InternalNode) {
                 val elem = queue.pop()
-                when (elem) {
-                    0 -> nodeptr = nodeptr.left
-                    1 -> nodeptr = nodeptr.right
+                nodeptr = when (elem) {
+                    0 -> nodeptr.left
+                    1 -> nodeptr.right
                     else -> throw IllegalArgumentException("Illegal character in encoding: $elem")
                 }
             }
