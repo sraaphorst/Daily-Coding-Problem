@@ -17,16 +17,18 @@ data class UndirectedSimpleGraph(val nodes: Vertex, val adjacencies: Map<Vertex,
         require(adjacencies.none { (u, vs) -> u in vs }){"Adjacency list contains loops."}
     }
 
-    private fun dfs(start: Vertex): List<Vertex> {
+    fun dfs(start: Vertex): Set<Vertex> {
         val visited = mutableSetOf<Vertex>()
 
-        fun aux(v: Vertex, list: List<Int> = emptyList()): List<Int> {
-            if (v in list)
-                return list
-            return adjacencies[v]?.fold(list){ acc, u -> aux(u, list + listOf(u))} ?: emptyList()
+        fun aux(v: Vertex): Unit {
+            if (v in visited)
+                return
+            visited.add(v)
+            adjacencies[v]?.forEach { aux(it) }
         }
 
-        return aux(start)
+        aux(start)
+        return visited
     }
 
     fun removeEdge(u: Vertex, v: Vertex): UndirectedSimpleGraph =
@@ -42,19 +44,10 @@ data class UndirectedSimpleGraph(val nodes: Vertex, val adjacencies: Map<Vertex,
     fun edges(): Set<Edge> =
         adjacencies.flatMap { (u, vs) -> vs.filter{u < it}.map{ Pair(u, it)} }.toSet()
 
-//    fun findBridgesBF(): Set<Edge> =
-//        edges().filter { e -> removeEdge(e).dfs(e.first).size <= nodes }.toSet()
-}
-
-fun main() {
-    val g = UndirectedSimpleGraph(3, mapOf(
-        Pair(0, setOf(1)),
-        Pair(1, setOf(0, 2)),
-        Pair(2, setOf(1))
-    ))
-
-    for (e in g.edges()) {
-        println("Removing $e")
-        println("${g.removeEdge(e)}")
-    }
+    /**
+     * This is a brute force approach that takes O((V+E)E), as it tries to remove an edge and then do a DFS to make
+     * sure the graph is still connected. There is an O(V+E) algorithm as well.
+     */
+    fun findBridgesBF(): Set<Edge> =
+        edges().filter { e -> removeEdge(e).dfs(e.first).size < nodes }.toSet()
 }

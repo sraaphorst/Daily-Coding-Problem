@@ -2034,3 +2034,16 @@ Given a dictionary of character frequencies, build a Huffman tree, and use it to
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day261)
 * [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day261/day261.kt)
+
+---
+
+### Day 262 \[Medium\]
+
+This problem was asked by Mozilla.
+
+A bridge in a connected (undirected) graph is an edge that, if removed, causes the graph to become disconnected. Find all the bridges in a graph.
+
+**Note:** This solution could be improved.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day262)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day262/day262.kt)
