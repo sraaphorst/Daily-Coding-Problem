@@ -82,7 +82,7 @@ class HuffmanCode(frequencies: Map<Char, Int>) {
 
         var nodeptr: Node = root
 
-        // Careful here: we have to make sue the last character is processed, which is why we have the while
+        // Careful here: we have to make sure the last character is processed, which is why we have the while
         // structure here.
         breakable@while (true) {
             if (nodeptr is Node.Leaf) {
