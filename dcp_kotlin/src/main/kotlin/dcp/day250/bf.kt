@@ -1,6 +1,6 @@
 package dcp.day250
 
-import java.util.*
+import java.util.LinkedList
 
 interface Circular<T> : Iterable<T> {
     fun state(): T
@@ -79,7 +79,7 @@ class Permutations(N: Int) : IntCombinations(N) {
 fun <T> `⊃`(set1: Set<T>, set2: Set<T>): Set<T> =
     set1.intersect(set2)
 
-fun brute_force_cryptopuzzle(word1: String, word2: String, wordSum: String): Map<Char, Int>? {
+fun bruteForceCryptopuzzle(word1: String, word2: String, wordSum: String): Map<Char, Int>? {
     val chars = (word1 + word2 + wordSum).toCharArray().distinct()
     for (configuration in Permutations(10)) {
         val map = chars.zip(configuration).toMap()
@@ -94,5 +94,5 @@ fun brute_force_cryptopuzzle(word1: String, word2: String, wordSum: String): Map
 }
 
 fun main() {
-    println(brute_force_cryptopuzzle("SEND", "MORE", "MONEY"))
+    println(bruteForceCryptopuzzle("SEND", "MORE", "MONEY"))
 }

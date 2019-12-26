@@ -1,7 +1,9 @@
 package dcp.day228
+// day228.kt
+// By Sebastian Raaphorst, 2019.
 
 import java.math.BigInteger
-import java.util.*
+import java.util.LinkedList
 
 // https://medium.com/@voddan/a-handful-of-kotlin-permutations-7659c555d42
 

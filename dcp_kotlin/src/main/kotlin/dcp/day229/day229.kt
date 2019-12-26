@@ -1,11 +1,14 @@
 package dcp.day229
+// day229.kt
+// By Sebastian Raaphorst, 2019.
 
-import java.util.*
+import java.util.LinkedList
 import kotlin.math.min
 
 typealias ID = Int
 typealias Moves = Int
 typealias Edges = Map<ID, Moves>
+
 // Snakes and ladders are both just different forms of transporters.
 typealias Transporters = Map<ID, ID>
 
@@ -40,7 +43,7 @@ fun snakesAndLadders(size: Int, transporters: Transporters): Int {
     while (queue.isNotEmpty()) {
         val nodeID = queue.pop()
         val node = board[nodeID]
-        //println("* Visiting $nodeID: $node, ${shortestDistance[nodeID]}")
+
         node.edges.forEach{ (dID, dist) ->
             // We either have a distance or we don't
             // If we don't, the distance is shortestDistance[node] + dist

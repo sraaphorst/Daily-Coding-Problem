@@ -2,7 +2,7 @@ package dcp.day226
 // day226.kt
 // By Sebastian Raaphorst, 2019.
 
-import java.util.*
+import java.util.LinkedList
 
 /**
  * Given a list of "words" sorted alphabetically (according to an arbitrary alphabet that does not necessarily
