@@ -30,7 +30,9 @@ class PropertyTests: StringSpec() {
         val pap = javaClass.classLoader.getResourceAsStream("prideandprejudice.txt")?.bufferedReader()
         require(pap != null)
         val sb = StringBuilder()
-        pap.readLines().forEach { sb.append(it).append("\n") }
+        with (sb) {
+            pap.readLines().forEach { append(it).append("\n") }
+        }
         val hc = HuffmanCode(HuffmanCode.frequencyMap(sb.toString()))
         val text = ('a'..'z').toList() + ('A'..'Z').toList() + listOf(" ", ".", ",", "?", "!")
         "Encoding / decoding" {
