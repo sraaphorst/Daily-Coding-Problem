@@ -2069,7 +2069,7 @@ word.
 
 ---
 
-# Day 264 \[Hard\]
+### Day 264 \[Hard\]
 
 This problem was asked by LinkedIn.
 

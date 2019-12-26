@@ -5,7 +5,7 @@ package dcp.day264
 import kotlin.math.pow
 
 // Generate k-ary deBruijn sequences covering words of length n.
-// We don't bother using an alphabet: this can just be mapped back and forth if wanted.
+// We don't bother using an alphabet: this can just be mapped back and forth if wanted, and we switched k for n.
 fun deBruijn(k: Int, n: Int): List<Int> {
     // Generate all the Lyndon words via Duval's 1988 Algorithm.
     // A Lyndon word is a nonempty string that is strictly smaller in lexicographic order than all its rotations.
