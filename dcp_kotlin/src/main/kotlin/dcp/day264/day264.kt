@@ -1,7 +1,11 @@
 package dcp.day264
+// day264.kt
+// By Sebastian Raaphorst, 2019.
 
 import kotlin.math.pow
 
+// Generate k-ary deBruijn sequences covering words of length n.
+// We don't bother using an alphabet: this can just be mapped back and forth if wanted.
 fun deBruijn(k: Int, n: Int): List<Int> {
     // Generate all the Lyndon words via Duval's 1988 Algorithm.
     // A Lyndon word is a nonempty string that is strictly smaller in lexicographic order than all its rotations.
@@ -41,22 +45,11 @@ fun deBruinLength(k: Int, n: Int): Int =
 
 fun covered(k: Int, n: Int, lst: List<Int>): Boolean {
     // Convert each word into a set, and then into an Int to mark it as covered.
-    // We add the first n-1 elements of list to the end so that we don't have to cycle.
-    val noncyclingList = (lst + lst.take(n-1))
+    // We double the elements so we don't have to cycle.
+    val noncyclingList = (lst + lst)
     val sz = lst.size
 
     return (0 until sz).
         map { i -> (0 until n).map { noncyclingList[i+it] * k.toDouble().pow(it).toInt() }.sum() }.
         toSet().size == deBruinLength(k, n)
-}
-
-
-fun main() {
-    val (k, n) = Pair(4, 2)
-    val db = deBruijn(k, n)
-//    println(db)
-//    println(db.size)
-    println("Calling covered...")
-    println(covered(k, n, db))
-//    println(deBruinLength(k, n))
 }

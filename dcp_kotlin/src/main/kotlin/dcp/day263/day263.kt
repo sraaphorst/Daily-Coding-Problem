@@ -118,8 +118,3 @@ fun sentenceStateChecker(txt: String, state: Int = 0): Boolean {
         }
     }
 }
-
-fun main() {
-    println(sentenceStateChecker("The goose flies at night.."))//oose flies at night."))
-    println(sentenceRegexChecker("The goose flies at night.."))//oose flies at night."))
-}
