@@ -1,4 +1,6 @@
 package dcp.day258
+// day258.kt
+// By Sebastian Raaphorst, 2019.
 
 enum class Direction {
     LEFT, RIGHT

@@ -1,7 +1,5 @@
-package dcp
+package dcp.day262
 
-import dcp.day262.Edge
-import dcp.day262.UndirectedSimpleGraph
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 

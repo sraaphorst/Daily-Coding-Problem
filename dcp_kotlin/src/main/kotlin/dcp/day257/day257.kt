@@ -2,7 +2,7 @@ package dcp.day257
 // day257.kt
 // By Sebastian Raaphorst, 2019.
 
-fun <T: Comparable<T>> brute_force_smallest_window(list: List<T>): Pair<Int, Int>? {
+fun <T: Comparable<T>> smallestWindowBruteForce(list: List<T>): Pair<Int, Int>? {
     if (list.isEmpty()) return null
 
     val sorted = list.sorted()
@@ -15,7 +15,7 @@ fun <T: Comparable<T>> brute_force_smallest_window(list: List<T>): Pair<Int, Int
 }
 
 
-fun <T: Comparable<T>> smallest_window(list: List<T>): Pair<Int, Int>? {
+fun <T: Comparable<T>> smallestWindow(list: List<T>): Pair<Int, Int>? {
     if (list.isEmpty()) return null
 
     // Traverse from left to right, finding the element less than the max seen so far.
