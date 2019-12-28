@@ -10,7 +10,7 @@ fun deBruijn(k: Int, n: Int): List<Int> {
     // Generate all the Lyndon words via Duval's 1988 Algorithm.
     // A Lyndon word is a nonempty string that is strictly smaller in lexicographic order than all its rotations.
     // A k-ary Lyndon word of length n > 0 is an n-character string over an alphabet of size k.
-    // Here we generate all k-ary Lyndon words of length < n in lexicographic order, from Wikipedia.
+    // Here we generate all k-ary Lyndon words of length < n in lexicographic order, from the algorithm in  Wikipedia.
     val lyndon: Sequence<List<Int>> = sequence {
         val word = mutableListOf(-1)
 
