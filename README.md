@@ -2096,3 +2096,16 @@ For example, given `[10, 40, 200, 1000, 60, 30]`, you should return `[1, 2, 3, 4
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day265)
 * [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day265/day265.kt)
+
+---
+
+### Day 266 \[Easy\]
+
+This problem was asked by Pivotal.
+
+A step word is formed by taking a given word, adding a letter, and anagramming the result. For example, starting with the word `"APPLE"`, you can add an `"A"` and anagram to get `"APPEAL"`.
+
+Given a dictionary of words and an input word, create a function that returns all valid step words.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day266)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day266/day266.kt)
