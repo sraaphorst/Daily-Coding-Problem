@@ -102,7 +102,7 @@ class HuffmanCode(frequencies: Map<Char, Int>) {
 
         // If we are not at the root now, the encoding was not valid.
         if (nodeptr != root) {
-            val codeAsTxt = code.map(Int::toString).joinToString()
+            val codeAsTxt = code.joinToString(transform = Int::toString)
             throw IllegalArgumentException("Invalid code: $codeAsTxt")
         }
 
