@@ -23,7 +23,6 @@ def form_array(msg: str, height: int) -> List[List[str]]:
     down = True
     posx, posy = 0, 0
     for ch in msg:
-        print(f"Trying to put {ch} at pos {posx},{posy}, {len(array)}, {len(array[1])}")
         array[posx][posy] = ch
         posy += 1
 
