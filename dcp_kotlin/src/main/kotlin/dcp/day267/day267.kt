@@ -3,7 +3,6 @@ package dcp.day267
 // By Sebastian Raaphorst, 2019.
 
 import java.lang.IllegalArgumentException
-import java.security.InvalidParameterException
 
 // Represent the board as an 8x8 grid with (0,0) being in the upper left corner, the first coordinate representing
 // the x-axis, and the second coordinate representing the y-axis.
@@ -170,7 +169,7 @@ class Board(matrix: List<String>) {
         val blackKingY = blackKingRow?.value?.indexOf('K')
 
         blackKing = blackKingX?.let { x -> blackKingY?.let { y -> Position(x, y) }} ?:
-                throw InvalidParameterException("Black king not found on board.")
+                throw IllegalArgumentExceptionException("Black king not found on board.")
 
     }
 
