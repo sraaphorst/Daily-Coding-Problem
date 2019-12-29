@@ -54,12 +54,12 @@ sealed class ChessPiece(val name: String, private val symbol: Char, val position
             else listOf(newPos) + when(direction) {
                 Direction.HORIZONTAL_E -> lineMoves(start,dx + 1, dy, direction, otherPieces)
                 Direction.HORIZONTAL_W -> lineMoves(start, dx - 1, dy, direction, otherPieces)
-                Direction.VERTICAL_N -> lineMoves(start, dx, dy + 1, direction, otherPieces)
-                Direction.VERTICAL_S -> lineMoves(start, dx, dy - 1, direction, otherPieces)
-                Direction.DIAGONAL_NE -> lineMoves(start, dx + 1, dy + 1, direction, otherPieces)
-                Direction.DIAGONAL_NW -> lineMoves(start, dx - 1, dy + 1, direction, otherPieces)
-                Direction.DIAGONAL_SE -> lineMoves(start, dx + 1, dy - 1, direction, otherPieces)
-                Direction.DIAGONAL_SW -> lineMoves(start, dx - 1, dy - 1, direction, otherPieces)
+                Direction.VERTICAL_N -> lineMoves(start, dx, dy - 1, direction, otherPieces)
+                Direction.VERTICAL_S -> lineMoves(start, dx, dy + 1, direction, otherPieces)
+                Direction.DIAGONAL_NE -> lineMoves(start, dx + 1, dy - 1, direction, otherPieces)
+                Direction.DIAGONAL_NW -> lineMoves(start, dx - 1, dy - 1, direction, otherPieces)
+                Direction.DIAGONAL_SE -> lineMoves(start, dx + 1, dy + 1, direction, otherPieces)
+                Direction.DIAGONAL_SW -> lineMoves(start, dx - 1, dy + 1, direction, otherPieces)
             }
         }
 
