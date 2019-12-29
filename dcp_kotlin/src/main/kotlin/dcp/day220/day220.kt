@@ -56,9 +56,3 @@ fun coin_dynamic(coins: List<Int>): Int {
     }
     return value[0][n-1]
 }
-
-fun main() {
-    val coins = listOf(30, 45, 10, 53)
-    println(coin_backtrack(coins))
-    println(coin_dynamic(coins))
-}

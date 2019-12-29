@@ -1,4 +1,6 @@
 package dcp.day252
+// day252.kt
+// By Sebastian Raaphorst, 2019.
 
 import java.lang.IllegalArgumentException
 import java.math.BigInteger

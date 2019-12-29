@@ -1,4 +1,6 @@
 package dcp.day252
+// day252.kt
+// By Sebastian Raaphorst, 2019.
 
 import io.kotlintest.properties.Gen
 import io.kotlintest.properties.forAll
@@ -45,7 +47,7 @@ class EgyptianRationalImperativeTest: StringSpec() {
     }
 }
 
-class Examples {
+class UnitTests {
     @Test
     fun example1() {
         assertEquals((4 divBy 13), listOf(1 divBy 4, 1 divBy 18, 1 divBy 468).sum())

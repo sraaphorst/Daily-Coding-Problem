@@ -45,9 +45,3 @@ fun findStartPointsRollingHash(str: String, substr: String): Set<Int> {
     }
     return aux(0, startHash)
 }
-
-fun main() {
-    println(findStartPointsRollingHash("abcdbcebccbc", "bc"))
-    println(findStartPointsRollingHash("abracadabra", "abr"))
-    println(findStartPointsRollingHash("essentialial", "ial"))
-}

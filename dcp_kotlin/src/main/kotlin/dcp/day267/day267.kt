@@ -188,18 +188,3 @@ class Board(matrix: List<String>) {
         }
     }
 }
-
-fun main() {
-    val boardString =
-        "...K...." +
-        "........" +
-        ".B......" +
-        "......P." +
-        ".......R" +
-        "..N....." +
-        "........" +
-        ".....Q.."
-
-    val board: Board = Board.stringToBoard(boardString)
-    println(board.isBlackKingInCheck())
-}
