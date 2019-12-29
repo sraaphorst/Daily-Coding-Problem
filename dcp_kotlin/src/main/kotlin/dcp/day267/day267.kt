@@ -134,7 +134,7 @@ class Queen(position: Position): ChessPiece("queen", 'Q', position) {
 // ........
 // .....Q..
 class Board(matrix: List<String>) {
-    private var blackKing: Position
+    private val blackKing: Position
     private val whitePieces: List<ChessPiece>
 
     init {
