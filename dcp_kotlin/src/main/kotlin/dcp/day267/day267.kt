@@ -169,7 +169,7 @@ class Board(matrix: List<String>) {
         val blackKingY = blackKingRow?.value?.indexOf('K')
 
         blackKing = blackKingX?.let { x -> blackKingY?.let { y -> Position(x, y) }} ?:
-                throw IllegalArgumentExceptionException("Black king not found on board.")
+                throw IllegalArgumentException("Black king not found on board.")
 
     }
 
