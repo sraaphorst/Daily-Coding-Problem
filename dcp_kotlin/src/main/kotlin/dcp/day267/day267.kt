@@ -139,6 +139,9 @@ class Board(matrix: List<String>) {
     private val whitePieces: List<ChessPiece>
 
     init {
+        require(matrix.size == 8)
+        matrix.forEach { require(it.length == 8) }
+
         // Auxiliary function to read in the white pieces.
         fun aux(x: Int, y: Int): List<ChessPiece> {
             // Stopping condition: we reach one row past the end of the board.
