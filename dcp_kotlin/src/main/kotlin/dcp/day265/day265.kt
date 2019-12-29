@@ -78,9 +78,3 @@ fun calculateBonusMutable(locs: List<LOC>): List<Bonus> {
 
     return bonuses
 }
-
-fun main() {
-    val l = listOf(38037, 42821, 48913, 82651, 22010)
-    println(calculateBonus(l))
-    println(calculateBonusMutable(l))
-}
