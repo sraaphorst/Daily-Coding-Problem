@@ -60,20 +60,3 @@ fun Rational.toEgyptianRationalImp(): List<Rational> {
 
     return list
 }
-
-fun main() {
-    val e1 = 815 divBy 934
-    //val e2 = e1.toEgyptianRational()
-    val e3 = e1.toEgyptianRationalImp()
-    println("$e1, $e3")
-
-    val egyptian1 = try {(99 divBy 101).toEgyptianRational()} catch (_: StackOverflowError) { null }
-    val egyptian2 = (99 divBy 101).toEgyptianRationalImp()
-    println(egyptian1)
-    println(egyptian2)
-    val sum1 = egyptian1?.fold(Rational.ZERO){acc, curr -> acc + curr}
-    val sum2 = egyptian2.fold(Rational.ZERO){acc, curr -> acc + curr}
-    println(sum1)
-    println(sum2)
-
-}
