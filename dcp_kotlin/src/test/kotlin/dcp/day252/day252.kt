@@ -51,8 +51,6 @@ class EgyptianRationalDirectTest: StringSpec() {
         "direct attempt" {
             forAll(100, RationalGen()) { r ->
                 val egyptian = r.toEgyptianRationalDirect()
-                println(r)
-                println(egyptian)
                 val sum = egyptian?.fold(Rational.ZERO){acc, curr -> acc + curr}
                 sum == null || r == sum
             }
