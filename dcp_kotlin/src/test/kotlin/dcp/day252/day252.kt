@@ -1,4 +1,6 @@
 package dcp.day252
+// day252.kt
+// By Sebastian Raaphorst, 2019.
 
 import io.kotlintest.properties.Gen
 import io.kotlintest.properties.forAll
@@ -14,19 +16,18 @@ class RationalGen: Gen<Rational> {
     }
 
     override fun random(): Sequence<Rational> = generateSequence {
-        val n = Gen.choose(0, 1_000).random().first()
-        val d = Gen.choose(n+1, 1_000).random().first()
+        val n = Gen.choose(1, 100).random().first()
+        val d = Gen.choose(n+1, 101).random().first()
         n divBy d
     }
 }
 
-
 class EgyptianRationalRecursiveTest: StringSpec() {
     init {
         "recursive attempt" {
-            forAll(10, RationalGen()) { r ->
-                val egyptian = try {r.toEgyptianRational()} catch (_: StackOverflowError) { null }
-                val sum = egyptian?.fold(Rational.ZERO){acc, curr -> acc + curr}
+            forAll(100, RationalGen()) { r ->
+                val egyptian = r.toEgyptianRational()
+                val sum = egyptian.fold(Rational.ZERO){acc, curr -> acc + curr}
                 r == sum
             }
         }
@@ -35,8 +36,8 @@ class EgyptianRationalRecursiveTest: StringSpec() {
 
 class EgyptianRationalImperativeTest: StringSpec() {
     init {
-        "recursive attempt" {
-            forAll(10, RationalGen()) { r ->
+        "imperative attempt" {
+            forAll(100, RationalGen()) { r ->
                 val egyptian = r.toEgyptianRationalImp()
                 val sum = egyptian.fold(Rational.ZERO){acc, curr -> acc + curr}
                 r == sum
@@ -45,7 +46,19 @@ class EgyptianRationalImperativeTest: StringSpec() {
     }
 }
 
-class Examples {
+class EgyptianRationalDirectTest: StringSpec() {
+    init {
+        "direct attempt" {
+            forAll(100, RationalGen()) { r ->
+                val egyptian = r.toEgyptianRationalDirect()
+                val sum = egyptian?.fold(Rational.ZERO){acc, curr -> acc + curr}
+                sum == null || r == sum
+            }
+        }
+    }
+}
+
+class UnitTests {
     @Test
     fun example1() {
         assertEquals((4 divBy 13), listOf(1 divBy 4, 1 divBy 18, 1 divBy 468).sum())

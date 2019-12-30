@@ -1,11 +1,11 @@
 package dcp.day185
-// RectangleIntersectionTester.kt
+// day185.kt
 // By Sebastian Raaphorst, 2019.
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class RectangleIntersectionTester {
+class UnitTests {
     @Test
     fun rectangleIntersectionTest() {
         val rect1 = Rectangle(Point(4, 1), Dimension(3, 3))

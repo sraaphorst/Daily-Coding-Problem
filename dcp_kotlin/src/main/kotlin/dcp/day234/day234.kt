@@ -39,25 +39,3 @@ data class WeightedGraph(val edges: List<WeightedEdge>) {
         return@lazy tree.toSet()
     }
 }
-
-fun e(u: Vertex, v: Vertex, w: Weight): WeightedEdge = ((u to v) to w)
-
-fun main() {
-    val wg = WeightedGraph(
-        listOf(
-            e(0,1,2),
-            e(0,2,2),
-            e(0,4,4),
-            e(0,5,2),
-            e(1,2,1),
-            e(1,3,3),
-            e(2,3,5),
-            e(2,4,3),
-            e(3,4,2),
-            e(3,5,5),
-            e(4,5,1)
-        )
-    )
-
-    println(wg.minimumSpanningTree)
-}

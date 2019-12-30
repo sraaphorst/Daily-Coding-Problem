@@ -35,15 +35,4 @@ fun maximumWeightPath(lists: List<MutableList<Int>>): Int {
     return lists[0][0]
 }
 
-fun main() {
-    val t1 = listOf(mutableListOf(1), mutableListOf(2, 3), mutableListOf(1, 5, 1))
-    println("{$t1} has maximum weight ${maximumWeightPath(t1)}.")
-
-    val t2 = listOf(mutableListOf(3))
-    println("{$t2} has maximum weight ${maximumWeightPath(t2)}")
-
-    val t3 = listOf<MutableList<Int>>()
-    println("{$t3} has maximum weight ${maximumWeightPath(t3)}")
-
-}
 

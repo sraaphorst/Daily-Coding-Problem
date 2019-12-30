@@ -2084,6 +2084,60 @@ Create an algorithm that finds a de Bruijn sequence.
 
 ---
 
+### Day 265 \[Easy\]
+
+This problem was asked by Atlassian.
+
+MegaCorp wants to give bonuses to its employees based on how many lines of codes they have written. They would like to give the smallest positive amount to each worker consistent with the constraint that if a developer has written more lines of code than their neighbor, they should receive more money.
+
+Given an array representing a line of seats of employees at MegaCorp, determine how much each one should get paid.
+
+For example, given `[10, 40, 200, 1000, 60, 30]`, you should return `[1, 2, 3, 4, 2, 1]`.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day265)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day265/day265.kt)
+
+---
+
+### Day 266 \[Easy\]
+
+This problem was asked by Pivotal.
+
+A step word is formed by taking a given word, adding a letter, and anagramming the result. For example, starting with the word `"APPLE"`, you can add an `"A"` and anagram to get `"APPEAL"`.
+
+Given a dictionary of words and an input word, create a function that returns all valid step words.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day266)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day266/day266.kt)
+
+---
+
+### Day 267 \[Hard\]
+
+This problem was asked by Oracle.
+
+You are presented with an 8 by 8 matrix representing the positions of pieces on a chess board. The only pieces on the board are the black king and various white pieces. Given this matrix, determine whether the king is in check.
+
+For details on how each piece moves, see here.
+
+For example, given the following matrix:
+```
+...K....
+........
+.B......
+......P.
+.......R
+..N.....
+........
+.....Q..
+```
+You should return `True`, since the bishop is attacking the king diagonally.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day267)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day267/day267.kt)
+
+---
+
 ### Day 268 \[Medium\]
 
 This problem was asked by Indeed.
