@@ -2081,3 +2081,14 @@ Create an algorithm that finds a de Bruijn sequence.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day264)
 * [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day264/day264.kt)
+
+---
+
+### Day 268 \[Medium\]
+
+This problem was asked by Indeed.
+
+Given a 32-bit positive integer `N`, determine whether it is a power of four in faster than `O(log N)` time.
+
+* [C++ implementation](dcp_cpp/src/day268)
+* [Unit testing](dcp_cpp/test/TestDay268.cpp)
