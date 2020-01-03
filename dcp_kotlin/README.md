@@ -12,7 +12,7 @@
 * [Day 207](src/main/kotlin/dcp/day207)
 * [Day 212](src/main/kotlin/dcp/day212)
 * [Day 215](src/main/kotlin/dcp/day215) - Incomplete
-* [Day 216](src/main/kotlin/dcp/day216) - Needs cleanup
+* [Day 216](src/main/kotlin/dcp/day216)
 * [Day 218](src/main/kotlin/dcp/day218)
 * [Day 220](src/main/kotlin/dcp/day220)
 * [Day 221](src/main/kotlin/dcp/day221)
@@ -37,3 +37,4 @@
 * [Day 262](src/main/kotlin/dcp/day262)
 * [Day 263](src/main/kotlin/dcp/day263)
 * [Day 264](src/main/kotlin/dcp/day264)
+* [Day 269](src/main/kotlin/dcp/day269)
