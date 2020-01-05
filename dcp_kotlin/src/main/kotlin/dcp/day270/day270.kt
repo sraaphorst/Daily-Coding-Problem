@@ -1,10 +1,16 @@
 package dcp.day270
-//https://www.dailycodingproblem.com/solution/271?token=1320e1dcfc4aacea2f737b55192b7de940d57e5c3b99fc08636220a94f7590b79aa9061e
+// day270.kt
+// Sebastian Raaphorst, 20202.
+
 import kotlin.math.min
+
+// Use a technique called the Fibonacci search.
+// https://en.wikipedia.org/wiki/Fibonacci_search_technique
 
 fun List<Int>.fibContains(x: Int): Boolean {
     if (x > last() || x < first())
         return false
+    val n: Int = this.size
 
     // We are trying to find t.
     // 1. q is the smallest fib # greater than or equal to the size of the array, i.e. fib(q) >= list.length &&
@@ -16,33 +22,28 @@ fun List<Int>.fibContains(x: Int): Boolean {
     fun fibonacci() =
         generateSequence(Pair(0, 1), { Pair(it.second, it.first + it.second) }).map{ it.first }
 
-    val seq = fibonacci().takeWhile { it <= this.size }.toList()
-    val n = seq.size
-    var offset = 0
-    var p = seq.size - 2
-    var q = seq.size - 1
+    // Get the fibonacci sequence with its indices.
+    val fibs = fibonacci().withIndex().takeWhile {it.value <= n }.toList()
 
-    while (q > 0) {
-        val index = min(offset + seq[p], x - 1)
-        when {
-            x == this[index] -> return true
-            x < this[index] -> {
-                p -= 2
-                q -= 2
-            }
-            else -> {
-                p -= 1
-                q -= 1
-                offset = index
-            }
+    // We use a tailrec look to traverse the array by fib numbers so we can achieve O(log n) performance.
+    tailrec
+    fun aux(p: Int, q: Int, offset: Int = 0): Boolean {
+       if (q <= 0) return false
+
+        val index = min(offset + fibs[p].value, n - 1)
+        return when {
+            x == this[index] -> true
+            x < this[index] -> aux(p - 2, q - 2, offset)
+            else -> aux(p - 1, q - 1, index)
         }
     }
 
-    return false
+    return aux(fibs.size - 1, fibs.size)
 }
 
 
 fun main() {
     val lst = listOf(4, 7, 11, 16, 27, 45, 55, 65, 80, 100)
-    (0..101).forEach{println("$it -> ${lst.fibContains(it)}")}
+    println(lst.fibContains(4))
+    (0..101).filter { lst.fibContains(it) }.forEach{println(it)}
 }

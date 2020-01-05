@@ -419,18 +419,38 @@ Do this in `O(M + N)` time (where `M` and `N` are the lengths of the lists) and 
 
 ---
 
-## Day 27 \[Easy\]
+### Day 27 \[Easy\]
 
-Given a string made of parentheses `{`, `}`, `[`, `]`, `(`, and `)`,
-determine if it is balanced.
+This problem was asked by Facebook.
 
-Implemented in C++: [Day 27](dcp_cpp/src/day027)
+Given a string of round, curly, and square open and closing brackets, return whether the brackets are balanced (well-formed).
 
-## Day 28 \[Medium\]
+For example, given the string `"([])[]({})"`, you should return `true`.
 
-Given a list of words `L` and a line length `k` (with each word at
-most length `k`), break the words into full-padded lines of length `k`
-with excess padding given to left words.
+Given the string `"([)]"` or `"((()"`, you should return `false`.
+
+* [C++ implementation](dcp_cpp/src/day027)
+* [Unit testing](dcp_cpp/test/TestDay027.cpp)
+
+---
+
+### Day 28 \[Medium\]
+
+This problem was asked by Palantir.
+
+Write an algorithm to justify text. Given a sequence of words and an integer line length `k`, return a list of strings which represents each line, fully justified.
+
+More specifically, you should have as many words as possible in each line. There should be at least one space between each word. Pad extra spaces when necessary so that each line has exactly length `k`. Spaces should be distributed as equally as possible, with the extra spaces, if any, distributed starting from the left.
+
+If you can only fit one word on a line, then you should pad the right-hand side with spaces.
+
+Each word is guaranteed not to be longer than `k`.
+
+For example, given the list of words `["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"]` and` k = 16`, you should return the following:
+
+* `["the  quick brown"`, # 1 extra space on the left
+* `"fox  jumps  over"`, # 2 extra spaces distributed evenly
+* `"the   lazy   dog"]` # 4 extra spaces distributed evenly
 
 Implemented in Python: [Day 28](dcp_py/day028)
 
@@ -2149,7 +2169,7 @@ Given a 32-bit positive integer `N`, determine whether it is a power of four in 
 
 ---
 
-# Day 269 \[Easy\]
+### Day 269 \[Easy\]
 
 This problem was asked by Microsoft.
 
@@ -2167,3 +2187,27 @@ Given the string `..R...L.L`, you should return `..RR.LLLL`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day269)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day269/day269.kt)
+
+---
+
+# Day 270 \[Hard\]
+
+Given a sorted list of integers of length `N`, determine if an element `x` is in the list without performing any multiplication, division, or bit-shift operations.
+
+Do this in `O(log N)` time.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day270)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day70/day270.kt)
+
+
+---
+
+### Day 273 \[Easy\]
+
+A fixed point in an array is an element whose value is equal to its index. Given a sorted array of distinct elements, return a fixed point, if one exists. Otherwise, return `False`.
+
+For example, given `[-6, 0, 2, 40]`, you should return `2`. Given `[1, 5, 7, 8]`, you should return `False`.
+
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day273)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day73/day273.kt)
