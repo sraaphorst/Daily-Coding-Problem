@@ -456,7 +456,7 @@ Implemented in Python: [Day 28](dcp_py/day028)
 
 ---
 
-## Day 29 \[Easy\]
+### Day 29 \[Easy\]
 
 This problem was asked by Amazon.
 
@@ -466,7 +466,9 @@ Implement run-length encoding and decoding. You can assume the string to be enco
 
 Implemented in Scala: [Day 29](dcp_jvm/src/main/scala/dcp/day029)
 
-## Day 30 \[Medium\]
+---
+
+### Day 30 \[Medium\]
 
 Elevation water pooling.
 
