@@ -2207,6 +2207,18 @@ Do this in `O(log N)` time.
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day270)
 * [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day70/day270.kt)
 
+---
+
+### Day 272 \[Medium\]
+
+This problem was asked by Spotify.
+
+Write a function, `throw_dice(N, faces, total)`, that determines how many ways it is possible to throw `N` dice with some number of `faces` each to get a specific total.
+
+For example, `throw_dice(3, 6, 7)` should equal 15.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day272)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day72/day272.kt)
 
 ---
 
