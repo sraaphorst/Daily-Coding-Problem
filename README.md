@@ -2252,3 +2252,18 @@ Given an integer `N`, print the Nth term of this sequence.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day275)
 * [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day75/day275.kt)
+
+---
+
+### Day 276 \[Hard\]
+
+This problem was asked by Dropbox.
+
+Implement an efficient string matching algorithm.
+
+That is, given a string of length `N` and a pattern of length `k`, write a program that searches for the pattern in the string with less than `O(N * k)` worst-case time complexity.
+
+If the pattern is found, return the start index of its location. If not, return `False`.
+
+* [C++ implementation](dcp_cpp/src/day276)
+* [Unit testing](dcp_cpp/test/TestDay276.cpp)
