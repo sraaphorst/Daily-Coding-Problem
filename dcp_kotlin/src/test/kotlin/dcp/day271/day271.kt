@@ -1,5 +1,5 @@
-package dcp.day270
-// day270.kt
+package dcp.day271
+// day271.kt
 // By Sebastian Raaphorst, 2020.
 
 import io.kotlintest.properties.Gen
@@ -18,8 +18,9 @@ class UnitTests {
 class PropertyTests: StringSpec() {
     init {
         "Find first fixed point correctly" {
-            forAll(100_000, Gen.list(Gen.choose(0, 50))) { lst ->
-                lst.sorted().all { lst.fibContains(it) }
+            forAll(100_000, Gen.list(Gen.choose(0, 50))) { unsortedLst ->
+                val lst = unsortedLst.sorted()
+                lst.all { lst.fibContains(it) }
             }
         }
     }

@@ -2203,14 +2203,14 @@ Given the string `..R...L.L`, you should return `..RR.LLLL`.
 
 ---
 
-### Day 270 \[Hard\]
+### Day 271 \[Hard\]
 
 Given a sorted list of integers of length `N`, determine if an element `x` is in the list without performing any multiplication, division, or bit-shift operations.
 
 Do this in `O(log N)` time.
 
-* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day270)
-* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day70/day270.kt)
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day271)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day71/day271.kt)
 
 ---
 
