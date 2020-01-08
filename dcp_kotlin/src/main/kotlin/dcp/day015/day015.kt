@@ -8,7 +8,9 @@ import kotlin.random.Random
  * Uniform distribution from a sequence, for cases where the data is too large to fit into memory.
  * Based on reservoir sampling.
  */
-fun <T> Sequence<T>.pickRandom(): T {
+fun <T> Sequence<T>.pickRandom(): T? {
+    if (none()) return null
+
     // Must initialize it to something.
     // Count represents the number of things we've seen, so it is one more than idx.
     var result: T = first()
@@ -27,6 +29,9 @@ fun <T> Sequence<T>.pickRandom(): T {
 // The only way to do so is to verify that all the numbers are approximately the same the majority of the time.
 fun main() {
     val lst = MutableList(10){0}
-    (0..1000000).forEach{ lst[(0 until 10).asSequence().pickRandom()] += 1}
+    (0..1000000).forEach{
+        val idx = (0 until 10).asSequence().pickRandom()
+        require(idx != null)
+        lst[idx] += 1}
     println(lst)
 }
