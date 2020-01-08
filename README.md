@@ -31,6 +31,10 @@ The Kotlin testing is done using:
 * Unit testing with [JUnit](https://junit.org/junit5/docs/current/user-guide).
 * Specification testing with [KotlinTest](https://github.com/kotlintest/kotlintest).
 
+Note that this was partly an exercise to learn Kotlin, so many of the
+exercises are done in Kotlin to reinforce the learning I was doing in
+Coursera's class, Kotlin for Java Developers. The earlier Kotlin
+exercises done in 2019 will clearly be rough around the edges due to my inexperience.
 
 Here are the descriptions of the problems solved (not all of them have
 been attempted but will progress as time goes on.)
@@ -292,7 +296,8 @@ This problem was asked by Facebook.
 
 Given a stream of elements too large to store in memory, pick a random element from the stream with uniform probability.
 
-* NOT YET IMPLEMENTED
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day015)
+* Testing done in `main` function.
 
 
 ---
