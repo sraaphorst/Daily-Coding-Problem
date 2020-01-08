@@ -2212,6 +2212,18 @@ Do this in `O(log N)` time.
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day270)
 * [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day70/day270.kt)
 
+---
+
+### Day 272 \[Medium\]
+
+This problem was asked by Spotify.
+
+Write a function, `throw_dice(N, faces, total)`, that determines how many ways it is possible to throw `N` dice with some number of `faces` each to get a specific total.
+
+For example, `throw_dice(3, 6, 7)` should equal 15.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day272)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day72/day272.kt)
 
 ---
 
@@ -2224,3 +2236,39 @@ For example, given `[-6, 0, 2, 40]`, you should return `2`. Given `[1, 5, 7, 8]`
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day273)
 * [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day73/day273.kt)
+
+---
+
+### Day 275 \[Medium\]
+
+This problem was asked by Epic.
+
+The "look and say" sequence is defined as follows: beginning with the term 1, each subsequent term visually describes the digits appearing in the previous term. The first few terms are as follows:
+```
+1
+11
+21
+1211
+111221
+```
+As an example, the fourth term is `1211`, since the third term consists of one `2` and one `1`.
+
+Given an integer `N`, print the Nth term of this sequence.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day275)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day75/day275.kt)
+
+---
+
+### Day 276 \[Hard\]
+
+This problem was asked by Dropbox.
+
+Implement an efficient string matching algorithm.
+
+That is, given a string of length `N` and a pattern of length `k`, write a program that searches for the pattern in the string with less than `O(N * k)` worst-case time complexity.
+
+If the pattern is found, return the start index of its location. If not, return `False`.
+
+* [C++ implementation](dcp_cpp/src/day276)
+* [Unit testing](dcp_cpp/test/TestDay276.cpp)
