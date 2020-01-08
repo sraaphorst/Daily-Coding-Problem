@@ -1,6 +1,8 @@
 # Daily Coding Problem: C++ implementations
 
-The following problems are implemented in C++:
+The following problems are implemented in C++. We implement them as headers for simplicity
+of not having either one massive library or hundreds of libraries; furthermore, many of them
+are templates, so they cannot be compiled into libraries anyway.
 
 * [Day 1](src/day001)
 * [Day 2](src/day002)
@@ -34,3 +36,4 @@ The following problems are implemented in C++:
 * [Day 256](src/day256)
 * [Day 268](src/day268)
 * [Day 276](src/day276)
+* [Day 277](src/day277)

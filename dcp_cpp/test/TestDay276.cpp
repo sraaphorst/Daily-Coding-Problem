@@ -1,7 +1,7 @@
 /**
  * TestDay276.cpp
  *
- * By Sebastian Raaphorst, 2019.
+ * By Sebastian Raaphorst, 2020.
  */
 
 #include <catch.hpp>

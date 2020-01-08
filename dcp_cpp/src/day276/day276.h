@@ -1,7 +1,7 @@
 /**
  * day276.h
  *
- * By Sebastian Raaphorst, 2019.
+ * By Sebastian Raaphorst, 2020.
  */
 
 #pragma once
