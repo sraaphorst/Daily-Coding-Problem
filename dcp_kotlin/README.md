@@ -1,6 +1,7 @@
 # Daily Coding Problem: Kotlin-based implementations
 
 * [Day 004](src/main/kotlin/dcp/day004)
+* [Day 011](src/main/kotlin/dcp/day011)
 * [Day 015](src/main/kotlin/dcp/day015)
 * [Day 119](src/main/kotlin/dcp/day119)
 * [Day 144](src/main/kotlin/dcp/day144) - Incorrectly interpreted.
