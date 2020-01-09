@@ -30,15 +30,21 @@ fun findFirstPositiveMissingInteger(array: IntArray): Int {
     // We only need to process elements to the right of pivot. Take their absolute value and mark their index value
     // as swapped.
     for (i in pivot until array.size) {
+        // We have to detect duplicate (or more) entries of a number or it will flip its sign back and seem like it
+        // never appeared in the array.
         if (abs(array[i]) <= array.size) {
             if ((abs(array[i]) - 1 < pivot && array[abs(array[i]) - 1] > 0) ||
-                (abs(array[i]) - 1 >= pivot && array[abs(array[i]) - 1] < 0)) // duplicate
+                (abs(array[i]) - 1 >= pivot && array[abs(array[i]) - 1] < 0))
                 continue
+            
+            // Reverse the sign of abs(array[i]) - 1 to indicate that array[i], a positive integer, is in the array.
             array[abs(array[i]) - 1] = -array[abs(array[i]) - 1]
         }
     }
 
-    // Check to see anomalies before the pivot and after the pivot.
+    // Check to see for missing elements. Everything before the pivot should be positive if 1..pivot appear in the
+    // array and everything after the pivot should be negative if (pivot+1)..(array.size) appears in the array.
+    // If everything appears in the array, then the first missing number is array.size + 1.
     for (i in 0 until pivot)
         if (array[i] < 0)
             return i + 1
