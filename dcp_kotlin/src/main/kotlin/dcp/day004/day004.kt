@@ -6,11 +6,15 @@ import kotlin.math.abs
 
 // Unfortunately, to make this code as efficient as possible and have it run in linear time and constant space,
 // we must use an imperative approach and mutability, along with an array to avoid linked list access times.
+// This is a very finicky algorithm that relies on bizarre array manipulation, hence all the documentation.
 fun findFirstPositiveMissingInteger(array: IntArray): Int {
     if (array.isEmpty())
         return 1
-    // We don't want to deal with 0 and it has no relevance, so change it to -1.
-    // We will use the signs of the elements to indicate their presence, starting at 1 for position 0.
+    
+    // We don't want to deal with 0 and it has no relevance, so change it to -1, which doesn't affect the final results.
+    // (Any negative number would do.)
+    // We will use the signs of the elements to indicate their presence, with array position 0 indicating positive integer 1,
+    // array position 1 indicating positive integer 2, etc.
     // Since there can be negative numbers in the array, we have to be careful about how we use this approach.
     // We first partition the list into negative numbers and positive numbers by moving all the negative numbers
     // to the left.
@@ -27,8 +31,10 @@ fun findFirstPositiveMissingInteger(array: IntArray): Int {
     }
 
     // Now everything to the left of pivot should be negative. Everything to the right of pivot should be positive.
-    // We only need to process elements to the right of pivot. Take their absolute value and mark their index value
-    // as swapped.
+    // We only need to process elements to the right of pivot since we are only interested in the appearance of positive
+    // integers in the array. Take their absolute value and mark their index value - 1 as swapped. (The subtraction is
+    // as detailed above: we don't care about 0, so the position 0 of the array indicates incidence of element 1 in the
+    // array, etc.)
     for (i in pivot until array.size) {
         // We have to detect duplicate (or more) entries of a number or it will flip its sign back and seem like it
         // never appeared in the array.
@@ -55,7 +61,7 @@ fun findFirstPositiveMissingInteger(array: IntArray): Int {
 }
 
 /**
- * Functional method.
+ * Functional method. Check for missing elements and if there are none, the first missing element is the size of the array + 1.
  */
 fun findFirstPositiveMissingIntegerFM(array: IntArray): Int =
     if (array.isEmpty()) 1
