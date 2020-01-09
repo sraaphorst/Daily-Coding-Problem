@@ -136,7 +136,6 @@ Implement car and cdr.
 
 * [Python implementation](dcp_py/day005)
 
-
 ---
 
 ### Day 6 \[Hard\]
@@ -174,7 +173,6 @@ For example, `001` is not allowed.
 
 * [Python implementation](dcp_py/day007)
 
-
 ---
 
 ### Day 8 \[Easy\]
@@ -200,7 +198,6 @@ For example, the following tree has 5 unival subtrees:
 * [Scala implementation](dcp_jvm/src/main/scala/dcp/day008)
 * [Unit testing](dcp_jvm/src/test/scala/dcp/day008/TestDay008.scala)
 
-
 ---
 
 ### Day 9 \[Hard\]
@@ -215,7 +212,6 @@ Follow-up: Can you do this in `O(N)` time and constant space?
 
 * NOT YET IMPLEMENTED
 
-
 ---
 
 ### Day 10 \[Medium\]
@@ -226,7 +222,6 @@ Implement a job scheduler which takes in a function `f` and an integer `n`, and 
 
 * [Java implementation](dcp_jvm/src/main/java/dcp/day010)
 * [Unit testing](dcp_jvm/src/test/scala/dcp/day010/TestDay010.scala)
-
 
 ---
 
@@ -240,8 +235,8 @@ For example, given the query string `de` and the set of strings `[dog, deer, dea
 
 Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
 
-* NOT YET IMPLEMENTED
-
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day011)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day011/day011.kt)
 
 ---
 
