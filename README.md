@@ -112,8 +112,8 @@ For example, the input `[3, 4, -1, 1]` should give `2`. The input `[1, 2, 0]` sh
 
 You can modify the input array in-place.
 
-* NOT YET IMPLEMENTED.
-
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day004)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day004/day004.kt)
 
 ---
 
@@ -2210,7 +2210,7 @@ Given a sorted list of integers of length `N`, determine if an element `x` is in
 Do this in `O(log N)` time.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day271)
-* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day71/day271.kt)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day271/day271.kt)
 
 ---
 
