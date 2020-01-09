@@ -136,7 +136,6 @@ Implement car and cdr.
 
 * [Python implementation](dcp_py/day005)
 
-
 ---
 
 ### Day 6 \[Hard\]
@@ -174,7 +173,6 @@ For example, `001` is not allowed.
 
 * [Python implementation](dcp_py/day007)
 
-
 ---
 
 ### Day 8 \[Easy\]
@@ -200,7 +198,6 @@ For example, the following tree has 5 unival subtrees:
 * [Scala implementation](dcp_jvm/src/main/scala/dcp/day008)
 * [Unit testing](dcp_jvm/src/test/scala/dcp/day008/TestDay008.scala)
 
-
 ---
 
 ### Day 9 \[Hard\]
@@ -215,7 +212,6 @@ Follow-up: Can you do this in `O(N)` time and constant space?
 
 * NOT YET IMPLEMENTED
 
-
 ---
 
 ### Day 10 \[Medium\]
@@ -226,7 +222,6 @@ Implement a job scheduler which takes in a function `f` and an integer `n`, and 
 
 * [Java implementation](dcp_jvm/src/main/java/dcp/day010)
 * [Unit testing](dcp_jvm/src/test/scala/dcp/day010/TestDay010.scala)
-
 
 ---
 
@@ -240,8 +235,8 @@ For example, given the query string `de` and the set of strings `[dog, deer, dea
 
 Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
 
-* NOT YET IMPLEMENTED
-
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day011)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day011/day011.kt)
 
 ---
 
@@ -2223,7 +2218,7 @@ Write a function, `throw_dice(N, faces, total)`, that determines how many ways i
 For example, `throw_dice(3, 6, 7)` should equal 15.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day272)
-* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day72/day272.kt)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day272/day272.kt)
 
 ---
 
@@ -2235,7 +2230,7 @@ For example, given `[-6, 0, 2, 40]`, you should return `2`. Given `[1, 5, 7, 8]`
 
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day273)
-* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day73/day273.kt)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day273/day273.kt)
 
 ---
 
@@ -2256,7 +2251,7 @@ As an example, the fourth term is `1211`, since the third term consists of one `
 Given an integer `N`, print the Nth term of this sequence.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day275)
-* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day75/day275.kt)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day275/day275.kt)
 
 ---
 
@@ -2300,3 +2295,14 @@ Write a program that takes in an array of integers representing byte values, and
 
 * [C++ implementation](dcp_cpp/src/day277)
 * [Unit testing](dcp_cpp/test/TestDay277.cpp)
+
+---
+
+### Day 278 \[Easy\]
+
+This problem was asked by Amazon.
+
+Given an integer `N`, construct all possible binary search trees with `N` nodes.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day278)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day278/day278.kt)
