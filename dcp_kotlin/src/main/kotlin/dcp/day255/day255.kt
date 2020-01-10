@@ -1,59 +1,44 @@
 package dcp.day255
-// day55.kt
-// By Sebastian Raaphorst, 2019.
+// day255.kt
+// By Sebastian Raaphorst, 2020.
 
-// TODO: Make this work.
-import kotlin.math.min
+typealias Vertex = Int
+typealias AdjacencyList = Set<Vertex>
+typealias AdjacencyGraph = Map<Vertex, AdjacencyList>
+typealias AdjacencyMatrix = List<List<Vertex>>
 
-typealias AdjacencyGraph = List<List<Int>>
-typealias TransitiveClosure = List<List<Int>>
+fun adjacencyGraphToMatrix(adjacencyGraph: AdjacencyGraph): AdjacencyMatrix {
+    if (adjacencyGraph.isEmpty())
+        return emptyList()
 
-// Add vectors so max values are 1: we only care about there being a path (1) or not being a path (0) between
-// two vectors.
-fun addVectors(v1: List<Int>, v2: List<Int>): List<Int> =
-    v1.zip(v2).map { (a1, a2) -> min(1, a1 + a2 )}
+    // We want the vertices to be {0, ..., n-1}.
+    val vertices = (adjacencyGraph.keys + adjacencyGraph.values.flatten()).toList().sorted()
+    require(vertices == vertices.indices.toList())
 
-// Given an adjacency graph, find its transitive closure, i.e. the square matrix M such that M[i][j] = 1
-// iff v_i can reach v_j.
-fun adjacencyGraphtoTransitiveClosure(adj: AdjacencyGraph): TransitiveClosure {
-    val N = adj.size
-    val adjMatrix = adj.map { row -> (0 until N).map{ if (it in row) 1 else 0} }
-    println(adj)
-    println()
-    println(adjMatrix)
-    println()
-    // Add the rows of the adjMatrix indicated together.
-    // e.g. adjMatrix row 0, 1, 3 adds rows 0, 1, and 3 of the adjMatrix. Cap out at 1. }
-    //return adj.map{ row -> row.fold(List(N){0}){acc, idx -> addVectors(acc, adjMatrix[idx])} }
-    return adj.withIndex().map{ (i, row) -> row.fold(adjMatrix[i]){acc, idx -> addVectors(acc, adjMatrix[idx])} }
+    fun row(vertex: Vertex): List<Vertex> {
+        val adjacencyList: AdjacencyList = adjacencyGraph[vertex] ?: emptySet()
+        return vertices.map { if (it in adjacencyList) 1 else 0 }
+    }
+
+    return vertices.map(::row)
 }
 
-fun main() {
-    val ad = listOf(
-        listOf(1, 2),
-        listOf(2),
-        listOf(0),
-        listOf()
-    )
+fun findTransitiveClosures(adjacencyMatrix: AdjacencyMatrix): AdjacencyMatrix {
+    if (adjacencyMatrix.isEmpty())
+        return emptyList()
 
-    println(adjacencyGraphtoTransitiveClosure(ad))
-    println()
-    println()
+    // We'll use the Floyd Warshall Algorithm for this, which lends itself poorly to functional programming and
+    // immutable data structures, unfortunately, so start by making a mutable copy of adjacencyMatrix.
+    val matrix: MutableList<MutableList<Vertex>> = adjacencyMatrix.map{ it.toMutableList() }.toMutableList()
+    val n: Int = matrix.size
 
+    (0 until n).forEach { k ->
+        (0 until n).forEach { i ->
+            (0 until n).forEach { j ->
+                if (matrix[i][k] == 1 && matrix[k][j] == 1) matrix[i][j] = 1
+            }
+        }
+    }
 
-    val adjgraph = listOf(
-        listOf(0, 1, 1, 0),
-        listOf(0, 0, 1, 0),
-        listOf(1, 0, 0, 1),
-        listOf()
-    )
-
-    val tc = listOf(
-        listOf(1, 1, 1, 1),
-        listOf(1, 1, 1, 1),
-        listOf(1, 1, 1, 1),
-        listOf(0, 0, 0, 1)
-    )
-
-    println(adjacencyGraphtoTransitiveClosure(adjgraph))
+    return matrix
 }

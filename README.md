@@ -1985,7 +1985,8 @@ The transitive closure of this graph would be:
 ```
 Given a graph, find its transitive closure.
 
-WORK IN PROGRESS
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day255)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day255/day255.kt)
 
 ---
 
