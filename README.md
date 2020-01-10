@@ -282,7 +282,6 @@ Hint: The basic equation of a circle is `x^2 + y^2 = r^2`.
 * [C++ implementation](dcp_cpp/src/day014)
 * [Unit testing](dcp_cpp/test/TestDay014.cpp)
 
-
 ---
 
 ### Day 15 \[Medium\]
@@ -294,7 +293,6 @@ Given a stream of elements too large to store in memory, pick a random element f
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day015)
 * Testing done in `main` function.
 
-
 ---
 
 ### Day 16 \[Easy\]
@@ -303,12 +301,13 @@ This problem was asked by Twitter.
 
 You run an e-commerce website and want to record the last `N` order ids in a log. Implement a data structure to accomplish this, with the following API:
 
-`record(order_id)`: adds the `order_id` to the log
-`get_last(i)`: gets the `i`th last element from the log. `i` is guaranteed to be smaller than or equal to `N`.
+* `record(order_id)`: adds the `order_id` to the log
+* `get_last(i)`: gets the `i`th last element from the log. `i` is guaranteed to be smaller than or equal to `N`.
+
 You should be as efficient with time and space as possible.
 
-* NOT YET IMPLEMENTED
-
+* [C++ implementation](dcp_cpp/src/day016)
+* [Unit testing](dcp_cpp/test/TestDay016.cpp)
 
 ---
 
