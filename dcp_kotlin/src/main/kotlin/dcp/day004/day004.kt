@@ -64,5 +64,4 @@ fun findFirstPositiveMissingInteger(array: IntArray): Int {
  * Functional method. Check for missing elements and if there are none, the first missing element is the size of the array + 1.
  */
 fun findFirstPositiveMissingIntegerFM(array: IntArray): Int =
-    if (array.isEmpty()) 1
-    else (1..array.size).find { it !in array } ?: (array.size + 1)
+    (1..array.size).find { it !in array } ?: (array.size + 1)

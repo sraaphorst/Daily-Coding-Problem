@@ -16,7 +16,6 @@ data class BinaryTree(val left: BinaryTree?, val right: BinaryTree?) {
 
             // Create a node and then append all combinations of i in [0, x-1] trees on the left and
             // j = x - 1 - i trees on the right.
-            // All possible left trees.
             return (0 until numNodes).flatMap { leftNodes ->
                 val rightNodes = numNodes - 1 - leftNodes
 
