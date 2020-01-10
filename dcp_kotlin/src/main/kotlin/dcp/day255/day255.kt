@@ -7,6 +7,9 @@ typealias AdjacencyList = Set<Vertex>
 typealias AdjacencyGraph = Map<Vertex, AdjacencyList>
 typealias AdjacencyMatrix = List<List<Vertex>>
 
+/**
+ * Convert an adjacency graph into an adjacency matrix.
+ */
 fun adjacencyGraphToMatrix(adjacencyGraph: AdjacencyGraph): AdjacencyMatrix {
     if (adjacencyGraph.isEmpty())
         return emptyList()
@@ -23,6 +26,9 @@ fun adjacencyGraphToMatrix(adjacencyGraph: AdjacencyGraph): AdjacencyMatrix {
     return vertices.map(::row)
 }
 
+/**
+ * Given an adjacency matrix, find its transitive closure, represented again by an adjacency matrix.
+ */
 fun findTransitiveClosures(adjacencyMatrix: AdjacencyMatrix): AdjacencyMatrix {
     if (adjacencyMatrix.isEmpty())
         return emptyList()
