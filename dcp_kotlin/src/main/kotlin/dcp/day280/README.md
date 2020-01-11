@@ -1,4 +1,4 @@
-# DAy 280 \[Easy\]
+# Day 280 \[Easy\]
 
 This problem was asked by Pandora.
 
