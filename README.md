@@ -282,7 +282,6 @@ Hint: The basic equation of a circle is `x^2 + y^2 = r^2`.
 * [C++ implementation](dcp_cpp/src/day014)
 * [Unit testing](dcp_cpp/test/TestDay014.cpp)
 
-
 ---
 
 ### Day 15 \[Medium\]
@@ -294,7 +293,6 @@ Given a stream of elements too large to store in memory, pick a random element f
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day015)
 * Testing done in `main` function.
 
-
 ---
 
 ### Day 16 \[Easy\]
@@ -303,12 +301,13 @@ This problem was asked by Twitter.
 
 You run an e-commerce website and want to record the last `N` order ids in a log. Implement a data structure to accomplish this, with the following API:
 
-`record(order_id)`: adds the `order_id` to the log
-`get_last(i)`: gets the `i`th last element from the log. `i` is guaranteed to be smaller than or equal to `N`.
+* `record(order_id)`: adds the `order_id` to the log
+* `get_last(i)`: gets the `i`th last element from the log. `i` is guaranteed to be smaller than or equal to `N`.
+
 You should be as efficient with time and space as possible.
 
-* NOT YET IMPLEMENTED
-
+* [C++ implementation](dcp_cpp/src/day016)
+* [Unit testing](dcp_cpp/test/TestDay016.cpp)
 
 ---
 
@@ -1986,7 +1985,8 @@ The transitive closure of this graph would be:
 ```
 Given a graph, find its transitive closure.
 
-WORK IN PROGRESS
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day255)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day255/day255.kt)
 
 ---
 
@@ -2306,3 +2306,38 @@ Given an integer `N`, construct all possible binary search trees with `N` nodes.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day278)
 * [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day278/day278.kt)
+
+---
+
+### Day 279 \[Easy\]
+
+This problem was asked by Twitter.
+
+A classroom consists of `N` students, whose friendships can be represented in an adjacency list. For example, the following describes a situation where `0` is friends with `1` and `2`, `3` is friends with `6`, and so on.
+
+```
+{0: [1, 2],
+ 1: [0, 5],
+ 2: [0],
+ 3: [6],
+ 4: [],
+ 5: [1],
+ 6: [3]}
+``` 
+Each student can be placed in a friend group, which can be defined as the transitive closure of that student's friendship relations. In other words, this is the smallest set such that no student in the group has any friends outside this group. For the example above, the friend groups would be `{0, 1, 2, 5}, {3, 6}, {4}`.
+
+Given a friendship list such as the one above, determine the number of friend groups in the class.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day279)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day279/day279.kt)
+
+---
+
+### Day 280 \[Easy\]
+
+This problem was asked by Pandora.
+
+Given an undirected graph, determine if it contains a cycle.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day280)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day280/day280.kt)

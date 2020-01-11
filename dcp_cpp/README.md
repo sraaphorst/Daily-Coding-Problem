@@ -9,6 +9,7 @@ are templates, so they cannot be compiled into libraries anyway.
 * [Day 4](src/day004)
 * [Day 6](src/day006)
 * [Day 12](src/day012)
+* [Day 16](src/day016)
 * [Day 27](src/day027)
 * [Day 30](src/day030)
 * [Day 35](src/day035)
