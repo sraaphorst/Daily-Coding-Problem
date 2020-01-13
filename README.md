@@ -210,7 +210,8 @@ For example, `[2, 4, 6, 2, 5]` should return `13`, since we pick `2`, `6`, and `
 
 Follow-up: Can you do this in `O(N)` time and constant space?
 
-* NOT YET IMPLEMENTED
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day009)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day009/day009.kt)
 
 ---
 

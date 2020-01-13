@@ -7,7 +7,9 @@ import kotlin.math.max
 /**
  * For this list of Int of size n, find the maximum sum of elements such that none of the elements are adjacent.
  * For each element in the list, we consider the case of including it or omitting it by maintaining variables
- * exlusive and inclusive, which keep track of the maximum sum of the sublists as we go.
+ * exclusive and inclusive, which keep track of the maximum sum of the sublists as we go.
+ *
+ * Thus, we manage to accomplish this in O(n) with constant space.
  */
 fun List<Int>.findMaxSumOfNonAdjacentElements(): Int {
     if (isEmpty())
