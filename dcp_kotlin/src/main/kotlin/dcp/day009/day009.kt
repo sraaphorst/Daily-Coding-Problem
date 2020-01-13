@@ -20,7 +20,8 @@ fun List<Int>.findMaxSumOfNonAdjacentElements(): Int {
         if (idx == size)
             max(inclusive, exclusive)
         else
-            aux(idx + 1, exclusive + get(idx), max(inclusive, exclusive))
+            // We may not always want to add the current element to inclusive, because it might be negative.
+            aux(idx + 1, max(inclusive, exclusive + get(idx)), max(inclusive, exclusive))
 
     return aux()
 }
