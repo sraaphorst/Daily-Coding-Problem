@@ -49,6 +49,7 @@ set(TEST_LIST
         TestDay180
         TestDay184
         TestDay208
+        TestDay214
         TestDay223
         TestDay248
         TestDay256

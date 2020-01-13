@@ -1,6 +1,6 @@
 package dcp.day144
 // day144.kt
-// By Sebastian Raaphorst, 2019.
+// By Sebastian Raaphorst, 2020.
 
 import kotlin.math.abs
 
@@ -10,8 +10,8 @@ import kotlin.math.abs
  *
  * This algorithm runs in time O(n log n) due to the call to sortedBy.
  */
-fun findNextHighestBF(elems: List<Int>, idx: Int): Int? =
-    elems.withIndex().filter { (_, value) -> value > elems[idx] }.sortedBy { abs(it.index - idx) }.firstOrNull()?.index
+fun List<Int>.findNextHighestBF(idx: Int): Int? =
+    withIndex().filter { (_, value) -> value > get(idx) }.sortedBy { abs(it.index - idx) }.firstOrNull()?.index
 
 
 /**
@@ -36,13 +36,4 @@ fun preprocess(elems: List<Int>): List<Int?> {
 
     // Now put everything back in order.
     return idxed.indices.map { mappedAnswer[it] }
-}
-
-fun main() {
-    println(preprocess(listOf(4, 1, 3, 5, 6)))
-    println(findNextHighestBF(listOf(4, 1, 3, 5, 6), 0))
-    println(findNextHighestBF(listOf(4, 1, 3, 5, 6), 1))
-    println(findNextHighestBF(listOf(4, 1, 3, 5, 6), 2))
-    println(findNextHighestBF(listOf(4, 1, 3, 5, 6), 3))
-    println(findNextHighestBF(listOf(4, 1, 3, 5, 6), 4))
 }

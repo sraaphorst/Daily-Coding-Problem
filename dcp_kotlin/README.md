@@ -5,7 +5,7 @@
 * [Day 011](src/main/kotlin/dcp/day011)
 * [Day 015](src/main/kotlin/dcp/day015)
 * [Day 119](src/main/kotlin/dcp/day119)
-* [Day 144](src/main/kotlin/dcp/day144) - Incorrectly interpreted.
+* [Day 144](src/main/kotlin/dcp/day144)
 * [Day 185](src/main/kotlin/dcp/day185)
 * [Day 194](src/main/kotlin/dcp/day194)
 * [Day 198](src/main/kotlin/dcp/day198)

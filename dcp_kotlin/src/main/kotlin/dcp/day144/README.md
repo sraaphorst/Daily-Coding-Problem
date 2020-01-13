@@ -6,11 +6,8 @@ Given an array of numbers and an index `i`, return the index of the nearest larg
 
 For example, given `[4, 1, 3, 5, 6]` and index `0`, you should return `3`.
 
-If two distances to larger numbers are the equal, then return any one of them. If the array at i doesn't have a nearest larger integer, then return null.
+If two distances to larger numbers are the equal, then return any one of them. If the array at `i` doesn't have a nearest larger integer, then return null.
 
 Follow-up: If you can preprocess the array, can you do this in constant time?
-
-NOTE: I misread this question and thought it was necessary to find the smallest
-larger number than the one at index `i`.
 
 Link: [Testing code](../../../../test/kotlin/dcp/day144)                                                                                                                                                                                                                                                                                                                                                                                                          

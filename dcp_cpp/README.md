@@ -32,6 +32,7 @@ are templates, so they cannot be compiled into libraries anyway.
 * [Day 180](src/day180)
 * [Day 181](src/day184)
 * [Day 208](src/day208)
+* [Day 214](src/day214)
 * [Day 223](src/day223)
 * [Day 248](src/day248)
 * [Day 256](src/day256)

@@ -882,12 +882,24 @@ Partition a list around a pivot element.
 Implemented in Python (and property tested with hypothesis):
 [Day 143](dcp_py/day143)
 
-## Day 144 \[Medium\]
+---
 
-Given an array and an index to an element in an array, find the
-nearest larger number. (Interpreted incorrectly.)
+### Day 144 \[Medium\]
 
-Implemented in Kotlin: [Day 144](dcp_kotlin/src/main/kotlin/dcp/day144)
+This problem was asked by Google.
+
+Given an array of numbers and an index `i`, return the index of the nearest larger number of the number at index `i`, where distance is measured in array indices.
+
+For example, given `[4, 1, 3, 5, 6]` and index `0`, you should return `3`.
+
+If two distances to larger numbers are the equal, then return any one of them. If the array at `i` doesn't have a nearest larger integer, then return null.
+
+Follow-up: If you can preprocess the array, can you do this in constant time?
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day281)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day281/day281.kt)
+
+---
 
 ## Day 145 \[Easy\]
 
@@ -896,84 +908,114 @@ third and fourth nodes, etc.
 
 Implemented in C++: [Day 145](dcp_cpp/src/day145)
 
-## Day 146 \[Medium\]
+---
+
+### Day 146 \[Medium\]
 
 Given a zero-one tree, process the tree.
 
 Implemented in Scala: [Day 146](dcp_jvm/src/main/scala/dcp/day146)
 
-## Day 151 \[Medium\]
+---
+
+### Day 151 \[Medium\]
 
 Perform flood-fill on an image.
 
 Implemened in Python: [Day 151](dcp_py/day151)
 
-## Day 154 \[Easy\]
+---
+
+### Day 154 \[Easy\]
 
 Implement a stack via a heap or priority queue.
 
 Impemented in C++: [Day 154](dcp_cpp/src/day154)
 
-## Day 155 \[Medium\]
+---
+
+### Day 155 \[Medium\]
 
 Given a list of elements, find the majority element, which appears
 more than half the time.
 
 Implemented in C++: [Day 155](dcp_cpp/src/day155)
 
-## Day 156 \[Medium\]
+---
+
+### Day 156 \[Medium\]
 
 For a given positive integer `n`, determine the smallest numnber of
 squared integers which sums up to `n`.
 
 Implemented in C++: [Day 156](dcp_cpp/src/day156)
 
-## Day 157 \[Easy\]
+---
+
+### Day 157 \[Easy\]
 
 Determine if a string is a permutation of a palindrome.
 
 Implemented in C++: [Day 157](dcp_cpp/src/day157)
 
-## Day 158 \[Medium\]
+---
+
+### Day 158 \[Medium\]
 
 Given a matrix indicating a floor plan, determine the number of paths
 through a matrix.
 
 Implemented in Python: [Day 158](dcp_py/day158)
 
-## Day 159 \[Medium\]
+---
+
+### Day 159 \[Medium\]
 
 For a given string, return the first duplicated character in it if one
 exists.
 
 Implemented in Python: [Day 159](dcp_py/day159)
 
-## Day 161 \[Easy\]
+---
+
+### Day 161 \[Easy\]
 
 Flip a 32 bit integer.
 
 Implemented in C++: [Day 161](dcp_cpp/src/day161)
 
-## Day 162 \[Medium\]
+---
+
+### Day 162 \[Medium\]
 
 Given a set of words, determine its unique set of minimal prefixes.
 
 Implemented in C++: [Day 162](dcp_cpp/src/day162)
 
-## Day 163 \[Hard\]
+---
+
+### Day 163 \[Hard\]
 
 Implement a Reverse Polish Notation calculator evaluator.
 
 Implemented in Scala: [Day 163](dcp_jvm/src/main/scala/dcp/day163)
 
-## Day 164 \[Medium\]
+---
 
-Implement a pigeon hole detector in `O(n)` time and `O(n)` space.
+### Day 164 \[Medium\]
+
+This problem was asked by Google.
+
+You are given an array of length `n + 1` whose elements belong to the set
+`{1, 2, ..., n}`.
+
+By the pigeonhole principle, there must be a duplicate. Find it in linear time and space.
 
 Implemented in C++: [Day 164](dcp_cpp/src/day164)
 
+---
 
-## Day 170 \[Medium\]
+### Day 170 \[Medium\]
 
 This problem was asked by Facebook.
 
@@ -985,7 +1027,9 @@ Given `start = "dog"`, `end = "cat"`, and `dictionary = {"dot", "tod", "dat", "d
 
 Implemented in Python: [Day 170](dcp_py/day170)
 
-## Day 171 \[Medium\]
+---
+
+### Day 171 \[Medium\]
 
 This problem was asked by Dropbox.
 
@@ -1007,8 +1051,9 @@ The order of the indices does not matter.
 
 Implemented in Python: [Day 171](dcp_py/day171)
 
+---
 
-## Day 173 \[Easy\]
+### Day 173 \[Easy\]
 
 This problem was asked by Stripe.
 
@@ -1043,8 +1088,9 @@ will occur.
 
 Implemented in Python: [Day 173](dcp_py/day173)
 
+---
 
-## Day 174 \[Medium\]
+### Day 174 \[Medium\]
 
 This problem was asked by Microsoft.
 
@@ -1120,8 +1166,9 @@ struct Earthworm {
 };
 ```
 
+---
 
-## Day 175: \[Easy\]
+### Day 175: \[Easy\]
 
 This problem was asked by Google.
 
@@ -1148,8 +1195,9 @@ One instance of running this Markov chain might produce:
 
 Implemented in Python: [Day 175](dcp_py/day175)
 
+---
 
-## Day 176 \[Easy\]
+### Day 176 \[Easy\]
 
 This problem was asked by Bloomberg.
 
@@ -1162,8 +1210,9 @@ map to two characters.
 
 Implemented in Python: [Day 176](dcp_py/day176)
 
+---
 
-## Day 177 \[Easy\]
+### Day 177 \[Easy\]
 
 This problem was asked by Airbnb.
 
@@ -1176,8 +1225,9 @@ become `3 -> 4 -> 5 -> 1 -> 2`.
 
 Implemented in C++: [Day 177](dcp_cpp/src/day177)
 
+---
 
-## Day 178 \[Hard\]
+### Day 178 \[Hard\]
 
 This problem was asked by Two Sigma.
 
@@ -1192,8 +1242,9 @@ Which of the two games should Alice elect to play? Does it even matter? Write a 
 Simultation implemented in Python, and explanation given here:
 [Day 178](dcp_py/day178)
 
+---
 
-## Day 179 \[Medium\]
+### Day 179 \[Medium\]
 
 This problem was asked by Google.
 
@@ -1211,8 +1262,9 @@ For example, given the sequence `2, 4, 3, 8, 7, 5`, you should construct the fol
 
 Implemented in Scala: [Day 179](dcp_jvm/src/main/scala/dcp/day179)
 
+---
 
-## Day 180 \[Medium\]
+### Day 180 \[Medium\]
 
 This problem was asked by Google.
 
@@ -1226,8 +1278,9 @@ Hint: Try working backwards from the end state.
 
 Implemented in C++: [Day 180](dcp_cpp/src/day180)
 
+---
 
-## Day 182 \[Medium\]
+### Day 182 \[Medium\]
 
 This problem was asked by Facebook.
 
@@ -1239,35 +1292,9 @@ an adjacency matrix or adjacency list.
 
 Implemented in Python: [Day 182](dcp_py/day182)
 
+---
 
-## Day 185 \[Easy\]
-
-This problem was asked by Google.
-
-Given two rectangles on a 2D graph, return the area of their intersection. If the rectangles don't intersect, return `0`.
-
-For example, given the following rectangles:
-
-```
-{
-    "top_left": (1, 4),
-    "dimensions": (3, 3) # width, height
-}
-```
-
-and
-
-```
-{
-    "top_left": (0, 5),
-    "dimensions": (4, 3) # width, height
-}
-```
-
-return `6`.
-
-
-## Day 184 \[Easy\]
+### Day 184 \[Easy\]
 
 This problem was asked by Amazon.
 
@@ -1277,8 +1304,9 @@ For example, given the numbers `[42, 56, 14]`, return `14`.
 
 Implemented in C++ using variadic templates: [Day 184](dcp_cpp/src/day184)
 
+---
 
-## Day 185 \[Easy\]
+### Day 185 \[Easy\]
 
 This problem was asked by Google.
 
@@ -1306,8 +1334,9 @@ return `6`.
 
 Implemented in Kotlin: [Day 185](dcp_kotlin/src/main/kotlin/dcp/day185)
 
+---
 
-## Day 186 \[Hard\]
+### Day 186 \[Hard\]
 
 This problem was asked by Microsoft.
 
@@ -1319,7 +1348,9 @@ possible difference.
 
 Implemented in Python: [Day 186](dcp_py/day186)
 
-## Day 188 \[Medium\]
+---
+
+### Day 188 \[Medium\]
 
 This problem was asked by Google.
 
@@ -1345,7 +1376,9 @@ How can we make it print out what we apparently want?
 
 Implemented in Python: [Day 188](dcp_py/day188)
 
-## Day 194 \[Easy\]
+---
+
+### Day 194 \[Easy\]
 
 This problem was asked by Facebook.
 
@@ -1360,8 +1393,9 @@ segments intersect.
 
 Implemented in Kotlin: [Day 194](dcp_kotlin/src/main/kotlin/dcp/day194)
 
+---
 
-## Day 198 \[Medium\]
+### Day 198 \[Medium\]
 
 This problem was asked by Google.
 
@@ -1371,8 +1405,9 @@ For example, given the set `[3, 5, 10, 20, 21]`, you should return `[5, 10, 20]`
 
 Implemented in Kotlin: [Day 198](dcp_kotlin/src/main/kotlin/dcp/day198)
 
+---
 
-## Day 199 - \[Hard\]
+### Day 199 - \[Hard\]
 
 This problem was asked by Facebook.
 
@@ -1383,7 +1418,9 @@ For example, given `"(()"`, you could return `"(())"`. Given
 
 Implemented in Kotlin: [Day 199](dcp_kotlin/src/main/kotlin/dcp/day199)
 
-## Day 200 \[Hard\]
+---
+
+### Day 200 \[Hard\]
 
 This problem was asked by Microsoft.
 
@@ -1394,7 +1431,9 @@ you should return `[4, 9]`.
 
 Implemented in Kotlin: [Day 200](dcp_kotlin/src/main/kotlin/dcp/day200)
 
-## Day 201 \[Easy\]
+---
+
+### Day 201 \[Easy\]
 
 This problem was asked by Google.
 
@@ -1411,7 +1450,9 @@ Write a program that returns the weight of the maximum weight path.
 
 Implemented in Kotlin: [Day 201](dcp_kotlin/src/main/kotlin/dcp/day201)
 
-## Day 206 \[Easy\]
+---
+
+### Day 206 \[Easy\]
 
 This problem was asked by Twitter.
 
@@ -1421,7 +1462,9 @@ Given an array and a permutation, apply the permutation to the array. For exampl
 
 Implemented in Kotlin: [Day 206](dcp_kotlin/src/main/kotlin/dcp/day206)
 
-## Day 207 \[Medium\]
+---
+
+### Day 207 \[Medium\]
 
 This problem was asked by Dropbox.
 
@@ -1433,7 +1476,9 @@ the same set.
 Implemented in Kotlin:
 [Day 207](dcp_kotlin/src/main/kotlin/dcp/day207)
 
-## Day 208 \[Easy\]
+---
+
+### Day 208 \[Easy\]
 
 This problem was asked by Apple.
 
@@ -1448,8 +1493,9 @@ Bonus: What input `n <= 1000000` gives the longest sequence?
 
 Implemented in C++: [Day 208](dcp_cpp/src/day208)
 
+---
 
-## Day 211 \[Medium\]
+### Day 211 \[Medium\]
 
 This problem was asked by Microsoft.
 
@@ -1458,7 +1504,9 @@ Given a string and a pattern, find the starting indices of all occurrences of th
 Implemented in Kotlin:
 [Day 211](dcp_kotlin/src/main/kotlin/dcp/day211)
 
-## Day 212 \[Easy\]
+---
+
+### Day 212 \[Easy\]
 
 This problem was asked by Dropbox.
 
@@ -1470,8 +1518,9 @@ given `1`, return `"A"`. Given `27`, return `"AA"`.
 Implemented in Kotlin:
 [Day 212](dcp_kotlin/src/main/kotlin/dcp/day212)
 
+---
 
-## Day 213 \[Medium\]
+### Day 213 \[Medium\]
 
 This problem was asked by Snapchat.
 
@@ -1483,10 +1532,22 @@ For example, given `"2542540123"`, you should return `['254.25.40.123', '254.254
 
 Implemented in Python: [Day 213](dcp_py/day213)
 
+---
 
-## Day 215 \[Medium\]
+### Day 214 \[Easy\]
 
-INCOMPLETE
+This problem was asked by Stripe.
+
+Given an integer `n`, return the length of the longest consecutive run of 1s in its binary representation.
+
+For example, given `156`, you should return `3`.
+
+* [C++ implementation](dcp_cpp/src/day214)
+* [Unit testing](dcp_cpp/test/TestDay214.cpp)
+
+---
+
+### Day 215 \[Medium\]
 
 This problem was asked by Yelp.
 
@@ -1516,12 +1577,11 @@ For this tree, for example, the bottom view could be `[0, 1, 3, 6, 8, 9]`.
 
 Given the root to a binary tree, return its bottom view.
 
+* INCOMPLETE
 
 ---
 
 ### Day 216 \[Medium\]
-
-TODO: NEEDS KOTLIN CLEANUP.
 
 This problem was asked by Facebook.
 
@@ -1570,7 +1630,6 @@ Write an algorithm that computes the reversal of a directed graph. For example, 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day218)
 * [Specification testing](dcp_kotlin/src/test/kotlin/dcp/day218/day218.kt)
 
-
 ---
 
 ### Day 219 \[Hard\]
@@ -1582,7 +1641,6 @@ Connect 4 is a game where opponents take turns dropping red or black discs into 
 Design and implement Connect 4.
 
 * [Java implementation](dcp_jvm/src/main/java/dcp/day219)
-
 
 ---
 
@@ -1599,7 +1657,6 @@ Write a program that returns the maximum amount of money you can win with certai
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day220)
 * [Specification testing](dcp_kotlin/src/test/kotlin/dcp/day220/day220.kt)
 
-
 ---
 
 ### Day 221 \[Easy\]
@@ -1610,7 +1667,6 @@ Let's define a "sevenish" number to be one which is either a power of 7, or the 
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day221)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day221/day221.kt)
-
 
 ---
 
@@ -1625,7 +1681,6 @@ For example, given `"/usr/bin/../bin/./scripts/../"`, return
 
 * [Python implementation](dcp_py/day222)
 
-
 ---
 
 ### Day 223 \[Hard\]
@@ -1633,7 +1688,6 @@ For example, given `"/usr/bin/../bin/./scripts/../"`, return
 This problem was asked by Palantir.
 
 Typically, an implementation of in-order traversal of a binary tree has `O(h)` space complexity, where `h` is the height of the tree. Write a program to compute the in-order traversal of a binary tree using `O(1)` space.
-
 
 * [C++ implementation](dcp_cpp/src/day223)
 * [Unit testing](dcp_cpp/test/TestDay223.cpp)
@@ -1653,7 +1707,6 @@ Do this in `O(N)` time.
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day224)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day224/day224.kt)
 
-
 ---
 
 ### Day 225 \[Easy\]
@@ -1669,7 +1722,6 @@ For example, if `N = 5` and `k = 2`, the order of executions would be `[2, 4, 1,
 Bonus: Find an `O(log N)` solution if `k = 2`.
 
 * [Python implementation](dcp_py/day225)
-
 
 ---
 
