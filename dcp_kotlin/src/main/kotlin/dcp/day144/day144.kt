@@ -2,50 +2,47 @@ package dcp.day144
 // day144.kt
 // By Sebastian Raaphorst, 2019.
 
-fun findNextHighestBruteForce(elems: List<Int>, elemIdx: Int): Int? {
-    val elem = elems[elemIdx]
-    var idx: Int? = null
-    for (i in elems.indices) {
-        val currElem = elems[i]
-        if (currElem > elem && (idx == null || currElem < elems[idx]))
-            idx = i
-    }
-    return idx
+import kotlin.math.abs
+
+/**
+ * Given a list of elements elems and an index idx of one of the elements, find the index of the nearest element whose
+ * value is greater than elems[idx]. Ties may be broken arbitrarily.
+ *
+ * This algorithm runs in time O(n log n) due to the call to sortedBy.
+ */
+fun findNextHighestBF(elems: List<Int>, idx: Int): Int? =
+    elems.withIndex().filter { (_, value) -> value > elems[idx] }.sortedBy { abs(it.index - idx) }.firstOrNull()?.index
+
+
+/**
+ * Preprocess the array so that we can retrieve the answer in constant time for any idx.
+ * This is very confusing, so lots of comments. It could probably be done more cleanly.
+ * At the end of this, the returned array should give a value equivalent to that given by findNextHighestBF,
+ * although since there may not be a unique answer, it may not be the same.
+ */
+fun preprocess(elems: List<Int>): List<Int?> {
+    val idxed = elems.withIndex().sortedBy { it.value }
+    // Now that we have sorted by value, for idx, we only need to find the idx of the value to the right that is
+    // smallest away in distance. We want to drop everything to the left, so index again. This is undoubtedly confusing
+    // now, but the format of each entry is:
+    // (idx in idxed, (idx in original list, value in original list)).
+    val nearest = idxed.withIndex().map { (idx2, p) ->
+        val (idx, _) = p
+        idxed.drop(idx2 + 1).minBy { abs(idx - it.index) }}
+
+    // Now convert back to the original ordering. To start doing this, create a map such that map[idx] is the answer
+    // for idx.
+    val mappedAnswer = idxed.indices.map { idxed[it].index to nearest[it]?.index }.toMap()
+
+    // Now put everything back in order.
+    return idxed.indices.map { mappedAnswer[it] }
 }
 
-fun preprocess(elems: List<Int>): Pair<List<Int>, List<Int>> {
-    // Create a map that indices where the numbers in elems appear when sorted.
-    // For example:
-    // elems:   4 1 3 5 6
-    // sorted:  1 3 4 5 6
-    // indices: 2 0 1 3 4
-    // i.e. elems[0] = 4 is in sorted position 2, elems[1] = 1 is in sorted position 0, etc.
-    val index = elems.withIndex()
-        .sortedBy{ x -> x.value }
-        .map{ x -> x.index }
-        .withIndex()
-        .sortedBy{ x -> x.value }
-        .map{ x -> x.index }
-
-    // Create a map that gives the reverse position of the above.
-    // For example:
-    // elems:    4 1 3 5 6
-    // sorted:   1 3 4 5 6
-    // original: 1 2 0 3 4
-    // i.e. sorted[0] = 1 was originally in position 0, sorted[1] = 3 was originally in position 2, etc.
-    val unindex = elems.withIndex()
-        .sortedBy { x -> x.value }
-        .map { x -> x.index }
-    return Pair(index, unindex)
-}
-
-fun findNextHighestConstant(data: Pair<List<Int>, List<Int>>, elemIdx: Int): Int? {
-    val index   = data.first
-    val unindex = data.second
-
-    // Get the sorted position of the element at elemIdx.
-    // Then, if there is a next position in the sorted list, find its index in the original list.
-    val position = index[elemIdx]
-
-    return if (position < unindex.size - 1) unindex[position + 1] else null
+fun main() {
+    println(preprocess(listOf(4, 1, 3, 5, 6)))
+    println(findNextHighestBF(listOf(4, 1, 3, 5, 6), 0))
+    println(findNextHighestBF(listOf(4, 1, 3, 5, 6), 1))
+    println(findNextHighestBF(listOf(4, 1, 3, 5, 6), 2))
+    println(findNextHighestBF(listOf(4, 1, 3, 5, 6), 3))
+    println(findNextHighestBF(listOf(4, 1, 3, 5, 6), 4))
 }
