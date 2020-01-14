@@ -2545,3 +2545,18 @@ a^2+ b^2 = c^2.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day282)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day282/day282.kt)
+
+---
+
+### Day 283 \[Easy\]
+
+This problem was asked by Google.
+
+A regular number in mathematics is defined as one which evenly divides some power of 60. Equivalently, we can say that a regular number is one whose only prime divisors are `2`, `3`, and `5`.
+
+These numbers have had many applications, from helping ancient Babylonians keep time to tuning instruments according to the diatonic scale.
+
+Given an integer `N`, write a program that returns, in order, the first `N` regular numbers.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day283)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day283/day283.kt)
