@@ -1541,7 +1541,8 @@ Let `X` be a set of `n` intervals on the real line. We say that a set of points 
 For example, given the intervals `[(1, 4), (4, 5), (7, 9), (9, 12)]`,
 you should return `[4, 9]`.
 
-Implemented in Kotlin: [Day 200](dcp_kotlin/src/main/kotlin/dcp/day200)
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day200)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day201/day200.kt)
 
 ---
 
@@ -1560,7 +1561,30 @@ We define a path in the triangle to start at the top and go down one row at a ti
 
 Write a program that returns the weight of the maximum weight path.
 
-Implemented in Kotlin: [Day 201](dcp_kotlin/src/main/kotlin/dcp/day201)
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day201)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day201/day201.kt)
+
+---
+
+### Day 202 \[Easy\]
+
+This problem was asked by Palantir.
+
+Write a program that checks whether an integer is a palindrome. For example, `121` is a palindrome, as well as `888`. `678` is not a palindrome. Do not convert the integer into a string.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day202)
+* [Property and Unit testing](dcp_kotlin/src/test/kotlin/dcp/day202/day202.kt)
+
+---
+
+### Day 204 \[Easy\]
+
+This problem was asked by Amazon.
+
+Given a complete binary tree, count the number of nodes in faster than `O(n)` time. Recall that a complete binary tree has every level filled except the last, and the nodes in the last level are filled starting from the left.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day204)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day204/day204.kt)
 
 ---
 
@@ -1572,7 +1596,8 @@ A permutation can be specified by an array `P`, where `P[i]` represents the loca
 
 Given an array and a permutation, apply the permutation to the array. For example, given the array `["a", "b", "c"]` and the permutation `[2, 1, 0]`, return `["c", "b", "a"]`.
 
-Implemented in Kotlin: [Day 206](dcp_kotlin/src/main/kotlin/dcp/day206)
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day206)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day206/day206.kt)
 
 ---
 
@@ -1585,8 +1610,8 @@ that a graph is bipartite if its vertices can be divided into two
 independent sets, `U` and `V`, such that no edge connects vertices of
 the same set.
 
-Implemented in Kotlin:
-[Day 207](dcp_kotlin/src/main/kotlin/dcp/day207)
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day207)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day207/day207.kt)
 
 ---
 
@@ -1613,8 +1638,8 @@ This problem was asked by Microsoft.
 
 Given a string and a pattern, find the starting indices of all occurrences of the pattern in the string. For example, given the string `"abracadabra"` and the pattern `"abr"`, you should return `[0, 7]`.
 
-Implemented in Kotlin:
-[Day 211](dcp_kotlin/src/main/kotlin/dcp/day211)
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day211)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day211/day211.kt)
 
 ---
 
@@ -1627,8 +1652,8 @@ Spreadsheets often use this alphabetical encoding for its columns: `"A"`, `"B"`,
 Given a column number, return its alphabetical column id. For example,
 given `1`, return `"A"`. Given `27`, return `"AA"`.
 
-Implemented in Kotlin:
-[Day 212](dcp_kotlin/src/main/kotlin/dcp/day212)
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day212)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day212/day212.kt)
 
 ---
 
@@ -1689,7 +1714,8 @@ For this tree, for example, the bottom view could be `[0, 1, 3, 6, 8, 9]`.
 
 Given the root to a binary tree, return its bottom view.
 
-* INCOMPLETE
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day215)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day215/day215.kt)
 
 ---
 
@@ -1716,7 +1742,7 @@ In addition, note that the Roman numeral system uses subtractive notation for nu
 For the input `XIV`, for instance, you should return `14`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day216)
-* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day216/RomanNumeralTester.kt)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day216/day216.kt)
 
 
 ---

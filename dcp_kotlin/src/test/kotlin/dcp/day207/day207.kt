@@ -1,11 +1,11 @@
 package dcp.day207
-// BipartiteTester.kt
+// day207.kt
 // By Sebastian Raaphorst, 2019.
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class BipartiteTester {
+class UnitTests {
     @Test
     fun cycle3Test() {
         val g = Graph(listOf(0, 1, 2), mapOf(0 to setOf(1, 2), 1 to setOf(0, 2), 2 to setOf(0, 1)))

@@ -1,11 +1,11 @@
 package dcp.day206
-// PermutationTester.kt
+// day206.kt
 // By Sebastian Raaphorst, 2019.
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class PermutationTester {
+class UnitTests {
     @Test
     fun permTest1() {
         assertEquals(permute(listOf("a", "b", "c"), listOf(2, 1, 0)), listOf("c", "b", "a"))

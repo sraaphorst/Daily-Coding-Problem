@@ -1,11 +1,11 @@
 package dcp.day204
-// TreeTester.kt
+// day204.kt
 // By Sebastian Raaphorst, 2019.
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class TreeTester {
+class UnitTests {
     @Test
     fun treeTest() {
         val t = CBT(1, CBT(2, CBT(4), CBT(5)), CBT(3, CBT(6), CBT(7)))

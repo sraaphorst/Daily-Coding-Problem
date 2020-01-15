@@ -2,28 +2,21 @@ package dcp.day200
 // day200.kt
 // By Sebastian Raaphorst, 2019.
 
-import io.kotlintest.properties.Gen
-import io.kotlintest.properties.forAll
-import io.kotlintest.specs.StringSpec
-import kotlin.math.max
-import kotlin.math.min
+import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-// Not sure how to do this.
-//class StringSpecExample: StringSpec() {
-//    init {
-//        "Set detection" {
-//            forAll(Gen.list(Gen.pair(Gen.numericDoubles(0, 200), Gen.numericDoubles(0, 200)))) { list ->
-//                // Convert the lists into intervals.
-//                val intervals = list
-//                    .filter { it.second >= it.first }
-//                    .map { (s, e) -> Interval.makeInterval(min(s, e), max(s, e)) }
-//                    .filterNotNull()
-//
-//                val ss1 = smallestStabbingSet(intervals)
-//                val ss2 = smallestStabSetFP(intervals)
-//                assertEquals(ss1.size, ss2.size)
-//            }
-//        }
-//    }
-//}
+// Based on the rules we have implemented, this should be the final results.
+class UnitTests {
+    @Test
+    fun stabIntervalTest() {
+        val list1 = listOf(
+            Interval.makeInterval(0.0, 3.0),
+            Interval.makeInterval(2.0, 3.0),
+            Interval.makeInterval(15.0, 3.0),
+            Interval.makeInterval(8.0, 11.0),
+            Interval.makeInterval(7.0, 10.0),
+            Interval.makeInterval(4.0, 6.0)
+        )
+        assertEquals(smallestStabbingSet(list1).size, smallestStabSetFP(list1).size)
+    }
+}

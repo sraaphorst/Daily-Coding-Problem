@@ -1,11 +1,11 @@
 package dcp.day216
-// RomanNumeralTester.kt
+// day216.kt
 // By Sebastian Raaphorst, 2019.
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class RomanNumeralTester {
+class UnitTests {
     @Test
     // We just make sure that we have a bijection.
     fun romanNumeralTester() {
