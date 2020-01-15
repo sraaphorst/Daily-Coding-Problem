@@ -535,8 +535,9 @@ Implemented in Scala (and property tested with ScalaCheck):
 Count the number of inversions in an array. Both brute force and
 mergesort are implemented.
 
-mplemented in Scala (and property tested with ScalaCheck):
+Implemented in Scala (and property tested with ScalaCheck):
 [Day 44](dcp_jvm/src/main/scala/dcp/day044)
+
 ---
 
 ### Day 45 \[Easy\]
