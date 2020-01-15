@@ -881,7 +881,7 @@ Implemented in C++: [Day 109](dcp_cpp/src/day109)
 
 ---
 
-### Day 110 \Medium\]
+### Day 110 \[Medium\]
 
 Given a binary tree, return all paths from the roots to the leaves.
 
