@@ -2607,3 +2607,18 @@ Given a binary tree and a particular node, find all cousins of that node.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day284)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day284/day284.kt)
+
+---
+
+### Day 285 \[Medium\]
+
+This problem was asked by Mailchimp.
+
+You are given an array representing the heights of neighboring buildings on a city street, from east to west. The city assessor would like you to write an algorithm that returns how many of these buildings have a view of the setting sun, in order to properly value the street.
+
+For example, given the array `[3, 7, 8, 3, 6, 1]`, you should return `3`, since the top floors of the buildings with heights `8`, `6`, and `1` all have an unobstructed view to the west.
+
+Can you do this using just one forward pass through the array?
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day285)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day285/day285.kt)
