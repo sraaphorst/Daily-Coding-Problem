@@ -6,13 +6,13 @@ package dcp.day288
 private fun Int.to4digits(): Int =
     (toString().toList() + List(4 - toString().length){"0"}).joinToString("").toInt()
 
-// No triply repeated numbers. Must treat as a string to avoid removing leading 0s.
-private fun Int.moreThanTwo(): Boolean =
-    (toString().toList() + List(4 - toString().length){"0"}).groupBy { it }.values.any{ it.size > 2 }
+// At least two digits. Must treat as a string to avoid removing leading 0s.
+private fun Int.atLeastTwo(): Boolean =
+    !(toString().toList() + List(4 - toString().length){"0"}).groupBy { it }.values.any{ it.size == 4 }
 
 // Size of digits must be between 0 and 4 inclusive, and not have triply repeated digits.
 fun Int.legal(): Boolean =
-    toString().length <= 4 && !moreThanTwo()
+    toString().length <= 4 && atLeastTwo()
 
 // Sorts
 private fun Int.sortDecreasing(): Int =
@@ -37,3 +37,9 @@ fun Int.checkKaprekar(): Int? {
     return aux()
 }
 
+fun main() {
+    for (i in 1 until 10000) {
+        if (i.legal())
+            println("$i -> ${i.checkKaprekar()}")
+    }
+}
