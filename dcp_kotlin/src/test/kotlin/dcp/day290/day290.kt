@@ -1,8 +1,7 @@
-package dcp
+package dcp.day290
 // day290.kt
 // By Sebastian Raaphorst, 2020.
 
-import dcp.day290.*
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
