@@ -10,7 +10,7 @@ class UnitTests {
     // do not contain any digit repeated three times.
     @Test
     fun testAll() {
-        for (i in 0 until 10000) {
+        for (i in 1 until 10000) {
             if (i.legal())
                 assertNotNull(i.checkKaprekar())
         }
