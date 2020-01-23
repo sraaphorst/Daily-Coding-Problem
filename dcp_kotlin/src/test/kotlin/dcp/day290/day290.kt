@@ -1,4 +1,4 @@
-package dcp
+package dcp.day290
 // day290.kt
 // By Sebastian Raaphorst, 2020.
 
