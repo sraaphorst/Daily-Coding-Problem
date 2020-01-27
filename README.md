@@ -2652,7 +2652,7 @@ As a result, your function should return `[(0, 3), (4, 5), (11, 3), (15, 0), (19
 
 ---
 
-# Day 287 \[Medium\]
+### Day 287 \[Medium\]
 
 This problem was asked by Quora.
 
@@ -2698,7 +2698,7 @@ Write a function that returns how many steps this will take for a given input `N
 
 ---
 
-# Day 289 \[Hard\]
+### Day 289 \[Hard\]
 
 This problem was asked by Google.
 
@@ -2799,7 +2799,7 @@ students = {
 
 ---
 
-# Day 295 \[Medium\]
+### Day 295 \[Medium\]
 
 This problem was asked by Stitch Fix.
 
@@ -2822,3 +2822,14 @@ Bonus: Can you do this using only `O(k)` space?
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day295)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day295/day295.kt)
+
+---
+
+### Day 296 \[Hard\]
+
+This problem was asked by Etsy.
+
+Given a sorted array, convert it into a height-balanced binary search tree.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day296)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day296/day296.kt)
