@@ -1,4 +1,6 @@
 package dcp.day291
+// day291.kt
+// By Sebastian Raaphorst, 2020.
 
 /**
  * We want to know how many boats of given capacity it requires to carry people of weights given to safety,

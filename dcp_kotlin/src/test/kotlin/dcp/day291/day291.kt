@@ -1,4 +1,6 @@
 package dcp.day291
+// day291.kt
+// By Sebastian Raaphorst, 2020.
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
