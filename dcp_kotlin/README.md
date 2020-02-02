@@ -64,3 +64,4 @@
 * [Day 295](src/main/kotlin/dcp/day295)
 * [Day 296](src/main/kotlin/dcp/day296)
 * [Day 297](src/main/kotlin/dcp/day297)
+* [Day 298](src/main/kotlin/dcp/day298)

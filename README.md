@@ -2858,3 +2858,19 @@ For the input above, the answer would be `2`, as drinks `1` and `5` will satisfy
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day297)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day297/day297.kt)
+
+---
+
+### Day 301 \[Medium\]
+
+This problem was asked by Triplebyte.
+
+Implement a data structure which carries out the following operations without resizing the underlying array:
+
+* `add(value)`: Add a value to the set of values.
+* `check(value)`: Check whether a value is in the set.
+
+The check method may return occasional false positives (in other words, incorrectly identifying an element as part of the set), but should always correctly identify a true element.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day301)
+* [Property testing](dcp_kotlin/src/test/kotlin/dcp/day301/day301.kt)
