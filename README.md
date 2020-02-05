@@ -2874,3 +2874,14 @@ The check method may return occasional false positives (in other words, incorrec
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day301)
 * [Property testing](dcp_kotlin/src/test/kotlin/dcp/day301/day301.kt)
+
+---
+
+### Day 303 \[Easy\]
+
+Given a clock time in `hh:mm` format, determine, to the nearest degree, the angle between the hour and the minute hands.
+
+Bonus: When, during the course of a day, will the angle be zero?
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day303)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day303/day303.kt)
