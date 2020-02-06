@@ -101,6 +101,9 @@ namespace dcp::day304 {
         return probability;
     }
 
+    /**
+     * Markov chain approach.
+     */
     constexpr double knight_survival_probability_markov(const int startx, const int starty, const int k) {
         if (startx < 0 || startx > 7 || starty < 0 || starty > 7)
             return 0;
@@ -117,8 +120,6 @@ namespace dcp::day304 {
          * 3 5 7 8 8 7 5 3
          * 1 2 5 6 6 5 2 1
          * 0 1 3 4 4 3 1 0
-         *
-         * and 10 being off the board.
          *
          * Determine the isomorphism class our starting position is in.
          * We only need the upper left quadrant of the board for this: we can map to the upper left quadrant
