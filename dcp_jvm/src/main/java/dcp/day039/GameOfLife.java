@@ -23,7 +23,7 @@ public final class GameOfLife extends JFrame {
         HashSet<Cell> board;
 
         /**
-         * OVerride the component painting to draw the cells.
+         * Override the component painting to draw the cells.
          */
         @Override
         protected void paintComponent(final Graphics g) {
