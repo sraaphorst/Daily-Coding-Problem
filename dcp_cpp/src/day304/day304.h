@@ -11,8 +11,6 @@ using namespace std;
 namespace dcp::day304 {
     using matrix = array<array<double, 11>, 11>;
     namespace {
-        using matrix = array<array<double, 11>, 11>;
-
         /**
          * We will use this to determine a knight's possible moves in the dynamic
          * programming method.
