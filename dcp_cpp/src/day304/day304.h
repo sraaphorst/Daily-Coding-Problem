@@ -17,14 +17,14 @@ namespace dcp::day304 {
          * We will use this to determine a knight's possible moves in the dynamic
          * programming method.
          */
-        const array<int, 8> dx {-2, -2, -1, -1,  1,  1,  2,  2};
-        const array<int, 8> dy {-1,  1, -2,  2, -2,  2, -1,  1};
+        constexpr array<int, 8> dx {-2, -2, -1, -1,  1,  1,  2,  2};
+        constexpr array<int, 8> dy {-1,  1, -2,  2, -2,  2, -1,  1};
 
         /**
          * We will use this to map from starting position to isomorphism class in
          * the Markov chain method.
          */
-        const array<array<int, 4>, 4> isomorphism_classes{{
+        constexpr array<array<int, 4>, 4> isomorphism_classes{{
             {0, 1, 3, 4},
             {1, 2, 5, 6},
             {3, 5, 7, 8},
