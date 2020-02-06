@@ -31,7 +31,7 @@ namespace dcp::day304 {
             {4, 6, 8, 9}
         }};
 
-        constexpr matrix operator*(const matrix &m1, const matrix &m2) noexcept {
+        constexpr auto operator*(const matrix &m1, const matrix &m2) noexcept {
             matrix m3{};
             for (auto r = 0; r < 11; ++r)
                 for (auto c = 0; c < 11; ++c)
@@ -40,7 +40,7 @@ namespace dcp::day304 {
             return m3;
         }
 
-        constexpr matrix operator*(double scalar, const matrix &m) noexcept {
+        constexpr auto operator*(double scalar, const matrix &m) noexcept {
             matrix ms{};
             for (auto r = 0; r < 11; ++r)
                 for (auto c = 0; c < 11; ++c)
@@ -52,7 +52,7 @@ namespace dcp::day304 {
     /**
      * Dynamic programming approach.
      */
-    constexpr double knight_survival_probability_dp(const int startx, const int starty, const int k) noexcept {
+    constexpr auto knight_survival_probability_dp(const int startx, const int starty, const int k) noexcept -> double {
         if (startx < 0 || startx > 7 || starty < 0 || starty > 7)
             return 0;
         if (k == 0)
@@ -104,7 +104,7 @@ namespace dcp::day304 {
     /**
      * Markov chain approach.
      */
-    constexpr double knight_survival_probability_markov(const int startx, const int starty, const int k) {
+    constexpr auto knight_survival_probability_markov(const int startx, const int starty, const int k) -> double {
         if (startx < 0 || startx > 7 || starty < 0 || starty > 7)
             return 0;
         if (k == 0)
