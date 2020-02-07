@@ -2087,7 +2087,7 @@ This problem was asked by Amazon.
 Given an array of a million integers between zero and a billion, out of order, how can you efficiently sort it? Assume that you cannot store an array of a billion elements in memory.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day251)
-* [Property testing](dcp_kotlin/src/test/kotlin/dcp/day251/day251.kt)
+* [Specification testing](dcp_kotlin/src/test/kotlin/dcp/day251/day251.kt)
 
 ---
 
@@ -2873,7 +2873,7 @@ Implement a data structure which carries out the following operations without re
 The check method may return occasional false positives (in other words, incorrectly identifying an element as part of the set), but should always correctly identify a true element.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day301)
-* [Property testing](dcp_kotlin/src/test/kotlin/dcp/day301/day301.kt)
+* [Specification testing](dcp_kotlin/src/test/kotlin/dcp/day301/day301.kt)
 
 ---
 
@@ -2936,4 +2936,4 @@ Given a binary search tree, find the floor and ceiling of a given integer. The f
 If either value does not exist, return `None`.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day307)
-* [Property testing](dcp_kotlin/src/test/kotlin/dcp/day306/day307.kt)
+* [Specification testing](dcp_kotlin/src/test/kotlin/dcp/day307/day307.kt)
