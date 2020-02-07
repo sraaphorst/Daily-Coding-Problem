@@ -1,4 +1,4 @@
-# Day 305
+# Day 305 \[Easy\]
 
 This problem was asked by Amazon.
 

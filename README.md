@@ -2901,7 +2901,7 @@ After `k` moves, what is the probability that the knight remains on the board?
 
 ---
 
-### Day 305
+### Day 305 \[Easy\]
 
 This problem was asked by Amazon.
 
