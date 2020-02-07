@@ -2924,3 +2924,16 @@ Come up with an algorithm that sorts this list in `O(N log k)` time.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day306)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day306/day306.kt)
+
+---
+
+### Day 307 \[Easy\]
+
+This problem was asked by Oracle.
+
+Given a binary search tree, find the floor and ceiling of a given integer. The floor is the highest element in the tree less than or equal to an integer, while the ceiling is the lowest element in the tree greater than or equal to an integer.
+
+If either value does not exist, return `None`.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day307)
+* [Property testing](dcp_kotlin/src/test/kotlin/dcp/day306/day307.kt)
