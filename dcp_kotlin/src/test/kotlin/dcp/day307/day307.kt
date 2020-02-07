@@ -55,7 +55,7 @@ class PropertyTests: StringSpec() {
         "Make sure floor and ceil coincide for lists and trees" {
             forAll(BinarySearchTreeGen()) { t ->
                 val values = t.values()
-                values.map { Triple(it, t.floor(it), t.ceil(it)) } == values.map { Triple(it, values.floor(it), values.ceil(it)) }
+                (0 until 1000).all { Triple(it, t.floor(it), t.ceil(it)) == Triple(it, values.floor(it), values.ceil(it)) }
             }
         }
     }
