@@ -2966,3 +2966,20 @@ Write an algorithm that finds the total number of set bits in all integers betwe
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day310)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day310/day310.kt)
+
+---
+
+### Day 311 \[Easy\]
+
+This problem was asked by Sumo Logic.
+
+Given an unsorted array, in which all elements are distinct, find a
+"peak" element in  `O(log N)` time.
+
+An element is considered a peak if it is greater than both its left
+and right neighbors. It is guaranteed that the first and last elements
+are lower than all others.
+
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day311)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day311/day311.kt)

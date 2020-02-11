@@ -11,15 +11,14 @@ import kotlin.math.pow
 enum class InBloomSet {
     NO,
     MAYBE
-
 }
 
 private fun Int.rempos(b: Int): Int {
-    val a = this.rem(b)
+    val a = rem(b)
     return if (a < 0) a + b else a
 }
 
-    /**
+/**
  * The data structure that satisfies the requirements is a a Bloom filter, which is a bit vector and probabilistic
  * in that it tells us with 100% certainty that an element is not in the set, and returns false positives that an
  * element is in the set at a fixed rate.
@@ -48,18 +47,15 @@ class BloomFilter<T>(val probability: Double, val n: Int, val f: (T) -> Int = { 
 
     init {
         require(n > 0)
-        require(probability >= 0 && probability <= 1)
+        require(probability in 0.0..1.0)
         require(m > 0)
         bitSet = BitSet(m)
     }
 
-    val numHashes: Int
+    private val numHashes: Int
         get() = ((m / n) * ln(2.0)).toInt()
 
     private val hashes = (0 until numHashes).map{murmur3_32(it)}
-
-    val bits: Int
-        get() = m
 
     // Adding an element multiple times makes the error rate unreliable due to increasing numAdds.
     fun add(value: T) {
@@ -68,13 +64,7 @@ class BloomFilter<T>(val probability: Double, val n: Int, val f: (T) -> Int = { 
     }
 
     fun check(value: T): InBloomSet {
-        println(bitSet)
-        println("Num hashes: $numHashes")
         val hashedValue = f(value)
-        println("Hashed value: $hashedValue")
-        println(hashes.map { it.hashInt(hashedValue).asInt().rempos(m) })
-        val indices = hashes.map { bitSet.get(it.hashInt(hashedValue).asInt().rempos(m)) }
-        println(indices)
         return if (hashes.all { bitSet.get(it.hashInt(hashedValue).asInt().rempos(m)) }) InBloomSet.MAYBE else InBloomSet.NO
     }
 }
