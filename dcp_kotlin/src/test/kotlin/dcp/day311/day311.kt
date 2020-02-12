@@ -9,11 +9,6 @@ import kotlin.test.assertTrue
 
 class UnitTests {
     @Test
-    fun example1() {
-        assertNull(emptyList<Int>().findPeak())
-    }
-
-    @Test
     fun example2() {
         assertEquals(listOf<Int>(0).findPeak(), 0)
     }
