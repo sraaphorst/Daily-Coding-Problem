@@ -2932,9 +2932,7 @@ Come up with an algorithm that sorts this list in `O(N log k)` time.
 This problem was asked by Oracle.
 
 Given a binary search tree, find the floor and ceiling of a given
-integer. The floor is the
-himmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-                                                                 ghest element in the tree less than or equal to an integer, while the ceiling is the lowest element in the tree greater than or equal to an integer.
+integer. The floor is the highest element in the tree less than or equal to an integer, while the ceiling is the lowest element in the tree greater than or equal to an integer.
 
 If either value does not exist, return `None`.
 
@@ -2983,3 +2981,23 @@ are lower than all others.
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day311)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day311/day311.kt)
+
+---
+
+### Day 312 \[Easy\]
+
+This problem was asked by Wayfair.
+
+You are given a `2 x N` board, and instructed to completely cover the board with the following shapes:
+* Dominoes, or `2 x 1` rectangles.
+* Trominoes, or `L`-shapes.
+
+For example, if `N = 4`, here is one possible configuration, where `A` is a domino, and `B` and `C` are trominoes.
+```
+A B B C
+A B C C
+```
+Given an integer `N`, determine in how many ways this task is possible.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day312)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day312/day312.kt)
