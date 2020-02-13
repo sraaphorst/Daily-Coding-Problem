@@ -5,15 +5,17 @@ import java.util.Queue
 import kotlin.math.max
 
 /**
- * We formulate the problem as a shortest path over a simple graph with unweighted edges.
+ * We formulate the problem as a shortest path over a simple graph.
  * For every one of the 1000 permissible states, we have a vertex, with edges between vertices if they differ by
  * 1 in one place, e.g. 123 is adjacent to 122, 124, 113, 133, 023, and 223.
  *
  * We can then use BFS to find the shortest path between the single source 000 and the desired state.
  */
 
-// A graph is just a node of adjacencies we can go to.
-// The node labeled x is simply list[x] is the list returned from createGraph.
+/**
+ * A graph is just a node of adjacencies we can go to.
+ * The node labeled x is simply the list at x returned from createGraph.
+ */
 private typealias Node = List<Int>
 
 /**
