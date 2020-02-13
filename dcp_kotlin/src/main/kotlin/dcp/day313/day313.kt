@@ -40,7 +40,7 @@ private fun calculateAdjacencies(i: Int): List<Int> {
     val str = i.toString()
     val digits = (if (str.length < 3) "0".repeat(3 - str.length) else "") + str
     return (0 until 3).flatMap {
-        idx -> listOf(rotateDigitClockwise(digits, idx),  rotateDigitCounterclockwise(digits, idx))
+        idx -> listOf(rotateDigitClockwise(digits, idx), rotateDigitCounterclockwise(digits, idx))
     }.map { it.toInt() }
 }
 
