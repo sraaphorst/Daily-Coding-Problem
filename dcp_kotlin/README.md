@@ -74,3 +74,4 @@
 * [Day 310](src/main/kotlin/dcp/day310)
 * [Day 311](src/main/kotlin/dcp/day311)
 * [Day 312](src/main/kotlin/dcp/day312)
+* [Day 313](src/main/kotlin/dcp/day313)
