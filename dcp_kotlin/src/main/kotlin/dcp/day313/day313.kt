@@ -1,6 +1,6 @@
 package dcp.day313
 
-import java.util.*
+import java.util.LinkedList
 import kotlin.math.max
 
 /**
@@ -13,7 +13,7 @@ import kotlin.math.max
 
 // A graph is just a node of adjacencies we can go to.
 // The node labeled x is simply list[x] is the list returned from createGraph.
-typealias Node = List<Int>
+private typealias Node = List<Int>
 
 /**
  * Find the adjacencies of a given number.
@@ -22,14 +22,14 @@ typealias Node = List<Int>
  * positively and negatively to get the six adjacencies.
  */
 private fun calculateAdjacencies(i: Int): List<Int> {
-    fun addDigit(str: String, i: Int): String {
+    fun rotateDigitClockwise(str: String, i: Int): String {
         return str.take(max(0,i)) + when (str[i]) {
             '9' -> '0'
             else -> str[i] + 1
         } + str.drop(i+1)
     }
 
-    fun subtractDigit(str: String, i: Int): String = str.take(max(0,i)) + when (str[i]) {
+    fun rotateDigitCounterclockwise(str: String, i: Int): String = str.take(max(0,i)) + when (str[i]) {
         '0' -> '9'
         else -> str[i] - 1
     } + str.drop(i+1)
@@ -37,7 +37,7 @@ private fun calculateAdjacencies(i: Int): List<Int> {
     val str = i.toString()
     val digits = (if (str.length < 3) "0".repeat(3 - str.length) else "") + str
     return (0 until 3).flatMap {
-        idx -> listOf(addDigit(digits, idx),  subtractDigit(digits, idx))
+        idx -> listOf(rotateDigitClockwise(digits, idx),  rotateDigitCounterclockwise(digits, idx))
     }.map { it.toInt() }
 }
 
