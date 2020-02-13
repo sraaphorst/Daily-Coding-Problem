@@ -1,6 +1,7 @@
 package dcp.day313
 
 import java.util.LinkedList
+import java.util.Queue
 import kotlin.math.max
 
 /**
@@ -69,13 +70,13 @@ fun unlock(goal: Int, forbidden: Collection<Int>): Int? {
 
     val graph = createGraph(forbidden)
 
-    // We will perform a BFS, using a priority queue and a list mapping the distance from 000.
+    // We will perform a BFS, using a queue and a list mapping the distance from 000.
     // We need mutable data structures to do this.
     val distances = MutableList(1000){-1}
     distances[0] = 0
 
-    // Priority queue: distance and node index.
-    val queue = LinkedList<Int>()
+    // Queue to for BFS to keep track of nodes to visit.
+    val queue: Queue<Int> = LinkedList<Int>()
     queue.add(0)
     while (queue.isNotEmpty()) {
         val nodeIdx = queue.poll()
