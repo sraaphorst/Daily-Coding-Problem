@@ -35,4 +35,10 @@ class UnitTests {
         )
         assertNull(unlock(555, forbidden))
     }
+
+    @Test
+    fun example5() {
+        // Block between 000 and 002 by forbidding 001. Going around costs 4 instead of the usual 2 it would take.
+        assertEquals(unlock(2, listOf(1)), 4)
+    }
 }
