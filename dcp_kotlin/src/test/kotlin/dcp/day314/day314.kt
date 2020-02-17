@@ -1,4 +1,6 @@
 package dcp.day314
+// day314.kt
+// By Sebastian Raaphorst, 2020.
 
 import org.junit.Assert.assertEquals
 import org.junit.jupiter.api.Test

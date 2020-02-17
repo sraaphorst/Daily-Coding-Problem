@@ -1,5 +1,6 @@
 package dcp.day315
-
+// day315.kt
+// By Sebastian Raaphorst, 2020.
 
 
 fun <T> List<List<T>>.isToeplitz(): Boolean {

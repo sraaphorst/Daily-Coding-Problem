@@ -1,4 +1,6 @@
 package dcp.day315
+// day315.kt
+// By Sebastian Raaphorst, 2020.
 
 import org.junit.jupiter.api.Test
 import org.junit.Assert.assertFalse
