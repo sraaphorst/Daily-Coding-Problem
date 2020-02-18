@@ -31,7 +31,7 @@ The Kotlin testing is done using:
 * Unit testing with [JUnit](https://junit.org/junit5/docs/current/user-guide).
 * Specification testing with [KotlinTest](https://github.com/kotlintest/kotlintest).
 
-Note that this was partly an exercise to learn Kotlin, so many of the
+Note tvhat this was partly an exercise to learn Kotlin, so many of the
 exercises are done in Kotlin to reinforce the learning I was doing in
 Coursera's class, Kotlin for Java Developers. The earlier Kotlin
 exercises done in 2019 will clearly be rough around the edges due to my inexperience.
@@ -3031,3 +3031,37 @@ For example, suppose listeners = [1, 5, 11, 20], and towers = [4, 8, 15]. In thi
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day314)
 * [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day314/day314.kt)
+
+---
+
+### Day 315 \[Easy\]
+
+This problem was asked by Google.
+
+In linear algebra, a Toeplitz matrix is one in which the elements on any given diagonal from top left to bottom right are identical.
+
+Here is an example:
+
+```
+1 2 3 4 8
+5 1 2 3 4
+4 5 1 2 3
+7 4 5 1 2
+```
+
+Write a program to determine whether a given input is a Toeplitz matrix.
+
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day315)
+* [Unit testing](dcp_kotlin/src/test/kotlin/dcp/day315/day315.kt)
+
+---
+
+### Day 317 \[Medium\]
+
+This problem was asked by Yahoo.
+
+Write a function that returns the bitwise AND of all integers between `M` and `N`, inclusive.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day317)
+* [Property testing](dcp_kotlin/src/test/kotlin/dcp/day317/day317.kt)
