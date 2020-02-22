@@ -40,3 +40,4 @@ are templates, so they cannot be compiled into libraries anyway.
 * [Day 276](src/day276)
 * [Day 277](src/day277)
 * [Day 304](src/day304)
+* [Day 321](src/day321)

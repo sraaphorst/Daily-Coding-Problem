@@ -56,7 +56,8 @@ set(TEST_LIST
         TestDay268
         TestDay276
         TestDay277
-        TestDay304)
+        TestDay304
+        TestDay321)
 
 foreach(testname ${TEST_LIST})
     set(testfile ${testname}.cpp)

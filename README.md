@@ -3065,3 +3065,25 @@ Write a function that returns the bitwise AND of all integers between `M` and `N
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day317)
 * [Property testing](dcp_kotlin/src/test/kotlin/dcp/day317/day317.kt)
+
+---
+
+### Day 321 \[Easy\]
+
+This problem was asked by PagerDuty.
+
+Given a positive integer `N`, find the smallest number of steps it will take to reach `1`.
+
+There are two kinds of permitted steps:
+
+* You may decrement `N` to `N - 1`.
+* If `a * b = N`, you may decrement `N` to the larger of `a` and `b`.
+
+For example, given `100`, you can reach `1` in five steps with the following route: `100 -> 10 -> 9 -> 3 -> 2 -> 1`.
+
+***Note:*** This solves Day 321 in Kotlin but explores other variations to explore integer sequences.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day321)
+* [Property testing](dcp_kotlin/src/test/kotlin/dcp/day321/day321.kt)
+* [C++ implementation](dcp_cpp/src/day321)
+* [Unit testing](dcp_cpp/test/TestDay321.cpp)
