@@ -3087,3 +3087,16 @@ For example, given `100`, you can reach `1` in five steps with the following rou
 * [Property testing](dcp_kotlin/src/test/kotlin/dcp/day321/day321.kt)
 * [C++ implementation](dcp_cpp/src/day321)
 * [Unit testing](dcp_cpp/test/TestDay321.cpp)
+
+---
+
+# Day 327 \[Medium\]
+
+This problem was asked by Salesforce.
+
+Write a program to merge two binary trees. Each node in the new tree should hold a value equal to the sum of the values of the corresponding nodes of the input trees.
+
+If only one input tree has a node in a given position, the corresponding node in the new tree should match that input node.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day327)
+* [Property testing](dcp_kotlin/src/test/kotlin/dcp/day327/day327.kt)
