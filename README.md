@@ -3100,3 +3100,18 @@ If only one input tree has a node in a given position, the corresponding node in
 
 * [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day327)
 * [Property testing](dcp_kotlin/src/test/kotlin/dcp/day327/day327.kt)
+
+---
+
+# Day 334 \[Easy\]
+
+This problem was asked by Twitter.
+
+The `24` game is played as follows. You are given a list of four integers, each between `1` and `9`, in a fixed order. By placing the operators `+`, `-`, `*`, and `/` between the numbers, and grouping them with parentheses, determine whether it is possible to reach the value `24`.
+
+For example, given the input `[5, 2, 7, 8]`, you should return `True`, since `(5 * 2 - 7) * 8 = 24`.
+
+Write a function that plays the `24` game.
+
+* [Kotlin implementation](dcp_kotlin/src/main/kotlin/dcp/day334)
+* [Property testing](dcp_kotlin/src/test/kotlin/dcp/day334/day334.kt)
