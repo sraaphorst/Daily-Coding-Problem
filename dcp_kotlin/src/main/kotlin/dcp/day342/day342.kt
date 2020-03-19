@@ -28,6 +28,8 @@ fun <T, R> Collection<T>.reduce(
 
 fun main() {
     val lst = listOf(1, 2, 3, 4, 5)
+    println(lst.reduce(0){acc: Int, next: Int -> acc + next})
+    println(lst.fold(0){acc: Int, next: Int -> acc + next})
     println(lst.reduce(0, {acc: Int, next: Int -> acc + next}))
     println(lst.fold(0){acc: Int, next: Int -> acc + next})
 }
