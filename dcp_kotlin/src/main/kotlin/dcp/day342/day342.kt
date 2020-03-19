@@ -31,5 +31,5 @@ fun main() {
     println(lst.reduce(0){acc: Int, next: Int -> acc + next})
     println(lst.fold(0){acc: Int, next: Int -> acc + next})
     println(lst.reduce(0, {acc: Int, next: Int -> acc + next}))
-    println(lst.fold(0){acc: Int, next: Int -> acc + next})
+    println(lst.fold(0, {acc: Int, next: Int -> acc + next}))
 }
