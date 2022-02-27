@@ -10,7 +10,7 @@ import kotlin.test.assertTrue
 class UnitTests {
     @Test
     fun example2() {
-        assertEquals(listOf<Int>(0).findPeak(), 0)
+        assertEquals(listOf(0).findPeak(), 0)
     }
 
     @Test
