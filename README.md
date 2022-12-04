@@ -13,7 +13,7 @@ for the day. So far, the programming languages I use are:
 * Java 10
 * Python 3.6
 * Scala 2.12
-* Kotlin 1.3.50 (in the process of learning)
+* Kotlin 1.3.50 (this was while I was in the process of learning)
 
 The C++ testing is done using:
 * Unit testing with [Catch2](https://github.com/catchorg/Catch2).
