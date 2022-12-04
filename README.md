@@ -22,7 +22,7 @@ The Java and Scala testing are done using:
 * Unit testing with [JUnit](https://junit.org/junit5/docs/current/user-guide).
 * Specification testing with ScalaTest and [ScalaCheck](https://github.com/rickynils/scalacheck).
 
-The Python testing are done using:
+The Python testing is done using:
 * Unit testing with [doctests](https://docs.python.org/2/library/doctest.html).
 * Specification testing with [Hypothesis](https://github.com/HypothesisWorks/hypothesis).
 Note that Python testing is included in the source files.
